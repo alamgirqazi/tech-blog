@@ -1,14 +1,17 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Link,graphql } from 'gatsby'
-import get from 'lodash/get'
+import 'highlight.js/styles/github.css'
+
+import { Link, graphql } from 'gatsby'
+import { rhythm, scale } from '../utils/typography'
 
 import Bio from '../components/Bio'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
-import { rhythm, scale } from '../utils/typography'
+import React from 'react'
+import get from 'lodash/get'
 
 class BlogPostTemplate extends React.Component {
   render() {
+
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const siteDescription = post.excerpt
