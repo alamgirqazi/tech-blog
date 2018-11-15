@@ -1,5 +1,8 @@
 import Typography from 'typography'
 import Wordpress2016 from 'typography-theme-wordpress-2016'
+require("prismjs/themes/prism-okaidia.css")
+// require("prismjs/themes/prism-dark.css")
+// require("prismjs/themes/prism-solarizedLight.css")
 
 Wordpress2016.overrideThemeStyles = () => ({
   'a.gatsby-resp-image-link': {
