@@ -1,2 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tech Blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>RSS for Node</generator><lastBuildDate>Wed, 07 Nov 2018 12:42:39 GMT</lastBuildDate><item><title><![CDATA[First Post]]></title><description><![CDATA[Hi, This is a blog where I’ll be sharing tech stuff that I’ve learned and I’m learning right now. I’ll focus mostly on Angular, Docker…]]></description><link>https://alamgirqazi.github.io/tech-blog/first-post/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/first-post/</guid><pubDate>Wed, 07 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, This is a blog where I’ll be sharing tech stuff that I’ve learned and I’m learning right now.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tech Blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>RSS for Node</generator><lastBuildDate>Thu, 15 Nov 2018 02:45:27 GMT</lastBuildDate><item><title><![CDATA[Exposing your app in Kubernetes]]></title><description><![CDATA[Ways to expose your app in Kubernetes Kubernetes is an open-source system for automating deployment, scaling, and management of…]]></description><link>https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</guid><pubDate>Thu, 08 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-2e2e8.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.018229166666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsSAAALEgHS3X78AAABCUlEQVQoz2P4jw38A5Ofv/8FIjgXEzBg1fbt57+5+z76dT8L7ns+d//H779Awv/+EdL85y9ISd/W9/aNTzo3vpu47QOQ0b/1PVDw71+8muFmx0x50b7h3eEb3w9f/96y7l3slBeEnQ3R/OXHX4+2p20b3p24/f3Q9e+t6995tT/9+uMvpsvRnQ129f+Vxz6bVj+qW/0WiMyqH6849hkuhTfA/kEVzdj9MXryi6jJL2bu+QgOCyI0kwQYkGMI6Ns9l79dffxz96Vvp+/+OHX3x8k7P87e+7Hv6jcg4+azX/hs/vn7365LX7df+Lrj4tdNZ7/uufLt6I3vW8592Xb+67pTn4/c+I6mGQBNui8gZLQFsgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Kubernetes&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-f8fb9.jpg&quot;
+        srcset=&quot;/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-e8976.jpg 148w,
+/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-63df2.jpg 295w,
+/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-f8fb9.jpg 590w,
+/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-85e3d.jpg 885w,
+/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-d1924.jpg 1180w,
+/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-2e2e8.jpg 1536w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Ways to expose your app in Kubernetes&lt;/h2&gt;
+&lt;p&gt;Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications built by Google. Kubernetes has now become the leader in container orchestration.&lt;/p&gt;
+&lt;p&gt;There are different ways we can expose our Kubernetes Deployments.&lt;/p&gt;
+&lt;h3&gt;1. Load Balancer&lt;/h3&gt;
+&lt;p&gt;Kubernetes provides a simple HTTPS L7 Load Balancer. In order to expose a deployment, run this command in Kubectl. Here, myapp is our deployment which is available via ClusterIP but isn’t exposed to the outside world.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 0&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;kubectl expose deployment myapp &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; type&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;LoadBalancer&quot;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2. Ingress&lt;/h3&gt;
+&lt;p&gt;Ingress can be considered as a fancier Load Balancer with more configurations. In Kubernetes Engine, Ingress is implemented using Cloud Load Balancing. When you create an Ingress in your cluster, Kubernetes Engine creates an HTTP(S) load balancer and configures it to route traffic to your application. We can set up several rules for our load balancer. Ingress can also help in exposing multiple services via a single host endpoint with different URLs.&lt;/p&gt;
+&lt;p&gt;In order to set up Ingress, we need to do 2 things.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Reserve a static IP on Google Cloud.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;set up SSL of our domain. (needed if you want to expose to a custom domain e.g myapp.com instead of a reserved IP address).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Step 1:&lt;/p&gt;
+&lt;p&gt;Run the following command and make sure you have Google Cloud SDK (&lt;a href=&quot;https://cloud.google.com/sdk/&quot;&gt;https://cloud.google.com/sdk/&lt;/a&gt;) installed and configured.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 0&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;gcloud compute addresses create kubernetes&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ingress &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; region us&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;central1&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will reserve a static IP with the name kubernetes-ingress.&lt;/p&gt;
+&lt;p&gt;Step 2:&lt;/p&gt;
+&lt;p&gt;Download the private key for your custom domain.&lt;/p&gt;
+&lt;p&gt;Run the following command to generate the RSA Private key&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 0&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;openssl rsa &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;key &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;out private_rsa&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;key&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;if you get passphrase error, run this&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 0&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;openssl rsa &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; privateKey&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pem &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;out newPrivateKey&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pem&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 0&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;kubectl create secret tls ingress&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ssl &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; key private_rsa&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;key &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; cert mycert&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;crt&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will create an SSL configuration named ingress-ssl. We will use this configuration for our Ingress.&lt;/p&gt;
+&lt;p&gt;Here’s a yaml configuration file for Kubernetes Ingress. This yaml file can be deployed.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 0&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;apiVersion&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; extensions&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;v1beta1
+kind&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Ingress
+metadata&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; kubernetes&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ingress
+# kubernetes&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ingress is the name &lt;span class=&quot;token keyword&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; ip we&apos;ve reserved &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; #Google Cloud
+annotations&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+kubernetes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;io&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ingress&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;global&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ip&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;kubernetes-ingress&quot;&lt;/span&gt;
+spec&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+tls&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; hosts&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; myapp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com
+secretName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ingress&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ssl
+backend&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+serviceName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; myapp
+servicePort&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;3. Port-Forward&lt;/h3&gt;
+&lt;p&gt;Port-forward basically exposes a service running in Kubernetes cluster and maps it to a local port on your computer. The below command is an example. It exposes my service prometheus from namespace ‘monitoring’ and it maps it to localhost:8082. This can be ideal for testing purposes and for services that you do not want to expose to the outside world but might need for testing for your own.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber 0&quot; class=&quot;language-javascript line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;kubectl port&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;forward svc&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;prometheus &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; namespace monitoring &lt;span class=&quot;token number&quot;&gt;8082&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9090&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Which one should you use?&lt;/p&gt;
+&lt;p&gt;Load Balancer is ideal if you are testing and only have a single service that you want to expose. Mostly this is not the case and thus this can become expensive.&lt;/p&gt;
+&lt;p&gt;Port-Forward is mostly for testing locally and not an option to expose for production.&lt;/p&gt;
+&lt;p&gt;Ingress is the most likely solution as it provides more customization and offers much more.&lt;/p&gt;
+&lt;p&gt;There are also other ways to expose your Kubernetes service. Have a look at Istio (a service mesh) or an API Gateway like (Express-gateway for Node.js).&lt;/p&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[Hi, This is a blog where I’ll be sharing tech stuff that I’ve learned and I’m learning right now. I’ll focus mostly on Angular, Docker…]]></description><link>https://alamgirqazi.github.io/tech-blog/first-post/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/first-post/</guid><pubDate>Wed, 07 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, This is a blog where I’ll be sharing tech stuff that I’ve learned and I’m learning right now.&lt;/p&gt;
 &lt;p&gt;I’ll focus mostly on Angular, Docker, Kubernetes, Node.js and more full-stack plus DevOp things.&lt;/p&gt;</content:encoded></item></channel></rss>
