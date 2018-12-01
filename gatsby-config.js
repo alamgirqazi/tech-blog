@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Tech Blog',
+    title: 'tech-blog',
     author: 'Alamgir Qazi',
     description: 'A simple tech blog.',
     siteUrl: 'https://alamgirqazi.github.io/tech-blog',
@@ -81,7 +81,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Tech Blog`,
+        name: `tech-blog`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,

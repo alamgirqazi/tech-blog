@@ -5,9 +5,6 @@ date: '2018-11-08'
 
 ![Kubernetes](./kubernetes.jpg)
 
-## Ways to expose your app in Kubernetes
-
-
 Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications built by Google. Kubernetes has now become the leader in container orchestration.
 
 There are different ways we can expose our Kubernetes Deployments.
