@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tech Blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>RSS for Node</generator><lastBuildDate>Thu, 15 Nov 2018 02:45:27 GMT</lastBuildDate><item><title><![CDATA[Exposing your app in Kubernetes]]></title><description><![CDATA[Ways to expose your app in Kubernetes Kubernetes is an open-source system for automating deployment, scaling, and management of…]]></description><link>https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</guid><pubDate>Thu, 08 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>RSS for Node</generator><lastBuildDate>Sat, 01 Dec 2018 15:37:39 GMT</lastBuildDate><item><title><![CDATA[Introduction to Containers and Docker]]></title><description><![CDATA[Containers, Docker and Kubernetes have become the new buzzwords in tech (in this post, I won’t talk about Kubernetes). However, they’re…]]></description><link>https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</guid><pubDate>Thu, 22 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-ed992.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 29.673590504451035%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABLElEQVQY02NgAAL25uNMDFDAVrlDmL3pKCtYvPUkE2vCJAa2vOUMbLlLCWFGBmTD2Gv3ynM0H8sHGnIYKCnAaBYEt4RkAHSVOmfL8Sts/Tf/s7ed/gM0vIuj9+pO9pYTkUzmIaxsuctcgJbIs+YuZWfNAeLcpTZsuUukgGIsrDlLBIFsLiBbBigHMZCj58p0xoU//vNMffCJc9rjv5wLv/7n6Luxl716lwVrzuJooOIuoCFlQI3JbDlLM4D8FCDuBeI0IO6BYgeEE5vOBrisf/XfZ9/v/yzzv/znnPLgDFv5FjGw63OXJQFdEQ40KAGoKQaIE4E4DIhBFiUD5RqAdCTcrPk//4Ppi5cum+Vtu5vK0HjaU02cnwUkxnvvPwNLTDdmEAG9ikWMEeRlAHf9gYGe4G9hAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Docker&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-fb8a0.png&quot;
+        srcset=&quot;/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-1a291.png 148w,
+/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-2bc4a.png 295w,
+/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-fb8a0.png 590w,
+/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-ed992.png 674w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Containers, Docker and Kubernetes have become the new buzzwords in tech (in this post, I won’t talk about Kubernetes). However, they’re correctly being hyped because they are indeed the future of how applications will be built. Infact, using Docker now is becoming extremely common.&lt;/p&gt;
+&lt;h2&gt;so what is Docker?&lt;/h2&gt;
+&lt;p&gt;Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Docker is a technology that allows you to incorporate and store your code and its dependencies into a neat little package - an image.&lt;/p&gt;
+&lt;p&gt;A docker image holds your source code and the dependencies it needs. Lets say you have a Node.js app, A docker image of your app will contain the code + the node_modules and everything that’s needed to run your Node.js app. &lt;/p&gt;
+&lt;p&gt;So now we know what a Docker Image is, let’s talk about Containers. &lt;/p&gt;
+&lt;h2&gt;Containers&lt;/h2&gt;
+&lt;p&gt;Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.&lt;/p&gt;
+&lt;p&gt;Containers are encapsulated environments in which applications are run. A container is defined by the Image and configuration options. Containers basically are where the (Docker) Image runs.  &lt;/p&gt;
+&lt;p&gt;Now you can have many containers running the same Docker Image since a Docker Image it has all it needs (code + dependencies/configuration). Now you can increase and decrease the number of containers to scale your application. How easy is that. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Exposing your app in Kubernetes]]></title><description><![CDATA[Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications built by Google…]]></description><link>https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</guid><pubDate>Thu, 08 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-2e2e8.jpg&quot;
@@ -34,7 +76,6 @@
   
   &lt;/a&gt;
     &lt;/p&gt;
-&lt;h2&gt;Ways to expose your app in Kubernetes&lt;/h2&gt;
 &lt;p&gt;Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications built by Google. Kubernetes has now become the leader in container orchestration.&lt;/p&gt;
 &lt;p&gt;There are different ways we can expose our Kubernetes Deployments.&lt;/p&gt;
 &lt;h3&gt;1. Load Balancer&lt;/h3&gt;
@@ -87,5 +128,4 @@ servicePort&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;sp
 &lt;p&gt;Load Balancer is ideal if you are testing and only have a single service that you want to expose. Mostly this is not the case and thus this can become expensive.&lt;/p&gt;
 &lt;p&gt;Port-Forward is mostly for testing locally and not an option to expose for production.&lt;/p&gt;
 &lt;p&gt;Ingress is the most likely solution as it provides more customization and offers much more.&lt;/p&gt;
-&lt;p&gt;There are also other ways to expose your Kubernetes service. Have a look at Istio (a service mesh) or an API Gateway like (Express-gateway for Node.js).&lt;/p&gt;</content:encoded></item><item><title><![CDATA[First Post]]></title><description><![CDATA[Hi, This is a blog where I’ll be sharing tech stuff that I’ve learned and I’m learning right now. I’ll focus mostly on Angular, Docker…]]></description><link>https://alamgirqazi.github.io/tech-blog/first-post/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/first-post/</guid><pubDate>Wed, 07 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hi, This is a blog where I’ll be sharing tech stuff that I’ve learned and I’m learning right now.&lt;/p&gt;
-&lt;p&gt;I’ll focus mostly on Angular, Docker, Kubernetes, Node.js and more full-stack plus DevOp things.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;There are also other ways to expose your Kubernetes service. Have a look at Istio (a service mesh) or an API Gateway like (Express-gateway for Node.js).&lt;/p&gt;</content:encoded></item></channel></rss>
