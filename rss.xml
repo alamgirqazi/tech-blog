@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>RSS for Node</generator><lastBuildDate>Sat, 01 Dec 2018 15:37:39 GMT</lastBuildDate><item><title><![CDATA[Introduction to Containers and Docker]]></title><description><![CDATA[Containers, Docker and Kubernetes have become the new buzzwords in tech (in this post, I won’t talk about Kubernetes). However, they’re…]]></description><link>https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</guid><pubDate>Thu, 22 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 12 Oct 2019 10:50:20 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 1]]></title><description><![CDATA[What is Node.js ? Node.js is basically a run-time environment that helps us run JavaScript code on the server. That means just like PHP…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-1/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-1/</guid><pubDate>Sat, 12 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-ed992.png&quot;
+    href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -13,18 +13,619 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 29.673590504451035%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABLElEQVQY02NgAAL25uNMDFDAVrlDmL3pKCtYvPUkE2vCJAa2vOUMbLlLCWFGBmTD2Gv3ynM0H8sHGnIYKCnAaBYEt4RkAHSVOmfL8Sts/Tf/s7ed/gM0vIuj9+pO9pYTkUzmIaxsuctcgJbIs+YuZWfNAeLcpTZsuUukgGIsrDlLBIFsLiBbBigHMZCj58p0xoU//vNMffCJc9rjv5wLv/7n6Luxl716lwVrzuJooOIuoCFlQI3JbDlLM4D8FCDuBeI0IO6BYgeEE5vOBrisf/XfZ9/v/yzzv/znnPLgDFv5FjGw63OXJQFdEQ40KAGoKQaIE4E4DIhBFiUD5RqAdCTcrPk//4Ppi5cum+Vtu5vK0HjaU02cnwUkxnvvPwNLTDdmEAG9ikWMEeRlAHf9gYGe4G9hAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVQoz32ST0sbURTF37xUlyq4iYotFilvJkqCmHkUyfyLSi2lLhS0Gy2lioi68QuYMaZoxbroF5B2UREXhX4G0cTWUHWjErMRim7cdTme+5IganDgcOfNnPnNu/cdxh65bMdUNWHF6Z47rlTrSq160UtS8lXJtLBjsPSBzvysrtaWE3/gdz3JegdKP0vtGWwpr7OFXcFWTyPKwNXfPcnJsPhb56ms4Iv7Ojc7XlYgDdA0FII0+EO2I3kQMJb+o2vkAVR7sNv3S9E769cj3cq0Mr9M0EuAwtW6BKyW6upZhJMxCf1yk9Kjh35OT2CX31BdWru9Mk7vCeh4Zh12Fk/0yG3U/nJHBkZkQxG0XE/A/9AP25b/xlOxcPpAXK2ddwSo15Pr0WbLkgWMY8NxzQvcPwe0+HasO4dvdqa+Rhszh2IQbX8AcC7z16gjYPHNO7MGwPzwTNfTdF4UvhQ7CXgxsRYL25Y8gWcLKgDYXAZuJvtl08/g2RPskGAfoVkAGwj4grbu9ZntjA3xT8dCwPQZpxwttxyD5zskS1GSnWh5HbVVjWjPaMEMe6C227xZ1XM17sfunJxlmdr9CFXLoTLhULRG5rLMkdD8nAj5+6UYIHMqJhSvih/zDFVgftbQMEPKrhYEo+wGOwusfLZj/14AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Intro To Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png&quot;
+        srcset=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/cf440/node-js.png 148w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/d2d38/node-js.png 295w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png 590w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f9b6a/node-js.png 885w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png 960w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;What is Node.js ?&lt;/h2&gt;
+&lt;p&gt;Node.js is basically a run-time environment that helps us run JavaScript code on the server. That means just like PHP, Ruby, Python,
+Golang etc, You can use JavaScript on the server. Node.js is ideal for building REST APIs.&lt;/p&gt;
+&lt;h3&gt;Why is Node.js famous?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Front-end developers who are familiar with JavaScript don’t have to learn a new language to write backend. &lt;/li&gt;
+&lt;li&gt;Node.js is fast and scalable.&lt;/li&gt;
+&lt;li&gt;Very large ecosystem (npm biggest package manager in the world).&lt;/li&gt;
+&lt;li&gt;Asynchronous or non-blocking nature.&lt;/li&gt;
+&lt;li&gt;It is easy to get started.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, remember it has its use cases. It is not ideal for CPU intensive tasks but very good for Asynchronous / Real-time tasks. We’ll go over them soon. &lt;/p&gt;
+&lt;p&gt;So lets get started. &lt;/p&gt;
+&lt;h3&gt;Writing my first program in Node.js&lt;/h3&gt;
+&lt;p&gt;First, let’s setup our project. we need to make a new folder. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;mkdir firstnodejsapp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;will create a new folder with that name&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/970f7/firstnodejsapp.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 583px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 57.804459691252156%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABJ0AAASdAHeZh94AAAC8klEQVQoz32S7U9TZxiHn3NOzzmlU4puULPBnERDHIJWFGSAxPhhnzRRgy/UdjqkYUZnomR+XDI2ZiSDSKF2wHizTMJLxVYbREQo0qLBSYhKsre/wWR/wOXTolG+7MOV+zl3nlznd995xLOlv5iJL3FjdJrekRlaeiYIhiYYj4VZWFxm8fnfLC3/yzNZF1/I88t/eLr0J39IEgsvmHvynPjCS+lYpOn6IOLx02WC4TjNfZN8H4hS3xKm0T9Az0Aj4bHb3L83yZP4Y+bnEszHJXPzzM0+IpFIMBuL8Wh2lkQ8zvT0Q3wdvyN6R2O09E9y9bdxrnaEae6O4jpzCaFbUNI0hFVBpAmEKTHeVtkTCoqipkiedd2kYMduRFtfFH/fHfy9Edq6x/D338VdewF7TjqObQ7sm+ysL/wIxw4HWXlZZBVmYTqsaKoFTbOgahqqmhQrfLoxF9ExEKUjGOV6f4TWrlHae8Zw15zHTDOwf5iBba2NNevWkL4+XX7bycjMwEgzV2RvRG/5PL8Q4e8eobVziGudI1zxBWlqH+SYpw5zg4n6sYa2QZIrR88WKA45Xo5AzVwRCSFW1U25mxGhGw3EI9/hOX2WK7+009jcyTFXDTarDUM10DUjVTVF7lSoqEKT9Z3kfeEn2RsRl7+twvdjFVvyttPwQyOvXv2Hz9eWumSaJoYhhaYUG3pqX4qqrKCsJjl+ds5niF0lFTh3SXaWUFRUys2bQwQCgZRQ13UslpVdJUn2/o9UwuKScgq272ZrvpNtBU7Kyvdx4MAhPrCtlQmtWK1WmdJcJTY0+SOZVtNU2Tdkcgu6RSMnmbC8rJKKin2UlFZSvGcvzqIyjrtcXOuqJxIJE7o1xoOpKWLyESeZic3QEPqZ4chtQnemiAz/yvDoEF2DYb4or0SU7iljb+V+9n95kINH3HjPX+anplY6g900twY4e+4i3rpzeL3fUFtbx9c1Xg5/dRT3qRqqPWfwnKzmhMtN1QkPBYVOXgN1cdAp2XOySgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Creating a new folder&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/970f7/firstnodejsapp.png&quot;
+        srcset=&quot;/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/cf440/firstnodejsapp.png 148w,
+/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/d2d38/firstnodejsapp.png 295w,
+/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/970f7/firstnodejsapp.png 583w&quot;
+        sizes=&quot;(max-width: 583px) 100vw, 583px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Cool. Now lets go into that directory&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cd firstnodejsapp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Great. Now lets create a file. We need to create any js file. lets create an index.js file. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;touch index.js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/a93b18e0209115830321f15817ecee96/d5c82/mkdircommand.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 57.40971357409714%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAB8klEQVQoz42SW08TQRTHd9vS3aUBSrc3Ci7S0meNL4o0UWLipzIxvvjmQ4GaVOJn8QMYX5AHFC+kxRDaIL2xl+7l5+xCVZ7oSf4z58yc+c2Zk5Hav01+dE1+9V3aPYf2hX09O7SEOgMb07QYjkw8z4MgwLRsfN8nNNf1ojgQfrgmDS5HnJye0huaOCLfdoNIjgvm2ONSJF/0epEGgwG2bTMcDun3+1iWFV3i+yLfcYQvgAQ+njsWix5XFkSj5VwwrfkR1BfFB0hB8G8juA481+fN21e8fP2C3b1dGu8b7Ozt0HjXoNG40vb2NvV6nWazKVpi/j0vhcP/Ci181sPaBvKcTEJPoBZVtIKGlJKQpJsqFouMRqObwEkw8cN+bG5touU09LUs2fWsmHVS+RSaqjGrzpLSUsTjcarV6nTAx082mEnPkA2B5SwZI0Myk0SZU1DmFdQFFSkmUSlXpgPWtmpRRblyjsW1RZJ6EjWnouoqSkFBK2rIMzKVyjqjyymAj0SF0qyEkldI5BPE0jHktExsPkY8I6THox6uGsbtwPF4zLPnT1nQ5ykZJUp3Sywby6ysLlO4UyC7kmPJWCKjp7l3/8FtTw7Cr8mnzx84PDygddym2+lydtbhvHPO4ckXPn7b5+f3Y46+7nNw1Ip+xYTxByd2na3TNucIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Creating a new index.js file&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/a93b18e0209115830321f15817ecee96/b9e4f/mkdircommand.png&quot;
+        srcset=&quot;/tech-blog/static/a93b18e0209115830321f15817ecee96/cf440/mkdircommand.png 148w,
+/tech-blog/static/a93b18e0209115830321f15817ecee96/d2d38/mkdircommand.png 295w,
+/tech-blog/static/a93b18e0209115830321f15817ecee96/b9e4f/mkdircommand.png 590w,
+/tech-blog/static/a93b18e0209115830321f15817ecee96/d5c82/mkdircommand.png 803w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;That wasn’t so hard. its quite easy doing it in the command line as well. Feels cool right? &lt;/p&gt;
+&lt;p&gt;now lets open it in VS Code &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;code .&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Excellent. Our &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt; file is empty. Lets add some Node.js / JavaScript code. &lt;/p&gt;
+&lt;p&gt;We will create a very simple http server in node.js and see how easy it is and how few lines of code it is. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const http = require(&amp;#39;http&amp;#39;);
+
+const server = http.createServer();
+
+server.on(&amp;#39;request&amp;#39;,(request,response)=&amp;gt;{
+   response.writeHead(200,{&amp;#39;Content-Type&amp;#39;:&amp;#39;text/plain&amp;#39;});
+   response.write(&amp;#39;Hello world&amp;#39;);
+   response.end();
+});
+
+server.listen(3000,()=&amp;gt;{
+  console.log(&amp;#39;Node server created at port 3000&amp;#39;);
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let go over what’s happening. &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;require(&amp;#39;http&amp;#39;)&lt;/code&gt; will help us import the already built-in http module in node.js. &lt;/p&gt;
+&lt;p&gt;After we require, we simply create the server using &lt;code class=&quot;language-text&quot;&gt;const server = http.createServer();&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server.on(&amp;#39;request&amp;#39;,(request,response)=&amp;gt;{
+   response.writeHead(200,{&amp;#39;Content-Type&amp;#39;:&amp;#39;text/plain&amp;#39;});
+   response.write(&amp;#39;Hello world&amp;#39;);
+   response.end();
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is a callback function. it basically listens to request and will respond with ‘Hello World’ and that’s it.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server.listen(3000,()=&amp;gt;{
+  console.log(&amp;#39;Node server created at port 3000&amp;#39;);
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Here we will telling it to listen to port 3000. This means our Node.js app / server will be running on localhost:3000 (you can change it to any you want). Remember, Angular app locally runs on localhost:4200, Ionic App runs on localhost:8100 etc.&lt;/p&gt;
+&lt;p&gt;Ok, so now we have some idea of what that code means. Lets actually run it. How will we do it? Simple. &lt;/p&gt;
+&lt;p&gt;(make sure you have node.js installed)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;node index.js    &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/2d9b7/runningnodejs.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.72185430463577%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAABWElEQVQ4y9XST0sCQRgG8BHdWXf2j5qQuyaBYmEWneyYB8Hdgui7dIyOJUWEmmQuuxjoR+hzdO/SMegLFB0En8ZhpbLM7NbCj+cdZuYdWF5yd3+Lx6cHvDy/4i/fYDAQhsOhSLK3v4tyeRuVSgXVahW2bcPZceA4gaC2HVvsTRrfGdckbiVAkkQIZUIgJq8NboGLcXqwDs4QMkNpq4TixhoKxQLWN4vIreaQWc4gZS3CWrJ4ppDNZ8F0BkVXoDBOmY7k8yuglEJTVchUhspUGEYMuqbB0A1oPGN8PdqjEhUpy/J7TiCmmUI4HBZNxyRJ+oLKVFwQOaVZ0NBEJBKZeuCj0WOzzszV8Df+QcN02hL/hjH24zhMiirR78cmEU/OHtZ5HJ8f4KJRQ7vdgef76PV6n/T7ffi+h2azCdd10e124XU8HNaPcHJ1hlb7BtetUzQu66g1XLwBMkeE1EjyjaQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Creating a new index.js file&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/b9e4f/runningnodejs.png&quot;
+        srcset=&quot;/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/cf440/runningnodejs.png 148w,
+/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/d2d38/runningnodejs.png 295w,
+/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/b9e4f/runningnodejs.png 590w,
+/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/2d9b7/runningnodejs.png 604w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;That message means our node.js app is running. (in case you want to stop &lt;code class=&quot;language-text&quot;&gt;control + c&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Awesome. Lets head over to &lt;a href=&quot;localhost:3000&quot;&gt;localhost:3000&lt;/a&gt; and see if it’s real.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/b9380/localhost.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 69.61722488038278%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAABm0lEQVQ4y62T3W/SUBiH+18bL/w/vDFxJroPcFgKgi6LF94tkpYBhVEKDMJayldpKUOgfTytGX7ELIvpL3mSvqc5T07e9xypePGVq8o139Q6Fa1BTTdoNDvUmwaVqk5O+cS70/dkzhWygpOszNuzc84EpxmZ45MMr98ck80Vefb8BVKnewtEfN9s2Ah2u91P9nuC9T22M8f11swWHvNlgDueMLtzGboBzsLF8rYMLBvP9/ggF5F6/Vu22y2+7+OvAuyxg2WPcSazpF7fb4R4zXLpsVytCEYDpoZNe77CmjuMg0gIh7gLi1L5M9JsOmUtNsT8K1EU8Xh+/S8UxAknk8kfm59EGBEeapIWxVFiodExkyIMw6cL/2Iv+h2nWPwohmL2DsL/zYOwXC4j1eqN1IRJD3W9lZowrxSQbtqd9IR5Jb6Hg9SEspxHGg76h8VY+kA8vd/rx4gfRpxcTkayrRFppVQSU/5yeUG/16V900po6jqmaTK6szC7PeKn2TY6NFstrms1NK2KqmmoqirQqIrvWlWl1zU5evWSH85LKq6KaL8EAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Localhost:3000&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/b9e4f/localhost.png&quot;
+        srcset=&quot;/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/cf440/localhost.png 148w,
+/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/d2d38/localhost.png 295w,
+/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/b9e4f/localhost.png 590w,
+/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/b9380/localhost.png 836w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;It is real :D&lt;/p&gt;
+&lt;p&gt;Okay, so we learned how easy it was to create a simplest server in Node.js. &lt;/p&gt;
+&lt;p&gt;But If we started building programming from the scratch like this, it would take a lot of time. That’s where &lt;strong&gt;Frameworks&lt;/strong&gt; come in. &lt;/p&gt;
+&lt;p&gt;Frameworks provide us alot of already built functions and modules which help us to easily build reliable applications using less code.&lt;/p&gt;
+&lt;p&gt;For Node.js, there are plenty of Backend Frameworks out there. Here’s a few
+&lt;a href=&quot;https://expressjs.com&quot;&gt;Express.js&lt;/a&gt;, &lt;a href=&quot;https://nestjs.com&quot;&gt;Nest.js&lt;/a&gt;,
+&lt;a href=&quot;https://loopback.io&quot;&gt;Loopback.js&lt;/a&gt;,
+&lt;a href=&quot;https://hapi.dev&quot;&gt;Hapi.js&lt;/a&gt;,
+&lt;a href=&quot;https://Koajs.com&quot;&gt;Koa.js&lt;/a&gt;,
+&lt;a href=&quot;https://sailsjs.com&quot;&gt;Sails.js&lt;/a&gt;,
+&lt;a href=&quot;https://meteor.com&quot;&gt;Meteor.js&lt;/a&gt;,
+&lt;a href=&quot;https://fastify.io&quot;&gt;Fastify.js&lt;/a&gt;, and many more.&lt;/p&gt;
+&lt;p&gt; Yes I know, so many. But it’s okay. We’ll only focus on one Framework. &lt;a href=&quot;https://expressjs.com&quot;&gt;Express.js&lt;/a&gt;. &lt;/p&gt;
+&lt;h3&gt;What is Express.js ?&lt;/h3&gt;
+&lt;p&gt;Express.js is a minimalistic framework written for Node.js. It helps us to build node.js applications especially apis very easily. &lt;/p&gt;
+&lt;p&gt;If you have heard of MERN or MEAN Stack, then you have also heard of Express. &lt;/p&gt;
+&lt;p&gt;M MongoDB&lt;br&gt;
+E Express.js&lt;br&gt;
+A Angular/AngularJS&lt;br&gt;
+N Node.js  &lt;/p&gt;
+&lt;p&gt;M MongoDB&lt;br&gt;
+E Express.js&lt;br&gt;
+R React.js&lt;br&gt;
+N Node.js  &lt;/p&gt;
+&lt;p&gt;There is also a MEVN Stack (V is for Vue.js).&lt;/p&gt;
+&lt;p&gt;Okay, so lets get back. &lt;/p&gt;
+&lt;p&gt;What we need to do now is to create a very simple &lt;strong&gt;express.js&lt;/strong&gt; application. &lt;/p&gt;
+&lt;p&gt;Before installing Express.js, we need set up our &lt;strong&gt;package.json&lt;/strong&gt;. How do we do that?&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will initialize your application with a package.json. Just keep pressing enter and you’re done. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/b1b29/npminit.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 83.98926654740609%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABJ0AAASdAHeZh94AAACUElEQVQ4y41TTW/aQBRcDNhrsI2xDbahqEDbS9vfVKlSL/2IUkEqAZVopDSJkka999ALkfhQWqWEAEn/3PTtGkeAAs1h9HYfeDzz3pj97P3A78sx5jd/MZ3dYja/xfX0BleTOcaTGS7H1/hzNaU6wWg0Qn8wwGAwxMXFL/T7dB4OqfbR6/XQOz8HKz+twipZ4EUd3OPQHA1agYPbBI1D5zpUVUUymZRIp9MEFalUanGOawRWe/IMQRigGPrwqYblEKVHZZTKJfi+L1EoFOC6HjKZjCRljG1GpfIYgR9I+EUfTt6BkTVgGiay2awkiasgUxQFiURiI1ieCBzHQRiGEvl8Hp7nyWrbNkzTBOd8RcVWQj8IJEEQRITCnphFPLP/KmJr91qtjlq9LokMw5Bqoj9uVrOtz6pEWK3WkMvl5Oa2DnyL3fg39vzFS6mO6zoUsqhpmlQpagxxFxARWSddfxHz/ciqaVkRTIs2Gm1Vp5eIGkPkceVhSbaYo+iLu+dGG/aLRbkcGc4HWL6zuN4veC4qlQpC2rZFEREWpTLKnswfQaVevO1lVfF5ZQRCoee6ZNWQRJqmSsR2dYJQvRyTO4v3LcfIRrNS6SHlPgsPCPMKYVYQZoRFHak0BTmpSCRTItiKhKIIwqU5rsx0gbjHbQ3MpIZN7BY1DCbvipEgywn6rhllVKENC5uRCmVd1fL53ftX6H7u4GB/HyfHRzg7PcH3s284/HqAbvcLDo+O0W610em00W630Gq15Hmv2cCnvSYazY94vfsGjd0PeLuzg3/GH68a7xp4/AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;npm init&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/b9e4f/npminit.png&quot;
+        srcset=&quot;/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/cf440/npminit.png 148w,
+/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/d2d38/npminit.png 295w,
+/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/b9e4f/npminit.png 590w,
+/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/f9b6a/npminit.png 885w,
+/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/b1b29/npminit.png 1118w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;btw if you want to open the folder from the terminal, &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;explorer .&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Okay, so lets take a look at the package.json file. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/0309e/packagejson.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 37.265625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABJ0AAASdAHeZh94AAABG0lEQVQoz3WRWW7DMAxEfZS08S5ZdrRY8pI0aYH+tPe/zpSk7QIF0o8BbS1vRmRmhggT74jXDxR1j3NlcC47lNrCuBm6H9GYgIZqRWuluqBohl0XUaUcau2kZq2JGJc7Hp/fMHbeNjtPBzwBPJZ+wjpMsPME97agcwm12valkvgOq+kCMtUn2OAx394JFJBTSnaXQ/T/GGZ8+SvSukL7JKDGHAqoOb1h8z2hsRNOucJrqUUvhRIxlA08GcYhQfkIRem0G6HsiC5EUtrW/ChQTksJowBOeSs6vhnYUDsSAVd6tnZRWlG1WxKpf2QpfeCE8y/kSLcBe2h7gyKY6iJaStmSOZs8E7+G25FxI58DB3Gs9uFUxyD+0TZpjx8wYNcbyAyqLwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;package.json&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/b9e4f/packagejson.png&quot;
+        srcset=&quot;/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/cf440/packagejson.png 148w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/d2d38/packagejson.png 295w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/b9e4f/packagejson.png 590w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/f9b6a/packagejson.png 885w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/2d849/packagejson.png 1180w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/0309e/packagejson.png 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;It’s a very basic and very simple package.json file. So we need to install express framework. &lt;/p&gt;
+&lt;p&gt;To install Express.js&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install express&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Once it gets installed, you will see it added in package.json dependencies. There will also be a node_modules folder.&lt;/p&gt;
+&lt;p&gt;Okay, so we’re set. We will replace the code in the index.js and create the same server with even less lines of code using Express.js Framework.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const express = require(&amp;#39;express&amp;#39;);
+const app = express();
+
+app.get(&amp;#39;/&amp;#39;, (req, res) =&amp;gt; { 
+  res.send(&amp;#39;hello world&amp;#39;);
+});
+
+app.listen(3000, () =&amp;gt; {
+  console.log(&amp;#39;Express application running on localhost:3000&amp;#39;);
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;we require &lt;strong&gt;express&lt;/strong&gt; package/module. We listen to port 3000 again. And any request on ’/’ will be responded with ‘Hello World’. Lets see this in action. &lt;/p&gt;
+&lt;p&gt;Lets run the code.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;node indexjs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Success :D We have an expressjs app running&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/6cc13/expresseg.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 35.42757417102966%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABJ0AAASdAHeZh94AAABOklEQVQoz42Qy0rDQBiFQ8nk1rS5YBc+T11a0EX2LrIQW4nZ5AncCb5DxY1QTfVNVCgtIm60IFSTgpMLJDk2E1qroPjDxxkG5pszw31QChpFiKIYSZIiTVO8BSFeZwEu/DP0z/vwb4a4uva/GPoYlpRr/xKDwQAPj0+YBXNw0UJGSymN8B4ECMM5aByjnB1rF7zOQ91UWQqGAGIQSJoAVeXRaNQYhNRwe3fPznBJkrBW65PnOUvLskB4gtZGC1pTg6Eb0DQdpmkuRE0IgsgQRRGTyaQSLiVFUazIsoztdTrb4Dhu0UaFLMsrJFliWa8rUJSK8XhcCddFP4Xt9hYT/ofRaPS94XrTvKiefHJ6DNu24XneCtd14TgOnCMHez0bh70D7He7eH6Z/i5cZpan+GsyVBcX7N8LtvoEgzKPvse9hAsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Express JS&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/b9e4f/expresseg.png&quot;
+        srcset=&quot;/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/cf440/expresseg.png 148w,
+/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/d2d38/expresseg.png 295w,
+/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/b9e4f/expresseg.png 590w,
+/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/f9b6a/expresseg.png 885w,
+/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/6cc13/expresseg.png 1146w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Lets go to a different URL.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/38c7b/cannotget.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 57.47800586510263%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABwElEQVQoz62Sy2sTURSH569S6saNDalIcCO4EsGNK6lYMGipBXXpwpUuxEc7mZk2pWkbW23FRwluFYTufNA2k0ky6WSSeeb5ee9AdGNbCh74cS7nnvOdc7hXefRUxyhssrj6juXie1Y2PrCy/pG1N58ovt2muLnNmvDa0mvuztwne2eGe7MPhB5yOzvNjckpbt7KJho7cxblmVrg4MAh8H1gyL+s1+vxc7dMpeZgOx61RitR1Q2w6i5OK+bXXoX0RAbl8ZM5giCg2+0SRRFBGGKLBuWyyd6+SbVuY9VsdvcrVO0GplWl3nCwTJPWtx1+fN/hy9cSnhcK4AWU9Y0tQgGM45hQAsXZaTZptdu0PR/fD/BFTDaKZE4YEXc6RCLWdxxct4FtV0R9h0zmIoplWbgC4AmALJTedZsMBgNOYnK7ZMJS6fOhScPh8FiNGssNx1PnUeTrHJY8gh5lo3sJTKcnUJ6r+T9djis+CihXTqUEcHJqOnnhfr+ffI+TStbKgXzx7c6Np1GuXrvO/7IEeOnyFZYLq+SXCuhGXmgRYyGPphvkcjq6voCmGaiqlmhuXmVe+Fzur2TOi5evOHV6jN9iRBP43+qTIQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Express JS Route error&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/b9e4f/cannotget.png&quot;
+        srcset=&quot;/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/cf440/cannotget.png 148w,
+/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/d2d38/cannotget.png 295w,
+/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/b9e4f/cannotget.png 590w,
+/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/38c7b/cannotget.png 682w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Oops. It says no such URL exists. and its right. We only set up ’/’ route. &lt;/p&gt;
+&lt;p&gt;If we change ’/’ to ’*’, This will show hello world page.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.get(&amp;#39;*&amp;#39;, (req, res) =&amp;gt; { 
+  res.send(&amp;#39;hello world&amp;#39;);
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;hint: Whenever you change code, you have to restart the server. Meaning you have to &lt;code class=&quot;language-text&quot;&gt;ctrl + c&lt;/code&gt; and then &lt;code class=&quot;language-text&quot;&gt;node index&lt;/code&gt; again. This becomes tiring. However, there is a solution, there’s a global npm module for this called &lt;strong&gt;nodemon&lt;/strong&gt;. Lets install nodemon globally.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install -g nodemon &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Cool. Now we want to display a separate page for students.&lt;/p&gt;
+&lt;p&gt;Lets change it with this&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.get(&amp;#39;/&amp;#39;, (req, res) =&amp;gt; { 
+  res.send(&amp;#39;hello world&amp;#39;);
+});
+app.get(&amp;#39;/students&amp;#39;, (req, res) =&amp;gt; { 
+  res.send(&amp;#39;Hello students&amp;#39;);
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and now we’ll run it using nodemon &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;nodemon index&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;now whenever you change content of file, it will automatically reload.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/b938d/students.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 58.06111696522655%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABJ0AAASdAHeZh94AAACgElEQVQoz22TyU/bQBSHfSEmC6g9UNVZgBSq0n+nqgTHVl3/kEqteuCIEAkIiV6qtoAqUERya6EkEZgshqQYxwkhkIQtJosIif3rs83SQ570aZ5n5n0zmhkzmWwBcq6AlJiD8DeHPbmAtJjFZiKNjVgKm/E0IvwO1vht/I4msRZJYH1DwHIghG/zPzG/uIQfi8v4vrCEj5/HwWiaimaziWq1iosLBZeXTdTqdRTLxzitKDg5qxitclBARTlDXjlH8aSCw+oV6jSvcdnC8WkJ58opwpENMHqnLtMlZ1RcPjmCoii0SAt6qKoGVdOAag3QWjjX2mi0NTT1sbY5p1arUG0Zq6t/wDQaDdrZBTS9iOLr/Cw+jX/A9OwM/LN+kxk/fHP0Pe3HjM+PaT/1+XyYmprC5OQkJiYmIMtZhMMRMLiO1vVqz148B3OfAfOAeHjd3iOcRA/BdCYQCCAWT5jCdrt9Kxx7PwbGy8DxxAHriBXWYWKIeEp4CTvRTVhN7Ha7IQyFQtiKxUyhqqq3wtF3o2AGGNiGbWAfs2CHiAFihOgnugkLwZroUl0YDAZph/EOwjck5Eg4SMJHVOQlnKwp5+5EHYWxTsLXY8bZ6ULLoAUWD+EmvBawbpJYWXR1dd1iIemNkN+K/XeGrStD+OrtS1h7u+EZ7IdrwAXOxcHV7wTn5sB5nHB73Ojr6wNrY2Fz2NHb4zCEKytBJJOJu1u+CSEdxXr4F3a2U8hIkoGckelZyNgWBAiEJEpYTa4hupNASogjyvNQqnXwPD3s/H4O0p6IXDYDPS8VSzgqllGiP6VYOqa8BEnKILefR/7g0MhFcY9qJIPdXRGijriLubkv+Afnf5W6qoNBWAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Students Page&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/b9e4f/students.png&quot;
+        srcset=&quot;/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/cf440/students.png 148w,
+/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/d2d38/students.png 295w,
+/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/b9e4f/students.png 590w,
+/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/f9b6a/students.png 885w,
+/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/b938d/students.png 949w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Great. But actually we want to use it as a REST API. That means we want to send / receive JSON. &lt;/p&gt;
+&lt;p&gt;What we want here is to send us the list of students as JSON instead of displaying ‘hello students’ because frankly thats pointless and useless :D &lt;/p&gt;
+&lt;p&gt;Ok, so for now, we’ll use a dummy Array of students&lt;/p&gt;
+&lt;p&gt;Let replace that ‘/students’ route with this&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.get(&amp;#39;/students&amp;#39;, (req, res) =&amp;gt; { 
+
+  const listOfStudents = [
+    {id: 1,name: &amp;#39;Ali&amp;#39;},
+    {id: 2,name: &amp;#39;Ahmed&amp;#39;},
+    {id: 3,name: &amp;#39;Danish&amp;#39;},
+  ]
+
+  res.send(listOfStudents);
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now when I open &lt;a href=&quot;http://localhost:3000/students&quot;&gt;localhost:3000/students&lt;/a&gt;, I see this&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/be8fa3f2817614e54c257e461eeab740/e1ed5/jsonres.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 55.291576673866096%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAA10lEQVQoz+1QW5KDIBDk/sfLZzaJG0lYd0VF5SEo9g4kegI/Q1VX98x09UzBatlAqT6j6xS0sZiXBbJVOF9LFOUPbneBIuOJW/nS129B+jW7FJy8d+IHmPceCcZayKZF9fuHpu2ylsTDqNENI3pa7HiJ2msUSoJLi3ow6JWCDzO+Lic6RoOFEDATEqfgaZp2bMtCnhO/e47qiZhzDiEEpJSoqgrGGDDnHBK0NnB05VZb0skw0oW7h+rUS764Riz0NRtijHkxw4EvB67riiOwBx5x2Sfw2MB/DRJet2OjlCYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Students Page&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/be8fa3f2817614e54c257e461eeab740/b9e4f/jsonres.png&quot;
+        srcset=&quot;/tech-blog/static/be8fa3f2817614e54c257e461eeab740/cf440/jsonres.png 148w,
+/tech-blog/static/be8fa3f2817614e54c257e461eeab740/d2d38/jsonres.png 295w,
+/tech-blog/static/be8fa3f2817614e54c257e461eeab740/b9e4f/jsonres.png 590w,
+/tech-blog/static/be8fa3f2817614e54c257e461eeab740/f9b6a/jsonres.png 885w,
+/tech-blog/static/be8fa3f2817614e54c257e461eeab740/e1ed5/jsonres.png 926w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;If you install a Chrome extension (&lt;a href=&quot;https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en&quot;&gt;JSON Formatter&lt;/a&gt;), you will see JSON in a formatted way which looks nice.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/1b685781ca7d445f63097b5f12faf084/04090/formatter.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAABJ0AAASdAHeZh94AAAB4klEQVQoz4WQS2/TQBSFK5BYVCyaBSzohn+FxAbllyChCoF4tWJBikQX3UTCUCoakhDsOA/bsR07OElxHUVFKTglLkLO2FO/Mo65ThewaNUjzZw7c+eb0ZwlVTN6+mFD2m+puto1OKlXrkolRtwtNalPjQ9Fbmv77aPHz548f7n28OmLjdydu/durd4WBDFJkqWD4SiOSeB7tm1jjJHrWr//2MiFcToeTzA6Rs4JJi72po4bzrw3W9s3bq6KopTC2v4QLAyjIIz8IIBidiZC5rCISUjI1METyzLNsWVNjn9NaIZtt5UULpa+gDlwaxQlyTw5X3PXdacIYXxKYmKapqp2Upii3oO5Lg6iEBrno/MFbNsIIVha1olyBu/s7IJhgMNgFs8ugiEOCMUPfIScRpNrK8o/GLa8wI9IdBEMIXieB/X6+sZKJiPJi8DoSnkRGOSSCs7F/4nATxaCOgpDOJnLvcqsZHheSOHPxY9g0E4uEzwO8+bm6+Xl64LQSuG1B/ebNYaly4rIK7LU63/TDwbq1x7fkth6k2HrhUIRQqWod/l8vrC3l81mr1y9Vqs3UliWRFnktY5s6P2BoY9GRz9+moffj4zBUOv2O1oXHmEYtlqt0jRdqVRqtTrHCRAewH8BWJ885HQGyk0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Students Page format&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/1b685781ca7d445f63097b5f12faf084/b9e4f/formatter.png&quot;
+        srcset=&quot;/tech-blog/static/1b685781ca7d445f63097b5f12faf084/cf440/formatter.png 148w,
+/tech-blog/static/1b685781ca7d445f63097b5f12faf084/d2d38/formatter.png 295w,
+/tech-blog/static/1b685781ca7d445f63097b5f12faf084/b9e4f/formatter.png 590w,
+/tech-blog/static/1b685781ca7d445f63097b5f12faf084/f9b6a/formatter.png 885w,
+/tech-blog/static/1b685781ca7d445f63097b5f12faf084/04090/formatter.png 1152w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;So what we learned so far?&lt;/p&gt;
+&lt;p&gt;We learned to create a simple GET request in Node.js which returns list of students. But we used static data. How does it work in real app?&lt;/p&gt;
+&lt;p&gt;its something like &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.get(&amp;#39;/students&amp;#39;, (req, res) =&amp;gt; { 
+
+&amp;lt;!-- listOfStudents = get students from mysql/mongodb/whatever database  --&amp;gt;
+
+  res.send(listOfStudents);
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;That is not an actual query&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We will look at this in detail in &lt;strong&gt;Part 2&lt;/strong&gt; of this tutorial.&lt;/p&gt;
+&lt;p&gt;Lets wrap this up and make it handle all scenarios&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const express = require(&amp;#39;express&amp;#39;);
+const app = express();
+
+app.get(&amp;#39;/&amp;#39;, (req, res) =&amp;gt; { 
+  res.send(&amp;#39;Welcome to my Node.js app&amp;#39;);
+});
+app.get(&amp;#39;/students&amp;#39;, (req, res) =&amp;gt; { 
+
+  const listOfStudents = [
+    {id: 1,name: &amp;#39;Ali&amp;#39;},
+    {id: 2,name: &amp;#39;Ahmed&amp;#39;},
+    {id: 3,name: &amp;#39;Danish&amp;#39;},
+  ]
+
+  res.send(listOfStudents);
+});
+app.get(&amp;#39;*&amp;#39;, (req, res) =&amp;gt; { 
+
+
+  res.send(&amp;#39;Page Doesnot exists&amp;#39;);
+});
+
+app.listen(3000, () =&amp;gt; {
+  console.log(&amp;#39;Express application running on localhost:3000&amp;#39;);
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We added a wildcard (*) route which will display whenever any url other than ’/’ or ‘/studentslist/’ is hit. &lt;/p&gt;
+&lt;p&gt;This was a very basic intro to Node.js and Mongodb. In part 2, we will set up a simple Node.js but with login functionalities (Login / Signup) which means we will cover MongoDB as well. &lt;/p&gt;
+&lt;p&gt;If you have any questions, you know where to find me :)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Introduction to Containers and Docker]]></title><description><![CDATA[Containers, Docker and Kubernetes have become the new buzzwords in tech (in this post, I won’t talk about Kubernetes). However, they’re…]]></description><link>https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</guid><pubDate>Thu, 22 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/61857/docker.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 29.673590504451035%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABP0lEQVQY02NgAAL25uNMDFDAVrlDmL3pKCtYvPUkE2vCJAa2vOUMrDlLIDh3KRAvYWAD0UA+W85SMBuIGRmQDWOv3SvP0XwsH2jIYbbcZQKMpv5wS0gGQFepc7Qcv8LWf/M/e9vpP2y1e7s4eq/tZG85EclkHsQKtMAF6AJ51pyl7Gy5S4B4qTXQpVJAF7IA2YJANhcQy4BcCgYcPVemMy788Z976v1PnNMe/+VY+PU/R9+NvezVuyxYcxZHAxV2ATWUAelkIM4A4hS2nCW9QDoNiHtAGGi4A8KJzecCXNa/+u+z9/d/lvlf/nNOeXCGrXyLGNj1ucuSgIrDgS5LABoaA8SJwHALA+JoqAUNQMMj4WYt/P4fTF+8fNUsf9vdVIbGM55qYvwsIDHeu/8ZWGK6MYModykLuhjQUkaQlwFWhIFp408gUAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Docker&quot;
         title=&quot;&quot;
-        src=&quot;/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-fb8a0.png&quot;
-        srcset=&quot;/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-1a291.png 148w,
-/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-2bc4a.png 295w,
-/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-fb8a0.png 590w,
-/tech-blog/static/docker-5a2256575c8ee60a661d5ec9c3b1ef83-ed992.png 674w&quot;
+        src=&quot;/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/b9e4f/docker.png&quot;
+        srcset=&quot;/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/cf440/docker.png 148w,
+/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/d2d38/docker.png 295w,
+/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/b9e4f/docker.png 590w,
+/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/61857/docker.png 674w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -35,15 +636,108 @@
 &lt;p&gt;Containers, Docker and Kubernetes have become the new buzzwords in tech (in this post, I won’t talk about Kubernetes). However, they’re correctly being hyped because they are indeed the future of how applications will be built. Infact, using Docker now is becoming extremely common.&lt;/p&gt;
 &lt;h2&gt;so what is Docker?&lt;/h2&gt;
 &lt;p&gt;Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Docker is a technology that allows you to incorporate and store your code and its dependencies into a neat little package - an image.&lt;/p&gt;
-&lt;p&gt;A docker image holds your source code and the dependencies it needs. Lets say you have a Node.js app, A docker image of your app will contain the code + the node_modules and everything that’s needed to run your Node.js app. &lt;/p&gt;
-&lt;p&gt;So now we know what a Docker Image is, let’s talk about Containers. &lt;/p&gt;
+&lt;p&gt;A docker image holds your source code and the dependencies it needs. Lets say you have a Node.js app, A docker image of your app will contain the code + the node_modules and everything that’s needed to run your Node.js app.&lt;/p&gt;
+&lt;p&gt;So now we know what a Docker Image is, let’s talk about Containers.&lt;/p&gt;
 &lt;h2&gt;Containers&lt;/h2&gt;
 &lt;p&gt;Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.&lt;/p&gt;
-&lt;p&gt;Containers are encapsulated environments in which applications are run. A container is defined by the Image and configuration options. Containers basically are where the (Docker) Image runs.  &lt;/p&gt;
-&lt;p&gt;Now you can have many containers running the same Docker Image since a Docker Image it has all it needs (code + dependencies/configuration). Now you can increase and decrease the number of containers to scale your application. How easy is that. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Exposing your app in Kubernetes]]></title><description><![CDATA[Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications built by Google…]]></description><link>https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</guid><pubDate>Thu, 08 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+&lt;p&gt;Containers are encapsulated environments in which applications are run. A container is defined by the Image and configuration options. Containers basically are where the (Docker) Image runs.&lt;/p&gt;
+&lt;p&gt;Now you can have many containers running the same Docker Image since a Docker Image it has all it needs (code + dependencies/configuration). Now you can increase and decrease the number of containers to scale your application. How easy is that.&lt;/p&gt;
+&lt;!-- Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications built by Google. Kubernetes has now become the leader in container orchestration.
+
+There are different ways we can expose our Kubernetes Deployments.
+
+### 1. Load Balancer
+
+Kubernetes provides a simple HTTPS L7 Load Balancer. In order to expose a deployment, run this command in Kubectl. Here, myapp is our deployment which is available via ClusterIP but isn&apos;t exposed to the outside world.
+
+```javascript{numberLines: true}
+kubectl expose deployment myapp - type=&quot;LoadBalancer&quot;
+```
+
+### 2. Ingress
+
+Ingress can be considered as a fancier Load Balancer with more configurations. In Kubernetes Engine, Ingress is implemented using Cloud Load Balancing. When you create an Ingress in your cluster, Kubernetes Engine creates an HTTP(S) load balancer and configures it to route traffic to your application. We can set up several rules for our load balancer. Ingress can also help in exposing multiple services via a single host endpoint with different URLs.
+
+In order to set up Ingress, we need to do 2 things.
+
+1. Reserve a static IP on Google Cloud.
+
+2. set up SSL of our domain. (needed if you want to expose to a custom domain e.g myapp.com instead of a reserved IP address).
+
+Step 1:
+
+Run the following command and make sure you have Google Cloud SDK (https://cloud.google.com/sdk/) installed and configured.
+
+```javascript{numberLines: true}
+gcloud compute addresses create kubernetes-ingress - region us-central1
+```
+
+This will reserve a static IP with the name kubernetes-ingress.
+
+Step 2:
+
+Download the private key for your custom domain.
+
+Run the following command to generate the RSA Private key
+
+```javascript{numberLines: true}
+openssl rsa -in private.key -out private_rsa.key
+```
+
+if you get passphrase error, run this
+
+```javascript{numberLines: true}
+openssl rsa -in privateKey.pem -out newPrivateKey.pem
+```
+
+Now run:
+
+```javascript{numberLines: true}
+kubectl create secret tls ingress-ssl - key private_rsa.key - cert mycert.crt
+```
+
+This will create an SSL configuration named ingress-ssl. We will use this configuration for our Ingress.
+
+Here&apos;s a yaml configuration file for Kubernetes Ingress. This yaml file can be deployed.
+
+```javascript{numberLines: true}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+name: kubernetes-ingress
+# kubernetes-ingress is the name of static ip we&apos;ve reserved in #Google Cloud
+annotations:
+kubernetes.io/ingress.global-static-ip-name: &quot;kubernetes-ingress&quot;
+spec:
+tls:
+- hosts:
+- myapp.com
+secretName: ingress-ssl
+backend:
+serviceName: myapp
+servicePort: 80
+```
+
+### 3. Port-Forward
+
+Port-forward basically exposes a service running in Kubernetes cluster and maps it to a local port on your computer. The below command is an example. It exposes my service prometheus from namespace &apos;monitoring&apos; and it maps it to localhost:8082. This can be ideal for testing purposes and for services that you do not want to expose to the outside world but might need for testing for your own.
+
+```javascript{numberLines: true}
+kubectl port-forward svc/prometheus - namespace monitoring 8082:9090
+```
+
+Which one should you use?
+
+Load Balancer is ideal if you are testing and only have a single service that you want to expose. Mostly this is not the case and thus this can become expensive.
+
+Port-Forward is mostly for testing locally and not an option to expose for production.
+
+Ingress is the most likely solution as it provides more customization and offers much more.
+
+There are also other ways to expose your Kubernetes service. Have a look at Istio (a service mesh) or an API Gateway like (Express-gateway for Node.js). --&gt;</content:encoded></item><item><title><![CDATA[Exposing your app in Kubernetes]]></title><description><![CDATA[Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications built by Google…]]></description><link>https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/exposing-your-app-in-kubernetes/</guid><pubDate>Thu, 08 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-2e2e8.jpg&quot;
+    href=&quot;/tech-blog/static/50d20da9d7a68b328a5dbbb5691ecadb/0a443/kubernetes.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -55,20 +749,20 @@
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 52.018229166666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsSAAALEgHS3X78AAABCUlEQVQoz2P4jw38A5Ofv/8FIjgXEzBg1fbt57+5+z76dT8L7ns+d//H779Awv/+EdL85y9ISd/W9/aNTzo3vpu47QOQ0b/1PVDw71+8muFmx0x50b7h3eEb3w9f/96y7l3slBeEnQ3R/OXHX4+2p20b3p24/f3Q9e+t6995tT/9+uMvpsvRnQ129f+Vxz6bVj+qW/0WiMyqH6849hkuhTfA/kEVzdj9MXryi6jJL2bu+QgOCyI0kwQYkGMI6Ns9l79dffxz96Vvp+/+OHX3x8k7P87e+7Hv6jcg4+azX/hs/vn7365LX7df+Lrj4tdNZ7/uufLt6I3vW8592Xb+67pTn4/c+I6mGQBNui8gZLQFsgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 52.018229166666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAd6ZyUawCv/EABoQAAICAwAAAAAAAAAAAAAAAAARATECAxL/2gAIAQEAAQUClrV0zOos/8QAFhEAAwAAAAAAAAAAAAAAAAAAARAx/9oACAEDAQE/ATV//8QAFhEAAwAAAAAAAAAAAAAAAAAAARAx/9oACAECAQE/ARF//8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAECExYf/aAAgBAQAGPwIrcy12xX//xAAaEAACAgMAAAAAAAAAAAAAAAAQIQBxMUFh/9oACAEBAAE/IaoUb0n2Mdnf/9oADAMBAAIAAwAAABBYD//EABURAQEAAAAAAAAAAAAAAAAAABAx/9oACAEDAQE/EIH/xAAVEQEBAAAAAAAAAAAAAAAAAAAQMf/aAAgBAgEBPxCh/8QAHRAAAQQCAwAAAAAAAAAAAAAAARARITEAQVHw8f/aAAgBAQABPxDQZJctGexp11lgjebCf//Z&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Kubernetes&quot;
         title=&quot;&quot;
-        src=&quot;/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-f8fb9.jpg&quot;
-        srcset=&quot;/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-e8976.jpg 148w,
-/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-63df2.jpg 295w,
-/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-f8fb9.jpg 590w,
-/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-85e3d.jpg 885w,
-/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-d1924.jpg 1180w,
-/tech-blog/static/kubernetes-50d20da9d7a68b328a5dbbb5691ecadb-2e2e8.jpg 1536w&quot;
+        src=&quot;/tech-blog/static/50d20da9d7a68b328a5dbbb5691ecadb/c739e/kubernetes.jpg&quot;
+        srcset=&quot;/tech-blog/static/50d20da9d7a68b328a5dbbb5691ecadb/8ee9c/kubernetes.jpg 148w,
+/tech-blog/static/50d20da9d7a68b328a5dbbb5691ecadb/ebbe7/kubernetes.jpg 295w,
+/tech-blog/static/50d20da9d7a68b328a5dbbb5691ecadb/c739e/kubernetes.jpg 590w,
+/tech-blog/static/50d20da9d7a68b328a5dbbb5691ecadb/5413e/kubernetes.jpg 885w,
+/tech-blog/static/50d20da9d7a68b328a5dbbb5691ecadb/4efde/kubernetes.jpg 1180w,
+/tech-blog/static/50d20da9d7a68b328a5dbbb5691ecadb/0a443/kubernetes.jpg 1536w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -85,12 +779,8 @@
 &lt;p&gt;Ingress can be considered as a fancier Load Balancer with more configurations. In Kubernetes Engine, Ingress is implemented using Cloud Load Balancing. When you create an Ingress in your cluster, Kubernetes Engine creates an HTTP(S) load balancer and configures it to route traffic to your application. We can set up several rules for our load balancer. Ingress can also help in exposing multiple services via a single host endpoint with different URLs.&lt;/p&gt;
 &lt;p&gt;In order to set up Ingress, we need to do 2 things.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Reserve a static IP on Google Cloud.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;set up SSL of our domain. (needed if you want to expose to a custom domain e.g myapp.com instead of a reserved IP address).&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Reserve a static IP on Google Cloud.&lt;/li&gt;
+&lt;li&gt;set up SSL of our domain. (needed if you want to expose to a custom domain e.g myapp.com instead of a reserved IP address).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Step 1:&lt;/p&gt;
 &lt;p&gt;Run the following command and make sure you have Google Cloud SDK (&lt;a href=&quot;https://cloud.google.com/sdk/&quot;&gt;https://cloud.google.com/sdk/&lt;/a&gt;) installed and configured.&lt;/p&gt;

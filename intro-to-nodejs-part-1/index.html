@@ -1,0 +1,618 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link rel="apple-touch-icon" sizes="256x256" href="/tech-blog/icons/icon-256x256.png?v=ab9d362a82390b1b299fe1144c79b26d"/><meta name="generator" content="Gatsby 2.15.36"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/tech-blog/rss.xml"/><link rel="shortcut icon" href="/tech-blog/icons/icon-48x48.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="manifest" href="/tech-blog/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/tech-blog/icons/icon-48x48.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="72x72" href="/tech-blog/icons/icon-72x72.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="96x96" href="/tech-blog/icons/icon-96x96.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="144x144" href="/tech-blog/icons/icon-144x144.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="192x192" href="/tech-blog/icons/icon-192x192.png?v=ab9d362a82390b1b299fe1144c79b26d"/><style data-href="/tech-blog/styles.75d456e0bf8bd0a47aa1.css">.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><link rel="apple-touch-icon" sizes="384x384" href="/tech-blog/icons/icon-384x384.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="512x512" href="/tech-blog/icons/icon-512x512.png?v=ab9d362a82390b1b299fe1144c79b26d"/><title data-react-helmet="true">A very basic introduction to Node.js - Part 1 | tech-blog</title><meta data-react-helmet="true" name="description" content="What is Node.js ? Node.js is basically a run-time environment that helps us run JavaScript code on the server. That means just like PHP…"/><style data-href="/tech-blog/commons.c6dceef504ade98e991f.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/tech-blog/static/montserrat-latin-100-50d279861fb3cbfed809eae6ed8b9ac9.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-100-5e334eff013f12fbb8ed72c2a253f119.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/tech-blog/static/montserrat-latin-100italic-8c0705336558194799a8729840d7ed9d.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-100italic-03e19243272affe738654a157625ec26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/tech-blog/static/montserrat-latin-200-4343d3d91a9446226e7a8bbb024111ad.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-200-f2022ecd65a0703ec3edcb7641709a75.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/tech-blog/static/montserrat-latin-200italic-116c4c4b14ef76b0555da09854512022.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-200italic-89614a6008fc5c60739012463d0ee7e6.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/tech-blog/static/montserrat-latin-300-d2ad295b60682a6537c358e06ea80c61.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-300-3a371ee0d175f5c2b15ce1d6b981dc4e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/tech-blog/static/montserrat-latin-300italic-f6b6bf2431003f8142e800f9df157989.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-300italic-16521668f5f238098329cdd7d27c391e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/tech-blog/static/montserrat-latin-400-240a84447b78da0920fcb07e378f2c5f.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-400-b20cc131034316b1c85d0498fb9ed5c5.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/tech-blog/static/montserrat-latin-400italic-86172bb829de6be08b92512096b6aca6.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-400italic-9405e78785a55cf0e4ea7669d4616ea9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/tech-blog/static/montserrat-latin-500-fb8d6b71dbe8d9294be43082936f649e.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-500-50825d47af7ae47e055018eb689c6c99.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/tech-blog/static/montserrat-latin-500italic-c0a555a4f8e997385a3eebbd4da0b9ee.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-500italic-635de59c4be86285b1f70068c95b9816.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/tech-blog/static/montserrat-latin-600-d5615136a08cfee70deb4be1ee1651df.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-600-f300da4fb4fe00e23915f62b2c643681.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/tech-blog/static/montserrat-latin-600italic-10f29d139edacde92df63374c5672568.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-600italic-2bc37d86a4ba12ce526c4af904a9946e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/tech-blog/static/montserrat-latin-700-7d77e1f03eefc452dab14d7f89080083.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-700-81826529772e52f0f14a4c73c2f2c7f1.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/tech-blog/static/montserrat-latin-700italic-1dd2b53f1567a29e0505de9b27c4352c.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-700italic-c162d257f5e9f9b108a96a604cfb2132.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/tech-blog/static/montserrat-latin-800-d4e7bf86bbd8e5f43ca73fa831218648.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-800-895aadbff357be35ac8dd107c7975ee7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/tech-blog/static/montserrat-latin-800italic-fc0cbe442f7b3733c91e982e825c4daa.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-800italic-b3362875067300abedb7a8fb97903258.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/tech-blog/static/montserrat-latin-900-c8bdd772c0d1347720ff7e3fb72719f3.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-900-1b99ef78e627dd9bbd0ca4b5c0789547.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/tech-blog/static/montserrat-latin-900italic-cb72c1f90f66c124fb897a75bec64c78.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-900italic-b78bb9f8ecec6c5a924c873f1818095f.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/tech-blog/static/merriweather-latin-300-f015f1e9a46a3b9db4fd64564dacece4.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-300-92dfe81b725c342d31d962da975c07a6.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/tech-blog/static/merriweather-latin-300italic-7fd86b32accf2df4403d1d4fa3a81502.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-300italic-878b76f59d5ba58dd1652dc8d2a0f4f9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/tech-blog/static/merriweather-latin-400-12dbf4c00ae43698f278b099e4b0ec9e.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-400-1fffad22b085a877995812dbf1d9ac08.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/tech-blog/static/merriweather-latin-400italic-1e0d3e8121d88969bfb153c8f174b758.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-400italic-de18d4c4e8e808a7248a185f866ff094.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/tech-blog/static/merriweather-latin-700-dc8fec81a125fc63856587e6683da73b.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-700-d7d2ed8e58f303392cc3fc00ba3a9186.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/tech-blog/static/merriweather-latin-700italic-b7b7e5da4d7be8c12bd5a6c809edc8fc.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-700italic-6210a5fc1c54ca85a5d82aa85d7a9b5c.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/tech-blog/static/merriweather-latin-900-43f870d543dd89fbeb66d417c0d97276.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-900-8f3806df74937c7b8b53f24ae1e725d1.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/tech-blog/static/merriweather-latin-900italic-168c1ab28ed0e4e7d654334def288bc1.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-900italic-ae7778f01871e35ee142ef207b313b34.woff) format("woff")}</style><link as="script" rel="preload" href="/tech-blog/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js"/><link as="script" rel="preload" href="/tech-blog/styles-fb92ae544d11cf3b4d1f.js"/><link as="script" rel="preload" href="/tech-blog/commons-5a145b310810eef08c08.js"/><link as="script" rel="preload" href="/tech-blog/app-13a28d1403ec4481c4eb.js"/><link as="script" rel="preload" href="/tech-blog/webpack-runtime-4eb88b68c6ccf5138c74.js"/><link as="fetch" rel="preload" href="/tech-blog/page-data\intro-to-nodejs-part-1\page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/tech-blog/">tech-blog</a></h3><h1>A very basic introduction to Node.js - Part 1</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">October 12, 2019</p><div><p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVQoz32ST0sbURTF37xUlyq4iYotFilvJkqCmHkUyfyLSi2lLhS0Gy2lioi68QuYMaZoxbroF5B2UREXhX4G0cTWUHWjErMRim7cdTme+5IganDgcOfNnPnNu/cdxh65bMdUNWHF6Z47rlTrSq160UtS8lXJtLBjsPSBzvysrtaWE3/gdz3JegdKP0vtGWwpr7OFXcFWTyPKwNXfPcnJsPhb56ms4Iv7Ojc7XlYgDdA0FII0+EO2I3kQMJb+o2vkAVR7sNv3S9E769cj3cq0Mr9M0EuAwtW6BKyW6upZhJMxCf1yk9Kjh35OT2CX31BdWru9Mk7vCeh4Zh12Fk/0yG3U/nJHBkZkQxG0XE/A/9AP25b/xlOxcPpAXK2ddwSo15Pr0WbLkgWMY8NxzQvcPwe0+HasO4dvdqa+Rhszh2IQbX8AcC7z16gjYPHNO7MGwPzwTNfTdF4UvhQ7CXgxsRYL25Y8gWcLKgDYXAZuJvtl08/g2RPskGAfoVkAGwj4grbu9ZntjA3xT8dCwPQZpxwttxyD5zskS1GSnWh5HbVVjWjPaMEMe6C227xZ1XM17sfunJxlmdr9CFXLoTLhULRG5rLMkdD8nAj5+6UYIHMqJhSvih/zDFVgftbQMEPKrhYEo+wGOwusfLZj/14AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Intro To Node.js"
+        title=""
+        src="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png"
+        srcset="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/cf440/node-js.png 148w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/d2d38/node-js.png 295w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png 590w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f9b6a/node-js.png 885w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png 960w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h2>What is Node.js ?</h2>
+<p>Node.js is basically a run-time environment that helps us run JavaScript code on the server. That means just like PHP, Ruby, Python,
+Golang etc, You can use JavaScript on the server. Node.js is ideal for building REST APIs.</p>
+<h3>Why is Node.js famous?</h3>
+<ul>
+<li>Front-end developers who are familiar with JavaScript don’t have to learn a new language to write backend. </li>
+<li>Node.js is fast and scalable.</li>
+<li>Very large ecosystem (npm biggest package manager in the world).</li>
+<li>Asynchronous or non-blocking nature.</li>
+<li>It is easy to get started.</li>
+</ul>
+<p>However, remember it has its use cases. It is not ideal for CPU intensive tasks but very good for Asynchronous / Real-time tasks. We’ll go over them soon. </p>
+<p>So lets get started. </p>
+<h3>Writing my first program in Node.js</h3>
+<p>First, let’s setup our project. we need to make a new folder. </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mkdir firstnodejsapp</code></pre></div>
+<p>will create a new folder with that name</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/970f7/firstnodejsapp.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 583px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 57.804459691252156%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABJ0AAASdAHeZh94AAAC8klEQVQoz32S7U9TZxiHn3NOzzmlU4puULPBnERDHIJWFGSAxPhhnzRRgy/UdjqkYUZnomR+XDI2ZiSDSKF2wHizTMJLxVYbREQo0qLBSYhKsre/wWR/wOXTolG+7MOV+zl3nlznd995xLOlv5iJL3FjdJrekRlaeiYIhiYYj4VZWFxm8fnfLC3/yzNZF1/I88t/eLr0J39IEgsvmHvynPjCS+lYpOn6IOLx02WC4TjNfZN8H4hS3xKm0T9Az0Aj4bHb3L83yZP4Y+bnEszHJXPzzM0+IpFIMBuL8Wh2lkQ8zvT0Q3wdvyN6R2O09E9y9bdxrnaEae6O4jpzCaFbUNI0hFVBpAmEKTHeVtkTCoqipkiedd2kYMduRFtfFH/fHfy9Edq6x/D338VdewF7TjqObQ7sm+ysL/wIxw4HWXlZZBVmYTqsaKoFTbOgahqqmhQrfLoxF9ExEKUjGOV6f4TWrlHae8Zw15zHTDOwf5iBba2NNevWkL4+XX7bycjMwEgzV2RvRG/5PL8Q4e8eobVziGudI1zxBWlqH+SYpw5zg4n6sYa2QZIrR88WKA45Xo5AzVwRCSFW1U25mxGhGw3EI9/hOX2WK7+009jcyTFXDTarDUM10DUjVTVF7lSoqEKT9Z3kfeEn2RsRl7+twvdjFVvyttPwQyOvXv2Hz9eWumSaJoYhhaYUG3pqX4qqrKCsJjl+ds5niF0lFTh3SXaWUFRUys2bQwQCgZRQ13UslpVdJUn2/o9UwuKScgq272ZrvpNtBU7Kyvdx4MAhPrCtlQmtWK1WmdJcJTY0+SOZVtNU2Tdkcgu6RSMnmbC8rJKKin2UlFZSvGcvzqIyjrtcXOuqJxIJE7o1xoOpKWLyESeZic3QEPqZ4chtQnemiAz/yvDoEF2DYb4or0SU7iljb+V+9n95kINH3HjPX+anplY6g900twY4e+4i3rpzeL3fUFtbx9c1Xg5/dRT3qRqqPWfwnKzmhMtN1QkPBYVOXgN1cdAp2XOySgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Creating a new folder"
+        title=""
+        src="/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/970f7/firstnodejsapp.png"
+        srcset="/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/cf440/firstnodejsapp.png 148w,
+/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/d2d38/firstnodejsapp.png 295w,
+/tech-blog/static/1a7530250b35ce33e45b790bd6c836c6/970f7/firstnodejsapp.png 583w"
+        sizes="(max-width: 583px) 100vw, 583px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Cool. Now lets go into that directory</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">cd firstnodejsapp</code></pre></div>
+<p>Great. Now lets create a file. We need to create any js file. lets create an index.js file. </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">touch index.js</code></pre></div>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/a93b18e0209115830321f15817ecee96/d5c82/mkdircommand.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 57.40971357409714%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAB8klEQVQoz42SW08TQRTHd9vS3aUBSrc3Ci7S0meNL4o0UWLipzIxvvjmQ4GaVOJn8QMYX5AHFC+kxRDaIL2xl+7l5+xCVZ7oSf4z58yc+c2Zk5Hav01+dE1+9V3aPYf2hX09O7SEOgMb07QYjkw8z4MgwLRsfN8nNNf1ojgQfrgmDS5HnJye0huaOCLfdoNIjgvm2ONSJF/0epEGgwG2bTMcDun3+1iWFV3i+yLfcYQvgAQ+njsWix5XFkSj5VwwrfkR1BfFB0hB8G8juA481+fN21e8fP2C3b1dGu8b7Ozt0HjXoNG40vb2NvV6nWazKVpi/j0vhcP/Ci181sPaBvKcTEJPoBZVtIKGlJKQpJsqFouMRqObwEkw8cN+bG5touU09LUs2fWsmHVS+RSaqjGrzpLSUsTjcarV6nTAx082mEnPkA2B5SwZI0Myk0SZU1DmFdQFFSkmUSlXpgPWtmpRRblyjsW1RZJ6EjWnouoqSkFBK2rIMzKVyjqjyymAj0SF0qyEkldI5BPE0jHktExsPkY8I6THox6uGsbtwPF4zLPnT1nQ5ykZJUp3Sywby6ysLlO4UyC7kmPJWCKjp7l3/8FtTw7Cr8mnzx84PDygddym2+lydtbhvHPO4ckXPn7b5+f3Y46+7nNw1Ip+xYTxByd2na3TNucIAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Creating a new index.js file"
+        title=""
+        src="/tech-blog/static/a93b18e0209115830321f15817ecee96/b9e4f/mkdircommand.png"
+        srcset="/tech-blog/static/a93b18e0209115830321f15817ecee96/cf440/mkdircommand.png 148w,
+/tech-blog/static/a93b18e0209115830321f15817ecee96/d2d38/mkdircommand.png 295w,
+/tech-blog/static/a93b18e0209115830321f15817ecee96/b9e4f/mkdircommand.png 590w,
+/tech-blog/static/a93b18e0209115830321f15817ecee96/d5c82/mkdircommand.png 803w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>That wasn’t so hard. its quite easy doing it in the command line as well. Feels cool right? </p>
+<p>now lets open it in VS Code </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">code .</code></pre></div>
+<p>Excellent. Our <code class="language-text">index.js</code> file is empty. Lets add some Node.js / JavaScript code. </p>
+<p>We will create a very simple http server in node.js and see how easy it is and how few lines of code it is. </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">const http = require(&#39;http&#39;);
+
+const server = http.createServer();
+
+server.on(&#39;request&#39;,(request,response)=&gt;{
+   response.writeHead(200,{&#39;Content-Type&#39;:&#39;text/plain&#39;});
+   response.write(&#39;Hello world&#39;);
+   response.end();
+});
+
+server.listen(3000,()=&gt;{
+  console.log(&#39;Node server created at port 3000&#39;);
+});</code></pre></div>
+<p>Let go over what’s happening. </p>
+<p><code class="language-text">require(&#39;http&#39;)</code> will help us import the already built-in http module in node.js. </p>
+<p>After we require, we simply create the server using <code class="language-text">const server = http.createServer();</code></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">server.on(&#39;request&#39;,(request,response)=&gt;{
+   response.writeHead(200,{&#39;Content-Type&#39;:&#39;text/plain&#39;});
+   response.write(&#39;Hello world&#39;);
+   response.end();
+});</code></pre></div>
+<p>This is a callback function. it basically listens to request and will respond with ‘Hello World’ and that’s it.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">server.listen(3000,()=&gt;{
+  console.log(&#39;Node server created at port 3000&#39;);
+});</code></pre></div>
+<p>Here we will telling it to listen to port 3000. This means our Node.js app / server will be running on localhost:3000 (you can change it to any you want). Remember, Angular app locally runs on localhost:4200, Ionic App runs on localhost:8100 etc.</p>
+<p>Ok, so now we have some idea of what that code means. Lets actually run it. How will we do it? Simple. </p>
+<p>(make sure you have node.js installed)</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">node index.js    </code></pre></div>
+<br/>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/2d9b7/runningnodejs.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 66.72185430463577%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAABWElEQVQ4y9XST0sCQRgG8BHdWXf2j5qQuyaBYmEWneyYB8Hdgui7dIyOJUWEmmQuuxjoR+hzdO/SMegLFB0En8ZhpbLM7NbCj+cdZuYdWF5yd3+Lx6cHvDy/4i/fYDAQhsOhSLK3v4tyeRuVSgXVahW2bcPZceA4gaC2HVvsTRrfGdckbiVAkkQIZUIgJq8NboGLcXqwDs4QMkNpq4TixhoKxQLWN4vIreaQWc4gZS3CWrJ4ppDNZ8F0BkVXoDBOmY7k8yuglEJTVchUhspUGEYMuqbB0A1oPGN8PdqjEhUpy/J7TiCmmUI4HBZNxyRJ+oLKVFwQOaVZ0NBEJBKZeuCj0WOzzszV8Df+QcN02hL/hjH24zhMiirR78cmEU/OHtZ5HJ8f4KJRQ7vdgef76PV6n/T7ffi+h2azCdd10e124XU8HNaPcHJ1hlb7BtetUzQu66g1XLwBMkeE1EjyjaQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Creating a new index.js file"
+        title=""
+        src="/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/b9e4f/runningnodejs.png"
+        srcset="/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/cf440/runningnodejs.png 148w,
+/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/d2d38/runningnodejs.png 295w,
+/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/b9e4f/runningnodejs.png 590w,
+/tech-blog/static/be2db24326a275c6f0b30aa9413f6b02/2d9b7/runningnodejs.png 604w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>That message means our node.js app is running. (in case you want to stop <code class="language-text">control + c</code>)</p>
+<p>Awesome. Lets head over to <a href="localhost:3000">localhost:3000</a> and see if it’s real.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/b9380/localhost.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 69.61722488038278%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAABm0lEQVQ4y62T3W/SUBiH+18bL/w/vDFxJroPcFgKgi6LF94tkpYBhVEKDMJayldpKUOgfTytGX7ELIvpL3mSvqc5T07e9xypePGVq8o139Q6Fa1BTTdoNDvUmwaVqk5O+cS70/dkzhWygpOszNuzc84EpxmZ45MMr98ck80Vefb8BVKnewtEfN9s2Ah2u91P9nuC9T22M8f11swWHvNlgDueMLtzGboBzsLF8rYMLBvP9/ggF5F6/Vu22y2+7+OvAuyxg2WPcSazpF7fb4R4zXLpsVytCEYDpoZNe77CmjuMg0gIh7gLi1L5M9JsOmUtNsT8K1EU8Xh+/S8UxAknk8kfm59EGBEeapIWxVFiodExkyIMw6cL/2Iv+h2nWPwohmL2DsL/zYOwXC4j1eqN1IRJD3W9lZowrxSQbtqd9IR5Jb6Hg9SEspxHGg76h8VY+kA8vd/rx4gfRpxcTkayrRFppVQSU/5yeUG/16V900po6jqmaTK6szC7PeKn2TY6NFstrms1NK2KqmmoqirQqIrvWlWl1zU5evWSH85LKq6KaL8EAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Localhost:3000"
+        title=""
+        src="/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/b9e4f/localhost.png"
+        srcset="/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/cf440/localhost.png 148w,
+/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/d2d38/localhost.png 295w,
+/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/b9e4f/localhost.png 590w,
+/tech-blog/static/cdb617870c5220869ec2b02fafb49b20/b9380/localhost.png 836w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>It is real :D</p>
+<p>Okay, so we learned how easy it was to create a simplest server in Node.js. </p>
+<p>But If we started building programming from the scratch like this, it would take a lot of time. That’s where <strong>Frameworks</strong> come in. </p>
+<p>Frameworks provide us alot of already built functions and modules which help us to easily build reliable applications using less code.</p>
+<p>For Node.js, there are plenty of Backend Frameworks out there. Here’s a few
+<a href="https://expressjs.com">Express.js</a>, <a href="https://nestjs.com">Nest.js</a>,
+<a href="https://loopback.io">Loopback.js</a>,
+<a href="https://hapi.dev">Hapi.js</a>,
+<a href="https://Koajs.com">Koa.js</a>,
+<a href="https://sailsjs.com">Sails.js</a>,
+<a href="https://meteor.com">Meteor.js</a>,
+<a href="https://fastify.io">Fastify.js</a>, and many more.</p>
+<p> Yes I know, so many. But it’s okay. We’ll only focus on one Framework. <a href="https://expressjs.com">Express.js</a>. </p>
+<h3>What is Express.js ?</h3>
+<p>Express.js is a minimalistic framework written for Node.js. It helps us to build node.js applications especially apis very easily. </p>
+<p>If you have heard of MERN or MEAN Stack, then you have also heard of Express. </p>
+<p>M MongoDB<br>
+E Express.js<br>
+A Angular/AngularJS<br>
+N Node.js  </p>
+<p>M MongoDB<br>
+E Express.js<br>
+R React.js<br>
+N Node.js  </p>
+<p>There is also a MEVN Stack (V is for Vue.js).</p>
+<p>Okay, so lets get back. </p>
+<p>What we need to do now is to create a very simple <strong>express.js</strong> application. </p>
+<p>Before installing Express.js, we need set up our <strong>package.json</strong>. How do we do that?</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm init</code></pre></div>
+<p>This will initialize your application with a package.json. Just keep pressing enter and you’re done. </p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/b1b29/npminit.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 83.98926654740609%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABJ0AAASdAHeZh94AAACUElEQVQ4y41TTW/aQBRcDNhrsI2xDbahqEDbS9vfVKlSL/2IUkEqAZVopDSJkka999ALkfhQWqWEAEn/3PTtGkeAAs1h9HYfeDzz3pj97P3A78sx5jd/MZ3dYja/xfX0BleTOcaTGS7H1/hzNaU6wWg0Qn8wwGAwxMXFL/T7dB4OqfbR6/XQOz8HKz+twipZ4EUd3OPQHA1agYPbBI1D5zpUVUUymZRIp9MEFalUanGOawRWe/IMQRigGPrwqYblEKVHZZTKJfi+L1EoFOC6HjKZjCRljG1GpfIYgR9I+EUfTt6BkTVgGiay2awkiasgUxQFiURiI1ieCBzHQRiGEvl8Hp7nyWrbNkzTBOd8RcVWQj8IJEEQRITCnphFPLP/KmJr91qtjlq9LokMw5Bqoj9uVrOtz6pEWK3WkMvl5Oa2DnyL3fg39vzFS6mO6zoUsqhpmlQpagxxFxARWSddfxHz/ciqaVkRTIs2Gm1Vp5eIGkPkceVhSbaYo+iLu+dGG/aLRbkcGc4HWL6zuN4veC4qlQpC2rZFEREWpTLKnswfQaVevO1lVfF5ZQRCoee6ZNWQRJqmSsR2dYJQvRyTO4v3LcfIRrNS6SHlPgsPCPMKYVYQZoRFHak0BTmpSCRTItiKhKIIwqU5rsx0gbjHbQ3MpIZN7BY1DCbvipEgywn6rhllVKENC5uRCmVd1fL53ftX6H7u4GB/HyfHRzg7PcH3s284/HqAbvcLDo+O0W610em00W630Gq15Hmv2cCnvSYazY94vfsGjd0PeLuzg3/GH68a7xp4/AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="npm init"
+        title=""
+        src="/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/b9e4f/npminit.png"
+        srcset="/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/cf440/npminit.png 148w,
+/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/d2d38/npminit.png 295w,
+/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/b9e4f/npminit.png 590w,
+/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/f9b6a/npminit.png 885w,
+/tech-blog/static/ec6f3fa04910873e791202eb0a3daf32/b1b29/npminit.png 1118w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<blockquote>
+<p>btw if you want to open the folder from the terminal, </p>
+</blockquote>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">explorer .</code></pre></div>
+<p>Okay, so lets take a look at the package.json file. </p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/0309e/packagejson.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 37.265625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABJ0AAASdAHeZh94AAABG0lEQVQoz3WRWW7DMAxEfZS08S5ZdrRY8pI0aYH+tPe/zpSk7QIF0o8BbS1vRmRmhggT74jXDxR1j3NlcC47lNrCuBm6H9GYgIZqRWuluqBohl0XUaUcau2kZq2JGJc7Hp/fMHbeNjtPBzwBPJZ+wjpMsPME97agcwm12valkvgOq+kCMtUn2OAx394JFJBTSnaXQ/T/GGZ8+SvSukL7JKDGHAqoOb1h8z2hsRNOucJrqUUvhRIxlA08GcYhQfkIRem0G6HsiC5EUtrW/ChQTksJowBOeSs6vhnYUDsSAVd6tnZRWlG1WxKpf2QpfeCE8y/kSLcBe2h7gyKY6iJaStmSOZs8E7+G25FxI58DB3Gs9uFUxyD+0TZpjx8wYNcbyAyqLwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="package.json"
+        title=""
+        src="/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/b9e4f/packagejson.png"
+        srcset="/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/cf440/packagejson.png 148w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/d2d38/packagejson.png 295w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/b9e4f/packagejson.png 590w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/f9b6a/packagejson.png 885w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/2d849/packagejson.png 1180w,
+/tech-blog/static/03ebd801d6410dd5c1422610fa52b448/0309e/packagejson.png 1280w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>It’s a very basic and very simple package.json file. So we need to install express framework. </p>
+<p>To install Express.js</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install express</code></pre></div>
+<p>Once it gets installed, you will see it added in package.json dependencies. There will also be a node_modules folder.</p>
+<p>Okay, so we’re set. We will replace the code in the index.js and create the same server with even less lines of code using Express.js Framework.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">const express = require(&#39;express&#39;);
+const app = express();
+
+app.get(&#39;/&#39;, (req, res) =&gt; { 
+  res.send(&#39;hello world&#39;);
+});
+
+app.listen(3000, () =&gt; {
+  console.log(&#39;Express application running on localhost:3000&#39;);
+});</code></pre></div>
+<p>we require <strong>express</strong> package/module. We listen to port 3000 again. And any request on ’/’ will be responded with ‘Hello World’. Lets see this in action. </p>
+<p>Lets run the code.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">node indexjs</code></pre></div>
+<p>Success :D We have an expressjs app running</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/6cc13/expresseg.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 35.42757417102966%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABJ0AAASdAHeZh94AAABOklEQVQoz42Qy0rDQBiFQ8nk1rS5YBc+T11a0EX2LrIQW4nZ5AncCb5DxY1QTfVNVCgtIm60IFSTgpMLJDk2E1qroPjDxxkG5pszw31QChpFiKIYSZIiTVO8BSFeZwEu/DP0z/vwb4a4uva/GPoYlpRr/xKDwQAPj0+YBXNw0UJGSymN8B4ECMM5aByjnB1rF7zOQ91UWQqGAGIQSJoAVeXRaNQYhNRwe3fPznBJkrBW65PnOUvLskB4gtZGC1pTg6Eb0DQdpmkuRE0IgsgQRRGTyaQSLiVFUazIsoztdTrb4Dhu0UaFLMsrJFliWa8rUJSK8XhcCddFP4Xt9hYT/ofRaPS94XrTvKiefHJ6DNu24XneCtd14TgOnCMHez0bh70D7He7eH6Z/i5cZpan+GsyVBcX7N8LtvoEgzKPvse9hAsAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Express JS"
+        title=""
+        src="/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/b9e4f/expresseg.png"
+        srcset="/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/cf440/expresseg.png 148w,
+/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/d2d38/expresseg.png 295w,
+/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/b9e4f/expresseg.png 590w,
+/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/f9b6a/expresseg.png 885w,
+/tech-blog/static/0d009d0802e8f5c988c3b474430f2e64/6cc13/expresseg.png 1146w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Lets go to a different URL.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/38c7b/cannotget.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 57.47800586510263%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABwElEQVQoz62Sy2sTURSH569S6saNDalIcCO4EsGNK6lYMGipBXXpwpUuxEc7mZk2pWkbW23FRwluFYTufNA2k0ky6WSSeeb5ee9AdGNbCh74cS7nnvOdc7hXefRUxyhssrj6juXie1Y2PrCy/pG1N58ovt2muLnNmvDa0mvuztwne2eGe7MPhB5yOzvNjckpbt7KJho7cxblmVrg4MAh8H1gyL+s1+vxc7dMpeZgOx61RitR1Q2w6i5OK+bXXoX0RAbl8ZM5giCg2+0SRRFBGGKLBuWyyd6+SbVuY9VsdvcrVO0GplWl3nCwTJPWtx1+fN/hy9cSnhcK4AWU9Y0tQgGM45hQAsXZaTZptdu0PR/fD/BFTDaKZE4YEXc6RCLWdxxct4FtV0R9h0zmIoplWbgC4AmALJTedZsMBgNOYnK7ZMJS6fOhScPh8FiNGssNx1PnUeTrHJY8gh5lo3sJTKcnUJ6r+T9djis+CihXTqUEcHJqOnnhfr+ffI+TStbKgXzx7c6Np1GuXrvO/7IEeOnyFZYLq+SXCuhGXmgRYyGPphvkcjq6voCmGaiqlmhuXmVe+Fzur2TOi5evOHV6jN9iRBP43+qTIQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Express JS Route error"
+        title=""
+        src="/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/b9e4f/cannotget.png"
+        srcset="/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/cf440/cannotget.png 148w,
+/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/d2d38/cannotget.png 295w,
+/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/b9e4f/cannotget.png 590w,
+/tech-blog/static/7ad56d9657b79bc40c328235cfbf138b/38c7b/cannotget.png 682w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Oops. It says no such URL exists. and its right. We only set up ’/’ route. </p>
+<p>If we change ’/’ to ’*’, This will show hello world page.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">app.get(&#39;*&#39;, (req, res) =&gt; { 
+  res.send(&#39;hello world&#39;);
+});</code></pre></div>
+<p>hint: Whenever you change code, you have to restart the server. Meaning you have to <code class="language-text">ctrl + c</code> and then <code class="language-text">node index</code> again. This becomes tiring. However, there is a solution, there’s a global npm module for this called <strong>nodemon</strong>. Lets install nodemon globally.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install -g nodemon </code></pre></div>
+<p>Cool. Now we want to display a separate page for students.</p>
+<p>Lets change it with this</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">app.get(&#39;/&#39;, (req, res) =&gt; { 
+  res.send(&#39;hello world&#39;);
+});
+app.get(&#39;/students&#39;, (req, res) =&gt; { 
+  res.send(&#39;Hello students&#39;);
+});</code></pre></div>
+<p>and now we’ll run it using nodemon </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">nodemon index</code></pre></div>
+<p>now whenever you change content of file, it will automatically reload.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/b938d/students.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 58.06111696522655%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABJ0AAASdAHeZh94AAACgElEQVQoz22TyU/bQBSHfSEmC6g9UNVZgBSq0n+nqgTHVl3/kEqteuCIEAkIiV6qtoAqUERya6EkEZgshqQYxwkhkIQtJosIif3rs83SQ570aZ5n5n0zmhkzmWwBcq6AlJiD8DeHPbmAtJjFZiKNjVgKm/E0IvwO1vht/I4msRZJYH1DwHIghG/zPzG/uIQfi8v4vrCEj5/HwWiaimaziWq1iosLBZeXTdTqdRTLxzitKDg5qxitclBARTlDXjlH8aSCw+oV6jSvcdnC8WkJ58opwpENMHqnLtMlZ1RcPjmCoii0SAt6qKoGVdOAag3QWjjX2mi0NTT1sbY5p1arUG0Zq6t/wDQaDdrZBTS9iOLr/Cw+jX/A9OwM/LN+kxk/fHP0Pe3HjM+PaT/1+XyYmprC5OQkJiYmIMtZhMMRMLiO1vVqz148B3OfAfOAeHjd3iOcRA/BdCYQCCAWT5jCdrt9Kxx7PwbGy8DxxAHriBXWYWKIeEp4CTvRTVhN7Ha7IQyFQtiKxUyhqqq3wtF3o2AGGNiGbWAfs2CHiAFihOgnugkLwZroUl0YDAZph/EOwjck5Eg4SMJHVOQlnKwp5+5EHYWxTsLXY8bZ6ULLoAUWD+EmvBawbpJYWXR1dd1iIemNkN+K/XeGrStD+OrtS1h7u+EZ7IdrwAXOxcHV7wTn5sB5nHB73Ojr6wNrY2Fz2NHb4zCEKytBJJOJu1u+CSEdxXr4F3a2U8hIkoGckelZyNgWBAiEJEpYTa4hupNASogjyvNQqnXwPD3s/H4O0p6IXDYDPS8VSzgqllGiP6VYOqa8BEnKILefR/7g0MhFcY9qJIPdXRGijriLubkv+Afnf5W6qoNBWAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Students Page"
+        title=""
+        src="/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/b9e4f/students.png"
+        srcset="/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/cf440/students.png 148w,
+/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/d2d38/students.png 295w,
+/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/b9e4f/students.png 590w,
+/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/f9b6a/students.png 885w,
+/tech-blog/static/5d1db6cc0d05b7fb9e3de630bfe66852/b938d/students.png 949w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Great. But actually we want to use it as a REST API. That means we want to send / receive JSON. </p>
+<p>What we want here is to send us the list of students as JSON instead of displaying ‘hello students’ because frankly thats pointless and useless :D </p>
+<p>Ok, so for now, we’ll use a dummy Array of students</p>
+<p>Let replace that ‘/students’ route with this</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">app.get(&#39;/students&#39;, (req, res) =&gt; { 
+
+  const listOfStudents = [
+    {id: 1,name: &#39;Ali&#39;},
+    {id: 2,name: &#39;Ahmed&#39;},
+    {id: 3,name: &#39;Danish&#39;},
+  ]
+
+  res.send(listOfStudents);
+});</code></pre></div>
+<p>Now when I open <a href="http://localhost:3000/students">localhost:3000/students</a>, I see this</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/be8fa3f2817614e54c257e461eeab740/e1ed5/jsonres.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 55.291576673866096%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAA10lEQVQoz+1QW5KDIBDk/sfLZzaJG0lYd0VF5SEo9g4kegI/Q1VX98x09UzBatlAqT6j6xS0sZiXBbJVOF9LFOUPbneBIuOJW/nS129B+jW7FJy8d+IHmPceCcZayKZF9fuHpu2ylsTDqNENI3pa7HiJ2msUSoJLi3ow6JWCDzO+Lic6RoOFEDATEqfgaZp2bMtCnhO/e47qiZhzDiEEpJSoqgrGGDDnHBK0NnB05VZb0skw0oW7h+rUS764Riz0NRtijHkxw4EvB67riiOwBx5x2Sfw2MB/DRJet2OjlCYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Students Page"
+        title=""
+        src="/tech-blog/static/be8fa3f2817614e54c257e461eeab740/b9e4f/jsonres.png"
+        srcset="/tech-blog/static/be8fa3f2817614e54c257e461eeab740/cf440/jsonres.png 148w,
+/tech-blog/static/be8fa3f2817614e54c257e461eeab740/d2d38/jsonres.png 295w,
+/tech-blog/static/be8fa3f2817614e54c257e461eeab740/b9e4f/jsonres.png 590w,
+/tech-blog/static/be8fa3f2817614e54c257e461eeab740/f9b6a/jsonres.png 885w,
+/tech-blog/static/be8fa3f2817614e54c257e461eeab740/e1ed5/jsonres.png 926w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>If you install a Chrome extension (<a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en">JSON Formatter</a>), you will see JSON in a formatted way which looks nice.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/1b685781ca7d445f63097b5f12faf084/04090/formatter.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAABJ0AAASdAHeZh94AAAB4klEQVQoz4WQS2/TQBSFK5BYVCyaBSzohn+FxAbllyChCoF4tWJBikQX3UTCUCoakhDsOA/bsR07OElxHUVFKTglLkLO2FO/Mo65ThewaNUjzZw7c+eb0ZwlVTN6+mFD2m+puto1OKlXrkolRtwtNalPjQ9Fbmv77aPHz548f7n28OmLjdydu/durd4WBDFJkqWD4SiOSeB7tm1jjJHrWr//2MiFcToeTzA6Rs4JJi72po4bzrw3W9s3bq6KopTC2v4QLAyjIIz8IIBidiZC5rCISUjI1METyzLNsWVNjn9NaIZtt5UULpa+gDlwaxQlyTw5X3PXdacIYXxKYmKapqp2Upii3oO5Lg6iEBrno/MFbNsIIVha1olyBu/s7IJhgMNgFs8ugiEOCMUPfIScRpNrK8o/GLa8wI9IdBEMIXieB/X6+sZKJiPJi8DoSnkRGOSSCs7F/4nATxaCOgpDOJnLvcqsZHheSOHPxY9g0E4uEzwO8+bm6+Xl64LQSuG1B/ebNYaly4rIK7LU63/TDwbq1x7fkth6k2HrhUIRQqWod/l8vrC3l81mr1y9Vqs3UliWRFnktY5s6P2BoY9GRz9+moffj4zBUOv2O1oXHmEYtlqt0jRdqVRqtTrHCRAewH8BWJ885HQGyk0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Students Page format"
+        title=""
+        src="/tech-blog/static/1b685781ca7d445f63097b5f12faf084/b9e4f/formatter.png"
+        srcset="/tech-blog/static/1b685781ca7d445f63097b5f12faf084/cf440/formatter.png 148w,
+/tech-blog/static/1b685781ca7d445f63097b5f12faf084/d2d38/formatter.png 295w,
+/tech-blog/static/1b685781ca7d445f63097b5f12faf084/b9e4f/formatter.png 590w,
+/tech-blog/static/1b685781ca7d445f63097b5f12faf084/f9b6a/formatter.png 885w,
+/tech-blog/static/1b685781ca7d445f63097b5f12faf084/04090/formatter.png 1152w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>So what we learned so far?</p>
+<p>We learned to create a simple GET request in Node.js which returns list of students. But we used static data. How does it work in real app?</p>
+<p>its something like </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">app.get(&#39;/students&#39;, (req, res) =&gt; { 
+
+&lt;!-- listOfStudents = get students from mysql/mongodb/whatever database  --&gt;
+
+  res.send(listOfStudents);
+});</code></pre></div>
+<p><em>That is not an actual query</em></p>
+<p>We will look at this in detail in <strong>Part 2</strong> of this tutorial.</p>
+<p>Lets wrap this up and make it handle all scenarios</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">const express = require(&#39;express&#39;);
+const app = express();
+
+app.get(&#39;/&#39;, (req, res) =&gt; { 
+  res.send(&#39;Welcome to my Node.js app&#39;);
+});
+app.get(&#39;/students&#39;, (req, res) =&gt; { 
+
+  const listOfStudents = [
+    {id: 1,name: &#39;Ali&#39;},
+    {id: 2,name: &#39;Ahmed&#39;},
+    {id: 3,name: &#39;Danish&#39;},
+  ]
+
+  res.send(listOfStudents);
+});
+app.get(&#39;*&#39;, (req, res) =&gt; { 
+
+
+  res.send(&#39;Page Doesnot exists&#39;);
+});
+
+app.listen(3000, () =&gt; {
+  console.log(&#39;Express application running on localhost:3000&#39;);
+});</code></pre></div>
+<p>We added a wildcard (*) route which will display whenever any url other than ’/’ or ‘/studentslist/’ is hit. </p>
+<p>This was a very basic intro to Node.js and Mongodb. In part 2, we will set up a simple Node.js but with login functionalities (Login / Signup) which means we will cover MongoDB as well. </p>
+<p>If you have any questions, you know where to find me :)</p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><img src="/tech-blog/static/profile-pic-60e61d84dd39be91e838f8204343d0bc.jpg" alt="Alamgir Qazi" style="border-radius:50%;margin-right:0.875rem;margin-bottom:0;width:3.5rem;height:3.5rem"/><p>Hey there, I&#x27;m Alamgir Qazi. I work as a full-stack JavaScript Developer. I&#x27;ll be sharing what I&#x27;ve learned about Angular, Node, Docker, Kubernetes and other cool things.</p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/tech-blog/introduction-to-containers-and-docker/">← <!-- -->Introduction to Containers and Docker</a></li><li></li></ul></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/intro-to-nodejs-part-1/";window.webpackCompilationHash="95a072d3ed2bd6166130";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-13a28d1403ec4481c4eb.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-2223fabe0a5d5ce97932.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js"],"component---src-pages-404-js":["/component---src-pages-404-js-bfcfeb502e0b4bb62413.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4513653e6f9bbe734230.js"]};/*]]>*/</script><script src="/tech-blog/webpack-runtime-4eb88b68c6ccf5138c74.js" async=""></script><script src="/tech-blog/app-13a28d1403ec4481c4eb.js" async=""></script><script src="/tech-blog/commons-5a145b310810eef08c08.js" async=""></script><script src="/tech-blog/styles-fb92ae544d11cf3b4d1f.js" async=""></script><script src="/tech-blog/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js" async=""></script></body></html>
