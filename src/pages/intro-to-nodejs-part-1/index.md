@@ -10,7 +10,7 @@ date: '2019-10-12'
 Node.js is basically a run-time environment that helps us run JavaScript code on the server. That means just like PHP, Ruby, Python,
 Golang etc, You can use JavaScript on the server. Node.js is ideal for building REST APIs.
 
-## Why is Node.js famous?
+### Why is Node.js famous?
 
 * Front-end developers who are familiar with JavaScript don't have to learn a new language to write backend. 
 
@@ -26,7 +26,7 @@ However, remember it has its use cases. It is not ideal for CPU intensive tasks 
 
 So lets get started. 
 
-## Writing my first program in Node.js
+### Writing my first program in Node.js
 
 First, let's setup our project. we need to make a new folder. 
 
@@ -39,6 +39,7 @@ will create a new folder with that name
 ![Creating a new folder](./firstnodejsapp.PNG)
 
 Cool. Now lets go into that directory
+
 
 ```
 cd firstnodejsapp
@@ -88,8 +89,6 @@ Let go over what's happening.
 
 After we require, we simply create the server using `const server = http.createServer();`
 
-This is a callback function. it basically listens to request and will respond with 'Hello World' and that's it.
-
 ```
 server.on('request',(request,response)=>{
    response.writeHead(200,{'Content-Type':'text/plain'});
@@ -97,8 +96,7 @@ server.on('request',(request,response)=>{
    response.end();
 });
 ```
-
-Here we will telling it to listen to port 3000. This means our Node.js app / server will be running on localhost:3000 (you can change it to any you want). Remember, Angular app locally runs on localhost:4200, Ionic App runs on localhost:8100 etc.
+This is a callback function. it basically listens to request and will respond with 'Hello World' and that's it.
 
 ```
 server.listen(3000,()=>{
@@ -106,6 +104,9 @@ server.listen(3000,()=>{
 });
 
 ```
+
+Here we will telling it to listen to port 3000. This means our Node.js app / server will be running on localhost:3000 (you can change it to any you want). Remember, Angular app locally runs on localhost:4200, Ionic App runs on localhost:8100 etc.
+
 
 Ok, so now we have some idea of what that code means. Lets actually run it. How will we do it? Simple. 
 
@@ -130,7 +131,7 @@ It is real :D
 
 Okay, so we learned how easy it was to create a simplest server in Node.js. 
 
-But If we started building programming from the scratch like this, it would take a lot of time. That's where *Frameworks* come in. 
+But If we started building programming from the scratch like this, it would take a lot of time. That's where **Frameworks** come in. 
 
 Frameworks provide us alot of already built functions and modules which help us to easily build reliable applications using less code.
 
@@ -145,7 +146,7 @@ For Node.js, there are plenty of Backend Frameworks out there. Here's a few
 
  Yes I know, so many. But it's okay. We'll only focus on one Framework. [Express.js](https://expressjs.com). 
 
-## What is Express.js ?
+### What is Express.js ?
 
 Express.js is a minimalistic framework written for Node.js. It helps us to build node.js applications especially apis very easily. 
 
@@ -160,15 +161,15 @@ N Node.js
 M MongoDB  
 E Express.js  
 R React.js   
-N Nodejs  
+N Node.js  
 
 There is also a MEVN Stack (V is for Vue.js).
 
 Okay, so lets get back. 
 
-What we need to do now is to create a very simple *express.js* application. 
+What we need to do now is to create a very simple **express.js** application. 
 
-Before installing Express.js, we need set up our *package.json*. How do we do that?
+Before installing Express.js, we need set up our **package.json**. How do we do that?
 
 ```
 npm init
@@ -216,7 +217,7 @@ app.listen(3000, () => {
 });
 ```
 
-we require *express* package/module. We listen to port 3000 again. And any request on '/' will be responded with 'Hello World'. Lets see this in action. 
+we require **express** package/module. We listen to port 3000 again. And any request on '/' will be responded with 'Hello World'. Lets see this in action. 
 
 Lets run the code.
 
@@ -244,9 +245,7 @@ app.get('*', (req, res) => {
 
 ```
 
-hint: Whenever you change code, you have to restart the server. Meaning you have to 
-
-``` ctrl + c``` and then ```node index``` again. This becomes tiring. However, there is a solution, there's a global npm module for this called *nodemon*. Lets install nodemon globally.
+hint: Whenever you change code, you have to restart the server. Meaning you have to ``` ctrl + c``` and then ```node index``` again. This becomes tiring. However, there is a solution, there's a global npm module for this called **nodemon**. Lets install nodemon globally.
 
 ```
 npm install -g nodemon 
@@ -305,13 +304,13 @@ Now when I open [localhost:3000/students](http://localhost:3000/students), I see
 
 If you install a Chrome extension ([JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)), you will see JSON in a formatted way which looks nice.
 
-![Students Page format](./formatter.PNG)
+![Students Page format](./formatter.png)
 
 So what we learned so far?
 
 We learned to create a simple GET request in Node.js which returns list of students. But we used static data. How does it work in real app?
 
-its some thing like 
+its something like 
 ```
 app.get('/students', (req, res) => { 
 
@@ -320,9 +319,9 @@ app.get('/students', (req, res) => {
   res.send(listOfStudents);
 });
 ```
+*That is not an actual query*
 
-
-we will look this in detail in **Part 2** of this tutorial.
+We will look at this in detail in **Part 2** of this tutorial.
 
 Lets wrap this up and make it handle all scenarios
 
@@ -358,6 +357,6 @@ app.listen(3000, () => {
 We added a wildcard (*) route which will display whenever any url other than '/' or '/studentslist/' is hit. 
 
 
-This was a very basic intro to Node.js and Mongodb. In the part 2, we will set up a simple Node.js but with login functionalities (Login / Signup) and which means we will cover MongoDB as well. 
+This was a very basic intro to Node.js and Mongodb. In part 2, we will set up a simple Node.js but with login functionalities (Login / Signup) which means we will cover MongoDB as well. 
 
 If you have any questions, you know where to find me :)
