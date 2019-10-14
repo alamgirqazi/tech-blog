@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 12 Oct 2019 10:50:20 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 1]]></title><description><![CDATA[What is Node.js ? Node.js is basically a run-time environment that helps us run JavaScript code on the server. That means just like PHP…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-1/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-1/</guid><pubDate>Sat, 12 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 14 Oct 2019 05:41:13 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 1]]></title><description><![CDATA[What is Node.js ? Node.js is basically a run-time environment that helps us run JavaScript code on the server. That means just like PHP…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-1/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-1/</guid><pubDate>Sat, 12 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
@@ -599,7 +599,406 @@ app.listen(3000, () =&amp;gt; {
 });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;We added a wildcard (*) route which will display whenever any url other than ’/’ or ‘/studentslist/’ is hit. &lt;/p&gt;
 &lt;p&gt;This was a very basic intro to Node.js and Mongodb. In part 2, we will set up a simple Node.js but with login functionalities (Login / Signup) which means we will cover MongoDB as well. &lt;/p&gt;
-&lt;p&gt;If you have any questions, you know where to find me :)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Introduction to Containers and Docker]]></title><description><![CDATA[Containers, Docker and Kubernetes have become the new buzzwords in tech (in this post, I won’t talk about Kubernetes). However, they’re…]]></description><link>https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</guid><pubDate>Thu, 22 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+&lt;p&gt;If you have any questions, you know where to find me :)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A very basic introduction to Node.js - Part 2]]></title><description><![CDATA[This is the part 2 of post Intro to Nodejs - part 1. In this, we will continue from the express application we created and build a very…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-2/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-2/</guid><pubDate>Sat, 12 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVQoz32ST0sbURTF37xUlyq4iYotFilvJkqCmHkUyfyLSi2lLhS0Gy2lioi68QuYMaZoxbroF5B2UREXhX4G0cTWUHWjErMRim7cdTme+5IganDgcOfNnPnNu/cdxh65bMdUNWHF6Z47rlTrSq160UtS8lXJtLBjsPSBzvysrtaWE3/gdz3JegdKP0vtGWwpr7OFXcFWTyPKwNXfPcnJsPhb56ms4Iv7Ojc7XlYgDdA0FII0+EO2I3kQMJb+o2vkAVR7sNv3S9E769cj3cq0Mr9M0EuAwtW6BKyW6upZhJMxCf1yk9Kjh35OT2CX31BdWru9Mk7vCeh4Zh12Fk/0yG3U/nJHBkZkQxG0XE/A/9AP25b/xlOxcPpAXK2ddwSo15Pr0WbLkgWMY8NxzQvcPwe0+HasO4dvdqa+Rhszh2IQbX8AcC7z16gjYPHNO7MGwPzwTNfTdF4UvhQ7CXgxsRYL25Y8gWcLKgDYXAZuJvtl08/g2RPskGAfoVkAGwj4grbu9ZntjA3xT8dCwPQZpxwttxyD5zskS1GSnWh5HbVVjWjPaMEMe6C227xZ1XM17sfunJxlmdr9CFXLoTLhULRG5rLMkdD8nAj5+6UYIHMqJhSvih/zDFVgftbQMEPKrhYEo+wGOwusfLZj/14AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Intro To Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png&quot;
+        srcset=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/cf440/node-js.png 148w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/d2d38/node-js.png 295w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png 590w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f9b6a/node-js.png 885w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png 960w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;This is the part 2 of post &lt;a href=&quot;https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-1/&quot;&gt;Intro to Nodejs - part 1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this, we will continue from the express application we created and build a very simple Auth system.&lt;/p&gt;
+&lt;p&gt;What we need is a method to Login, a method to Signup and a method which returns us a list of students. We should only get the list of students if the user is authenticated / logged in.&lt;/p&gt;
+&lt;p&gt;So lets go.&lt;/p&gt;
+&lt;p&gt;Before we start, we need to know two things. GET and POST methods. GET and POST methods are used to transfer data from client to server in HTTP. The client can be a web app or a mobile app.&lt;/p&gt;
+&lt;p&gt;GET method is mainly for getting some data from the server. POST method is mainly for sending data to the server.&lt;/p&gt;
+&lt;p&gt;Before login, we need to add students. To add students, we need to send data to server (student name, student email, password etc). that means we will create a POST request.&lt;/p&gt;
+&lt;p&gt;Here is what the post request handler would look like.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.post(&amp;#39;/signup&amp;#39;,  (req, res) =&amp;gt; {
+const body = req.body;
+
+console.log(&amp;#39;req.body&amp;#39;, body)
+
+const email = body.email;
+
+// we need to check if email exists already or not
+
+// if email exists, throw error
+// otherwise
+// insert into database
+
+// Once saved to database, we will send response back to user with message &amp;#39; User signup successfull&amp;#39;
+
+
+  });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We will write actual code after we set up MongoDB but first we’re trying to understand how it works. Lets say, our Signup feature has now been added, lets add a Login feature. Again in Login, data will be sent to server so again it will be a POST request.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  app.post(&amp;#39;/login&amp;#39;,  (req, res) =&amp;gt; {
+    console.log(&amp;#39;req.body&amp;#39;, body)
+
+    const email = req.body.email;
+    const password = req.body.password;
+
+// 1. find if a user exists with email
+// 2. if exists, check if password matches
+// 3. if password matches, Success. (in case of success, we should create and send a token(jwt token))
+// 4. otherwise, send error
+
+  });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So, now we know we just need to create these methods, so lets head over to &lt;strong&gt;MongoDB&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;MongoDB is a nosql database. It is very different from sql databases such as mysql, postgresql, SQL Server etc.&lt;/p&gt;
+&lt;p&gt;But still, mongodb has some similarities with sql databases.&lt;/p&gt;
+&lt;p&gt;MongoDB has collections instead of sql tables.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./nosql.png&quot; alt=&quot;Nosql&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I have written more about nosql databases &lt;a href=&quot;https://slides.com/alamgirqazi/nosql#/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Okay, so now we need to set up MongoDB.&lt;/p&gt;
+&lt;p&gt;Download MongoDB Community Edition from &lt;a href=&quot;https://www.mongodb.com/download-center/community&quot;&gt;here&lt;/a&gt; and a tool to visualize your mongodb database, &lt;strong&gt;Robo 3T&lt;/strong&gt; from &lt;a href=&quot;https://robomongo.org/download&quot;&gt;here&lt;/a&gt;. Choose Robo 3T (formerly Robomongo) on the right.&lt;/p&gt;
+&lt;p&gt;Okay, all set. now we need to add mongodb to our existing express.js app.&lt;/p&gt;
+&lt;p&gt;MongoDB has an excellent ODM (Object Document Mapper) written for it called &lt;a href=&quot;https://mongoosejs.com/&quot;&gt;&lt;strong&gt;Mongoose&lt;/strong&gt;&lt;/a&gt; which helps us alot with queries etc. We will use that. Think of Mongoose like an ORM for a sql database.&lt;/p&gt;
+&lt;p&gt;Lets install mongoose&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install mongoose&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;MongoDB runs at port 27017 locally by default. So our database url will be localhost:27017/myfirstmongodb or whatever.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;mongoose.connect(&amp;#39;mongodb://localhost:27017/myfirstmongodb&amp;#39;, {useNewUrlParser: true});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;just this code added to the top and our database / mongoDB has been connected. It really is that simple.&lt;/p&gt;
+&lt;p&gt;Okay, lets talk a little bit about our students.&lt;/p&gt;
+&lt;p&gt;We can think of students as our Models (like th M in MVC). a student will have email, student_id, password, name at the very least. We represent this in a model. lets create that model using mongoose.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const Student = mongoose.model(&amp;#39;Student&amp;#39;, {
+  name: String,
+  student_id: Number,
+  email: String,
+  password: String,
+  date_added: Date
+ });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;we also need to add one more module.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install body-parser&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;after this, add these line&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const bodyParser = require(&amp;#39;body-parser&amp;#39;);
+const app = express();
+mongoose.connect(&amp;#39;mongodb://localhost:27017/myfirstmongodb&amp;#39;, {useNewUrlParser: true,useUnifiedTopology:true});
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, we have set up the model and setup bodyParser middleware. Lets write an actual &lt;strong&gt;Signup&lt;/strong&gt; POST method.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; app.post(&amp;#39;/signup&amp;#39;, async (req, res) =&amp;gt; {
+const body = req.body;
+console.log(&amp;#39;req.body&amp;#39;, body);
+res.send({
+  message: &amp;#39;Success&amp;#39;
+});
+
+  });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We can use browser for GET requests but for POST requests we would have to use a client (mobile app or web app). There is an alternative. Using &lt;a href=&quot;https://www.getpostman.com/&quot;&gt;Postman&lt;/a&gt;. Install it.&lt;/p&gt;
+&lt;p&gt;Okay, now lets run our Node.js app&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;nodemon index&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lets test route &lt;a href=&quot;http://localhost:3000/signup&quot;&gt;localhost:3000/signup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./notfound.png&quot; alt=&quot;Not Found&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This is predictable because we wrote only POST method and not GET method. So how do we test POST method? using &lt;strong&gt;Postman&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/ecd27/postmaneg.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 65.96942880128721%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAACiUlEQVQ4y42SyU8TYRiH51/yRCQxBg/qzZsHY/SC0URNiGsi0bgl4sF4cQsQjUDhJCZgBFzA0AgkpWwdaJGlVK1GC2X2mc5M+/hOWSTqwS958nvfd+b7vd+mxAeHefd2mJ43I7waiNPTH6dX9EXvIJ0vBoh1v6Xr5Tuexbp52PxcaONRS3tVm1s7aBG9/6CVxxJfv3UXpffKAV5eruVGwyEa6/dy9WQd107t4+Kx3Zw9vIub9bU0Hq/h3NEaLkgt0ojzEt85vZ97J+o4f7yWpoaDnDmyByWXiBHMx9Cmn6GnOnHSXdhzMdF27HQHXrqNUqYdV4hqbqYDa/Y5hfEnGJPN8KkN5lsJMk8Z676NMq2mMb08mmVju0vYgUGpwjbeJjtrlg9uCT7mbJqG8wxnqY6x5BzKeCKOZY6ia98orPbx4/t1Vn+2YuiW1NZEi8I6pqFto0vumTpD80tc6v3AgFqUrgajIyMoqRmVMJSOtovjgK2vYGspPM+X3Mf3Q8rl8h+EMifk99iIk4kEiqrOEgQZwmBdNJAfK4RlqhMcJydqUJFtbplVJHFdl5LnSV6hFISU/EDsyhuG6bloheNSWNvsVtnu63mj8i1fNaxUNswiomYRO/PqCpNJlIwYSjMMwxZ0TMtC03Us265a/2n2L7YMp6YmUWamp3A9Rw5aR9M0HLmEkrFO6Biyi4D/GdFRREOdmZJnI66maVIoFCgWi6wWfmKbBqFfkgvxN5Cz/ftifrO9wokJlOzSYrUQmVqyXUveoydnEDgWoWtRFvDd/1ppKjWDMvT+DWoqxeREkvTcLPOZNKqqimZYXFjgy+ccuZUVVoTs8rLEWT7nJM9md8TL5PNf6e97zS+cUKToW8MPowAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Postman Example&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/b9e4f/postmaneg.png&quot;
+        srcset=&quot;/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/cf440/postmaneg.png 148w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/d2d38/postmaneg.png 295w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/b9e4f/postmaneg.png 590w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/f9b6a/postmaneg.png 885w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/2d849/postmaneg.png 1180w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/ecd27/postmaneg.png 1243w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Once we click on SEND, we get a response.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/30caf/postmanresponse.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 65.05246166263116%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAACcUlEQVQ4y62S20tUURSHzz/USykGJUG99d6LZS9J0YtBGkFBEURGROBDQlkK3vJSoGFTJoWYz82cuTmemWlGMsTUuZ/7OfO15ijDBEUvHfj4rb3X2mv/9j5bWf34ieWlFeY/rLEQEhUW3q8wO7/MxFyIiTdLTAovx+YYej7O0PB4oE+F4ZEpXgxPMDg0yrORVzx4NIjytq+D1zdPcq/3LLcvneDO5U7uXjlF/4U2es8d4X5PB7e6j9J3/hg3utu43iWx0N/dzsDV0zzu6aT/YjsPe89wres4yo46hZueoBIbQ09OYqensbRp0Rms9KzkpnEzMzjpQyQ2U1MU1VFqsRHIjgW42jjJ5ScomfwOZQPKuk/NEFyw6mAfYrXiH2jNAd30WcvDwCp8EXVlPq59R0mtJ6lWipTLRfb2dtnd3mL/5zaVcolyqSBaDKhWSk3KkrOqBVa1CrdDJT6vF/GMErGoipLL5XAcB7NWpaYbVIv7QgHTNNF1Pch5nofv+03qgYol/BZgQ8wpmUwW27ap1+tBYaMsQMaNhkGDRq4FwzCwLItGT9er47hyT75z0DC/uYktLoLdpbjpROLGogN39d8cutKg1XUjDhxubEhDLYFrW8GuDUeGaWEaOpYc2fNcWez8HTFSM0zBEpceqZQ0TKpfKRSKFErVgFK5RrFUQa9UsOXX2a7/B+rNnCNqOR6m7ZHWNJR4PI4uOxhVk2pNEvI2HK9lsRT/C8t2g/tMa2mUzXyO//X92NpCCS0uoEYiJBMxMukUuW8ZEokEmWwWTY7QiNVoFFVVCYfDRNUI8Zgq40jw7hKxKNFIWOaihN4t8gv/MKgBBrJyjwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Postman Response&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/b9e4f/postmanresponse.png&quot;
+        srcset=&quot;/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/cf440/postmanresponse.png 148w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/d2d38/postmanresponse.png 295w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/b9e4f/postmanresponse.png 590w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/f9b6a/postmanresponse.png 885w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/2d849/postmanresponse.png 1180w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/30caf/postmanresponse.png 1239w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;But something else also happened. Remember we added a console.log(‘req.body’, body) before sending the response.&lt;/p&gt;
+&lt;p&gt;Here&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/6935a888026cd4f1989c85aeead40e26/8ab6a/cmderres.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 452px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 40.04424778761062%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABJ0AAASdAHeZh94AAABQklEQVQoz02S23KDMAxELTtAQzvplISbAXMJSZq+NP//c9vFdid5OCPJ9i6SjRInkB9yI61AdxpyZlxY92RS8Gc+uXZkXMI5yVhrRnmitYYSK95AJlJxsSZOQ4+sjzTrSMM8ISn3Phj3xBD9ahZQWxfqRtFVgtDGLqaYOwVluf8RuvRdV/EDOnTlicZKOglmK6mj6UDmKOyiSS7B9CQwXzTYBSNjNozPvaHiSOoSqSIzGUhJRtKShLwpfw3qEGqRgFLqadgtA8arQ9EWaJ3FdJnQDA3Gm0PZlqjaCvM6oe97VCfWxxrOdljPK6xtYbsOj8cv0jQJhm4YMbsR63JGSUFT1bh/35Fnez/e7r6D6TUOxQHveQ7NEROK0zRFkuw8WZb5sc32ykVR+Ja3hf9X83kcR7bRjPKXrl9+j9davF57wz8ZP7FP6K8emQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;CMDER Response&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/6935a888026cd4f1989c85aeead40e26/8ab6a/cmderres.png&quot;
+        srcset=&quot;/tech-blog/static/6935a888026cd4f1989c85aeead40e26/cf440/cmderres.png 148w,
+/tech-blog/static/6935a888026cd4f1989c85aeead40e26/d2d38/cmderres.png 295w,
+/tech-blog/static/6935a888026cd4f1989c85aeead40e26/8ab6a/cmderres.png 452w&quot;
+        sizes=&quot;(max-width: 452px) 100vw, 452px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;What happened here is our Node.js server was hit with a request for signup and the data we got was {
+name: ‘Alamgir’
+}.&lt;/p&gt;
+&lt;p&gt;This means our flows are ready. now if we add other values then they will be added themselves.&lt;/p&gt;
+&lt;p&gt;Once we get the full data, we can add that to the database after checking if it doesnot exist already.&lt;/p&gt;
+&lt;p&gt;So, let update the code to save it to MongoDB.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.post(&amp;#39;/signup&amp;#39;, async (req, res) =&amp;gt; {
+const body = req.body;
+console.log(&amp;#39;req.body&amp;#39;, body)
+  try{
+const student = new Student(body);
+
+const result = await student.save();
+res.send({
+  message: &amp;#39;Student signup successful&amp;#39;
+});
+
+  }
+  catch(ex){
+    console.log(&amp;#39;ex&amp;#39;,ex);
+    res.send({message: &amp;#39;Error&amp;#39;}).status(401);
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now lets try again from postman&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/d9d29/postman2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 64.66721446179129%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAACQklEQVQ4y42RyU4VURCG+3GMYIiJAZe+h3FgYURNdOUCh6gbAyw00bhBEAUVEURlBSGiMYI74wOYsPCiDH27b89zf1b1HbwaE+zkS9WpU/V3nSpjfWGGlbdLzC4uM/18kenZNzx7ucTU01eMT80yObPAxPQ8E0/mKh4+bjI+9ULyX7MoNeo/krzJmXmM5cs9LFw5yuilY9we6mfswgAj5we4OdjH8PED3Bk6zOiZPq6f6uXG6UNcPXGQa8rJHkYk//7Zfm4N9nL34gBj545glHufYHuNcusd7H6Aupzr62BtCJ8F8W1FfFtijWYsr61Sfl8WX+rc97CzBj9WMRpeyo4VYrsJlhNh+RleDEECfjdxC/ElDUeSvtYyhldyHmxkOH5KIywxXKeB07DxXAfLtjF3tzH3duUscceurN75vovvtfGIA4dv2x73PrrMfXEJvAaBa2MkSUIYhqRxSBhFhI5FJHTiaUpZlhRFUVklz3OyLAfKDkWRk6cJhhZFIlRKgSbmYouWgN5pTL9u0TiOq5qiKEnzoqJIInLB2NzcxLKsTlEb/YIgqFBh7fjv++6zhvSHxlatVgl2d9Imy7Iqqc2fAr+Fm89uCercInlC9VxpPW8Vq9X5abwtqPdq9UeK3qVi06w500zOhm/+lA05spAQP/AJwojA94nEbxam/yZtWp1lEKdSJ7uIZSlW3cQ0LWzbpW77NNwAx/UIfU+GXe5LpshyQhFN0gxjzzSls4gkyqTLUoIgOZLEfwl2hCVfxX8BPua6vr5eQkkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Postman&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/b9e4f/postman2.png&quot;
+        srcset=&quot;/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/cf440/postman2.png 148w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/d2d38/postman2.png 295w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/b9e4f/postman2.png 590w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/f9b6a/postman2.png 885w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/2d849/postman2.png 1180w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/d9d29/postman2.png 1217w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;press Save&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/d40d9/consolecmd.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 485px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30.927835051546392%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABJ0AAASdAHeZh94AAAA7klEQVQY05XP21LCMBAG4E1aGnMgFFpKpcEekgr6/u/3uwTHGxlnvPhu9vDPLumgUU4laCTIvYTsJNRFwUQD3Wq45GBrC210ZpyBcw7G2Mz7HapK/aA5LVjeF3RDhxACYoxIccXbHNCGFuPniClOCH3AsTkinHlmjnn27nb7wIu6h1UZnU491rTmIect6vGA12sPURMosStBDALlib8w9GC5RgJE9NuGz4zrimWeYLcW7mJBPTfOj0Vy7MAG5r/DdgJSyOeB1lp+M/GVEXGJ8FsPagiVr6AK9XzpL03ToCw3KIoiy8WCCb5Ein8HfgFsDYcXD02V5QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Console&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/d40d9/consolecmd.png&quot;
+        srcset=&quot;/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/cf440/consolecmd.png 148w,
+/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/d2d38/consolecmd.png 295w,
+/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/d40d9/consolecmd.png 485w&quot;
+        sizes=&quot;(max-width: 485px) 100vw, 485px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;We see the data in cmder.&lt;/p&gt;
+&lt;p&gt;But is the data actually saved in Database/MongoDB? lets take a look.&lt;/p&gt;
+&lt;p&gt;Open Robo 3T.&lt;/p&gt;
+&lt;p&gt;connect to localhost&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/9a22e/robo3t.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 91.67950693374422%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABJ0AAASdAHeZh94AAADVElEQVQ4y4WU6W7bVhCF+artg6RA/zR9g8SJAyde2kpxEiDIjzS2ozhBjbiWnEULV5GiRIqkFq7ipuV07pVlREUXAYNL6pLfPTNzhsKrt+/wVRYhyl3IqgFVN6HpfWjGAJKio/buPU5Pz3ByQkHr6U2w6zN6923tHGdnNZy//4A7P/wIodlpoygzJEmCPMuQZSmKIkeR5yiLAsvlEv/32zxTqTyF8GvlObxxAM9zYVk2rR6GwyF6vR6/DoMQURQhDMN/jel0StAF9vaeQDg4qsB2CGJbUFUNJoEcx+GwwA8w9sdw6bDRaMRf9H0W/laMx2OU8xJ7jwkoywoa4gCfvzTR7/cxmUwQxTGlXSCntL3Qgx/4iH36Ly+QximSKMEsnlGkfI3DGFgBj5nCZquNgTWELMukaoTFYsFhGdWTAYsyR39qwo1dBFkIO6CyRB7ciEoUWDBpT/M0TIsJ7j98AOH17ye8Xl+/NCBKHcxmEUWCNE2pSTlmeYIT9Q0ue5dQRypUT4E+1mlV0bSbkFwZsiNhUk6w8+ghhMPDI/TcAI3mAJrqQBRtao7LoXEUIy1SXPvXsBILTuL8Z7f39w8hHB8/Q1qu0FR+JpXfQ5K/QxzXKV2QwpSnbAYmT9GJHXSnOuzQgl8EWK1WWK6WmM/nHPhk/wDC02oVIb3cEN9Qh39BENRQllOq4bqOC3rYdVwYhkFOIDvpBmzbpgxSDmFQVnf2412uVqpwyIdXnw2Y5pggoCiR5RkHstOZZQaDASzb5l4dkBuYI5YE+9bYBwf7ZOzfqvwmiQLM0oRPSn4DY11m15IkQSF7tVpNtEURerdLB+a3oI3C3d1dSvn4Bb9hKawB+S1srbDkJmcqPZfswsNF3+yTgHQLuPOAbPP8xcsb4IwDvlW2AQ6HNpWjz9O1LPKeaVIdh5iX5TZwh4C18z9uFW6AfwcrisLTVlUVBjVFoxFlTdqAtoCSonEVTCEz8z9B2RS1mi2ubjO/UxrRothWeO/efQgXFxf8hnWTbbB1HSVPiX3C2NdmA7JvvkisjgmJYM+yg9dNeQThWeWIpkOkDrZ4Wjql0qW0DBrHHtVK6+ro0L5Ie51OB9efPqFeb6DeoKjX8efVFT5+vES73cbdn+7iL6tLL+Ra1jKgAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Robo 3t&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/b9e4f/robo3t.png&quot;
+        srcset=&quot;/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/cf440/robo3t.png 148w,
+/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/d2d38/robo3t.png 295w,
+/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/b9e4f/robo3t.png 590w,
+/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/9a22e/robo3t.png 649w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;double click&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/59bfa/robo3tsaved.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 49.20767306088407%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABJ0AAASdAHeZh94AAABzElEQVQoz52SWW/TQBDH/f2/QwEhBA9IVVBCEsLRF5CalIojbWzHdn3EV9ZX3Djx7T+7mwMe4IWRfpr5z+6OdnZHmEsSrJUN3ydwPR+EhIjjDcIoQRDFHMd1Yds2bMc5eM4hXtGzlrWiWNA0DYKiGvBsHbpl0qIeNpsEWbbFbr/DnrHboyxLVFXF/b9g61mWQfh+J0NRFERRxBcsZ4Xr6Qz39OaLhQhRlrBUVEjyEg+GeUZnmNZZm/SW6oMO4ef8DoZpIk1TNG0LdSlj8OYS40Efk3EfV59G+DgZ4sN4gKv34zMsNxm9PcTvRuj1LjHs9yDcSwrmkgZVVdBUBT7LPl7dEgwWKWcobvH6W4gXszWezUI8nRI8uSZ4fhPg5VfqbxNKjItpgIsvLoSFrGGp2/zdiqLANq9geBGsdYzHskNatPDiLX7IOkTdpTgw/ATrNKf5DOGu5iR5y3OC43rI8/xM1zbYZ4+IwgAna+sKXVMfVXfK0o5K/Glsn8DGhf3QqSCLm6ZBS9+z6zoOi9u2+62Puea4h2lmBf1UgY0KK8DaLYoSdV3jf42dFWRJpO2FCAihQ034+CRJQoc75oRUB0HwVwihHGNWw/Nc/AKXoueIs7opjwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Robo 3t&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/b9e4f/robo3tsaved.png&quot;
+        srcset=&quot;/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/cf440/robo3tsaved.png 148w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/d2d38/robo3tsaved.png 295w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/b9e4f/robo3tsaved.png 590w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/f9b6a/robo3tsaved.png 885w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/2d849/robo3tsaved.png 1180w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/59bfa/robo3tsaved.png 1199w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Congratulations! Your student has been saved to MongoDB. that wasn’t so hard right.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Introduction to Containers and Docker]]></title><description><![CDATA[Containers, Docker and Kubernetes have become the new buzzwords in tech (in this post, I won’t talk about Kubernetes). However, they’re…]]></description><link>https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/introduction-to-containers-and-docker/</guid><pubDate>Thu, 22 Nov 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/61857/docker.png&quot;

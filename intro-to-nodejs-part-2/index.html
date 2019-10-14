@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link rel="apple-touch-icon" sizes="256x256" href="/tech-blog/icons/icon-256x256.png?v=ab9d362a82390b1b299fe1144c79b26d"/><meta name="generator" content="Gatsby 2.15.36"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/tech-blog/rss.xml"/><link rel="shortcut icon" href="/tech-blog/icons/icon-48x48.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="manifest" href="/tech-blog/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/tech-blog/icons/icon-48x48.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="72x72" href="/tech-blog/icons/icon-72x72.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="96x96" href="/tech-blog/icons/icon-96x96.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="144x144" href="/tech-blog/icons/icon-144x144.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="192x192" href="/tech-blog/icons/icon-192x192.png?v=ab9d362a82390b1b299fe1144c79b26d"/><style data-href="/tech-blog/styles.75d456e0bf8bd0a47aa1.css">.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><link rel="apple-touch-icon" sizes="384x384" href="/tech-blog/icons/icon-384x384.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="512x512" href="/tech-blog/icons/icon-512x512.png?v=ab9d362a82390b1b299fe1144c79b26d"/><title data-react-helmet="true">A very basic introduction to Node.js - Part 2 | tech-blog</title><meta data-react-helmet="true" name="description" content="This is the part 2 of post Intro to Nodejs - part 1. In this, we will continue from the express application we created and build a very…"/><style data-href="/tech-blog/commons.c6dceef504ade98e991f.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/tech-blog/static/montserrat-latin-100-50d279861fb3cbfed809eae6ed8b9ac9.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-100-5e334eff013f12fbb8ed72c2a253f119.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/tech-blog/static/montserrat-latin-100italic-8c0705336558194799a8729840d7ed9d.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-100italic-03e19243272affe738654a157625ec26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/tech-blog/static/montserrat-latin-200-4343d3d91a9446226e7a8bbb024111ad.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-200-f2022ecd65a0703ec3edcb7641709a75.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/tech-blog/static/montserrat-latin-200italic-116c4c4b14ef76b0555da09854512022.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-200italic-89614a6008fc5c60739012463d0ee7e6.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/tech-blog/static/montserrat-latin-300-d2ad295b60682a6537c358e06ea80c61.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-300-3a371ee0d175f5c2b15ce1d6b981dc4e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/tech-blog/static/montserrat-latin-300italic-f6b6bf2431003f8142e800f9df157989.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-300italic-16521668f5f238098329cdd7d27c391e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/tech-blog/static/montserrat-latin-400-240a84447b78da0920fcb07e378f2c5f.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-400-b20cc131034316b1c85d0498fb9ed5c5.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/tech-blog/static/montserrat-latin-400italic-86172bb829de6be08b92512096b6aca6.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-400italic-9405e78785a55cf0e4ea7669d4616ea9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/tech-blog/static/montserrat-latin-500-fb8d6b71dbe8d9294be43082936f649e.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-500-50825d47af7ae47e055018eb689c6c99.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/tech-blog/static/montserrat-latin-500italic-c0a555a4f8e997385a3eebbd4da0b9ee.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-500italic-635de59c4be86285b1f70068c95b9816.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/tech-blog/static/montserrat-latin-600-d5615136a08cfee70deb4be1ee1651df.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-600-f300da4fb4fe00e23915f62b2c643681.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/tech-blog/static/montserrat-latin-600italic-10f29d139edacde92df63374c5672568.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-600italic-2bc37d86a4ba12ce526c4af904a9946e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/tech-blog/static/montserrat-latin-700-7d77e1f03eefc452dab14d7f89080083.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-700-81826529772e52f0f14a4c73c2f2c7f1.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/tech-blog/static/montserrat-latin-700italic-1dd2b53f1567a29e0505de9b27c4352c.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-700italic-c162d257f5e9f9b108a96a604cfb2132.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/tech-blog/static/montserrat-latin-800-d4e7bf86bbd8e5f43ca73fa831218648.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-800-895aadbff357be35ac8dd107c7975ee7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/tech-blog/static/montserrat-latin-800italic-fc0cbe442f7b3733c91e982e825c4daa.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-800italic-b3362875067300abedb7a8fb97903258.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/tech-blog/static/montserrat-latin-900-c8bdd772c0d1347720ff7e3fb72719f3.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-900-1b99ef78e627dd9bbd0ca4b5c0789547.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/tech-blog/static/montserrat-latin-900italic-cb72c1f90f66c124fb897a75bec64c78.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-900italic-b78bb9f8ecec6c5a924c873f1818095f.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/tech-blog/static/merriweather-latin-300-f015f1e9a46a3b9db4fd64564dacece4.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-300-92dfe81b725c342d31d962da975c07a6.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/tech-blog/static/merriweather-latin-300italic-7fd86b32accf2df4403d1d4fa3a81502.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-300italic-878b76f59d5ba58dd1652dc8d2a0f4f9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/tech-blog/static/merriweather-latin-400-12dbf4c00ae43698f278b099e4b0ec9e.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-400-1fffad22b085a877995812dbf1d9ac08.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/tech-blog/static/merriweather-latin-400italic-1e0d3e8121d88969bfb153c8f174b758.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-400italic-de18d4c4e8e808a7248a185f866ff094.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/tech-blog/static/merriweather-latin-700-dc8fec81a125fc63856587e6683da73b.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-700-d7d2ed8e58f303392cc3fc00ba3a9186.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/tech-blog/static/merriweather-latin-700italic-b7b7e5da4d7be8c12bd5a6c809edc8fc.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-700italic-6210a5fc1c54ca85a5d82aa85d7a9b5c.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/tech-blog/static/merriweather-latin-900-43f870d543dd89fbeb66d417c0d97276.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-900-8f3806df74937c7b8b53f24ae1e725d1.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/tech-blog/static/merriweather-latin-900italic-168c1ab28ed0e4e7d654334def288bc1.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-900italic-ae7778f01871e35ee142ef207b313b34.woff) format("woff")}</style><link as="script" rel="preload" href="/tech-blog/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js"/><link as="script" rel="preload" href="/tech-blog/styles-a81d106dd494ea129cb3.js"/><link as="script" rel="preload" href="/tech-blog/commons-1f390115944f3b296e88.js"/><link as="script" rel="preload" href="/tech-blog/app-13a28d1403ec4481c4eb.js"/><link as="script" rel="preload" href="/tech-blog/webpack-runtime-d35fa9472111221b0ebc.js"/><link as="fetch" rel="preload" href="/tech-blog/page-data\intro-to-nodejs-part-2\page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/tech-blog/">tech-blog</a></h3><h1>A very basic introduction to Node.js - Part 2</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">October 12, 2019</p><div><p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVQoz32ST0sbURTF37xUlyq4iYotFilvJkqCmHkUyfyLSi2lLhS0Gy2lioi68QuYMaZoxbroF5B2UREXhX4G0cTWUHWjErMRim7cdTme+5IganDgcOfNnPnNu/cdxh65bMdUNWHF6Z47rlTrSq160UtS8lXJtLBjsPSBzvysrtaWE3/gdz3JegdKP0vtGWwpr7OFXcFWTyPKwNXfPcnJsPhb56ms4Iv7Ojc7XlYgDdA0FII0+EO2I3kQMJb+o2vkAVR7sNv3S9E769cj3cq0Mr9M0EuAwtW6BKyW6upZhJMxCf1yk9Kjh35OT2CX31BdWru9Mk7vCeh4Zh12Fk/0yG3U/nJHBkZkQxG0XE/A/9AP25b/xlOxcPpAXK2ddwSo15Pr0WbLkgWMY8NxzQvcPwe0+HasO4dvdqa+Rhszh2IQbX8AcC7z16gjYPHNO7MGwPzwTNfTdF4UvhQ7CXgxsRYL25Y8gWcLKgDYXAZuJvtl08/g2RPskGAfoVkAGwj4grbu9ZntjA3xT8dCwPQZpxwttxyD5zskS1GSnWh5HbVVjWjPaMEMe6C227xZ1XM17sfunJxlmdr9CFXLoTLhULRG5rLMkdD8nAj5+6UYIHMqJhSvih/zDFVgftbQMEPKrhYEo+wGOwusfLZj/14AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Intro To Node.js"
+        title=""
+        src="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png"
+        srcset="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/cf440/node-js.png 148w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/d2d38/node-js.png 295w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png 590w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f9b6a/node-js.png 885w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png 960w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>This is the part 2 of post <a href="https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-1/">Intro to Nodejs - part 1</a>.</p>
+<p>In this, we will continue from the express application we created and build a very simple Auth system.</p>
+<p>What we need is a method to Login, a method to Signup and a method which returns us a list of students. We should only get the list of students if the user is authenticated / logged in.</p>
+<p>So lets go.</p>
+<p>Before we start, we need to know two things. GET and POST methods. GET and POST methods are used to transfer data from client to server in HTTP. The client can be a web app or a mobile app.</p>
+<p>GET method is mainly for getting some data from the server. POST method is mainly for sending data to the server.</p>
+<p>Before login, we need to add students. To add students, we need to send data to server (student name, student email, password etc). that means we will create a POST request.</p>
+<p>Here is what the post request handler would look like.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">app.post(&#39;/signup&#39;,  (req, res) =&gt; {
+const body = req.body;
+
+console.log(&#39;req.body&#39;, body)
+
+const email = body.email;
+
+// we need to check if email exists already or not
+
+// if email exists, throw error
+// otherwise
+// insert into database
+
+// Once saved to database, we will send response back to user with message &#39; User signup successfull&#39;
+
+
+  });</code></pre></div>
+<p>We will write actual code after we set up MongoDB but first we’re trying to understand how it works. Lets say, our Signup feature has now been added, lets add a Login feature. Again in Login, data will be sent to server so again it will be a POST request.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  app.post(&#39;/login&#39;,  (req, res) =&gt; {
+    console.log(&#39;req.body&#39;, body)
+
+    const email = req.body.email;
+    const password = req.body.password;
+
+// 1. find if a user exists with email
+// 2. if exists, check if password matches
+// 3. if password matches, Success. (in case of success, we should create and send a token(jwt token))
+// 4. otherwise, send error
+
+  });</code></pre></div>
+<p>So, now we know we just need to create these methods, so lets head over to <strong>MongoDB</strong></p>
+<p>MongoDB is a nosql database. It is very different from sql databases such as mysql, postgresql, SQL Server etc.</p>
+<p>But still, mongodb has some similarities with sql databases.</p>
+<p>MongoDB has collections instead of sql tables.</p>
+<p><img src="./nosql.png" alt="Nosql"></p>
+<p>I have written more about nosql databases <a href="https://slides.com/alamgirqazi/nosql#/">here</a></p>
+<p>Okay, so now we need to set up MongoDB.</p>
+<p>Download MongoDB Community Edition from <a href="https://www.mongodb.com/download-center/community">here</a> and a tool to visualize your mongodb database, <strong>Robo 3T</strong> from <a href="https://robomongo.org/download">here</a>. Choose Robo 3T (formerly Robomongo) on the right.</p>
+<p>Okay, all set. now we need to add mongodb to our existing express.js app.</p>
+<p>MongoDB has an excellent ODM (Object Document Mapper) written for it called <a href="https://mongoosejs.com/"><strong>Mongoose</strong></a> which helps us alot with queries etc. We will use that. Think of Mongoose like an ORM for a sql database.</p>
+<p>Lets install mongoose</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install mongoose</code></pre></div>
+<p>MongoDB runs at port 27017 locally by default. So our database url will be localhost:27017/myfirstmongodb or whatever.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mongoose.connect(&#39;mongodb://localhost:27017/myfirstmongodb&#39;, {useNewUrlParser: true});</code></pre></div>
+<p>just this code added to the top and our database / mongoDB has been connected. It really is that simple.</p>
+<p>Okay, lets talk a little bit about our students.</p>
+<p>We can think of students as our Models (like th M in MVC). a student will have email, student_id, password, name at the very least. We represent this in a model. lets create that model using mongoose.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">const Student = mongoose.model(&#39;Student&#39;, {
+  name: String,
+  student_id: Number,
+  email: String,
+  password: String,
+  date_added: Date
+ });</code></pre></div>
+<p>we also need to add one more module.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install body-parser</code></pre></div>
+<p>after this, add these line</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">const bodyParser = require(&#39;body-parser&#39;);
+const app = express();
+mongoose.connect(&#39;mongodb://localhost:27017/myfirstmongodb&#39;, {useNewUrlParser: true,useUnifiedTopology:true});
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));</code></pre></div>
+<p>Now, we have set up the model and setup bodyParser middleware. Lets write an actual <strong>Signup</strong> POST method.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"> app.post(&#39;/signup&#39;, async (req, res) =&gt; {
+const body = req.body;
+console.log(&#39;req.body&#39;, body);
+res.send({
+  message: &#39;Success&#39;
+});
+
+  });</code></pre></div>
+<p>We can use browser for GET requests but for POST requests we would have to use a client (mobile app or web app). There is an alternative. Using <a href="https://www.getpostman.com/">Postman</a>. Install it.</p>
+<p>Okay, now lets run our Node.js app</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">nodemon index</code></pre></div>
+<p>Lets test route <a href="http://localhost:3000/signup">localhost:3000/signup</a></p>
+<p><img src="./notfound.png" alt="Not Found"></p>
+<p>This is predictable because we wrote only POST method and not GET method. So how do we test POST method? using <strong>Postman</strong>.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/ecd27/postmaneg.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 65.96942880128721%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAACiUlEQVQ4y42SyU8TYRiH51/yRCQxBg/qzZsHY/SC0URNiGsi0bgl4sF4cQsQjUDhJCZgBFzA0AgkpWwdaJGlVK1GC2X2mc5M+/hOWSTqwS958nvfd+b7vd+mxAeHefd2mJ43I7waiNPTH6dX9EXvIJ0vBoh1v6Xr5Tuexbp52PxcaONRS3tVm1s7aBG9/6CVxxJfv3UXpffKAV5eruVGwyEa6/dy9WQd107t4+Kx3Zw9vIub9bU0Hq/h3NEaLkgt0ojzEt85vZ97J+o4f7yWpoaDnDmyByWXiBHMx9Cmn6GnOnHSXdhzMdF27HQHXrqNUqYdV4hqbqYDa/Y5hfEnGJPN8KkN5lsJMk8Z676NMq2mMb08mmVju0vYgUGpwjbeJjtrlg9uCT7mbJqG8wxnqY6x5BzKeCKOZY6ia98orPbx4/t1Vn+2YuiW1NZEi8I6pqFto0vumTpD80tc6v3AgFqUrgajIyMoqRmVMJSOtovjgK2vYGspPM+X3Mf3Q8rl8h+EMifk99iIk4kEiqrOEgQZwmBdNJAfK4RlqhMcJydqUJFtbplVJHFdl5LnSV6hFISU/EDsyhuG6bloheNSWNvsVtnu63mj8i1fNaxUNswiomYRO/PqCpNJlIwYSjMMwxZ0TMtC03Us265a/2n2L7YMp6YmUWamp3A9Rw5aR9M0HLmEkrFO6Biyi4D/GdFRREOdmZJnI66maVIoFCgWi6wWfmKbBqFfkgvxN5Cz/ftifrO9wokJlOzSYrUQmVqyXUveoydnEDgWoWtRFvDd/1ppKjWDMvT+DWoqxeREkvTcLPOZNKqqimZYXFjgy+ccuZUVVoTs8rLEWT7nJM9md8TL5PNf6e97zS+cUKToW8MPowAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Postman Example"
+        title=""
+        src="/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/b9e4f/postmaneg.png"
+        srcset="/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/cf440/postmaneg.png 148w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/d2d38/postmaneg.png 295w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/b9e4f/postmaneg.png 590w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/f9b6a/postmaneg.png 885w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/2d849/postmaneg.png 1180w,
+/tech-blog/static/a22914c43f5b39018b5eaf5ed4044eb3/ecd27/postmaneg.png 1243w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Once we click on SEND, we get a response.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/30caf/postmanresponse.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 65.05246166263116%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAACcUlEQVQ4y62S20tUURSHzz/USykGJUG99d6LZS9J0YtBGkFBEURGROBDQlkK3vJSoGFTJoWYz82cuTmemWlGMsTUuZ/7OfO15ijDBEUvHfj4rb3X2mv/9j5bWf34ieWlFeY/rLEQEhUW3q8wO7/MxFyIiTdLTAovx+YYej7O0PB4oE+F4ZEpXgxPMDg0yrORVzx4NIjytq+D1zdPcq/3LLcvneDO5U7uXjlF/4U2es8d4X5PB7e6j9J3/hg3utu43iWx0N/dzsDV0zzu6aT/YjsPe89wres4yo46hZueoBIbQ09OYqensbRp0Rms9KzkpnEzMzjpQyQ2U1MU1VFqsRHIjgW42jjJ5ScomfwOZQPKuk/NEFyw6mAfYrXiH2jNAd30WcvDwCp8EXVlPq59R0mtJ6lWipTLRfb2dtnd3mL/5zaVcolyqSBaDKhWSk3KkrOqBVa1CrdDJT6vF/GMErGoipLL5XAcB7NWpaYbVIv7QgHTNNF1Pch5nofv+03qgYol/BZgQ8wpmUwW27ap1+tBYaMsQMaNhkGDRq4FwzCwLItGT9er47hyT75z0DC/uYktLoLdpbjpROLGogN39d8cutKg1XUjDhxubEhDLYFrW8GuDUeGaWEaOpYc2fNcWez8HTFSM0zBEpceqZQ0TKpfKRSKFErVgFK5RrFUQa9UsOXX2a7/B+rNnCNqOR6m7ZHWNJR4PI4uOxhVk2pNEvI2HK9lsRT/C8t2g/tMa2mUzXyO//X92NpCCS0uoEYiJBMxMukUuW8ZEokEmWwWTY7QiNVoFFVVCYfDRNUI8Zgq40jw7hKxKNFIWOaihN4t8gv/MKgBBrJyjwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Postman Response"
+        title=""
+        src="/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/b9e4f/postmanresponse.png"
+        srcset="/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/cf440/postmanresponse.png 148w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/d2d38/postmanresponse.png 295w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/b9e4f/postmanresponse.png 590w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/f9b6a/postmanresponse.png 885w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/2d849/postmanresponse.png 1180w,
+/tech-blog/static/0e72394fbdf4123bc3d3f67a81c94c31/30caf/postmanresponse.png 1239w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>But something else also happened. Remember we added a console.log(‘req.body’, body) before sending the response.</p>
+<p>Here</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/6935a888026cd4f1989c85aeead40e26/8ab6a/cmderres.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 452px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 40.04424778761062%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABJ0AAASdAHeZh94AAABQklEQVQoz02S23KDMAxELTtAQzvplISbAXMJSZq+NP//c9vFdid5OCPJ9i6SjRInkB9yI61AdxpyZlxY92RS8Gc+uXZkXMI5yVhrRnmitYYSK95AJlJxsSZOQ4+sjzTrSMM8ISn3Phj3xBD9ahZQWxfqRtFVgtDGLqaYOwVluf8RuvRdV/EDOnTlicZKOglmK6mj6UDmKOyiSS7B9CQwXzTYBSNjNozPvaHiSOoSqSIzGUhJRtKShLwpfw3qEGqRgFLqadgtA8arQ9EWaJ3FdJnQDA3Gm0PZlqjaCvM6oe97VCfWxxrOdljPK6xtYbsOj8cv0jQJhm4YMbsR63JGSUFT1bh/35Fnez/e7r6D6TUOxQHveQ7NEROK0zRFkuw8WZb5sc32ykVR+Ja3hf9X83kcR7bRjPKXrl9+j9davF57wz8ZP7FP6K8emQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="CMDER Response"
+        title=""
+        src="/tech-blog/static/6935a888026cd4f1989c85aeead40e26/8ab6a/cmderres.png"
+        srcset="/tech-blog/static/6935a888026cd4f1989c85aeead40e26/cf440/cmderres.png 148w,
+/tech-blog/static/6935a888026cd4f1989c85aeead40e26/d2d38/cmderres.png 295w,
+/tech-blog/static/6935a888026cd4f1989c85aeead40e26/8ab6a/cmderres.png 452w"
+        sizes="(max-width: 452px) 100vw, 452px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>What happened here is our Node.js server was hit with a request for signup and the data we got was {
+name: ‘Alamgir’
+}.</p>
+<p>This means our flows are ready. now if we add other values then they will be added themselves.</p>
+<p>Once we get the full data, we can add that to the database after checking if it doesnot exist already.</p>
+<p>So, let update the code to save it to MongoDB.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">app.post(&#39;/signup&#39;, async (req, res) =&gt; {
+const body = req.body;
+console.log(&#39;req.body&#39;, body)
+  try{
+const student = new Student(body);
+
+const result = await student.save();
+res.send({
+  message: &#39;Student signup successful&#39;
+});
+
+  }
+  catch(ex){
+    console.log(&#39;ex&#39;,ex);
+    res.send({message: &#39;Error&#39;}).status(401);
+  }</code></pre></div>
+<p>Now lets try again from postman</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/d9d29/postman2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 64.66721446179129%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAACQklEQVQ4y42RyU4VURCG+3GMYIiJAZe+h3FgYURNdOUCh6gbAyw00bhBEAUVEURlBSGiMYI74wOYsPCiDH27b89zf1b1HbwaE+zkS9WpU/V3nSpjfWGGlbdLzC4uM/18kenZNzx7ucTU01eMT80yObPAxPQ8E0/mKh4+bjI+9ULyX7MoNeo/krzJmXmM5cs9LFw5yuilY9we6mfswgAj5we4OdjH8PED3Bk6zOiZPq6f6uXG6UNcPXGQa8rJHkYk//7Zfm4N9nL34gBj545glHufYHuNcusd7H6Aupzr62BtCJ8F8W1FfFtijWYsr61Sfl8WX+rc97CzBj9WMRpeyo4VYrsJlhNh+RleDEECfjdxC/ElDUeSvtYyhldyHmxkOH5KIywxXKeB07DxXAfLtjF3tzH3duUscceurN75vovvtfGIA4dv2x73PrrMfXEJvAaBa2MkSUIYhqRxSBhFhI5FJHTiaUpZlhRFUVklz3OyLAfKDkWRk6cJhhZFIlRKgSbmYouWgN5pTL9u0TiOq5qiKEnzoqJIInLB2NzcxLKsTlEb/YIgqFBh7fjv++6zhvSHxlatVgl2d9Imy7Iqqc2fAr+Fm89uCercInlC9VxpPW8Vq9X5abwtqPdq9UeK3qVi06w500zOhm/+lA05spAQP/AJwojA94nEbxam/yZtWp1lEKdSJ7uIZSlW3cQ0LWzbpW77NNwAx/UIfU+GXe5LpshyQhFN0gxjzzSls4gkyqTLUoIgOZLEfwl2hCVfxX8BPua6vr5eQkkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Postman"
+        title=""
+        src="/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/b9e4f/postman2.png"
+        srcset="/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/cf440/postman2.png 148w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/d2d38/postman2.png 295w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/b9e4f/postman2.png 590w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/f9b6a/postman2.png 885w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/2d849/postman2.png 1180w,
+/tech-blog/static/aafdf2829658dee94b62b8280f5d7133/d9d29/postman2.png 1217w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>press Save</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/d40d9/consolecmd.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 485px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 30.927835051546392%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABJ0AAASdAHeZh94AAAA7klEQVQY05XP21LCMBAG4E1aGnMgFFpKpcEekgr6/u/3uwTHGxlnvPhu9vDPLumgUU4laCTIvYTsJNRFwUQD3Wq45GBrC210ZpyBcw7G2Mz7HapK/aA5LVjeF3RDhxACYoxIccXbHNCGFuPniClOCH3AsTkinHlmjnn27nb7wIu6h1UZnU491rTmIect6vGA12sPURMosStBDALlib8w9GC5RgJE9NuGz4zrimWeYLcW7mJBPTfOj0Vy7MAG5r/DdgJSyOeB1lp+M/GVEXGJ8FsPagiVr6AK9XzpL03ToCw3KIoiy8WCCb5Ein8HfgFsDYcXD02V5QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Console"
+        title=""
+        src="/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/d40d9/consolecmd.png"
+        srcset="/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/cf440/consolecmd.png 148w,
+/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/d2d38/consolecmd.png 295w,
+/tech-blog/static/379046bc804495ad48b02f5ad20ac3c2/d40d9/consolecmd.png 485w"
+        sizes="(max-width: 485px) 100vw, 485px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>We see the data in cmder.</p>
+<p>But is the data actually saved in Database/MongoDB? lets take a look.</p>
+<p>Open Robo 3T.</p>
+<p>connect to localhost</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/9a22e/robo3t.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 91.67950693374422%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABJ0AAASdAHeZh94AAADVElEQVQ4y4WU6W7bVhCF+artg6RA/zR9g8SJAyde2kpxEiDIjzS2ozhBjbiWnEULV5GiRIqkFq7ipuV07pVlREUXAYNL6pLfPTNzhsKrt+/wVRYhyl3IqgFVN6HpfWjGAJKio/buPU5Pz3ByQkHr6U2w6zN6923tHGdnNZy//4A7P/wIodlpoygzJEmCPMuQZSmKIkeR5yiLAsvlEv/32zxTqTyF8GvlObxxAM9zYVk2rR6GwyF6vR6/DoMQURQhDMN/jel0StAF9vaeQDg4qsB2CGJbUFUNJoEcx+GwwA8w9sdw6bDRaMRf9H0W/laMx2OU8xJ7jwkoywoa4gCfvzTR7/cxmUwQxTGlXSCntL3Qgx/4iH36Ly+QximSKMEsnlGkfI3DGFgBj5nCZquNgTWELMukaoTFYsFhGdWTAYsyR39qwo1dBFkIO6CyRB7ciEoUWDBpT/M0TIsJ7j98AOH17ye8Xl+/NCBKHcxmEUWCNE2pSTlmeYIT9Q0ue5dQRypUT4E+1mlV0bSbkFwZsiNhUk6w8+ghhMPDI/TcAI3mAJrqQBRtao7LoXEUIy1SXPvXsBILTuL8Z7f39w8hHB8/Q1qu0FR+JpXfQ5K/QxzXKV2QwpSnbAYmT9GJHXSnOuzQgl8EWK1WWK6WmM/nHPhk/wDC02oVIb3cEN9Qh39BENRQllOq4bqOC3rYdVwYhkFOIDvpBmzbpgxSDmFQVnf2412uVqpwyIdXnw2Y5pggoCiR5RkHstOZZQaDASzb5l4dkBuYI5YE+9bYBwf7ZOzfqvwmiQLM0oRPSn4DY11m15IkQSF7tVpNtEURerdLB+a3oI3C3d1dSvn4Bb9hKawB+S1srbDkJmcqPZfswsNF3+yTgHQLuPOAbPP8xcsb4IwDvlW2AQ6HNpWjz9O1LPKeaVIdh5iX5TZwh4C18z9uFW6AfwcrisLTVlUVBjVFoxFlTdqAtoCSonEVTCEz8z9B2RS1mi2ubjO/UxrRothWeO/efQgXFxf8hnWTbbB1HSVPiX3C2NdmA7JvvkisjgmJYM+yg9dNeQThWeWIpkOkDrZ4Wjql0qW0DBrHHtVK6+ro0L5Ie51OB9efPqFeb6DeoKjX8efVFT5+vES73cbdn+7iL6tLL+Ra1jKgAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Robo 3t"
+        title=""
+        src="/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/b9e4f/robo3t.png"
+        srcset="/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/cf440/robo3t.png 148w,
+/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/d2d38/robo3t.png 295w,
+/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/b9e4f/robo3t.png 590w,
+/tech-blog/static/23d9501a9a493bfc59ad319431b7c487/9a22e/robo3t.png 649w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>double click</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/59bfa/robo3tsaved.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 49.20767306088407%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABJ0AAASdAHeZh94AAABzElEQVQoz52SWW/TQBDH/f2/QwEhBA9IVVBCEsLRF5CalIojbWzHdn3EV9ZX3Djx7T+7mwMe4IWRfpr5z+6OdnZHmEsSrJUN3ydwPR+EhIjjDcIoQRDFHMd1Yds2bMc5eM4hXtGzlrWiWNA0DYKiGvBsHbpl0qIeNpsEWbbFbr/DnrHboyxLVFXF/b9g61mWQfh+J0NRFERRxBcsZ4Xr6Qz39OaLhQhRlrBUVEjyEg+GeUZnmNZZm/SW6oMO4ef8DoZpIk1TNG0LdSlj8OYS40Efk3EfV59G+DgZ4sN4gKv34zMsNxm9PcTvRuj1LjHs9yDcSwrmkgZVVdBUBT7LPl7dEgwWKWcobvH6W4gXszWezUI8nRI8uSZ4fhPg5VfqbxNKjItpgIsvLoSFrGGp2/zdiqLANq9geBGsdYzHskNatPDiLX7IOkTdpTgw/ATrNKf5DOGu5iR5y3OC43rI8/xM1zbYZ4+IwgAna+sKXVMfVXfK0o5K/Glsn8DGhf3QqSCLm6ZBS9+z6zoOi9u2+62Puea4h2lmBf1UgY0KK8DaLYoSdV3jf42dFWRJpO2FCAihQ034+CRJQoc75oRUB0HwVwihHGNWw/Nc/AKXoueIs7opjwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Robo 3t"
+        title=""
+        src="/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/b9e4f/robo3tsaved.png"
+        srcset="/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/cf440/robo3tsaved.png 148w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/d2d38/robo3tsaved.png 295w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/b9e4f/robo3tsaved.png 590w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/f9b6a/robo3tsaved.png 885w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/2d849/robo3tsaved.png 1180w,
+/tech-blog/static/931701f3b18ab2b1b88de56a593f2e32/59bfa/robo3tsaved.png 1199w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Congratulations! Your student has been saved to MongoDB. that wasn’t so hard right.</p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><img src="/tech-blog/static/profile-pic-60e61d84dd39be91e838f8204343d0bc.jpg" alt="Alamgir Qazi" style="border-radius:50%;margin-right:0.875rem;margin-bottom:0;width:3.5rem;height:3.5rem"/><p>Hey there, I&#x27;m Alamgir Qazi. I work as a full-stack JavaScript Developer. I&#x27;ll be sharing what I&#x27;ve learned about Angular, Node, Docker, Kubernetes and other cool things.</p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/tech-blog/introduction-to-containers-and-docker/">← <!-- -->Introduction to Containers and Docker</a></li><li><a rel="next" href="/tech-blog/intro-to-nodejs-part-1/">A very basic introduction to Node.js - Part 1<!-- --> →</a></li></ul></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/intro-to-nodejs-part-2/";window.webpackCompilationHash="df89b241ef9396fac886";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-13a28d1403ec4481c4eb.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-2223fabe0a5d5ce97932.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js"],"component---src-pages-404-js":["/component---src-pages-404-js-bfcfeb502e0b4bb62413.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4513653e6f9bbe734230.js"]};/*]]>*/</script><script src="/tech-blog/webpack-runtime-d35fa9472111221b0ebc.js" async=""></script><script src="/tech-blog/app-13a28d1403ec4481c4eb.js" async=""></script><script src="/tech-blog/commons-1f390115944f3b296e88.js" async=""></script><script src="/tech-blog/styles-a81d106dd494ea129cb3.js" async=""></script><script src="/tech-blog/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js" async=""></script></body></html>
