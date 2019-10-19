@@ -1,6 +1,6 @@
 ---
 title: A very basic introduction to Node.js - Part 2
-date: '2019-10-12'
+date: '2019-10-19'
 ---
 
 ![Intro To Node.js](./node-js.png)
@@ -68,7 +68,7 @@ But still, mongodb has some similarities with sql databases.
 
 MongoDB has collections instead of sql tables.
 
-![Nosql](./nosql.png)
+![Nosql](./nosql.PNG)
 
 I have written more about nosql databases [here](https://slides.com/alamgirqazi/nosql#/)
 
@@ -155,7 +155,7 @@ nodemon index
 
 Lets test route [localhost:3000/signup](http://localhost:3000/signup)
 
-![Not Found](./notfound.png)
+![Not Found](./notfound.PNG)
 
 This is predictable because we wrote only POST method and not GET method. So how do we test POST method? using **Postman**.
 
@@ -224,3 +224,180 @@ double click
 ![Robo 3t](./robo3tsaved.PNG)
 
 Congratulations! Your student has been saved to MongoDB. that wasn't so hard right.
+
+So what have we done? We have inserted a student into mongoDB using a post request.
+
+Now, I wanna retrieve all students inside my database. For now, I have inserted 2 more using Postman.
+
+Okay, so to retrieve, we get to get data from the server (Node.js) so in order to do that, we need to write a _GET_ request.
+
+```
+app.get('/students', async (req, res) => {
+
+  const allStudents = await Student.find();
+  console.log('allStudents', allStudents);
+
+  res.send(allStudents);
+});
+
+```
+
+This will return all the students in the database.
+
+![GET students](./GETstudents.PNG)
+
+that is excellent.
+
+So now that we have our students in the database, lets write a login method for them. What it would do is check by email if the user exists, if it exists, then it will check for password.
+
+For login, we have to send email and password to the server from (mobile/web/client) so again, it will be a POST request.
+
+here's how the login method would look like for now
+
+```
+ app.post('/login',  async (req, res) => {
+    const body = req.body;
+    console.log('req.body', body);
+
+    const email = body.email;
+
+    // lets check if email exists
+
+    const result = await Student.findOne({"email":  email});
+    console.log('result', result);
+
+    // 2. if exists, check if password matches
+
+res.send({
+ result: result
+});
+
+  });
+
+```
+
+if the email doesnot exists, the result will be **null** otherwise we will get the object.
+
+lets see
+
+alamgir@gmail.com doesnot exists so
+
+![NO email](./noemail.PNG)
+
+Okay, so lets try with an email that exists.
+
+![student exists](./studentexists.PNG)
+
+When the email exists, we will get an object in result instead of null.
+
+Okay, so lets write an error in case the email doesnot exists.
+
+```
+   app.post('/login',  async (req, res) => {
+    const body = req.body;
+    console.log('req.body', body);
+
+    const email = body.email;
+
+    // lets check if email exists
+
+    const result = await Student.findOne({"email":  email});
+    if(!result) // this means result is null
+    {
+      res.status(401).send({
+        Error: 'This user doesnot exists. Please signup first'
+       });
+    }
+
+    console.log('result', result);
+
+    // 2. if exists, check if password matches
+
+
+  });
+```
+
+![401 error](./401error.PNG)
+
+Now we're sending back proper error from server.
+
+Okay, lets get back to login. If our email matches, we need to match the password.
+
+In the variable **result**, we already have the password so we just match it with **body.password**
+
+```
+
+ app.post('/login',  async (req, res) => {
+    const body = req.body;
+    console.log('req.body', body);
+
+    const email = body.email;
+
+    // lets check if email exists
+
+    const result = await Student.findOne({"email":  email});
+    if(!result) // this means result is null
+    {
+      res.status(401).send({
+        Error: 'This user doesnot exists. Please signup first'
+       });
+    }
+    else{
+      // email did exist
+      // so lets match password
+
+      if(body.password === result.password){
+
+        // great, allow this user access
+
+        console.log('match');
+
+        res.send({message: 'Successfully Logged in'});
+      }
+
+        else{
+
+          console.log('password doesnot match');
+
+          res.status(401).send({message: 'Wrong email or Password'});
+        }
+
+
+    }
+
+  });
+
+```
+
+Lets see it in action
+
+![error login](./incorrectlogin.PNG)
+
+Using the wrong credentials, we get error response (code : 401)
+
+![success login](./successlogin.PNG)
+
+Using the right credentials, we get success response (code : 200)
+
+So we set up a very simplistic auth system using node.js and express.js framework.
+
+Here is the link to code. [github/simplest-nodejs-auth](https://github.com/alamgirqazi/simplest-nodejs-auth)
+
+To run it locally,
+
+```
+$ git clone https://github.com/alamgirqazi/simplest-nodejs-auth
+
+$ cd simplest-nodejs-auth
+
+$ npm i
+
+$ npm start
+
+```
+
+In this part, we learned how to connect with MongoDB database. How to create GET and POST requests in Express.js. Very few lines and alot of functionality.
+
+Btw, there are many things that we do not use in production projects. For e.g we never save password in plain text. we use an ecrypted hash as password. We also have a single index.js file in the project we created which again is not ideal.
+
+We will cover the best practices in part 3 of the tutorial.
