@@ -5,7 +5,7 @@ date: '2019-12-01'
 
 ![Intro To Node.js](./node-js.png)
 
-This is the part 4 of post [Intro to Nodejs - part 2](https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-3/).
+This is the part 4 of post [Intro to Nodejs - part 3](https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-3/).
 
 In this post, we will
 
