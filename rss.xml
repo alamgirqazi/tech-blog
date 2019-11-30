@@ -1,4 +1,519 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 30 Nov 2019 09:27:36 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 3]]></title><description><![CDATA[This is the part 3 of post Intro to Nodejs - part 2. In this post, we will look at improving our existing code and add new features like…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-3/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-3/</guid><pubDate>Sat, 26 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 30 Nov 2019 13:21:05 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 4]]></title><description><![CDATA[This is the part 4 of post Intro to Nodejs - part 2. In this post, we will fix two issues we found in last post. Writing all the code in one…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-4/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-4/</guid><pubDate>Sun, 01 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVQoz32ST0sbURTF37xUlyq4iYotFilvJkqCmHkUyfyLSi2lLhS0Gy2lioi68QuYMaZoxbroF5B2UREXhX4G0cTWUHWjErMRim7cdTme+5IganDgcOfNnPnNu/cdxh65bMdUNWHF6Z47rlTrSq160UtS8lXJtLBjsPSBzvysrtaWE3/gdz3JegdKP0vtGWwpr7OFXcFWTyPKwNXfPcnJsPhb56ms4Iv7Ojc7XlYgDdA0FII0+EO2I3kQMJb+o2vkAVR7sNv3S9E769cj3cq0Mr9M0EuAwtW6BKyW6upZhJMxCf1yk9Kjh35OT2CX31BdWru9Mk7vCeh4Zh12Fk/0yG3U/nJHBkZkQxG0XE/A/9AP25b/xlOxcPpAXK2ddwSo15Pr0WbLkgWMY8NxzQvcPwe0+HasO4dvdqa+Rhszh2IQbX8AcC7z16gjYPHNO7MGwPzwTNfTdF4UvhQ7CXgxsRYL25Y8gWcLKgDYXAZuJvtl08/g2RPskGAfoVkAGwj4grbu9ZntjA3xT8dCwPQZpxwttxyD5zskS1GSnWh5HbVVjWjPaMEMe6C227xZ1XM17sfunJxlmdr9CFXLoTLhULRG5rLMkdD8nAj5+6UYIHMqJhSvih/zDFVgftbQMEPKrhYEo+wGOwusfLZj/14AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Intro To Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png&quot;
+        srcset=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/cf440/node-js.png 148w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/d2d38/node-js.png 295w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png 590w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f9b6a/node-js.png 885w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png 960w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;This is the part 4 of post &lt;a href=&quot;https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-3/&quot;&gt;Intro to Nodejs - part 2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this post, we will&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;fix two issues we found in last post. Writing all the code in one .js file and the other was writing secret keys inside our code.&lt;/li&gt;
+&lt;li&gt;create a complete new API for books.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Lets first tackle the first part. Creating a folder structure. Some Web Frameworks like Laravel (PHP), Django (Python), Nest.js (Node.js) create a proper folder structure when you start a project. However, Express.js gives you minimal. It doesnot forces you to follow anything. It gives you full control. This is why we need some boilerplate for Express.js which can help us maintain our project.&lt;/p&gt;
+&lt;p&gt;I have extracted and created an Express.js boilerplate and uploaded it on Github. It contains most best practices of how backend Express.js projects should be created. We will &lt;code class=&quot;language-text&quot;&gt;clone&lt;/code&gt; that project, see the complete folder structure one by one and go through it.&lt;/p&gt;
+&lt;p&gt;Here is the link to that repo &lt;a href=&quot;https://github.com/alamgirqazi/nodejs-express-mongoose-starter&quot;&gt;https://github.com/alamgirqazi/nodejs-express-mongoose-starter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;First up, open up &lt;code class=&quot;language-text&quot;&gt;cmd&lt;/code&gt;,&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git clone https://github.com/alamgirqazi/nodejs-express-mongoose-starter.git
+
+cd nodejs-express-mongoose-starter&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/d8ebcbcd72c782dd397939ceb1e100ca/bfdc0/clone.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 57.25490196078431%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABqElEQVQoz62S3W7aQBCFd9fGP7s2oMQ4NjahxBCltpFSKW1CoCLUirBVc9v3f5PT2YBQEFHbi158OjOzO2dnLLNpkSF/LFAsSpQPcxQlMZ8jL0vcFQU+lwVpjts8x81shk/T6ZtqJhRPbmfIojFSJ0IiY7AgCBFGIeI0xiAcII6GCIMBXNsBY+yf8ITERI3IlAzjKMEoGWGUXiMdphgOEzKN0e/14boupCthCOOtUXBxhq53rS6mwQTZVQYmewrelQcVkV76UFKhY1onBpzxDybjx7rDLFT3X/Hr5w7M9mzwLh32CJ9QdElSg0c4dFk6sC2HpnXg6Jxw3b0qyWEYtLLhYezTdl4Exg9jn8H3yrmehB0R/ICODxP6hkRqB0jsS52frsP/gDir7Xv7psK1HSJxAjD9wYUQR3T+HtM4pXNAx/qcCw7flIitC7hc6QcY/geOULCZC7Z4fkDTNGjb9q/s2h3quka9rVFtK7y8blA3W2Q3dzBZBy6Zsi/lPdZPG2yWFTarH3v9gGpVoV3XaFavqBYVlk/f8fjtGevlC8ZpRoYW/T4KvwEQ4gxMWCX5eQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;clone project&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/d8ebcbcd72c782dd397939ceb1e100ca/b9e4f/clone.png&quot;
+        srcset=&quot;/tech-blog/static/d8ebcbcd72c782dd397939ceb1e100ca/cf440/clone.png 148w,
+/tech-blog/static/d8ebcbcd72c782dd397939ceb1e100ca/d2d38/clone.png 295w,
+/tech-blog/static/d8ebcbcd72c782dd397939ceb1e100ca/b9e4f/clone.png 590w,
+/tech-blog/static/d8ebcbcd72c782dd397939ceb1e100ca/f9b6a/clone.png 885w,
+/tech-blog/static/d8ebcbcd72c782dd397939ceb1e100ca/2d849/clone.png 1180w,
+/tech-blog/static/d8ebcbcd72c782dd397939ceb1e100ca/bfdc0/clone.png 1275w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;we can see a folder being created.&lt;/p&gt;
+&lt;p&gt;The first thing I often do is change folder name. You can pick any name. After that, I will go inside that folder -&gt; view hidden files -&gt; delete .git folder. because I don’t want my old comment history. I want a brand new git history. Next, I open up package.json and change the name of project.&lt;/p&gt;
+&lt;p&gt;Since we deleted .git folder, lets do&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git init
+
+git add .
+
+git commit -m &amp;quot;set up repo&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Okay, so lets take a look at the folder structure&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/e8a95e9fe48793b40a6b226fc41ab47e/05cd5/folderstructure.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.51759610178668%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABlUlEQVQoz4WSWY7bMBBEdZMkM7a1cBVXk5I3xIGNBLn/cSpNSkaMOIP5KLRAsR+rl4brCCYMYspomcOuU9gOI3aDxrZX2HQfa9trMOXp7oheOHTcorFhwnsnIVTGOVwR8xX29Btmn8FVQDvYRawkvKpltkoauq8TGq4cvm4GSp4wxTtOaYaf75DTT7h9ggoRwkdIG9Gtyc96QHuKvfBoTHHYigo8+xtufoJPN9jLL8TLDHvIGHOCoZaUhPY/0Icq0KUj3ggoZMI5XpHDETrfYfIF0u0xSHLGfVVJeHy/amlB0/IR37acLgdYT47IsXBHDNTTBRIIGmrs19gV8L9aoc2X9746HOhQUFOVop6RK0bJ5aw4LGJ0/lnJFVgG8rYTNcmYGdFmCIr9OIGZAEHD4Ga/lus+BL0AGQG9OZAmmHDC6Kh8Sz1UxSWVLl3dtaqn7+dH/pa8Ap0qbmaYcSm9rAqjtSqrVdzykaQ9uKVI/4Re2vKAVWB5ZUMbzwmow3fI9IOWmibsE02ZSjZHgh+gVaqOPiv5Dx6gVjQqP5K9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;folder structure&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/e8a95e9fe48793b40a6b226fc41ab47e/b9e4f/folderstructure.png&quot;
+        srcset=&quot;/tech-blog/static/e8a95e9fe48793b40a6b226fc41ab47e/cf440/folderstructure.png 148w,
+/tech-blog/static/e8a95e9fe48793b40a6b226fc41ab47e/d2d38/folderstructure.png 295w,
+/tech-blog/static/e8a95e9fe48793b40a6b226fc41ab47e/b9e4f/folderstructure.png 590w,
+/tech-blog/static/e8a95e9fe48793b40a6b226fc41ab47e/f9b6a/folderstructure.png 885w,
+/tech-blog/static/e8a95e9fe48793b40a6b226fc41ab47e/2d849/folderstructure.png 1180w,
+/tech-blog/static/e8a95e9fe48793b40a6b226fc41ab47e/05cd5/folderstructure.png 1847w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Controllers&lt;/h3&gt;
+&lt;p&gt;They will contain our actual business logic.&lt;/p&gt;
+&lt;h3&gt;Middlewares&lt;/h3&gt;
+&lt;p&gt;Middlewares are functions that are executed whenever a request is received by Express.js server. All requests have to go through middlewares first before actually hitting the controllers. This is where we will check if the user is authorized or not. (we will check it using JWT Token).&lt;/p&gt;
+&lt;h3&gt;Models&lt;/h3&gt;
+&lt;p&gt;They are kind of an actual schema for your backend. They are optional but using them helps alot in managing node.js applications especially those that use MongoDB.&lt;/p&gt;
+&lt;h3&gt;Routes&lt;/h3&gt;
+&lt;p&gt;This is where we define all the routing files. These are the routes that are in the end exposed.&lt;/p&gt;
+&lt;h3&gt;App.js&lt;/h3&gt;
+&lt;p&gt;We try to keep this file as small as possible. This is where our Node.js application starts.&lt;/p&gt;
+&lt;p&gt;lets go through some of the things in &lt;code class=&quot;language-text&quot;&gt;app.js&lt;/code&gt; that wasn’t in previous tutorial&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;require(&amp;#39;dotenv&amp;#39;).config();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;if you take a look at package.json, there will be a package in dependencies called &lt;code class=&quot;language-text&quot;&gt;dotenv&lt;/code&gt;. It helps us manage environment variables and prevent writing secret values inside our code.&lt;/p&gt;
+&lt;p&gt;take a look at this code in app.js&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// connection to mongoose
+const mongoCon = process.env.mongoCon;
+
+mongoose.connect(mongoCon,{ useNewUrlParser: true,useCreateIndex: true, useUnifiedTopology: true });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;process.env.mongoCon holds the URL for our database. we’re not directly writing it in our code.&lt;/p&gt;
+&lt;p&gt;How do we set mongoCon up? create a &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt; file in your project. your app won’t run without it.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/c125d67c462e8c5843e81e34eb7d339e/2970d/env.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 317px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 176.65615141955837%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAjCAYAAACU9ioYAAAACXBIWXMAABJ0AAASdAHeZh94AAAEq0lEQVRIx41Wy3LjVBD1T7AYhsQP2XpdSZZly3aiOI7HJvYkmUdSTM2wYBYs+QGKKr6A4lHFPwBVFK8N8xXAKhvmZw59Wrq28xwWXVfW1T23+/TpbtfcMIPjdcHVDXvynKDRNmp1mhPqu7afrNf7rNbtF3h68TH2Dz/Uw20/xmzxGNNHSxzNV5gfn6LlGjQ7vCR8p9WOTy7w+tPPBPB4/TJMBvCjDEbWMOnjYcPF+7tt3dsGbnbCG8+1/miK45NzAZDDcY5efiCenWC+fILD2QqL1VMs5Hl1eg7THaIT9OCZrKLoqvF9jQ8tN9EXJhmiPzrE8uQ5zp69wOOzCzw9f4mlgL149RpJtl8d7IsNqnVj3KsF4lW+N9OPTXeEwXiKZxev8NHLTwT4HCsBpddt8Wy4P0Mk35DvKB0jG070TDY8RD4+0uTW4t4exgcLcKXLUTrC3mSOYrrAuJhhJCDpoBBK+rrPQ3alKvgcJrkavayFEib54w/Hi4XYALstH8XYg4lLqTBBbpjihx9/wuXlJf76+x+8ffsvvvnue7z3oK6JqjtBGbKNnZxQR5ot+SCIImRZrJd0gq4e+urrb/Hb73/g519+xZ9v3uDzL77Egx1Hv+G+AtqQyUUp6hC7joEX+JjseQKWqIzoIQ/RqEuCULNBnK3lpIDpQGSyOJONoQKWByL4cYFOOFDv/KinYXump8Z9+53V5RqQnpHHksNk7YGXSCJEAa4CZvAFiN4Q3Hp6VeQVoBUlE7Pt4WGUIhWAjoQaCGAY9/UgybcA26BrQOpv+uhEZdNyS3KbApgKoDEpHD9R/mxi7qtjBczyCVjPPVmbnUi9I+GtYQ9uVzgTMCaF3KknFW+3mQJqDVdaLENmWAajYYRQpONKlqMkQ9Px0XA8NFp3mOxR/DVbmyxBC7jTMngyD5D3I+wdzDA5nOHhThM7dUdtt9G+YvadArIfsnX1h1Pl0PLR8qlLCTvsakKYXU84bZOOSgnXTbsNRU0OCWyTQsB2QI9TBWRSaFaDemnHrDu7muWQ/FGLJYexyqIuB9KOi47UtVdJht7R9MJKOhsLNlkmfxZQ69pQexnyrIdYunUoe+xAJt0UwG3N1eZCK4Vdu6yYEeLsQA4XOF1KGysK5MUxRkJLmk8FfIyoV8g3Ny3K2OLyEnBczFXYbb+rQmbXaUXS7jX7tIESHiSsbYq9W1lyZVUPGSpBrWwsHx9EYzR94S2salmyzKHFpLBf3lkpROXg4Q96ptUg5phc277tNKVsyt/brexGpQyEv8XqucySo7UOCdgKZHhJGKxhW8u2c9uLt8fqGpA1XEyXOqgUUOerbMZiRhqoqJ+ysfVMD0Od1wNtZzcAyeFmptibDdphJCGX7X/jZZkwu9rWz3JdA9qZapuDBXSNX3oYl96Ybq5mx8F2X7zFw+uAAdrpBA4TJTXq+hE6Mj9Ki240V8c17/IwgDNYSKbFGy+EH8YKSvOCq3NE696L7gfk37gk8uSw0VIsZVMOKYZ77wi4i0Mv4F+7SBPiVd2mTFByBeR/JYU6bHT3RYvlgCrLr69e1reAbk3KrYA8IM8sMw5zx6vmzLU5fFvI/wF0AS/LOPoa9wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;env file&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/c125d67c462e8c5843e81e34eb7d339e/2970d/env.png&quot;
+        srcset=&quot;/tech-blog/static/c125d67c462e8c5843e81e34eb7d339e/cf440/env.png 148w,
+/tech-blog/static/c125d67c462e8c5843e81e34eb7d339e/d2d38/env.png 295w,
+/tech-blog/static/c125d67c462e8c5843e81e34eb7d339e/2970d/env.png 317w&quot;
+        sizes=&quot;(max-width: 317px) 100vw, 317px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;There will be a sample.env file in our project. copy the contents from there to .env file.&lt;/p&gt;
+&lt;p&gt;Now to run the project, first&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm i
+
+or
+
+yarn install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;then&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm run dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Great. Our app should be running now.&lt;/p&gt;
+&lt;p&gt;The login/register methods in this should work and some other methods have been added as well. They are in &lt;code class=&quot;language-text&quot;&gt;users.controllers.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Lets take a look at line 49 of app.js&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.use(&amp;quot;/users&amp;quot;,UsersRoutes);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This means all user related routes will start from &lt;code class=&quot;language-text&quot;&gt;localhost:3000/users&lt;/code&gt;. In case we want to add more, we can easily add multiple routes.&lt;/p&gt;
+&lt;p&gt;Lets first signup&lt;/p&gt;
+&lt;p&gt;go to postman and post register &lt;a href=&quot;localhost:3000/users/register&quot;&gt;localhost:3000/users/register&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;try it again and it will throw this error&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/ce6fb56b182e6ccc85a52cdf3413004e/a83d3/duplicate.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 70.17398508699254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAACTklEQVQ4y42Sy05UQRCGz/u4QY0JsjDxcTTeQgIbN8YLOoIwAzMKCGgID2DiA6gLNwQNETUjLF3I3M6l793n8lt9zkxglBhP8p36u7q6urqrg/cbC3i1tYOVtW0sNTdQb20Rm3i80MTDWgOLjVXUnjUxN+9ZId8yHj1dxoMnDYrfLGPvk56vr6O2+ALB3r1zeDt3Fc9nr6A1PYn12SmsEY1bF7F4fQKvZy5h9c4FNG56zqN+YwJLhLerM1NoTl9G6/YEtu9O4eXsJAIkB0D8GQg/AfLbkK+A+AKo72QPKm3agPsBpIeAJv9gj9bskt4HLM2z/TJH0A8FOgOBQSzR6TPSvCRiBrFwiLklKp2IFIlMEXGyicC7Q4NrbyxaHw1CWh9yh0AKDsEZlJLwukJASQHGEmitoGlODfHjKAohkhBHHYWdPYEPR+RPBlA8QdDtdpGmKf78iqKgxRpZlpV6hP/yPCd/Poqs/nmGLKUK2+02OOdl0OmFHikljDF/+Yd5kZNI8wIZ4V0Z5QgGYVhWclZCa+0ZyYqx2JMqyU+nCYzksFSFc46qsTAuLRNZGrsh/koqKu2cLWNSmpNKQ2gL5TF05PDXT+pYDEbHZowhYWTjGEYk5VH8Hf4L5zci6xNrbRAcU1OiSCDq01NJLO1Gu5oUmjBp8V9YQru8PB11uQNnHcRxjEGX2q/y070eu6Nxxl/EqPtBt1M9G8skop4CZ7Srol0NoStt9AmaxnR1VEQOyb0vp0SnEvZ6vbF3SL4yoLIjPY4vqPA6G41PEv4G0tYJVTi8c4EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;duplicate&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/ce6fb56b182e6ccc85a52cdf3413004e/b9e4f/duplicate.png&quot;
+        srcset=&quot;/tech-blog/static/ce6fb56b182e6ccc85a52cdf3413004e/cf440/duplicate.png 148w,
+/tech-blog/static/ce6fb56b182e6ccc85a52cdf3413004e/d2d38/duplicate.png 295w,
+/tech-blog/static/ce6fb56b182e6ccc85a52cdf3413004e/b9e4f/duplicate.png 590w,
+/tech-blog/static/ce6fb56b182e6ccc85a52cdf3413004e/f9b6a/duplicate.png 885w,
+/tech-blog/static/ce6fb56b182e6ccc85a52cdf3413004e/2d849/duplicate.png 1180w,
+/tech-blog/static/ce6fb56b182e6ccc85a52cdf3413004e/a83d3/duplicate.png 1207w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;It says that a user with email bilal@gmail.com has already been registered.&lt;/p&gt;
+&lt;p&gt;Lets go to &lt;code class=&quot;language-text&quot;&gt;users.controllers.js&lt;/code&gt; and update register method&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;catch (ex) {
+    console.log(&amp;#39;ex&amp;#39;, ex);
+    if(ex.code===11000){
+      res
+      .send({
+        message: &amp;#39;This email has been registered already&amp;#39;,
+      })
+      .status(500);
+    }
+    else {
+    res
+      .send({
+        message: &amp;#39;Error&amp;#39;,
+        detail: ex
+      })
+      .status(500);
+  }
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Here I check if the error code is 11000, it means its duplicate error so I send a proper error which a user will understand.&lt;/p&gt;
+&lt;p&gt;You can test the login call as well &lt;a href=&quot;localhost:3000/users/login&quot;&gt;localhost:3000/users/login&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Okay, so what we need is to create an API for Books. We want to be able to perform CRUD (Create, Read, Update, Delete) on Books.&lt;/p&gt;
+&lt;p&gt;Lets start.&lt;/p&gt;
+&lt;p&gt;First step. Create a model for Books. lets go copy and paste &lt;code class=&quot;language-text&quot;&gt;users.model.js&lt;/code&gt; file and name it &lt;code class=&quot;language-text&quot;&gt;books.model.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This is what my books.model.js looks like&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const mongoose = require(&amp;#39;mongoose&amp;#39;);
+const mongoosePaginate = require(&amp;#39;mongoose-paginate&amp;#39;);
+const Schema = mongoose.Schema;
+
+const Book = new Schema({
+     name: {
+        type: String
+    },
+     ibn: {
+        type: String,
+        unique: true,
+        sparse:true
+    },
+     author: {
+        type: String
+    },
+    image_url: {
+        type: String
+    },
+    is_deleted: {
+        type: Boolean,
+        default: false
+    }
+});
+
+Book.plugin(mongoosePaginate);
+
+module.exports = mongoose.model(&amp;quot;Book&amp;quot;, Book);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We now need a controller file. lets copy paste &lt;code class=&quot;language-text&quot;&gt;users.controllers.js&lt;/code&gt; file&lt;/p&gt;
+&lt;p&gt;This is what our books.controllers.js file looks like&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const booksController = {};
+const Books = require(&amp;#39;../models/books.model&amp;#39;);
+
+booksController.getAll = async (req, res) =&amp;gt; {
+  let books;
+  try {
+    let merged = {};
+    const start = 0;
+    const length = 100;
+    books = await Books.paginate(
+      merged,
+      {
+        offset: parseInt(start),
+        limit: parseInt(length)
+      }
+    );
+    res.status(200).send({
+      code: 200,
+      message: &amp;#39;Successful&amp;#39;,
+      data: books
+    });
+  } catch (error) {
+    console.log(&amp;#39;error&amp;#39;, error);
+    return res.status(500).send(error);
+  }
+};
+
+booksController.addBook = async (req, res) =&amp;gt; {
+  try {
+
+    const body = req.body;
+
+    const book = new Books(body);
+
+  const result = await book.save();
+
+    res.status(200).send({
+      code: 200,
+      message: &amp;#39;Book Added Successfully&amp;#39;,
+    });
+  } catch (error) {
+    console.log(&amp;#39;error&amp;#39;, error);
+    return res.status(500).send(error);
+  }
+};
+module.exports = booksController;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now we need a router file as well.&lt;/p&gt;
+&lt;p&gt;Here’s what our books.routes.js file looks like&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const express = require(&amp;quot;express&amp;quot;);
+const router = express.Router();
+
+const bookController = require(&amp;#39;../controllers/books.controllers&amp;#39;);
+
+router.get(&amp;quot;/&amp;quot;,bookController.getAll);
+router.post(&amp;quot;/add&amp;quot;,bookController.addBook);
+// router.get(&amp;quot;/:_id&amp;quot;,bookController.getSingleBook);
+// router.put(&amp;quot;/:_id&amp;quot;, bookController.updateBook);
+// router.delete(&amp;quot;/:_id&amp;quot;, bookController.deleteBook);
+
+
+module.exports = router;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Right now, we focus only on Adding books and retrieving books.&lt;/p&gt;
+&lt;p&gt;We have all files ready, we just need to update our &lt;code class=&quot;language-text&quot;&gt;App.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;we first add routes for Books&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Requiring Routes
+
+const UsersRoutes = require(&amp;#39;./routes/users.routes&amp;#39;);
+const BooksRoutes = require(&amp;#39;./routes/books.routes&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and we configure them with Express.js framework&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Routes which should handle requests
+app.use(&amp;quot;/users&amp;quot;,UsersRoutes);
+app.use(&amp;quot;/books&amp;quot;,BooksRoutes);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Okay, lets go to Postman and see if our new API is working&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/78b2b33133aaf8dca4215be766bb577e/015f2/getempty.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 71.03559870550163%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAACSElEQVQ4y5WS2UtVURSHz7/TS2RR9FBYj/0NgRFhIEVED9EAFTQgDUQPkpZjaZomji++9FYQmYopRen1gjl0zx08875n+lrn3JtcHwrd8LHW2mftH3v99tG6nz5hYmiYrt4ROnsGhSG6Xg3xorOf1pe9Egdo63hDW3sfrQmyl/BcaO9+S0f3IC1tr6Wnn2ctnWi9jfuYvF1P85VT3G06TvNFyS+d5Na5I1w9vZ9HTUe533iYm2cPpVxrOMD1hjpunDnIA+m9d6Fe8joeXz7BnfPH0JY+9sD6JOWlYdTyGMHKOP7yqMQxyisTRCuSZ0YoZ0bxhTA7QZAdx/g2iPd9AFbfwdqI9A2Tn+tD+/FzDScEy4sxJSk5EbYrKDAFW/a37JCiFWLaAU5131MhH7JwdQpGF6X2YUO30RZnvmDkNzFKBQp5nWJBxzS2sEwD20owcWxLMLETpDblm2cVmcmaPHxvMLW4ldYbv1blhl/niT2LoKyIopg4jnFdF8dxUEqhPI8wDNP9OI6qMSYSoBYo5H6jZTLZtIiqjckhV0S8REzwJA+CoCISRTsIhXIQ4QvJyucLMvL0J8quJePYWJbgVG7nuU4qlOD7/j9xXA/LVRIV6xtyw4X5hW2xJKbjSvRde3u8/0E1JrboOR1tbnYu9cnKyUMYCrGy0gi7EtwWTkfOi+DMrHjg4xVtipsl8aVWjF1SFdRFcPrzdOqbpyLxIZD/KUYFe0TO+PIuOb1QGTkIA2rXXkatHblULFUEE0P/ClH9uPu1U/APPMQBprnLbmkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;get empty&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/78b2b33133aaf8dca4215be766bb577e/b9e4f/getempty.png&quot;
+        srcset=&quot;/tech-blog/static/78b2b33133aaf8dca4215be766bb577e/cf440/getempty.png 148w,
+/tech-blog/static/78b2b33133aaf8dca4215be766bb577e/d2d38/getempty.png 295w,
+/tech-blog/static/78b2b33133aaf8dca4215be766bb577e/b9e4f/getempty.png 590w,
+/tech-blog/static/78b2b33133aaf8dca4215be766bb577e/f9b6a/getempty.png 885w,
+/tech-blog/static/78b2b33133aaf8dca4215be766bb577e/2d849/getempty.png 1180w,
+/tech-blog/static/78b2b33133aaf8dca4215be766bb577e/015f2/getempty.png 1236w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;It works. Since we haven’t added any book, docs is empty.&lt;/p&gt;
+&lt;p&gt;Lets add a books then&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/568badf9ed335598ed2a29036bb4af4e/84739/addbook.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 71.76759410801964%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAACX0lEQVQ4y5WSyU4UURSG631MjHNMNCJbH8E4xbjAgAtjopiwMHQkvAECjSABuhmk9y58AjdCADVFB5C5aamqW2PX8HlutSC2McFKvrqnzvDfc+4tY2ZwgMr0HGOTFUbfzTA6PsvY+BzF0TKDwxP5OjxSYqg4xdDIFIPFyZw3w5MUx6Z5K/kDQxPik5jEjUrXGeZ7btL39Ba9Hdd53dlG35N2eh5e4dnts/R3XKXw6DLd9y/y8sElnt85x4u7mvMUHt+g0NlO970L9He1Uei4hlFbLJNtVAi+zhCa74lWBXOOxuq82BWSVbHlOzSba1ytCPPYSyXcpQlYK8PmLLFZJvpWwtjZd1AReEGKCjIsH5Sf4olPheIPM2w/44dKcNy46Rf8MGVxF159hNJnnQeOYHxfX8M6rGPbFgcHNWq729T2dlCOhSM+R1albDzXwVVObjuOje/UWd606f1gM/XJwrMPUPYhxv7ePmEUEXourufjWnVc2SAIAnzfpyGxNElI0/SYLMtIBUiPSdOMOApk5O0dIinKdLIuzJPJC7VgIj4tcJIgDAkkpnMbiUZqRSwORXBhYQHLstDPySL9KKVyWmMnO/1NShLHGCvLK3ie91cX8so717QKHm3Y+q2nMbY2t/IRWkfLx2k0/ji7I3RuLN007Sba1j5jy/xC4Km8S0e5KFcuRsb0XTcX/BfRr9XzA/nNorzOCyKMjfV1OScnF3FFRF+EJzceB64e6pQg3TWaZ2iapoj5OHUPy05kJ/lB5R5k4/wGo1hGPw2SG8voRrValfZjxBZH9ifpfyIiPwHBGAOsZrzzUgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;add book&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/568badf9ed335598ed2a29036bb4af4e/b9e4f/addbook.png&quot;
+        srcset=&quot;/tech-blog/static/568badf9ed335598ed2a29036bb4af4e/cf440/addbook.png 148w,
+/tech-blog/static/568badf9ed335598ed2a29036bb4af4e/d2d38/addbook.png 295w,
+/tech-blog/static/568badf9ed335598ed2a29036bb4af4e/b9e4f/addbook.png 590w,
+/tech-blog/static/568badf9ed335598ed2a29036bb4af4e/f9b6a/addbook.png 885w,
+/tech-blog/static/568badf9ed335598ed2a29036bb4af4e/2d849/addbook.png 1180w,
+/tech-blog/static/568badf9ed335598ed2a29036bb4af4e/84739/addbook.png 1222w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Lets add a few more and test &lt;a href=&quot;localhost:3000/books&quot;&gt;localhost:3000/books&lt;/a&gt; again&lt;/p&gt;
+&lt;p&gt;I added 3 books and now I can see them&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/0fc7fed018fa2eda3a29239c7dac18ee/c6a5f/response.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.98280098280098%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABJ0AAASdAHeZh94AAAA40lEQVQoz51SW27DMAzzzXeOHaUH6FWGJrVTxW/Htji56Iai6EdSAQQMSKBJUYqWBUQEYwwWeVtrD2DFciN8nSy+z4QtEBTpGc57OOfgQ0AKDq1WtNZ2ocpsKA2xVOScoYyoiuQRXJGBDmDgs+q9Qw2b3BnZRphLwXpr2AqD+SD+CMfuRmUbsOqCGEbrOOG/QqMfhG4ozC8K8QHhi8IU+WkrvHN7T4TTNKNKDp4i5p+M6dLkjDpS6dgaBLwTQBEipbW+8ycJha4bnIWkzfKbQBqdeReG63El95RrKgg2vbF53PIvvfUQ+hn4za4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;response&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/0fc7fed018fa2eda3a29239c7dac18ee/b9e4f/response.png&quot;
+        srcset=&quot;/tech-blog/static/0fc7fed018fa2eda3a29239c7dac18ee/cf440/response.png 148w,
+/tech-blog/static/0fc7fed018fa2eda3a29239c7dac18ee/d2d38/response.png 295w,
+/tech-blog/static/0fc7fed018fa2eda3a29239c7dac18ee/b9e4f/response.png 590w,
+/tech-blog/static/0fc7fed018fa2eda3a29239c7dac18ee/f9b6a/response.png 885w,
+/tech-blog/static/0fc7fed018fa2eda3a29239c7dac18ee/2d849/response.png 1180w,
+/tech-blog/static/0fc7fed018fa2eda3a29239c7dac18ee/c6a5f/response.png 1628w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;I can even test this in the browser&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/f4247d754673a7df9264054f4dfb6c91/7e73b/browserresponse.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.8356263577118%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAAA7UlEQVQ4y6WS6W6EMAyEef/H7GqLKIUlsXMfU4cVqN1fDWtlZCnHxF+cIcaIIHo8tGiD0gTrfJecf2ZjHYacM+Z5ARuPXBPejaHWCuccrDViypITUk7IJQNVhqz3aDdswUSYlgn39Q5tNUIK+/wlwyYmxqYUONBZ/nFZN3IpBV6wmRnGRMQUn8i/KuwybEFKY/z+xG25ncj15Q3/bdhkjAEJtov2z4Ze7BO5dZqYRPKnghVjh1JLN/aJrDaFcR4F+QNfagJ7lovyNcO2d2+KsfBSGeobyPsfFNR1JRxnXxvRXWEIQd5QulquGx3xAzMQAy8tWuLfAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;browser response&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/f4247d754673a7df9264054f4dfb6c91/b9e4f/browserresponse.png&quot;
+        srcset=&quot;/tech-blog/static/f4247d754673a7df9264054f4dfb6c91/cf440/browserresponse.png 148w,
+/tech-blog/static/f4247d754673a7df9264054f4dfb6c91/d2d38/browserresponse.png 295w,
+/tech-blog/static/f4247d754673a7df9264054f4dfb6c91/b9e4f/browserresponse.png 590w,
+/tech-blog/static/f4247d754673a7df9264054f4dfb6c91/f9b6a/browserresponse.png 885w,
+/tech-blog/static/f4247d754673a7df9264054f4dfb6c91/2d849/browserresponse.png 1180w,
+/tech-blog/static/f4247d754673a7df9264054f4dfb6c91/7e73b/browserresponse.png 1381w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Awesome.&lt;/p&gt;
+&lt;p&gt;We covered a lot of things in this. Before we dwelve deep into Node.js, we need to connect it to a web app or a mobile app because frankly we’re tired of Postman. In next tutorial, we will use this api with an Angular web app and an Ionic mobile app.&lt;/p&gt;
+&lt;p&gt;Here is &lt;a href=&quot;https://github.com/alamgirqazi/intro-to-nodejs-part4&quot;&gt;Link to code of part 4&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A very basic introduction to Node.js - Part 3]]></title><description><![CDATA[This is the part 3 of post Intro to Nodejs - part 2. In this post, we will look at improving our existing code and add new features like…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-3/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-3/</guid><pubDate>Sat, 30 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
