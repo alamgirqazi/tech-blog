@@ -1,4 +1,560 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 19 Oct 2019 10:33:46 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 2]]></title><description><![CDATA[This is the part 2 of post Intro to Nodejs - part 1. In this, we will continue from the express application we created and build a very…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-2/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-2/</guid><pubDate>Sat, 19 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 30 Nov 2019 09:16:16 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 3]]></title><description><![CDATA[This is the part 3 of post Intro to Nodejs - part 2. In this post, we will look at improving our existing code and add new features like…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-3/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-3/</guid><pubDate>Sat, 26 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVQoz32ST0sbURTF37xUlyq4iYotFilvJkqCmHkUyfyLSi2lLhS0Gy2lioi68QuYMaZoxbroF5B2UREXhX4G0cTWUHWjErMRim7cdTme+5IganDgcOfNnPnNu/cdxh65bMdUNWHF6Z47rlTrSq160UtS8lXJtLBjsPSBzvysrtaWE3/gdz3JegdKP0vtGWwpr7OFXcFWTyPKwNXfPcnJsPhb56ms4Iv7Ojc7XlYgDdA0FII0+EO2I3kQMJb+o2vkAVR7sNv3S9E769cj3cq0Mr9M0EuAwtW6BKyW6upZhJMxCf1yk9Kjh35OT2CX31BdWru9Mk7vCeh4Zh12Fk/0yG3U/nJHBkZkQxG0XE/A/9AP25b/xlOxcPpAXK2ddwSo15Pr0WbLkgWMY8NxzQvcPwe0+HasO4dvdqa+Rhszh2IQbX8AcC7z16gjYPHNO7MGwPzwTNfTdF4UvhQ7CXgxsRYL25Y8gWcLKgDYXAZuJvtl08/g2RPskGAfoVkAGwj4grbu9ZntjA3xT8dCwPQZpxwttxyD5zskS1GSnWh5HbVVjWjPaMEMe6C227xZ1XM17sfunJxlmdr9CFXLoTLhULRG5rLMkdD8nAj5+6UYIHMqJhSvih/zDFVgftbQMEPKrhYEo+wGOwusfLZj/14AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Intro To Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png&quot;
+        srcset=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/cf440/node-js.png 148w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/d2d38/node-js.png 295w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png 590w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f9b6a/node-js.png 885w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png 960w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;This is the part 3 of post &lt;a href=&quot;https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-2/&quot;&gt;Intro to Nodejs - part 2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this post, we will look at improving our existing code and add new features like password hashing. We will also take a look at JWT tokens.&lt;/p&gt;
+&lt;p&gt;First we define a User model.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const Users = mongoose.model(&amp;#39;Users&amp;#39;, {
+    name: String,
+    email: String,
+    password: String,
+    date_added: Date
+   });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Right. Now we first set up login / Signup.&lt;/p&gt;
+&lt;p&gt;We will make some changes in the Signup method we wrote in previous tutorial. Remember, we never save passwords as string in database. They are always hashed.&lt;/p&gt;
+&lt;p&gt;We need to encrypt passwords. Node.js provides us a module for that, Bcrypt. Brcypt causes dependency issues so instead, we will use &lt;code class=&quot;language-text&quot;&gt;bcryptjs&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install bcryptjs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;btw I would recommend installing &lt;a href=&quot;https://yarnpkg.com/lang/en/&quot;&gt;yarn&lt;/a&gt; and running &lt;code class=&quot;language-text&quot;&gt;yarn add bcryptjs&lt;/code&gt; instead.&lt;/p&gt;
+&lt;p&gt;Lets get back to our code.&lt;/p&gt;
+&lt;p&gt;we first include bcrypt at the top&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const bcrypt = require(&amp;#39;bcryptjs&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;now modifying our /signup method&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; app.post(&amp;#39;/signup&amp;#39;, async (req, res) =&amp;gt; {
+
+  try{
+    const body = req.body;
+
+    // there must be a password in body
+
+    // we follow these 2 steps
+
+    const password = body.password;
+
+    var salt = bcrypt.genSaltSync(10);
+    var hash = bcrypt.hashSync(password, salt);
+
+    console.log(&amp;#39;hash - &amp;gt; &amp;#39;, hash);
+    // const user = new Users(body);
+
+
+    // const result = await user.save();
+
+    // res.send({
+    //   message: &amp;#39;Student signup successful&amp;#39;
+    // });
+
+  }
+
+  catch(ex){
+    console.log(&amp;#39;ex&amp;#39;,ex)
+
+    res.send({
+      message: &amp;#39;Error&amp;#39;,
+      detail: ex
+    }).status(500);
+  }
+
+  });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A couple of things to notice.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I wrapped the code in try/catch. Always use it when you are using &lt;code class=&quot;language-text&quot;&gt;await&lt;/code&gt; in the code.&lt;/li&gt;
+&lt;li&gt;we are using bcrypt to hash the password.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;let try it in Postman and see what we get in console.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/9ff9af508b79073fab772f4323fc76f1/76d12/testsignup1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 55.527847049044055%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAB2ElEQVQoz42Q22oTURSG90sJxkMsiK/gU0jTNESlps00SZtABemFb+CNBwq1Iki91ydQ6I2EYFsnmcOew57z/K61pyNj8cIFH3sd/732FqezRzh8foDRZIrtHQNDY0yMsNl7jM7GJgbPBuj3n6BLcbfXR6fbwwaxTrXhzi5e0Mx6p4etgYGnW9sQZ4c38OXlAxzt38fR5B5OZms4nq7h3egOXg9b+DS9jZPJLYqJXaaFt0YLb4ybON5r4+P4Lt5PqO+gjQ+zNkQWWyjVJRCcA7lTkVkVuUunXfnwiYAIgdJDHlwg83+ijJfUR/V0qXXEypIwVy5sx4O5tPGLfEcGcD0mhMu+vPI9Bekr2DKE5zr4/D3Aw1chxqcBLJvmqC6kdOF7kvBoUMI6X8BZLREEPjzKh2EIpRSiKCLUFRGSWOHSifD1h8K3C8op6vMlRJpliOMIKRHFMaIwQEwDaZrqwTzPUZblX3COobf/oSwolyYQpmkiSRJUVqK2oij0dnw2xdhivpgu0+JFRZFEyGhrsVgs9DZc5OFagM/6qf8S1dc3N6eYtxbz+Ry+7+uhpnETb9IUuC503bSg/mB6MgcZ/SdT+5xvxrXPL2Lqv2z2aEEu1gNNmkL/y2/r1B+fdV39XQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;signup using postman&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/9ff9af508b79073fab772f4323fc76f1/b9e4f/testsignup1.png&quot;
+        srcset=&quot;/tech-blog/static/9ff9af508b79073fab772f4323fc76f1/cf440/testsignup1.png 148w,
+/tech-blog/static/9ff9af508b79073fab772f4323fc76f1/d2d38/testsignup1.png 295w,
+/tech-blog/static/9ff9af508b79073fab772f4323fc76f1/b9e4f/testsignup1.png 590w,
+/tech-blog/static/9ff9af508b79073fab772f4323fc76f1/f9b6a/testsignup1.png 885w,
+/tech-blog/static/9ff9af508b79073fab772f4323fc76f1/2d849/testsignup1.png 1180w,
+/tech-blog/static/9ff9af508b79073fab772f4323fc76f1/76d12/testsignup1.png 1203w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Here’s what we get in our Node.js console&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/16854049296bcc15ff6c1163c97cb748/64b01/hash.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 54.36241610738255%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABg0lEQVQoz6WR3S/DUBjGz9svNVNMq91Y6zNYEX+GW4m/AYn4iGwTibDaEOHWDQlbZJsEMeP/e5xuzaxGduHil+d533P6vD3nsN2tdRTv7lF+qKBSrDYol6qolp5QKz+jXnnGB+cz0HrAe4MX1Divj09443Xx5hYsaSdguxOYWJ6CveBgfImzyOHe4eq4TWa5n5/jpBykAubmm+q6Nqamk5hMOmAjsV7YjgxtkEGSGRj7J8OmiviMiFhchj4qI6or6NO5xhREVAWSIILaPiBGHKEDxvuSIIHpMRORqAZjxIJlJWBaFgzDgGlaGE2MwdANaP0ahgYGGvSqaiv4+8+aXiIRrEdUf0xnLfyeQMQRIAb4NYUCqeVFP1AiJTSlGxQaTKHh/kCmCMofR6AuwdQZ6N+lRPL/XzYU6L9M+wL9sjnoEQW+VYdP4d81W1tdwWE2De8oh3Mvj3zuFAXOWS6PS6+A69NCw19xveD1pa8nHo6zhygcedjP7GAvk8bJQRabG9v4AvC0LPixAUbqAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;has&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/16854049296bcc15ff6c1163c97cb748/b9e4f/hash.png&quot;
+        srcset=&quot;/tech-blog/static/16854049296bcc15ff6c1163c97cb748/cf440/hash.png 148w,
+/tech-blog/static/16854049296bcc15ff6c1163c97cb748/d2d38/hash.png 295w,
+/tech-blog/static/16854049296bcc15ff6c1163c97cb748/b9e4f/hash.png 590w,
+/tech-blog/static/16854049296bcc15ff6c1163c97cb748/f9b6a/hash.png 885w,
+/tech-blog/static/16854049296bcc15ff6c1163c97cb748/64b01/hash.png 1043w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;So this means, we will save $2a$10$GTxdgZ.KNxiGud.rvNM9SOfOTXuWKp/963ZlN6L9IR1ydSn8TclTy in database instead of 123456 which gives us more security. Even if our database is hacked, the user wont have direct access to passwords. He only can see the hash.&lt;/p&gt;
+&lt;p&gt;We still need to do some work in password. we need to replace the old password with new hash.&lt;/p&gt;
+&lt;p&gt;Just one line added&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  const salt = bcrypt.genSaltSync(10);
+  const hash = bcrypt.hashSync(password, salt);
+
+  body.password = hash;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;new updated code&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; app.post(&amp;#39;/signup&amp;#39;, async (req, res) =&amp;gt; {
+
+  try{
+    const body = req.body;
+
+    // there must be a password in body
+
+    // we follow these 2 steps
+
+    const password = body.password;
+
+    var salt = bcrypt.genSaltSync(10);
+    var hash = bcrypt.hashSync(password, salt);
+
+    body.password = hash;
+    console.log(&amp;#39;hash - &amp;gt; &amp;#39;, hash);
+    const user = new Users(body);
+
+
+    const result = await user.save();
+
+    res.send({
+      message: &amp;#39;Student signup successful&amp;#39;
+    });
+
+  }
+
+  catch(ex){
+    console.log(&amp;#39;ex&amp;#39;,ex)
+
+    res.send({
+      message: &amp;#39;Error&amp;#39;,
+      detail: ex
+    }).status(500);
+  }
+
+  });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lets take a look at the database&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/850690ed04dcb5a7126644af2f288582/9910f/hashsaved.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 55.81395348837209%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABpUlEQVQoz6WTW2vbQBCF9f9f+hdaQkILeQoNlJJSS1bltJjYFByKvbp55bUdyyLGknXX6ezKdgRtHkoHPnbmsJydvWm6oeNx8ogJwWYMvufDcz2F67iv4kjsFpvZ8P05el91aOOfEwjB8bTZIHqOsI0i7OMYcZwgy3MUZanIiyPHukuWF5DBmANtOByB8wBVVdHKDJ8/3cLofSHuYBk9DPo6LGJgGrgnBqautC5Wvwfrm4Gb62tos+kUG+quzFM82Ctc9ae4Gfq4HXF8fOB4P3BxSdqFaeOdwWh0cGl5Zy5MF1cmw1vS33ygLYuFUN1laYokK7DYPGOXlkgr4EDsKJn5Aq4IMV9HENs9wn2Op12KbZwjLkF1hoy2/ItxaItggaIocDgcUJUFmopmNDVeokEttZrcQXpTtXl90nAe557XGpZ0sNJQGrcWRNMc6Vr/GXJOXbcNuM5rhh2XF+O/oxo8G7rQOOfKKEkS5PRMTiv+C/IOZNg2PZv1aq0K2eX/Bp/TpYxHYwRBoH6I7FaIJSEUS8pXxPJINz/NkchjC8MQ3+9/4Dd9ojlNTkLpGwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;hash saved&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/850690ed04dcb5a7126644af2f288582/b9e4f/hashsaved.png&quot;
+        srcset=&quot;/tech-blog/static/850690ed04dcb5a7126644af2f288582/cf440/hashsaved.png 148w,
+/tech-blog/static/850690ed04dcb5a7126644af2f288582/d2d38/hashsaved.png 295w,
+/tech-blog/static/850690ed04dcb5a7126644af2f288582/b9e4f/hashsaved.png 590w,
+/tech-blog/static/850690ed04dcb5a7126644af2f288582/f9b6a/hashsaved.png 885w,
+/tech-blog/static/850690ed04dcb5a7126644af2f288582/2d849/hashsaved.png 1180w,
+/tech-blog/static/850690ed04dcb5a7126644af2f288582/9910f/hashsaved.png 1505w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;That looks awesome. Exactly what we wanted.&lt;/p&gt;
+&lt;p&gt;There’s one problem. What if user logins with email bilal@gmail.com and password: 123456, how are we going to check ? we don’t have 123456 saved but instead, the hash.&lt;/p&gt;
+&lt;p&gt;Lets see how we will modify our login method&lt;/p&gt;
+&lt;p&gt;Here’s what we’re doing now&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.post(&amp;#39;/login&amp;#39;, async (req, res) =&amp;gt; {
+  try {
+    const body = req.body;
+
+    const email = body.email;
+
+    // lets check if email exists
+
+    const result = await Users.findOne({ email: email });
+    if (!result) {
+      // this means result is null
+      res.status(401).send({
+        Error: &amp;#39;This user doesnot exists. Please signup first&amp;#39;
+      });
+    } else {
+      // email did exist
+      // so lets match password
+
+      if (body.password === result.password) {
+        // great, allow this user access
+
+        console.log(&amp;#39;match&amp;#39;);
+
+        res.send({ message: &amp;#39;Successfully Logged in&amp;#39; });
+      } else {
+        console.log(&amp;#39;password doesnot match&amp;#39;);
+
+        res.status(401).send({ message: &amp;#39;Wrong email or Password&amp;#39; });
+      }
+    }
+  } catch (ex) {
+    console.log(&amp;#39;ex&amp;#39;, ex);
+  }
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lets try it&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/34ae28dd35763168c1bf78ba850291c0/67bc9/testlogin.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 64.82982171799027%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAACd0lEQVQ4y62Sy09TQRSH79/jRsVoYiI+lv4NRlnIAozGxIWKCSujmLAwQU14CfgoTwFBE4Ou1YURo4JQSiu05SFpaXvfz36euaXxEZdO8uU3Z+7vnDlzZ7TE/S5mxicZTEwz8GhcmGDw8QR9AyN09z0VHaX34Qi9/cMxPf0JuhV9CQaGxkgID3qe0Dc4yt2ufrSxln3MtJ+k48ppbrY2cvviCe5cOkX7+SNcPbOfztaj3Gw+TFvTIW40NXDt7AGuK8410HHhOPdaGmV+kM7LJ2lvPoaW/zgM+Vnc1CTu6jR+5jleego/PY2j4tVJwswU4dos0foLqtmXBN9nqHwbw1qS3NyE5E9SXXvG9ochtLXsDqYHhiNYAWVR0xWcKiUzFCJMO8LywQ7ACcUnfscN+ZCDttcwtQASkt0ooaWSSfRKiYpQKBQo/NikVNjBMCoYehlTqRCrXkMXHGOXz1mdW28qvPxSxjNLrGfSaLlsDt/3cSwTy7Ixy7sYpSKO42DbNoF8i6LoD6rVKpEA0W/Adj6Pll7N4Pke1dgcxkZlVUmWZeF53q8ie6o2UyivH0Z4gZw39NhSBec/zstxK7E5HqpgvLv8R9OMu6zHda0Xro/6fHtrS468nosX1LF9P8CX3YJAaRBrGIYxwV4cf1M+8bvSveUGckF+3G0+vymX8vUTllHGkG4MQ5ebNuUCdFxLl0J7Rf8mrGm9oO2q4j653Aba4sIixZJOsahT2LUEm0LRolK2cLwQW3D+QbzuR7i+iqVLL6p1mE5n+F+jXK6gzb2aY3lpmaS8x+RykpU9Ve9zNblCarlGpj5P1lCeOio/lUrx7u17fgIBbKoAxHbakQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;test login&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/34ae28dd35763168c1bf78ba850291c0/b9e4f/testlogin.png&quot;
+        srcset=&quot;/tech-blog/static/34ae28dd35763168c1bf78ba850291c0/cf440/testlogin.png 148w,
+/tech-blog/static/34ae28dd35763168c1bf78ba850291c0/d2d38/testlogin.png 295w,
+/tech-blog/static/34ae28dd35763168c1bf78ba850291c0/b9e4f/testlogin.png 590w,
+/tech-blog/static/34ae28dd35763168c1bf78ba850291c0/f9b6a/testlogin.png 885w,
+/tech-blog/static/34ae28dd35763168c1bf78ba850291c0/2d849/testlogin.png 1180w,
+/tech-blog/static/34ae28dd35763168c1bf78ba850291c0/67bc9/testlogin.png 1234w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;It’s saying wrong email/password even though its right :/&lt;/p&gt;
+&lt;p&gt;we make just 1 line change in our code. we compare it using bcrypt&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; if ( bcrypt.compareSync(body.password, result.password))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now using wrong login&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/15333006e02ce66e47749daadebf3d75/30caf/wronglogin.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 64.89104116222761%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAACdklEQVQ4y62SSU8VQRDH5+t4UjEaDxL06Hdw4YAJLjHGCy6JJhoTDNwMkU2eKIYHiDxFTPRiogQJB2EGeGDCIhJx4c3aM9Mz3TPzt6bfI8LBm538UlXdVdX/6Rqtt60Nr0dGURgYQ1//MDGCwpMRdPcNorNngGwR3Y8G0d37DF1EZ0+Vh0Tf4yEMFIro6Hqq8js6+6E9adqHidsNaL16EnfP16P1EvmXT+BW0xG0nNqPtgtHce/cYdxoPISbjXW4dvoArp8hztbh/sUGPGg+Rv5BtF85jjvN9dC+fCwAPyYQrbxAtFqCXH+FeHUMYq0EvvISgvx0vYRkYxzptwlkm28gv47DXRpGuFwENkeB72NI1p7DWShCK5fXEUjACzMwX8IJAZ/nZLD9hEjhh0QMhJTHE4CRz6MEUxtAy1ugtEhntLdtR9D0z7NgzIHr2KiYJiq/tmBVftOeB+Y58JmrfF/hKjzPBWcWZjc8tL938a5cjbd/bkFbLi8jSRNwnyEIQwSuDWabpCBCSLGUEmma7iHLMqQEkNYgn2LXMknhnLG3KFPHqigIAsRx/LdJzXLOFXlTkaQQkt5BcDh5w8kPk/R2DElCm1CdVFG+fN9XKnfirHaW7crZUZcv13XpkxeXVJArEUKq26SyUinPL5I1fwchBBHTs8TwI0lWqDrTsqHNfZpEmD80YwQNglTlQ+C+u6dZktTYdUlEIgKaNo8FQh7BNC1oM9MzsF0Gs+KhYgU0aU42pKkHlJjQ7/Bv8vNIVG1ASi3bgWYY8/hfS9Jna0ODw9B1nTCgz+kwlK9jgeJFfV7ZeWLJyP1qnFuDcvVdGLQ/PTWNP8p3qEYk0QbCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;wrong login&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/15333006e02ce66e47749daadebf3d75/b9e4f/wronglogin.png&quot;
+        srcset=&quot;/tech-blog/static/15333006e02ce66e47749daadebf3d75/cf440/wronglogin.png 148w,
+/tech-blog/static/15333006e02ce66e47749daadebf3d75/d2d38/wronglogin.png 295w,
+/tech-blog/static/15333006e02ce66e47749daadebf3d75/b9e4f/wronglogin.png 590w,
+/tech-blog/static/15333006e02ce66e47749daadebf3d75/f9b6a/wronglogin.png 885w,
+/tech-blog/static/15333006e02ce66e47749daadebf3d75/2d849/wronglogin.png 1180w,
+/tech-blog/static/15333006e02ce66e47749daadebf3d75/30caf/wronglogin.png 1239w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Now using correct login&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/46b9564ee3193f360acc1e163c1a630e/99d00/correctlogin.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 65.06514657980456%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAACcUlEQVQ4y62SSU8UURRG6/+40JBojFFh629witHEYDDGjSKGFUYWkrgwRqARcGixmdElG0PUjSuiHUhX9QDYKE03PdQ89fFWFTgkxpWVnNx7X7533/fuK2V65AmLmVkm0wuMP5sWZph4PkNqfIrh1EuJrxl9OsXo2KuYkbE0wxGpNOOTGdLC45EXjE1kGHo4jLLQc4j5/i4Gb55hoPsU93s6GbzeRf/lY9w6e5gH3ccZuHKUOxc76BNunztC73nhQgeD107z6OpJemV96EYnfZdOoOx+zsDWInZuFkebxy0s4GpzwjyWKrU6S5CfIygtEW68Ed7iFxdpZqcw19KwOS37Z2iXZtn6mEL5VmmhO2AIuunTsJPcsELqRoJhtzE9sIME3QXLCfn0Fe4uw9wX8EIolHZQtjZKNBt7NJt1qtUqu9/L1KsVdL2J3moIzTg34jqhJdj6HqubLe4tN1labeBbDbT1dZRKpYLjujimgWlaGI0aRr2GbdtYloXneYRh+AftdptQgPA35ObFIsp2eVsaOiIScRDEwkgbbTRN82fDuMl+jA6LiLReEOJ6MofQY7NQQMlmszQa9VgYf3HDJDcMI3Z5UB/EpHHiKlnfd7ixGV15l0AEkRPP8/H8AN//FQNxHRHlCUGiE31UO66H7XhERxWLG/IouTUMGX7kpqW3MOSahtGSmerSKGkS/I0gibbjyou7cm2ffF5mqGka1b0mtVqL2p4pucVu1ZTXNLFlNrb7bxz5XyxXnPptCpHDcrnM//oqOxWUlXcr5HI5IqeaqiZoKgVVE/Lk46hR0vJxfYCmHug11Jwq8yvyfuUDPwBh1arTUs9HvAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;correct login&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/46b9564ee3193f360acc1e163c1a630e/b9e4f/correctlogin.png&quot;
+        srcset=&quot;/tech-blog/static/46b9564ee3193f360acc1e163c1a630e/cf440/correctlogin.png 148w,
+/tech-blog/static/46b9564ee3193f360acc1e163c1a630e/d2d38/correctlogin.png 295w,
+/tech-blog/static/46b9564ee3193f360acc1e163c1a630e/b9e4f/correctlogin.png 590w,
+/tech-blog/static/46b9564ee3193f360acc1e163c1a630e/f9b6a/correctlogin.png 885w,
+/tech-blog/static/46b9564ee3193f360acc1e163c1a630e/2d849/correctlogin.png 1180w,
+/tech-blog/static/46b9564ee3193f360acc1e163c1a630e/99d00/correctlogin.png 1228w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Hurray !!!&lt;/p&gt;
+&lt;p&gt;Here is the complete code&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.post(&amp;#39;/login&amp;#39;, async (req, res) =&amp;gt; {
+  try {
+    const body = req.body;
+
+    const email = body.email;
+
+    // lets check if email exists
+
+    const result = await Users.findOne({ email: email });
+    if (!result) {
+      // this means result is null
+      res.status(401).send({
+        Error: &amp;#39;This user doesnot exists. Please signup first&amp;#39;
+      });
+    } else {
+      // email did exist
+      // so lets match password
+
+      if ( bcrypt.compareSync(body.password, result.password)) {
+        // great, allow this user access
+
+        console.log(&amp;#39;match&amp;#39;);
+
+        res.send({ message: &amp;#39;Successfully Logged in&amp;#39; });
+      } else {
+        console.log(&amp;#39;password doesnot match&amp;#39;);
+
+        res.status(401).send({ message: &amp;#39;Wrong email or Password&amp;#39; });
+      }
+    }
+  } catch (ex) {
+    console.log(&amp;#39;ex&amp;#39;, ex);
+  }
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;we learned how to use password hashing. We allowed user to sign in. There’s still one more thing we need to do. Once a user logs in, we need to provide it a &lt;code class=&quot;language-text&quot;&gt;token&lt;/code&gt;. That &lt;code class=&quot;language-text&quot;&gt;token&lt;/code&gt; will tell us which user it is. With that token, that user can make changes to our database but without that token, a user cannot make any changes to our database or access our secure apis. &lt;code class=&quot;language-text&quot;&gt;Token&lt;/code&gt; kindof works as a guards for us. remember Route Guards? the concept is very similar.&lt;/p&gt;
+&lt;p&gt;We will use JWT Tokens.&lt;/p&gt;
+&lt;p&gt;What we will do is whenever a user successfully logins, we will create a JWT token and send it back in response. This means whenever an Angular / Web App / Mobile app user successfully logins, he will get back a token in return. We will then save that token. For now, lets just see how to create it.&lt;/p&gt;
+&lt;p&gt;What happens in real world apps is that every protected request send via HTTP includes some sort of token. that token tells the server / us where the request came from, who is the user etc. Lets see how we incorporate that.&lt;/p&gt;
+&lt;p&gt;First, we need to add a JWT module for Express.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install jsonwebtoken
+
+or
+
+yarn add jsonwebtoken&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;include jsonwebtoken at the top&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const jsonwebtoken = require(&amp;#39;jsonwebtoken&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now lets create a JWT Token&lt;/p&gt;
+&lt;p&gt;Lets update the /Login method&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;if ( bcrypt.compareSync(body.password, result.password)) {
+        // great, allow this user access
+
+        console.log(&amp;#39;match&amp;#39;);
+
+        const token = jsonwebtoken.sign({
+           data: body,
+           role: &amp;#39;User&amp;#39;
+        }, &amp;#39;supersecretToken&amp;#39;, { expiresIn: &amp;#39;7d&amp;#39; });
+
+        console.log(&amp;#39;token -&amp;gt; &amp;#39;, token)
+
+        res.send({ message: &amp;#39;Successfully Logged in&amp;#39;, token: token });
+      }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;what we’re doing here is using the &lt;code class=&quot;language-text&quot;&gt;jsonwebtoken&lt;/code&gt; module to sign some data. Note with body, we also send role. Here, we can handle multiple roles e.g admin, teacher etc. We manage rules using tokens as well.&lt;/p&gt;
+&lt;p&gt;Lets try to login using postman and see if we get the token in console.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/4778933bba679d633d1f7d8770dd2085/b828e/correctloginwithtoken.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 71.0569105691057%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAACqElEQVQ4y3WSyU8UURCH+98xUSGaGKMc/Tc0GOPBIAeuKnpyvWhMNCaAKLuCChoXcIsXjypGCZBxmJ1lWKb37tfLZ3XPDBlMnOTLr1696ppXizbdd5/ZmZeMTr5maPQ5Q2MvGJmYYXB4kr7BcQaGp+h//JT+R08YEPofTdCXMDjB40b8g4ExBkeecffeQ7Sprn1M93Zws+cEV88d41a32Oc7uHLmMBdO7ud21xGunz1Eb2c7l0+3c/HUAeEglzrbuNF1nGtdHeJv405P8s1RtI2Fl7Dxkaj4jrg0B5X3orNQniMsyln8lOW89hHWP0nsZ1j9gPPnFUF2RnxvoCoxlbesfRtHK5Sq1OwY3Q6pGR5bZojhRBh2wJah2DZVapse2L6gQHfBcRVfczHdryLGvod4AazkNtBy2SymUcPQa2xubbG5vsr2ZhXTNMSvY4km2Jaxayd3nrXDr5LJnS8Gcws6gaOTXV5GW62soZTCd2wcx8XRd4RtPM+Xs0MQBMRxTBRFqTbtUIC4QWJLZ/IFtHwuj+/79aAwJEo+kJjkbNv27l2TJKHrunhCJIEqiPBVKB8oSrkc2vyPeWq1WnpZ/4nGdduyrPSVcePcqk271V8uleolR3GUlq1UIIR1lVKTcpNXBw27ST1WpbYrrXE9lVaVzxfRVhZ+YknfDHmNIUMwbUuaruPZRkuycA+Jv3mXJHQkoSePyK7k0TKZjEzQwjVNUQ/L8DF1DyUDiqO4pfH/g92hFIsylPn5n9Inj7WCz/JvyCzC8oLoEuQyMQXZtVIhppiv62o5ZrMaU91ooRqxsw3ZP2W0pcUllDzfk8WV9UK2R/5AFtgS7LqvlcQn7ZPpCw2Vqkm2qFSsoC1KQk+yBYEvffFTTWnYiW8P4lPqH3xPJh2RrOBfZvr+6J5vDXsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;correct login with token&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/4778933bba679d633d1f7d8770dd2085/b9e4f/correctloginwithtoken.png&quot;
+        srcset=&quot;/tech-blog/static/4778933bba679d633d1f7d8770dd2085/cf440/correctloginwithtoken.png 148w,
+/tech-blog/static/4778933bba679d633d1f7d8770dd2085/d2d38/correctloginwithtoken.png 295w,
+/tech-blog/static/4778933bba679d633d1f7d8770dd2085/b9e4f/correctloginwithtoken.png 590w,
+/tech-blog/static/4778933bba679d633d1f7d8770dd2085/f9b6a/correctloginwithtoken.png 885w,
+/tech-blog/static/4778933bba679d633d1f7d8770dd2085/2d849/correctloginwithtoken.png 1180w,
+/tech-blog/static/4778933bba679d633d1f7d8770dd2085/b828e/correctloginwithtoken.png 1230w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;You can see the token in the response.&lt;/p&gt;
+&lt;p&gt;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVkZTIxODhhY2U2Y2ZiMDQwYzMwM2I4ZCIsIm5hbWUiOiJCaWxhbCIsImVtYWlsIjoiYmlsYWxAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkdWdtSHAwcFhYSTR1S2ZNVk45cm1PT1FPaENLWENPYS8xS0g0bnJ4VGtWekVRU2syM0pqRmUiLCJfX3YiOjB9LCJyb2xlIjoiVXNlciIsImlhdCI6MTU3NTEwMzg4MSwiZXhwIjoxNTc1NzA4NjgxfQ.C2C3iiiDl8N3SH8utZYbUwrqChH0NfyxzPbdUZQCyco&lt;/p&gt;
+&lt;p&gt;Let open &lt;a href=&quot;jwt.io&quot;&gt;jwt.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lets copy and paste the token on the left hand side.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/1cba1f1987fa6da632ef49ff6a9149f3/7bc83/jwtio.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.98576122672508%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABJ0AAASdAHeZh94AAABnklEQVQoz3VR20ojQRCdLzCZmMgMiE+Chn1b9ssEYyaTiIoI/qPLosuymqjxknR6+lLH6q5M4gW7OVR11elTXdXJaDRCr9fD2fklLi4ucXJ6iqIYRAwGJcpyiHI4/GALjh8VBYqDAxz2+yhHx+hzfMhaSZq20GhsYH/vF7o/fqLb3UezmSJttdDpdJBlGfI8R7vdZl4DHbabmy2kqXDyLMfuzjayrS2+10TivQcR4eV5ivHdf6j5DM4YeGsZRnzmzDk+nkwwVwpVVcGGPMeDNQznXNRJUC/DuHfAhAXutOBWw40tUAUCgSoWMTZe/G4lIRm2VR7qmqBuBIt/wOJvAOfmBE8O7lWBFlUUJE9il6g7TaQYwfEl/ZsFrihCs7j+I76bAdZbaG0g5T0X8FHkPZYvFEGrCdNHj8dnwv3U44lt8B+eiGdGkeMVC/PZvnKRBS1bF9RjSMQQDLcwc6E2kyG2Rtz8AsNi5oExZdEZ57QIe1O3DvmUqF4Pmr5CZhTGAjgl1BV87X8SrAPvBy0fhtXQw4tCu+TWbRLW3LDeAKJSwJr2nBtdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;jwt io&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/1cba1f1987fa6da632ef49ff6a9149f3/b9e4f/jwtio.png&quot;
+        srcset=&quot;/tech-blog/static/1cba1f1987fa6da632ef49ff6a9149f3/cf440/jwtio.png 148w,
+/tech-blog/static/1cba1f1987fa6da632ef49ff6a9149f3/d2d38/jwtio.png 295w,
+/tech-blog/static/1cba1f1987fa6da632ef49ff6a9149f3/b9e4f/jwtio.png 590w,
+/tech-blog/static/1cba1f1987fa6da632ef49ff6a9149f3/f9b6a/jwtio.png 885w,
+/tech-blog/static/1cba1f1987fa6da632ef49ff6a9149f3/2d849/jwtio.png 1180w,
+/tech-blog/static/1cba1f1987fa6da632ef49ff6a9149f3/7bc83/jwtio.png 1826w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;When we decode it, we can see the data for e.g User Email, ID, Role etc. We also see password which should not be in that token. so we can remove it by&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  delete result[&amp;#39;password&amp;#39;];
+
+        const token = jsonwebtoken.sign({
+           data: result,
+           role: &amp;#39;User&amp;#39;
+        }, &amp;#39;supersecretToken&amp;#39;, { expiresIn: &amp;#39;7d&amp;#39; });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;if delete doesn’t work&lt;/p&gt;
+&lt;p&gt;then just do&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; result.password = undefined;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;now the JWT token won’t have password. Btw, the token will expire after 7 days. the secret key with which we can &lt;strong&gt;&lt;em&gt;validate&lt;/em&gt;&lt;/strong&gt; the token is &lt;code class=&quot;language-text&quot;&gt;supersecretToken&lt;/code&gt;. Right now, we wrote this in code which is a bad practice. We will fix this in the next tutorial.&lt;/p&gt;
+&lt;p&gt;So in this, we improved our Login/Register methods with better practices such as password hashing and usage of JWT Tokens.&lt;/p&gt;
+&lt;p&gt;Here is the look at the final code &lt;a href=&quot;https://github.com/alamgirqazi/simplest-nodejs-auth/blob/part3&quot;&gt;Link to code of part 3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There are still some things we can improve in this workflow. First of all, one index.js with all the code is not a good approach at all. We need to split things up. 2. we wrote secret information such as database name, JWT token secret key inside code which is a BAD practice. we never write it in code. we define them in environment variables. In the next post, we will cover that.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A very basic introduction to Node.js - Part 2]]></title><description><![CDATA[This is the part 2 of post Intro to Nodejs - part 1. In this, we will continue from the express application we created and build a very…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-2/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-2/</guid><pubDate>Sat, 19 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
