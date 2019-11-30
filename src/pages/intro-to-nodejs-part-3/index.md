@@ -357,6 +357,6 @@ now the JWT token won't have password. Btw, the token will expire after 7 days. 
 
 So in this, we improved our Login/Register methods with better practices such as password hashing and usage of JWT Tokens.
 
-Here is the look at the final code [Link to code of part 3](https://github.com/alamgirqazi/simplest-nodejs-auth/blob/part3)
+Here is the look at the final code [Link to code of part 3](https://github.com/alamgirqazi/simplest-nodejs-auth/tree/part3)
 
 There are still some things we can improve in this workflow. First of all, one index.js with all the code is not a good approach at all. We need to split things up. 2. we wrote secret information such as database name, JWT token secret key inside code which is a BAD practice. we never write it in code. we define them in environment variables. In the next post, we will cover that.
