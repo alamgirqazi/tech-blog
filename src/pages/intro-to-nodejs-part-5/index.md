@@ -25,9 +25,9 @@ Usually its preferable we use different repositories for Ionic apps, front-end a
 
 So in our case, we will have 2 repositories. In case, we build an Angular web app, we might need a third named `Booky-angular` but we'll see when we get there.
 
-Okay so our create a starter with side-menu by default.
+Okay so we used a starter with side-menu by default.
 
-Lets clean things up abit. I'm deleting lists folder because I don't need it. I also have to remove the link from `app-routing.module.ts`
+Lets clean things up a bit. I'm deleting lists folder because I don't need it. I also have to remove the link from `app-routing.module.ts`
 
 First thing, we need to create a login page.
 
@@ -182,7 +182,7 @@ What we need to do now is send a request to Booky-Node (our backend). We need to
 
 We need to do an API request.
 
-So for API requests, remember we do those things in services.
+So for API requests, we need services.
 
 Lets create a `User` service.
 
@@ -192,7 +192,7 @@ ionic g service user
 
 ```
 
-Awesome. two files will be created for us.
+Awesome. Two files will be created for us.
 
 However, to make services more manageable, we will move them in proper folder structure.
 
@@ -454,6 +454,8 @@ export class RegisterPage implements OnInit {
 ```
 
 A couple of new things were added to this. I used a custom validator. Don't worry I didn't wrote it myself :) I just copy / pasted from Stackoverflow :) Full Stackoverflow developer :D
+
+![fullstack](./fullstack.PNG)
 
 Okay, coming back to this
 
