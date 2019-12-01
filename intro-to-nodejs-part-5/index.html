@@ -1,0 +1,633 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link rel="apple-touch-icon" sizes="256x256" href="/tech-blog/icons/icon-256x256.png?v=ab9d362a82390b1b299fe1144c79b26d"/><meta name="generator" content="Gatsby 2.15.36"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/tech-blog/rss.xml"/><link rel="shortcut icon" href="/tech-blog/icons/icon-48x48.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="manifest" href="/tech-blog/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/tech-blog/icons/icon-48x48.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="72x72" href="/tech-blog/icons/icon-72x72.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="96x96" href="/tech-blog/icons/icon-96x96.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="144x144" href="/tech-blog/icons/icon-144x144.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="192x192" href="/tech-blog/icons/icon-192x192.png?v=ab9d362a82390b1b299fe1144c79b26d"/><style data-href="/tech-blog/styles.75d456e0bf8bd0a47aa1.css">.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><link rel="apple-touch-icon" sizes="384x384" href="/tech-blog/icons/icon-384x384.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="512x512" href="/tech-blog/icons/icon-512x512.png?v=ab9d362a82390b1b299fe1144c79b26d"/><title data-react-helmet="true">A very basic introduction to Node.js - Part 5 | tech-blog</title><meta data-react-helmet="true" name="description" content="This is the part 5 of post Intro to Nodejs - part 4. In this post, we will connect our Node.js App with an Ionic app. Most software…"/><style data-href="/tech-blog/commons.c6dceef504ade98e991f.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/tech-blog/static/montserrat-latin-100-50d279861fb3cbfed809eae6ed8b9ac9.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-100-5e334eff013f12fbb8ed72c2a253f119.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/tech-blog/static/montserrat-latin-100italic-8c0705336558194799a8729840d7ed9d.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-100italic-03e19243272affe738654a157625ec26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/tech-blog/static/montserrat-latin-200-4343d3d91a9446226e7a8bbb024111ad.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-200-f2022ecd65a0703ec3edcb7641709a75.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/tech-blog/static/montserrat-latin-200italic-116c4c4b14ef76b0555da09854512022.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-200italic-89614a6008fc5c60739012463d0ee7e6.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/tech-blog/static/montserrat-latin-300-d2ad295b60682a6537c358e06ea80c61.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-300-3a371ee0d175f5c2b15ce1d6b981dc4e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/tech-blog/static/montserrat-latin-300italic-f6b6bf2431003f8142e800f9df157989.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-300italic-16521668f5f238098329cdd7d27c391e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/tech-blog/static/montserrat-latin-400-240a84447b78da0920fcb07e378f2c5f.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-400-b20cc131034316b1c85d0498fb9ed5c5.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/tech-blog/static/montserrat-latin-400italic-86172bb829de6be08b92512096b6aca6.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-400italic-9405e78785a55cf0e4ea7669d4616ea9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/tech-blog/static/montserrat-latin-500-fb8d6b71dbe8d9294be43082936f649e.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-500-50825d47af7ae47e055018eb689c6c99.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/tech-blog/static/montserrat-latin-500italic-c0a555a4f8e997385a3eebbd4da0b9ee.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-500italic-635de59c4be86285b1f70068c95b9816.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/tech-blog/static/montserrat-latin-600-d5615136a08cfee70deb4be1ee1651df.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-600-f300da4fb4fe00e23915f62b2c643681.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/tech-blog/static/montserrat-latin-600italic-10f29d139edacde92df63374c5672568.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-600italic-2bc37d86a4ba12ce526c4af904a9946e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/tech-blog/static/montserrat-latin-700-7d77e1f03eefc452dab14d7f89080083.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-700-81826529772e52f0f14a4c73c2f2c7f1.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/tech-blog/static/montserrat-latin-700italic-1dd2b53f1567a29e0505de9b27c4352c.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-700italic-c162d257f5e9f9b108a96a604cfb2132.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/tech-blog/static/montserrat-latin-800-d4e7bf86bbd8e5f43ca73fa831218648.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-800-895aadbff357be35ac8dd107c7975ee7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/tech-blog/static/montserrat-latin-800italic-fc0cbe442f7b3733c91e982e825c4daa.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-800italic-b3362875067300abedb7a8fb97903258.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/tech-blog/static/montserrat-latin-900-c8bdd772c0d1347720ff7e3fb72719f3.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-900-1b99ef78e627dd9bbd0ca4b5c0789547.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/tech-blog/static/montserrat-latin-900italic-cb72c1f90f66c124fb897a75bec64c78.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-900italic-b78bb9f8ecec6c5a924c873f1818095f.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/tech-blog/static/merriweather-latin-300-f015f1e9a46a3b9db4fd64564dacece4.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-300-92dfe81b725c342d31d962da975c07a6.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/tech-blog/static/merriweather-latin-300italic-7fd86b32accf2df4403d1d4fa3a81502.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-300italic-878b76f59d5ba58dd1652dc8d2a0f4f9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/tech-blog/static/merriweather-latin-400-12dbf4c00ae43698f278b099e4b0ec9e.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-400-1fffad22b085a877995812dbf1d9ac08.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/tech-blog/static/merriweather-latin-400italic-1e0d3e8121d88969bfb153c8f174b758.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-400italic-de18d4c4e8e808a7248a185f866ff094.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/tech-blog/static/merriweather-latin-700-dc8fec81a125fc63856587e6683da73b.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-700-d7d2ed8e58f303392cc3fc00ba3a9186.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/tech-blog/static/merriweather-latin-700italic-b7b7e5da4d7be8c12bd5a6c809edc8fc.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-700italic-6210a5fc1c54ca85a5d82aa85d7a9b5c.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/tech-blog/static/merriweather-latin-900-43f870d543dd89fbeb66d417c0d97276.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-900-8f3806df74937c7b8b53f24ae1e725d1.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/tech-blog/static/merriweather-latin-900italic-168c1ab28ed0e4e7d654334def288bc1.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-900italic-ae7778f01871e35ee142ef207b313b34.woff) format("woff")}</style><link as="script" rel="preload" href="/tech-blog/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js"/><link as="script" rel="preload" href="/tech-blog/styles-7f65c0d76820c6c21304.js"/><link as="script" rel="preload" href="/tech-blog/commons-112a8c3f7d8702c23842.js"/><link as="script" rel="preload" href="/tech-blog/app-13a28d1403ec4481c4eb.js"/><link as="script" rel="preload" href="/tech-blog/webpack-runtime-a8ae7da560eced2cf2d1.js"/><link as="fetch" rel="preload" href="/tech-blog/page-data\intro-to-nodejs-part-5\page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/tech-blog/">tech-blog</a></h3><h1>A very basic introduction to Node.js - Part 5</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">December 02, 2019</p><div><p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVQoz32ST0sbURTF37xUlyq4iYotFilvJkqCmHkUyfyLSi2lLhS0Gy2lioi68QuYMaZoxbroF5B2UREXhX4G0cTWUHWjErMRim7cdTme+5IganDgcOfNnPnNu/cdxh65bMdUNWHF6Z47rlTrSq160UtS8lXJtLBjsPSBzvysrtaWE3/gdz3JegdKP0vtGWwpr7OFXcFWTyPKwNXfPcnJsPhb56ms4Iv7Ojc7XlYgDdA0FII0+EO2I3kQMJb+o2vkAVR7sNv3S9E769cj3cq0Mr9M0EuAwtW6BKyW6upZhJMxCf1yk9Kjh35OT2CX31BdWru9Mk7vCeh4Zh12Fk/0yG3U/nJHBkZkQxG0XE/A/9AP25b/xlOxcPpAXK2ddwSo15Pr0WbLkgWMY8NxzQvcPwe0+HasO4dvdqa+Rhszh2IQbX8AcC7z16gjYPHNO7MGwPzwTNfTdF4UvhQ7CXgxsRYL25Y8gWcLKgDYXAZuJvtl08/g2RPskGAfoVkAGwj4grbu9ZntjA3xT8dCwPQZpxwttxyD5zskS1GSnWh5HbVVjWjPaMEMe6C227xZ1XM17sfunJxlmdr9CFXLoTLhULRG5rLMkdD8nAj5+6UYIHMqJhSvih/zDFVgftbQMEPKrhYEo+wGOwusfLZj/14AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Intro To Node.js"
+        title=""
+        src="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png"
+        srcset="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/cf440/node-js.png 148w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/d2d38/node-js.png 295w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png 590w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f9b6a/node-js.png 885w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png 960w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>This is the part 5 of post <a href="https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-4/">Intro to Nodejs - part 4</a>.</p>
+<p>In this post, we will connect our Node.js App with an Ionic app. Most software development is done like this: Different teams works on different parts of the application. For e.g There will be a back-end team which will only focus building backends. Their focus will solely be on Node.js (or whatever language they use), Database (MongoDB or anyother). Same way, there will be different teams for Front-end Web whether its in React.js, Angular or any other framework. Again, different team for Mobile which can be hybrid or native.</p>
+<p>In first 4 posts, we were only concerned with back-end. Now we will see some front-end and see how the whole picture fits. We will use Ionic app but later we will see how easily we can reuse functionalities with our Web app if its in Angular.</p>
+<p>so lets start.</p>
+<p>first, lets create an ionic application from scratch.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ionic start booky-ionic</code></pre></div>
+<p>Since we are going to be creating an API for books, I’m naming our project <code class="language-text">Booky</code>. <code class="language-text">Booky-ionic</code> will be our ionic code. aur node.js project could have the name Booky-node or whatever. It’s upto you.</p>
+<p>Usually its preferable we use different repositories for Ionic apps, front-end app and backend apps. Different repositories help us manage them more easily.</p>
+<p>So in our case, we will have 2 repositories. In case, we build an Angular web app, we might need a third named <code class="language-text">Booky-angular</code> but we’ll see when we get there.</p>
+<p>Okay so our create a starter with side-menu by default.</p>
+<p>Lets clean things up abit. I’m deleting lists folder because I don’t need it. I also have to remove the link from <code class="language-text">app-routing.module.ts</code></p>
+<p>First thing, we need to create a login page.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ionic g page login</code></pre></div>
+<p>lets also go ahead a create a register page.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ionic g page register</code></pre></div>
+<p>All set. lets add some html code in login page.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ion-header&gt;
+  &lt;ion-toolbar color=&quot;primary&quot;&gt;
+    &lt;ion-title class=&quot;ion-text-center&quot;&gt;Booky - Login&lt;/ion-title&gt;
+  &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content color=&quot;&quot;&gt;
+  &lt;form&gt;
+    &lt;ion-grid&gt;
+      &lt;ion-row color=&quot;justify-content-center&quot;&gt;
+        &lt;ion-col class=&quot;ion-align-self-center&quot; size-md=&quot;6&quot; size-lg=&quot;5&quot; size-xs=&quot;12&quot;&gt;
+
+          &lt;div class=&quot;ion-padding&quot;&gt;
+
+            &lt;ion-item&gt;
+              &lt;ion-input name=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;your@email.com&quot;&gt;&lt;/ion-input&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-input name=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;&lt;/ion-input&gt;
+            &lt;/ion-item&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;ion-padding&quot;&gt;
+            &lt;ion-button size=&quot;large&quot; color=&quot;primary&quot; type=&quot;submit&quot; expand=&quot;block&quot;&gt;Login&lt;/ion-button&gt;
+          &lt;/div&gt;
+        &lt;/ion-col&gt;
+      &lt;/ion-row&gt;
+    &lt;/ion-grid&gt;
+  &lt;/form&gt;
+&lt;/ion-content&gt;</code></pre></div>
+<p>We just added simple HTML for now. no forms etc just yet.</p>
+<p>This is how it looks</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/671006d58cc7cb4f69b972057658f1d0/101aa/bookylogin.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 466px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 147.42489270386267%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAABJ0AAASdAHeZh94AAACbElEQVRIx+2WvW4TQRDH/RB0FCCQIEABPTUSouMxUoAgfCqBBhqEKHgBhIBE4KC8Q6QAEVIQUFDQGNwY++yzz4e937t/ZvZssOMkdkqknPTb2buZ/e/czti6krUWzjn0ej3U63U0m01IKaG1Rr/fhxACSqno996j1WrFuDzPUavV0Gg0YnyWZTG+1G630elkaLbaqDea+FVPSDSN9wnZpNmieRrnrbRDMUkRQ894niQNpGkaE+HNSiyWd7uwMoNXhTWi8xc7Ztvk78Apjs2gRY4ureXshpS8s8j7BmsfDcofDFY3C94ObHmbHfqWNww2vxsgGBhjwUfHlILXqDYETt/xOHodOH4j4Mi1gLOLAZefBpx/UHDxccCxhYITNwMOzQNXX1gAEkKaeOZMyVmDNBNYeWfwasOR9ViOuAE2svLekr+A75+tO6x/0/BWQukRQR6kFLSTJxyhCE2YwbO9LkvZSXrlEUFjdGwN6zykMujmPfzuiYjS1FI+kG8SCicBG1tmTJAHFvQh0G6K+qsXbeD8aBEL7gSFxyLI3TIMwcdXKF6XbZgCYnV3zFDRGQrt8bUa8KUKguzPgM/Ep0rAVqWYM+zbqnj8SAK8M5OCSmkEqlSlbjF3OxDAKeLkLeDcEnDhEXDpCaitgDl6duYucPgKMP88xML1xXZBGqyWSDKLpTcSi6+Jgb2/KvFwrWDou1eWWHgpqX1MUWWx5xlihrOb4QxjlamkRVX/4UdwY+xR5VHBmF8IMxHbelbBadeB4IHgfyk46y+FhaYK7ufa5R+72IWdLMqfJbPAsbyWP1MmBIdZ7pfhN9BQg+0fuTarSgf4K+cAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="booky login"
+        title=""
+        src="/tech-blog/static/671006d58cc7cb4f69b972057658f1d0/101aa/bookylogin.png"
+        srcset="/tech-blog/static/671006d58cc7cb4f69b972057658f1d0/cf440/bookylogin.png 148w,
+/tech-blog/static/671006d58cc7cb4f69b972057658f1d0/d2d38/bookylogin.png 295w,
+/tech-blog/static/671006d58cc7cb4f69b972057658f1d0/101aa/bookylogin.png 466w"
+        sizes="(max-width: 466px) 100vw, 466px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Looks neat.</p>
+<p>lets add Angular Reactive Forms.</p>
+<p><code class="language-text">login.page.ts</code></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import { Component, OnInit } from &#39;@angular/core&#39;;
+import { FormBuilder, Validators } from &#39;@angular/forms&#39;;
+
+import { FormGroup } from &#39;@angular/forms&#39;;
+
+@Component({
+  selector: &#39;app-login&#39;,
+  templateUrl: &#39;./login.page.html&#39;,
+  styleUrls: [&#39;./login.page.scss&#39;]
+})
+export class LoginPage implements OnInit {
+  constructor(private formBuilder: FormBuilder) {}
+  loginForm: FormGroup;
+
+  ngOnInit() {
+    this.formInitializer();
+  }
+
+  formInitializer() {
+    this.loginForm = this.formBuilder.group({
+      email: [null, [Validators.required, Validators.email]],
+      password: [null, [Validators.required]]
+    });
+  }
+}</code></pre></div>
+<p>remember, we have to add ReactiveFormsModule import in <code class="language-text">login.module.ts</code></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    IonicModule,
+    LoginPageRoutingModule
+  ],
+  declarations: [LoginPage]
+})</code></pre></div>
+<p>Okay, that’s good. Now we need to add the form controls into HTML of <code class="language-text">login.page.ts</code></p>
+<p>Here’s after adding FormControlNames and FormGroup</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ion-content color=&quot;&quot;&gt;
+  &lt;form [formGroup]=&quot;loginForm&quot;&gt;
+    &lt;ion-grid&gt;
+      &lt;ion-row color=&quot;justify-content-center&quot;&gt;
+        &lt;ion-col class=&quot;ion-align-self-center&quot; size-md=&quot;6&quot; size-lg=&quot;5&quot; size-xs=&quot;12&quot;&gt;
+
+          &lt;div class=&quot;ion-padding&quot;&gt;
+
+            &lt;ion-item&gt;
+              &lt;ion-input name=&quot;email&quot; formControlName=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;your@email.com&quot;&gt;&lt;/ion-input&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-input name=&quot;password&quot; formControlName=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;&lt;/ion-input&gt;
+            &lt;/ion-item&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;ion-padding&quot;&gt;
+            &lt;ion-button size=&quot;large&quot; [disabled]=&quot;loginForm.invalid&quot; (click)=&quot;save()&quot; color=&quot;primary&quot; type=&quot;submit&quot; expand=&quot;block&quot;&gt;Login
+            &lt;/ion-button&gt;
+          &lt;/div&gt;
+        &lt;/ion-col&gt;
+      &lt;/ion-row&gt;
+    &lt;/ion-grid&gt;
+  &lt;/form&gt;
+&lt;/ion-content&gt;</code></pre></div>
+<p>We also added a save() function on click. The click will only trigger if the form is valid.</p>
+<p>Lets write some logic</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  save() {
+    const loginData = this.loginForm.value;
+    console.log(&#39;loginData&#39;, loginData);
+  }</code></pre></div>
+<p>What we need to do now is send a request to Booky-Node (our backend). We need to send a request to <a href="localhost:3000/users/login">localhost:3000/users/login</a>.</p>
+<p>We need to do an API request.</p>
+<p>So for API requests, remember we do those things in services.</p>
+<p>Lets create a <code class="language-text">User</code> service.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ionic g service user</code></pre></div>
+<p>Awesome. two files will be created for us.</p>
+<p>However, to make services more manageable, we will move them in proper folder structure.</p>
+<p>Here’s what I do</p>
+<p>create an <code class="language-text">sdk</code> folder inside <code class="language-text">app</code> directory.</p>
+<p>create a file named <code class="language-text">booky.config.ts</code></p>
+<p>create a folder named <code class="language-text">core</code></p>
+<p>This will contain core services</p>
+<p>create a folder named <code class="language-text">custom</code></p>
+<p>This will contain our custom services e.g User, Books etc</p>
+<p>This is what the folder structure looks like</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/770dd875d8e29c303b1fde790fbfd268/349f8/folderstructure.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 346px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 168.20809248554914%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAiCAYAAABfqvm9AAAACXBIWXMAABJ0AAASdAHeZh94AAAEUklEQVRIx5VW2W7bVhDVDxQoim6BZa3cxX1fREqURMuWncZ1aiBoU3RNC/QlBfpQIG996mefzlxZrmJTjv0w4NUleTQzZ8657OhWhKRY4OLFNb6+eoXm9AVOz69wdf0d/KiEYvjQzPDR0VEnASwvQb3aYHFxiaxcoqrXWJycw/ZSSJpDoB5kncN9MPi5zli1MVZMjDQbyg8/I1qsURDo8UjH0UBFb2yIdW+sYyAZB4PvjxQLHc5gTAt14qB5VSPMMtiWC8dxYUxsmKYNz92u+cWhPHkveE9STWi6tQeoWpANG9dv1qjmJQLLQhoGCD2Prj7KNIRPoP0HAHUCHO4DapYP57qAnEdQ/PCmTGOvZOMWYD9TXo80CxJVNZLNLeCIbox1B8U8RVPkGNNNSeMS7mfTluGIMpSoJSPiosPsDLjhhoOlHuJd/RxqlcEsU/SGWivA3d9jKle2vW2GDDiUCFDxsJrb+PPXAqZf0GzO4EV5K8DdNV/7O5ZFhgQ4VFxUpYvff6phMWA+g+NTliNNPNy/GZuDoLLxP2CfABXFgb0skP+yge/lNNwnKCnq1RkWzUasmbxHZsjUW3CiDNXJGTQvxCSKIdOwSxQyESbr9sEeMiljY58U2uSXw6JGQzpWIhdqHKLbk0Up/T1FtJW8HRtnNzY3GRKgrps4at7CnF0jS6dwo0L08C7TbcwP9qW3A+Qs4+yEgErYfgLTjUXf7r18J+6RwpsK9UmyQvzbuPi2TOCmc9TkOhm1YUAq6Q+JaVLMUGrJkvb4Gf7zjm7FMJxUjIppBvjy5d9QNt8jqkqEyxW8cg6vItNoVvDnC5rRXDx/G3YKM8jh5BUYq6OZEXQ7xsRJYJDZdhevIZfn8KbUwzmBUbjlDMFyAb+uYbiJeJHfEcEJ0Z5JImAs0UP2Ml2jPlbfIP3xH0yTlObwFGE8RY88sdtX6KoJKQ7afJFbQuSJsdmxzE2dGBHqeE3lJ8imNYJkKojRreDDTO9I4QyHBNgltfgkv6nsIy5rlPOGjoMFoqyis6VodZp7A74PeExM+aqKy8kYTlIhpwzjbIaUrm6YPQ1wq0UNCjXYzRpYLp+Ec5EdO45hB08EpI3RQMKz9AIfvXxH1h+S2TaIyXF4troDpdWtHwYcyuiGK3x2+htsMsuEBpodh/unGO3nyYcBowafnv+BJM5QzFYoqiVSKp1ZZnt6IqCEo+QMn1z+hThMkFcrOEGGZz1JGMS+0xw8W94DHMk4Dpb4fP2GJEhmS2BemNMcRlANV3jiQ8S0ZvhFfIaPn79FGEQiw5AGe735ij5LNoLth8q+NzYMemWOEegGMXwilMIss1KOh+qtLz6uZJ5D2lwbGnzLQ0wMMxmc4cSJhEYPncsHldIjpbymjYw8cbpcC+lNiekZfTyFafl4luWbDPnrYVlpSBKfFMKy22o4Jz3b9Ln3aKXsAIc3gHkWCMCcDILPZjaItgP/EOB/NIAIzHZ4RGAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="folderstructure"
+        title=""
+        src="/tech-blog/static/770dd875d8e29c303b1fde790fbfd268/349f8/folderstructure.png"
+        srcset="/tech-blog/static/770dd875d8e29c303b1fde790fbfd268/cf440/folderstructure.png 148w,
+/tech-blog/static/770dd875d8e29c303b1fde790fbfd268/d2d38/folderstructure.png 295w,
+/tech-blog/static/770dd875d8e29c303b1fde790fbfd268/349f8/folderstructure.png 346w"
+        sizes="(max-width: 346px) 100vw, 346px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Our config file is empty. Lets add some boilerplate code</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">export class BookyConfig {
+  private static path = &#39;http://localhost:3000&#39;;
+
+  public static getPath(): string {
+    return BookyConfig.path;
+  }
+}</code></pre></div>
+<p>The purpose of this is that whenever our backend URL changes, for e.g our backend is live at <code class="language-text">api.booky.com</code>, then we only need to make a change in one file and all URLs will be updated.</p>
+<p>Ok, so lets move on.</p>
+<p>we created a user service but its in outer app folder. There was also a .spec file. I’ll just delete the .spec file and move the <code class="language-text">user.service.ts</code> file to <code class="language-text">sdk -&gt; custom -&gt; user.service.ts</code></p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/ba70619eb2b751b5668ade9797e900c6/fa223/userservice.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 310px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 52.58064516129033%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAByUlEQVQoz5WSXW/TMBSGc80/QIi1aZo4dhwnsRsn6ZI27Uo/xiqYRgFRaUK7QPBPuBo/+eWklAnY0ODikR2dN6/PlyOUgUhG2L7/iLRsELdjCGvRH3C4fvRP9D0Olmn4cQbH5wk62s1rSJ2DWQMvTvC8z36Ih+JxQ9J4QsHjCo7rSyRJhmfJAuH+G7QZo5m+QF5NcDIIHzX9Geuy7Lwcj8XwQ0JayPoVeGwQpxZMZOj9R9kdgyAmwyACSwusTIrbbY0gG0E0JZKzGqo9hUvxHmXaH/Ij4h7dw4HuepjC4fEIXOWI5Ai7zRTT1oKbCnFeQZgSIcWFsoczJA2LzD2CSCNKS6KAo0wNXUwwFBVurgS+7DVmy7e42l1jef4Gl3R2bC/3WF/s6Cd6TJ/+hkgqNLOXKJslnM6d0XRcPcXJ+gZhmoMTkSkQKsqIeiroLjJ7+B6GyYMESh+0jhtIuL0BnqYNnnz4Ct8WtIsV1KKBmtWQzRjZqoW5mNPQSvQ8/kAPQzBNpSvaQybInXoTbD5D2hZ6VELSlAVlM2DyuBLi7v735SZNtzZcZhiSYfXpFpPzd5ifrbBYbzGdr0jwy54ds/nzfmfokyFV+x3ld1N0rymkwAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="userservice"
+        title=""
+        src="/tech-blog/static/ba70619eb2b751b5668ade9797e900c6/fa223/userservice.png"
+        srcset="/tech-blog/static/ba70619eb2b751b5668ade9797e900c6/cf440/userservice.png 148w,
+/tech-blog/static/ba70619eb2b751b5668ade9797e900c6/d2d38/userservice.png 295w,
+/tech-blog/static/ba70619eb2b751b5668ade9797e900c6/fa223/userservice.png 310w"
+        sizes="(max-width: 310px) 100vw, 310px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>This also keeps the services organized.</p>
+<p>Okay, so for user, we need to create a service method for login</p>
+<p>Here’s how <code class="language-text">user.service.ts</code> file looks</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import { HttpClient, HttpHeaders } from &#39;@angular/common/http&#39;;
+
+import { BookyConfig } from &#39;../booky.config&#39;;
+import { Injectable } from &#39;@angular/core&#39;;
+import { Observable } from &#39;rxjs&#39;;
+
+@Injectable({
+  providedIn: &#39;root&#39;
+})
+export class UserService {
+  constructor(private http: HttpClient) {}
+
+  public userLogin(credentials: object): Observable&lt;any&gt; {
+
+    // this url will be http://localhost:3000/users/login
+    const url = BookyConfig.getPath() + &#39;/users/login&#39;;
+
+    return this.http.post(url, credentials);
+  }
+}</code></pre></div>
+<p>After this, I need to import <code class="language-text">HttpClientModule</code> in imports of app.module.ts because we are using it in service.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import { HttpClientModule } from &#39;@angular/common/http&#39;;</code></pre></div>
+<p>Lets go to login.page.ts and write the <code class="language-text">.subscribe</code> method</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">save() {
+    const loginData = this.loginForm.value;
+    console.log(&#39;loginData&#39;, loginData);
+    // we need to send this data to our node.js server
+
+    this.userService.userLogin(loginData).subscribe(
+      data =&gt; {
+        console.log(&#39;got response from server&#39;, data);
+        this.loading = false;
+      },
+      error =&gt; {
+        this.loading = false;
+        console.log(&#39;error&#39;, error);
+      }
+    );
+  }</code></pre></div>
+<p>lets go to <a href="localhost:8100/login">localhost:8100/login</a> and see if it works</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/724e1ebaf94f79f266adf93578c09b44/b9cc0/boom.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 60.262612301313055%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABJ0AAASdAHeZh94AAABj0lEQVQoz42Ty27kIBBF+fsss5tIyWK+YTZZRBONZp1ddq3JU51gOm6/ANuAgTsF7iRuKVF3SUfG+HKpKjDTWuMQPaGItejwspEoSoUn3kK81VBK7mmZMQaHcNZAaoOzK4fTS4vz6wknvzxu7hwQDcbxU8ucczgW70YgGLyHnyZYa/c0LE0cxiF4i6tbjx+/I37+Dbj4EyFqmp/m7+/aIw1TFha89lhxj3vhcScC9ODy/J7hseUmMTUMywj+i5KNsbmZwzgSqcHjPB6GmcXY5kXTB2ld0i8PkD2vOYTYoCwriM0b2qaGlnJGqY9nU9do2zbTEU3TQMrdlUm6Hezp3wqPD/foyxJVUWDLCzSvr+iEgOIcphAwrYQl8UQGnjINRCSjQO+Jqe9h9QhPFTK+XoOTQYgBRlm0mxp9VaLfbjFQVom02dg29F3lxYFKjyEsiAhEjBFsW9WoqiobumGCLDUslZQyIcVMit04ki7G/cNZBtNa0e9DO3tPd8rD9XQIXZezCdTknEGMn2Tv+C3/AR6IoBwHCO7/AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="boom"
+        title=""
+        src="/tech-blog/static/724e1ebaf94f79f266adf93578c09b44/b9e4f/boom.png"
+        srcset="/tech-blog/static/724e1ebaf94f79f266adf93578c09b44/cf440/boom.png 148w,
+/tech-blog/static/724e1ebaf94f79f266adf93578c09b44/d2d38/boom.png 295w,
+/tech-blog/static/724e1ebaf94f79f266adf93578c09b44/b9e4f/boom.png 590w,
+/tech-blog/static/724e1ebaf94f79f266adf93578c09b44/f9b6a/boom.png 885w,
+/tech-blog/static/724e1ebaf94f79f266adf93578c09b44/2d849/boom.png 1180w,
+/tech-blog/static/724e1ebaf94f79f266adf93578c09b44/b9cc0/boom.png 1447w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>BOOM ! We successfully connected our ionic app with our backend. Hurray !! Lets also add Full stack developer to our CV while we’re at it :)</p>
+<p>lets get back.</p>
+<p>we got 401 unauthorized error. We can also see our custom message ‘Please signup first’ in the console.</p>
+<p>Lets try it with a user that already exists.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/8f5945b92871ed8b7611a5273638e9e0/a987b/success.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 41.14583333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABJ0AAASdAHeZh94AAABBElEQVQoz32RW2vDMAyF8/9/0va8pz0MVggMSttRSJe0aWo7ji+yfSa7l22Q7OFDR7IkDnKltcYSxmjUnyNe6iurjeC6YqbFmcp7jzkcQ+RR7x1e14S3HfDRhFJzCzOZyjmHOSyTosP2y+HpPeJ5lbDrCCnkN4+lubJwyWEgh14SNm1iYtG55tw/Dr2nv86sfWCMZZcEIBWytnbe2WPhoe1w6s84nQdchCiHHcexRMVRSMVRQ6qx5Hqafvj1GUopDMOAarteozseMfQXqLaF73s4biBuCLyAMjm/6xueFwZ2FG9oKTFxvTo0DYSQiBRBxiCy/Uh0bcw6M6c5Ju67gxD4KgnfqSlsByFx4fwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="success"
+        title=""
+        src="/tech-blog/static/8f5945b92871ed8b7611a5273638e9e0/b9e4f/success.png"
+        srcset="/tech-blog/static/8f5945b92871ed8b7611a5273638e9e0/cf440/success.png 148w,
+/tech-blog/static/8f5945b92871ed8b7611a5273638e9e0/d2d38/success.png 295w,
+/tech-blog/static/8f5945b92871ed8b7611a5273638e9e0/b9e4f/success.png 590w,
+/tech-blog/static/8f5945b92871ed8b7611a5273638e9e0/f9b6a/success.png 885w,
+/tech-blog/static/8f5945b92871ed8b7611a5273638e9e0/2d849/success.png 1180w,
+/tech-blog/static/8f5945b92871ed8b7611a5273638e9e0/a987b/success.png 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Awesome. We get success message. After login, we’re not doing anything right now. we should however take it to a different page. something like /books where we can see our own books but right now we’ll just navigate it home page.</p>
+<p>we need to do two things here which we’re not doing right now. 1. we need to save the JWT token from the server. That’s how we will know which user it is. 2. We are not showing any loading screen for now. It’s all happening very quick. We should add a loader.</p>
+<p>We’ll come back to this later.</p>
+<p>Lets just write that navigate method and we’ll move to register page.</p>
+<p>add these</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import { Router } from &#39;@angular/router&#39;;
+
+
+constructor ( private router: Router)
+
+ this.userService.userLogin(loginData).subscribe(
+      data =&gt; {
+        console.log(&#39;got response from server&#39;, data);
+        this.loading = false;
+        this.router.navigateByUrl(&#39;/home&#39;);
+      },
+      error =&gt; {
+        this.loading = false;
+        console.log(&#39;error&#39;, error);
+      }
+    );</code></pre></div>
+<p>Ok. so far so good. We need to provide users a way to signup from the ionic app. Lets add code to that <code class="language-text">register</code> page we created.</p>
+<p>Here is register.page.html</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;ion-header&gt;
+  &lt;ion-toolbar color=&quot;primary&quot;&gt;
+    &lt;ion-title class=&quot;ion-text-center&quot;&gt;Booky - Register&lt;/ion-title&gt;
+  &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content color=&quot;&quot;&gt;
+  &lt;form [formGroup]=&quot;registerForm&quot;&gt;
+    &lt;ion-grid&gt;
+      &lt;ion-row color=&quot;justify-content-center&quot;&gt;
+        &lt;ion-col class=&quot;ion-align-self-center&quot; size-md=&quot;6&quot; size-lg=&quot;5&quot; size-xs=&quot;12&quot;&gt;
+          &lt;div class=&quot;ion-text-center&quot;&gt;
+            &lt;h3&gt;Create your account!&lt;/h3&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;ion-padding&quot;&gt;
+            &lt;ion-item&gt;
+              &lt;ion-input name=&quot;name&quot; formControlName=&quot;name&quot; type=&quot;text&quot; placeholder=&quot;Name&quot;&gt;&lt;/ion-input&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-input name=&quot;email&quot; formControlName=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;your@email.com&quot;&gt;&lt;/ion-input&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-input name=&quot;password&quot; formControlName=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;&lt;/ion-input&gt;
+            &lt;/ion-item&gt;
+            &lt;ion-item&gt;
+              &lt;ion-input name=&quot;password&quot; formControlName=&quot;confirm_password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+              &lt;/ion-input&gt;
+            &lt;/ion-item&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;ion-padding&quot;&gt;
+            &lt;ion-button size=&quot;large&quot; [disabled]=&quot;registerForm.invalid&quot; (click)=&quot;save()&quot; color=&quot;primary&quot; type=&quot;submit&quot;
+              expand=&quot;block&quot;&gt;Register
+            &lt;/ion-button&gt;
+          &lt;/div&gt;
+        &lt;/ion-col&gt;
+      &lt;/ion-row&gt;
+    &lt;/ion-grid&gt;
+  &lt;/form&gt;
+&lt;/ion-content&gt;</code></pre></div>
+<p>Here is what the view looks like</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/32c225c31995f9196cf65c401247a0ad/0306f/register.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 394px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 157.1065989847716%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAfCAYAAADnTu3OAAAACXBIWXMAABJ0AAASdAHeZh94AAACWklEQVRIx+2VvW/TQBjG89/ASkFMCFUgMQEjoIp/A5YAEtCCivimdGNALCwsgNSygPq5dSk0aYuAlsSlEBHFiWP7bN/78L52r7WBJk5gQeKkx+/57vHPr+98dwXPDwB4uPwswMAFYHCEcPgq4dAVwolbhKFxwvGbhJNcP/WAcHqMcGw06Ref+Pfzc3cnhOOjYIDFpz72nCMcvKRx4KLGQFHj6LUIQw8jBmscGdE4O65xZkxjcDjCvmLiE//e84QbzxVAHgpKBVC+h7VND+8qEUpVFseyxdoAFj8DS1WgZAFvK3zPkvaypWOf+OW5Ss1HoBgYBAFc1wM0vyEuFF/9dgPW+nt8tT7Crm+i/q26rS+VD3Bb3zN+6ACetwWUiu8raO4jSiwqCNFoNNGwm2g2HTRbO5I2n79M/BFfJMp9BqhUkqFEaeu1GE4GSJxeq9XiIXC3jdKmtf5F0m60K1BKGIb8+X4MlWhe1EkdMxSQbdtwHCeW9JlM+wKarNLj+EcZSt18bjdQbmDescsFdJw2z7SDdtvl2aRcok6znC2UU/L/poCy9KJQYa1GeFMizCwTppeTOLea1exK0i6S+uslglVnbMQcA2xvrWUxjL4E7r3i7WgSuD0BPJ4BnszuxEdTwJ3JpP8++66/ABY+yXpVcWKZDNdrGtPlEPMrEeZyaH41wlQpxEadxzKdYXYMqQ/9NIZpoKZk9zCi30hn1GUt5/33cm8OaVOe8h/4LwN7/W3k+Qywn5Nu11NPNlSRHFByn8TuSvslQ2HEQJOubP2ysfaq9AlZMAfS39IPrJRQOW4GBYAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="register"
+        title=""
+        src="/tech-blog/static/32c225c31995f9196cf65c401247a0ad/0306f/register.png"
+        srcset="/tech-blog/static/32c225c31995f9196cf65c401247a0ad/cf440/register.png 148w,
+/tech-blog/static/32c225c31995f9196cf65c401247a0ad/d2d38/register.png 295w,
+/tech-blog/static/32c225c31995f9196cf65c401247a0ad/0306f/register.png 394w"
+        sizes="(max-width: 394px) 100vw, 394px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>lets write some typescript code</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">import { AbstractControl, FormBuilder, Validators } from &#39;@angular/forms&#39;;
+import { Component, OnInit } from &#39;@angular/core&#39;;
+
+import { FormGroup } from &#39;@angular/forms&#39;;
+import { Subscription } from &#39;rxjs&#39;;
+
+@Component({
+  selector: &#39;app-register&#39;,
+  templateUrl: &#39;./register.page.html&#39;,
+  styleUrls: [&#39;./register.page.scss&#39;]
+})
+export class RegisterPage implements OnInit {
+  constructor(private formBuilder: FormBuilder) {}
+  registerForm: FormGroup;
+
+  ngOnInit() {
+    this.formInitializer();
+  }
+
+  formInitializer() {
+    this.registerForm = this.formBuilder.group({
+      name: [&#39;&#39;, [Validators.required]],
+      email: [&#39;&#39;, [Validators.required, Validators.email]],
+      password: [&#39;&#39;, [Validators.required, Validators.minLength(5)]],
+      confirm_password: [
+        &#39;&#39;,
+        [
+          Validators.required,
+          Validators.minLength(5),
+          this.matchOtherValidator(&#39;password&#39;)
+        ]
+      ]
+    });
+  }
+
+  matchOtherValidator(otherControlName: string) {
+    return (control: AbstractControl): { [key: string]: any } =&gt; {
+      const otherControl: AbstractControl = control.root.get(otherControlName);
+
+      if (otherControl) {
+        const subscription: Subscription = otherControl.valueChanges.subscribe(
+          () =&gt; {
+            control.updateValueAndValidity();
+            subscription.unsubscribe();
+          }
+        );
+      }
+
+      return otherControl &amp;&amp; control.value !== otherControl.value
+        ? { match: true }
+        : null;
+    };
+  }
+}</code></pre></div>
+<p>A couple of new things were added to this. I used a custom validator. Don’t worry I didn’t wrote it myself :) I just copy / pasted from Stackoverflow :) Full Stackoverflow developer :D</p>
+<p>Okay, coming back to this</p>
+<p>Our scenario, which we often see in some apps is that you need to write password two times. and comparing both of them is not that straight-forward when it comes to making it work with the custom validations that we already use. Lets see it in action.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/2e079b4ae5a03850efa96f75cf0bc328/82024/confirmpassword.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 413px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 150.36319612590802%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAACXBIWXMAABJ0AAASdAHeZh94AAACmUlEQVRIx+2WOW8UMRTH811oKRAgvgBUUBCgQULiaGlpEFcZCiSgiAiJAqHgFCAoEaAQEFc4coBEg8RuyELYyd47Y49n/fznebw7u2yyB1FEhaX/PM+859+Mn99YHlAqQhQp+CJEqSJZIlG+JJBjFcrONtQaY1XxJZRSzIkwIMMIgMTIE4XtQwZ7LxIGzxN2sw5dJhwZI+wfZjtKODzqng1ecP49bHeeIxyd0JBSOqCoA4cehNhwzGDbGcKWUwabThB2cfCBS4QdZx3g4AhhH79w62nC5pPWGmw8bhisIYRwwHjKSiK1JDGT0phPa8yla/j0nTC7AHxMAXMLBjNpE/etPi8iiZvlMV8WoybQXoSQMFrBNRNfRbWAzMJXeEtpVIpZFJZ/sDIoeBlkf6Y5ooZmoz+Bdv4yVDCm7mZr7ytVP1YQSPiBQNUPYtl7rQ2IrBhd0+1fKOJVMkwslUoc0Pr23o2IOgEJ5XJ51QH2ZZ2kdYcvtC2fzyOTycQ2l8slz9cEtM5isQjP82Jr1QvYY8oGvu8ngY3W7eu6A9kZBAEiXhQbTF1AiXiM7ghkR57zFnIZGVsSnBvS1EU6HkPtOZR8E/IfgxrnS/pOoh9VOTZYbVFkvOMEzMxWgOWqk8f6VXayz631Wv3c581nZQ5t5YMU3n8zGH5sMD5lMDZpcIXt7TcGd94a3GJ7d9pg4rnzjT8zGHlq8PCDS42UnLYEKBzQbgJXpzRuvCJcf0mxvTdNuP+OGObszddN37UXhEfznENqA9opu7IBrzChpp1sX1lFTdvu1/H/vMrm0CjgtbSuQNNP7fUq7HZgv+0/8B8C132V/xa4YnNYj8JOTg72EoZhArX9MFR9y45pjKufHNwhpwFdi+zYBuc35m8Cfn4cCHEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="confirmpassword"
+        title=""
+        src="/tech-blog/static/2e079b4ae5a03850efa96f75cf0bc328/82024/confirmpassword.png"
+        srcset="/tech-blog/static/2e079b4ae5a03850efa96f75cf0bc328/cf440/confirmpassword.png 148w,
+/tech-blog/static/2e079b4ae5a03850efa96f75cf0bc328/d2d38/confirmpassword.png 295w,
+/tech-blog/static/2e079b4ae5a03850efa96f75cf0bc328/82024/confirmpassword.png 413w"
+        sizes="(max-width: 413px) 100vw, 413px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>It not enabling the register button and we can see the red line because the passwords I typed didnot match. We are able to handle it quite easily and gracefully in Angular.</p>
+<p>Right, we need to save() method and also add a register method in <code class="language-text">user.service.ts</code></p>
+<p>Lets add this method</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">public userRegister(credentials: object): Observable&lt;any&gt; {
+    const url = BookyConfig.getPath() + &#39;/users/register&#39;;
+
+    return this.http.post(url, credentials);
+  }</code></pre></div>
+<p>Lets write that save method</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">save() {
+    this.loading = true;
+
+    this.userService.userRegister(this.registerForm.value).subscribe(
+      data =&gt; {
+        console.log(&#39;got response from server&#39;, data);
+        this.loading = false;
+        this.router.navigateByUrl(&#39;/home&#39;);
+      },
+      error =&gt; {
+        this.loading = false;
+        console.log(&#39;error&#39;, error);
+      }
+    );
+  }</code></pre></div>
+<p>Again once our register is succeessful, we need to navigate it to <code class="language-text">/home</code> page or eventually <code class="language-text">/books</code> page.</p>
+<p>We covered a lot in this post. Few things we will cover in the next part are</p>
+<ol>
+<li>Showing proper Error Messages to user and success message</li>
+<li>Showing some loader</li>
+<li>saving JWT Token</li>
+<li>Complete Books API integration</li>
+</ol>
+<p>Here’s <a href="https://github.com/alamgirqazi/intro-to-nodejs-part4">link</a> to the ionic app code.</p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><img src="/tech-blog/static/profile-pic-60e61d84dd39be91e838f8204343d0bc.jpg" alt="Alamgir Qazi" style="border-radius:50%;margin-right:0.875rem;margin-bottom:0;width:3.5rem;height:3.5rem"/><p>Hey there, I&#x27;m Alamgir Qazi. I work as a full-stack JavaScript Developer. I&#x27;ll be sharing what I&#x27;ve learned about Angular, Node, Docker, Kubernetes and other cool things.</p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/tech-blog/intro-to-nodejs-part-4/">← <!-- -->A very basic introduction to Node.js - Part 4</a></li><li></li></ul></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/intro-to-nodejs-part-5/";window.webpackCompilationHash="e7a09ab67e530e789081";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-13a28d1403ec4481c4eb.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-2223fabe0a5d5ce97932.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js"],"component---src-pages-404-js":["/component---src-pages-404-js-bfcfeb502e0b4bb62413.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4513653e6f9bbe734230.js"]};/*]]>*/</script><script src="/tech-blog/webpack-runtime-a8ae7da560eced2cf2d1.js" async=""></script><script src="/tech-blog/app-13a28d1403ec4481c4eb.js" async=""></script><script src="/tech-blog/commons-112a8c3f7d8702c23842.js" async=""></script><script src="/tech-blog/styles-7f65c0d76820c6c21304.js" async=""></script><script src="/tech-blog/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js" async=""></script></body></html>
