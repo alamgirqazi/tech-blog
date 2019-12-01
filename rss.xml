@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 Dec 2019 14:53:03 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 5]]></title><description><![CDATA[This is the part 5 of post Intro to Nodejs - part 4. In this post, we will connect our Node.js App with an Ionic app. Most software…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-5/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-5/</guid><pubDate>Mon, 02 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 Dec 2019 15:10:01 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 5]]></title><description><![CDATA[This is the part 5 of post Intro to Nodejs - part 4. In this post, we will connect our Node.js App with an Ionic app. Most software…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-5/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-5/</guid><pubDate>Mon, 02 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
@@ -42,8 +42,8 @@
 &lt;p&gt;Since we are going to be creating an API for books, I’m naming our project &lt;code class=&quot;language-text&quot;&gt;Booky&lt;/code&gt;. &lt;code class=&quot;language-text&quot;&gt;Booky-ionic&lt;/code&gt; will be our ionic code. aur node.js project could have the name Booky-node or whatever. It’s upto you.&lt;/p&gt;
 &lt;p&gt;Usually its preferable we use different repositories for Ionic apps, front-end app and backend apps. Different repositories help us manage them more easily.&lt;/p&gt;
 &lt;p&gt;So in our case, we will have 2 repositories. In case, we build an Angular web app, we might need a third named &lt;code class=&quot;language-text&quot;&gt;Booky-angular&lt;/code&gt; but we’ll see when we get there.&lt;/p&gt;
-&lt;p&gt;Okay so our create a starter with side-menu by default.&lt;/p&gt;
-&lt;p&gt;Lets clean things up abit. I’m deleting lists folder because I don’t need it. I also have to remove the link from &lt;code class=&quot;language-text&quot;&gt;app-routing.module.ts&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Okay so we used a starter with side-menu by default.&lt;/p&gt;
+&lt;p&gt;Lets clean things up a bit. I’m deleting lists folder because I don’t need it. I also have to remove the link from &lt;code class=&quot;language-text&quot;&gt;app-routing.module.ts&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;First thing, we need to create a login page.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ionic g page login&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;lets also go ahead a create a register page.&lt;/p&gt;
@@ -186,10 +186,10 @@ export class LoginPage implements OnInit {
   }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;What we need to do now is send a request to Booky-Node (our backend). We need to send a request to &lt;a href=&quot;localhost:3000/users/login&quot;&gt;localhost:3000/users/login&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;We need to do an API request.&lt;/p&gt;
-&lt;p&gt;So for API requests, remember we do those things in services.&lt;/p&gt;
+&lt;p&gt;So for API requests, we need services.&lt;/p&gt;
 &lt;p&gt;Lets create a &lt;code class=&quot;language-text&quot;&gt;User&lt;/code&gt; service.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ionic g service user&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Awesome. two files will be created for us.&lt;/p&gt;
+&lt;p&gt;Awesome. Two files will be created for us.&lt;/p&gt;
 &lt;p&gt;However, to make services more manageable, we will move them in proper folder structure.&lt;/p&gt;
 &lt;p&gt;Here’s what I do&lt;/p&gt;
 &lt;p&gt;create an &lt;code class=&quot;language-text&quot;&gt;sdk&lt;/code&gt; folder inside &lt;code class=&quot;language-text&quot;&gt;app&lt;/code&gt; directory.&lt;/p&gt;
@@ -547,6 +547,39 @@ export class RegisterPage implements OnInit {
   }
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A couple of new things were added to this. I used a custom validator. Don’t worry I didn’t wrote it myself :) I just copy / pasted from Stackoverflow :) Full Stackoverflow developer :D&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/28c044f9707038355c5a289155877df2/b4523/fullstack.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 525px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 84.19047619047619%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAAsSAAALEgHS3X78AAADuElEQVQ4y2P4Twj8+/cPlxQDhHr8+PGjR4+A5I0bNx48eHDz5s0fP34AxX///g3XDyfhAKr54cOHFy5cAOo5ceLE7du3gYyfP3/+/fv38uXLR44cAXKxOoEBqOLXr19APadPn75+/frBgweBJETp9+/fjx49euzYsZOnTp49e/bSxYunT5+6cvXq8ePHz5079+zZM5DNQP137945c+bM5StXgFYBnQ03+8uXL58+A8GXR0+fPX356vmLF29fv/r8+dOH9+/evX3LsHr16jmz586aOWfqlGkTJ0ycM3f20mWLli5fvnDR0jVrN23ZuGHd6pVrV644vXPbjQO7zp04vmnX4fkLVy5csvrFy1cMAvwCnJycIiKiTEysQoL8GhoqWkqyKiICHGy8WjrWhuoqskJ8auKC+bZGYXoq+srqXILyDAxcDAzse/bsY/Byd81OCEvyc7QzVtfRU3K0tYhzNJsQ6WqiIGlo6uxkbmKspWqppRpjri8pKMTKzM3FxsPHycvJynVg/wGG/vrCCRkhc1PD68Pd1ZTElcUEIiy0KgNtzRQlLK3sy4tKgjzd7EwMFcWE5SWkuNh5QZq5+AW5Bfbv28/Qlh1RF+rYHuXdGOpmryWnIyFY6G5aE+SgIsxrZGJaX9tYW1IY5OEsxMOdHBIwp6+js7aqID5GXkxs3549DJneFuVelr2RPhOj/QKMVe311KZmRE7Lig6xt3RzdPT39k2ICHazNpcVl8yJCji+uP/Y2sXtFaXsDAyHDuxnyAmwKnYz6Qr1SLE1yvN3Wtpas6M5b0lJYqKDcXKov5OtnbGWtqW+jqqsXHF8eHd27Jy20pKcLE5mzgP79jHUJPvnuRsVuJg2RvotKk8v9nfsjHINtTbgYWIM8HD19/aRFZeVFpe0s3OKi4iY0lGzecnUGRMaUpPCb16/xuBibRxkrZbhbrq6Lr8zJUSah81OUUxMgI+ThdncxMTG2k5aXFZeVtHD18fQWNPNwyw80i010a2hNPje3esMRYnhfrZGC2tyVtZkmWsqCXFy2GjISwgLSglyuzna2dg46aiq6WtoqSurGOvpBPt65GUkxUSGzZ/Y/PXjW4YVnU2TsyJnZQamOhsyMDCwMDDI8bCxMjMD04GDhWFEdERkqH18pEtCuHNxesSK6T371y3euGjWnJ6mF48fMFw8vP/01lXHNy1fOXdaU2Nza1PzxM72rta2/rbmZQvmrtu4btHiOUuWzF68ZNbObWtvXzhz7fSJq6eOXTp+8POHdwCSYRfki/t2GwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;fullstack&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/28c044f9707038355c5a289155877df2/b4523/fullstack.png&quot;
+        srcset=&quot;/tech-blog/static/28c044f9707038355c5a289155877df2/cf440/fullstack.png 148w,
+/tech-blog/static/28c044f9707038355c5a289155877df2/d2d38/fullstack.png 295w,
+/tech-blog/static/28c044f9707038355c5a289155877df2/b4523/fullstack.png 525w&quot;
+        sizes=&quot;(max-width: 525px) 100vw, 525px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;Okay, coming back to this&lt;/p&gt;
 &lt;p&gt;Our scenario, which we often see in some apps is that you need to write password two times. and comparing both of them is not that straight-forward when it comes to making it work with the custom validations that we already use. Lets see it in action.&lt;/p&gt;
 &lt;p&gt;
