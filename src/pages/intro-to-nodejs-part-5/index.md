@@ -455,7 +455,7 @@ export class RegisterPage implements OnInit {
 
 A couple of new things were added to this. I used a custom validator. Don't worry I didn't wrote it myself :) I just copy / pasted from Stackoverflow :) Full Stackoverflow developer :D
 
-![fullstack](./fullstack.PNG)
+![fullstack](./fullstack.png)
 
 Okay, coming back to this
 
