@@ -508,4 +508,4 @@ We covered a lot in this post. Few things we will cover in the next part are
 3. saving JWT Token
 4. Complete Books API integration
 
-Here's [link](https://github.com/alamgirqazi/intro-to-nodejs-part4) to the ionic app code.
+Here's [link](https://github.com/alamgirqazi/booky-ionic) to the ionic app code.
