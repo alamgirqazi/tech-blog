@@ -1,10 +1,15 @@
 // Import typefaces
+
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
 import React from 'react'
-import profilePic from './profile-pic.jpg'
+import profilePic from './alam01.jpg'
 import { rhythm } from '../utils/typography'
+
+// import profilePic from './alamgir-img.png'
+
+
 
 class Bio extends React.Component {
   render() {
