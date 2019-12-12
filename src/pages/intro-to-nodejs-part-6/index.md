@@ -1,6 +1,6 @@
 ---
 title: A very basic introduction to Node.js - Part 6
-date: '2019-12-08'
+date: '2019-12-12'
 ---
 
 ![Intro To Node.js](./node-js.png)
