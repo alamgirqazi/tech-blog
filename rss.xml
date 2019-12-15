@@ -1,4 +1,656 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Dec 2019 18:30:03 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 6]]></title><description><![CDATA[This is the part 6 of post Intro to Nodejs - part 5. In this post, we will integrate our Books API with all CRUD (Create, Read, Update and…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-6/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-6/</guid><pubDate>Thu, 12 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Dec 2019 04:08:23 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 7]]></title><description><![CDATA[This is the part 7 of post Intro to Nodejs - part 6. So lets get started. In the next part, we will cover Guards and Authentication. Only…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-7/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-7/</guid><pubDate>Sun, 15 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVQoz32ST0sbURTF37xUlyq4iYotFilvJkqCmHkUyfyLSi2lLhS0Gy2lioi68QuYMaZoxbroF5B2UREXhX4G0cTWUHWjErMRim7cdTme+5IganDgcOfNnPnNu/cdxh65bMdUNWHF6Z47rlTrSq160UtS8lXJtLBjsPSBzvysrtaWE3/gdz3JegdKP0vtGWwpr7OFXcFWTyPKwNXfPcnJsPhb56ms4Iv7Ojc7XlYgDdA0FII0+EO2I3kQMJb+o2vkAVR7sNv3S9E769cj3cq0Mr9M0EuAwtW6BKyW6upZhJMxCf1yk9Kjh35OT2CX31BdWru9Mk7vCeh4Zh12Fk/0yG3U/nJHBkZkQxG0XE/A/9AP25b/xlOxcPpAXK2ddwSo15Pr0WbLkgWMY8NxzQvcPwe0+HasO4dvdqa+Rhszh2IQbX8AcC7z16gjYPHNO7MGwPzwTNfTdF4UvhQ7CXgxsRYL25Y8gWcLKgDYXAZuJvtl08/g2RPskGAfoVkAGwj4grbu9ZntjA3xT8dCwPQZpxwttxyD5zskS1GSnWh5HbVVjWjPaMEMe6C227xZ1XM17sfunJxlmdr9CFXLoTLhULRG5rLMkdD8nAj5+6UYIHMqJhSvih/zDFVgftbQMEPKrhYEo+wGOwusfLZj/14AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Intro To Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png&quot;
+        srcset=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/cf440/node-js.png 148w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/d2d38/node-js.png 295w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png 590w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f9b6a/node-js.png 885w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png 960w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;This is the part 7 of post &lt;a href=&quot;https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-6/&quot;&gt;Intro to Nodejs - part 6&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So lets get started.&lt;/p&gt;
+&lt;p&gt;In the next part, we will cover Guards and Authentication. Only the user who are logged in should see the books list and should only be able to add/edit/delete. We will discuss concepts like Authentication, Authorization, Guards and Interceptors.&lt;/p&gt;
+&lt;p&gt;First, we need to protect our backend.&lt;/p&gt;
+&lt;p&gt;Only authorized users should have access to Books List right. Only authorized users can add/update/delete books from the database.&lt;/p&gt;
+&lt;p&gt;How do we do it?&lt;/p&gt;
+&lt;p&gt;Remember, we created a JWT Token when we login? we will use that token and save in our “local Storage”.&lt;/p&gt;
+&lt;p&gt;Once token is saved, every request is sent with an authorization header. That includes our credentials.&lt;/p&gt;
+&lt;p&gt;Here is an example&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/c16e41e2ffeb67f2d100fb6bba285cab/c2216/authorization.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 46.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAABo0lEQVQoz42Su24UMRSG510ooYKOF0qklAheAXFp0kYKUgokKspISBQ8AB1CFLmwya5m1h57PB5fx7OzP8fOrrQFEoz06dij49/n/MfVo8fPcPt7AWy3mOcZ28xufci0meGshQ0b2BFIM9D3PWTXgXGOBWnoYUD15OlzLJdLkCLGGJHGVGJO5FKACQHZK/y8WeH0/Bzvzz7h9ccf+PztChcXH3B8coSXr17g7bs3uPxyieru5hZCSPC2xf2qLqwZQ0OsGUcnJbRSUJ0EoxzBG7R8DdEycE45TQNOuYwQokWVq3HjhMFHaBegrS/Rh4QrzfBdcPySEQ31aeNUcjM2x5jg6XycJkw7KkEVWGMQQkDbShjywTuH4D2MMxC074xDbyycDxhTQiRyHMmeOI5lnXZULbXRkV+Rbrq7X0AqCU8HE92WB/VAHtTDsP71VXVdl/61HigqqtCSePivw38V5DRypXpYq1DXX8noFVWs4KjtPTY/FyKvszV7PNmSOdxX+bnkb7OZSPCaBNel2mEwVK2hOMCQx1prEnXFmj1FiLo5/PcHOqqoNozK9aoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;authorization&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/c16e41e2ffeb67f2d100fb6bba285cab/b9e4f/authorization.png&quot;
+        srcset=&quot;/tech-blog/static/c16e41e2ffeb67f2d100fb6bba285cab/cf440/authorization.png 148w,
+/tech-blog/static/c16e41e2ffeb67f2d100fb6bba285cab/d2d38/authorization.png 295w,
+/tech-blog/static/c16e41e2ffeb67f2d100fb6bba285cab/b9e4f/authorization.png 590w,
+/tech-blog/static/c16e41e2ffeb67f2d100fb6bba285cab/f9b6a/authorization.png 885w,
+/tech-blog/static/c16e41e2ffeb67f2d100fb6bba285cab/2d849/authorization.png 1180w,
+/tech-blog/static/c16e41e2ffeb67f2d100fb6bba285cab/c2216/authorization.png 1890w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;do you see the highlighted part? thats the JWT Token. every request includes that token. Without that token, that server will throw a 401 or 403 HTTP Error stating you do not have access to this resource.&lt;/p&gt;
+&lt;p&gt;We need to incorporate that in our app.&lt;/p&gt;
+&lt;p&gt;lets first setup our application. we will use that same Ionic and Node app from previous part.&lt;/p&gt;
+&lt;p&gt;We need to add a check in our Node.js / Express app. That check will check if the request that Authorization token in it. If it doesnot, then it will throw an error.&lt;/p&gt;
+&lt;p&gt;We use &lt;em&gt;middlewares&lt;/em&gt; for that.&lt;/p&gt;
+&lt;p&gt;The main idea of middlewares is that every request goes through middleware before executing our method.&lt;/p&gt;
+&lt;p&gt;Lets see some code to get a better idea.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const checkAuth = require(&amp;#39;../middleware/check-auth&amp;#39;);
+
+router.get(&amp;quot;/&amp;quot;,checkAuth, bookController.getAll);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When we go to localhost:3000/books&lt;/p&gt;
+&lt;p&gt;then first &lt;code class=&quot;language-text&quot;&gt;checkAuth&lt;/code&gt; will run. After that, &lt;code class=&quot;language-text&quot;&gt;UserController.getAll&lt;/code&gt; will run.&lt;/p&gt;
+&lt;p&gt;If any error then checkAuth will throw the error and it won’t touch &lt;code class=&quot;language-text&quot;&gt;UserController.getAll&lt;/code&gt;. That’s it. that’s all the logic.&lt;/p&gt;
+&lt;p&gt;lets also make one change in our code.&lt;/p&gt;
+&lt;p&gt;in users.controller.js&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; const token = jsonwebtoken.sign({
+               data: result,
+               role: &amp;#39;User&amp;#39;
+            }, process.env.JWT_KEY, { expiresIn: &amp;#39;7d&amp;#39; });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;make sure we use &lt;code class=&quot;language-text&quot;&gt;process.env.JWT_KEY&lt;/code&gt; instead of previously &lt;code class=&quot;language-text&quot;&gt;supersecretToken&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Lets take a look at &lt;code class=&quot;language-text&quot;&gt;checkAuth&lt;/code&gt; middleware.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const jwt = require(&amp;#39;jsonwebtoken&amp;#39;);
+
+module.exports = (req, res, next) =&amp;gt; {
+    try {
+        const token = req.headers.authorization;
+        const decoded = jwt.verify(token, process.env.JWT_KEY);
+        req.userData = decoded;
+        next();
+    } catch (error) {
+        next({
+            message: &amp;#39;Auth failed&amp;#39;,
+            status: 401
+        });
+    }
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;we get that authorization from &lt;code class=&quot;language-text&quot;&gt;req.headers&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;we decode it using the jwt library.&lt;/p&gt;
+&lt;p&gt;if there is no token or it has expired, then it will throw the error.&lt;/p&gt;
+&lt;p&gt;Lets see this in action.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/e0124299570cadd27de6f76a09b41805/6095e/unauth.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 63.191153238546605%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAAB/ElEQVQ4y42T227UMBCG83hcI5B4hD5PL7iDa3iRShQEt6inVZdt18kmseNTDk7889tZtaiAWkuf/sn4kBnPuHDOYRgGSKlQVgfUrUSnDazzxD3Bw3kHYw2cs/C0k1qriaHforA2OVbS4e5oG2My9qjZpr+RGveiQVl3ODQre6EgSgWtNYpxHPEcAwlhhNQDTj4EvD1dcPJxxrvTiNfvDV6dfcKbb59RM8pimiY8xziu6vsRPzYzzq8ivm8WfL2OOL8JONsLfBECru9fFuEjA4AF64hHHkdaU4QXRJgIIeQN8xLXo+If8HtelvXAtXIengVJ9LRzcf6JzZumdK/sjESKehj6/NO0t7jdCVRVg6pusd1L7O4EmqZl61gopaE6zerZ3Eptq3B3v+e8pN9Aqi7PS9lBm9ROjhG2P2HlDUx7BV1fQh0u0NUXcIq+5jL7k+pEe501zQ12i9Ht0JstfLfBaH8hThWKQdxCiS0OuxtUu2uouw081fK7rwVG3WLoKgRVYSZB15ikQJAlQiswNXv0tCeuW3yHIl2o63q0TFeWJXR5YJQ1JK+gY9NaxVfBtHqm3TPFwBaKqTBhZkRz1pmFp4BuFKncwQdGafh3g8VoLpw4yxVzyHaGVV4CdZ7x94gPuh44BnjJKisF1zAlPrMY40OnxSdb89x/+A2gt+Xq/p6UMQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;unauth&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/e0124299570cadd27de6f76a09b41805/b9e4f/unauth.png&quot;
+        srcset=&quot;/tech-blog/static/e0124299570cadd27de6f76a09b41805/cf440/unauth.png 148w,
+/tech-blog/static/e0124299570cadd27de6f76a09b41805/d2d38/unauth.png 295w,
+/tech-blog/static/e0124299570cadd27de6f76a09b41805/b9e4f/unauth.png 590w,
+/tech-blog/static/e0124299570cadd27de6f76a09b41805/f9b6a/unauth.png 885w,
+/tech-blog/static/e0124299570cadd27de6f76a09b41805/2d849/unauth.png 1180w,
+/tech-blog/static/e0124299570cadd27de6f76a09b41805/6095e/unauth.png 1266w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;we get a 401 error. We don’t see our books list anymore.&lt;/p&gt;
+&lt;p&gt;For that to happen, we first need to save our JWT token after we login into local Storage or ionic Storage.&lt;/p&gt;
+&lt;p&gt;lets do that.&lt;/p&gt;
+&lt;p&gt;lets create an &lt;code class=&quot;language-text&quot;&gt;auth.service.ts&lt;/code&gt; file in sdk -&gt; core folder.&lt;/p&gt;
+&lt;p&gt;lets install these to access ionic storage.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ionic cordova plugin add cordova-sqlite-storage
+
+npm install @ionic/storage&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to use it in our service file, we need to import it in app.module.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
+    HttpClientModule,
+    AppRoutingModule
+  ]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;lets write code in our Auth.service.ts file&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import { Injectable } from &amp;#39;@angular/core&amp;#39;;
+import { Storage } from &amp;#39;@ionic/storage&amp;#39;;
+
+@Injectable({
+  providedIn: &amp;#39;root&amp;#39;
+})
+export class AuthService {
+  constructor(private storage: Storage) {}
+
+  public saveTokenToStorage(token: string) {
+    this.storage.set(&amp;#39;token&amp;#39;, token);
+  }
+
+  public async getTokenFromStorage() {
+    return await this.storage.get(&amp;#39;token&amp;#39;);
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;we will use this in login.page.ts&lt;/p&gt;
+&lt;p&gt;lets update our code. we just add one line. we get the token in data.token so&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  data =&amp;gt; {
+        console.log(&amp;#39;got response from server&amp;#39;, data);
+        this.loading = false;
+        this.authService.saveTokenToStorage(data.token);
+        this.router.navigateByUrl(&amp;#39;/home&amp;#39;);
+      },&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nice. we still however need to add this token to our books request. Lets do that.&lt;/p&gt;
+&lt;p&gt;We will be changing our methods a little bit.&lt;/p&gt;
+&lt;p&gt;We first need to update our GET /books request.&lt;/p&gt;
+&lt;p&gt;lets go to &lt;code class=&quot;language-text&quot;&gt;books.service.ts&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  public async getAllBooks(): Promise&amp;lt;any&amp;gt; {
+    const url = BookyConfig.getPath() + &amp;#39;/books&amp;#39;;
+    const token = await this.authService.getTokenFromStorage();
+    return this.http.get(url, {
+      headers: new HttpHeaders().set(&amp;#39;Authorization&amp;#39;, token)
+    });
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Few things we changed. We converted our Observable to Promise (because we had to use async/await for getting token from Ionic Storage).&lt;/p&gt;
+&lt;p&gt;we append that Token in our headers.&lt;/p&gt;
+&lt;p&gt;remember our Node.js middleware where we read &lt;code class=&quot;language-text&quot;&gt;req.headers.authorization&lt;/code&gt; ? that’s what we are adding here.&lt;/p&gt;
+&lt;p&gt;We also updated the component method. Lets take a look.&lt;/p&gt;
+&lt;p&gt;books.page.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;async getAll() {
+    this.loading = true;
+
+    const observable = await this.booksService.getAllBooks();
+    observable.subscribe(
+      data =&amp;gt; {
+        this.books = data.data.docs;
+        this.loading = false;
+        console.log(&amp;#39;data&amp;#39;, data);
+      },
+      err =&amp;gt; {
+        console.log(&amp;#39;err&amp;#39;, err);
+      }
+    );
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, our books should return.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/79c520a1eb7e063690c2a9a4b0077b1f/4221c/booksback.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 453px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 106.18101545253865%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABJ0AAASdAHeZh94AAADKUlEQVQ4y51TyU4UURTtlYlb49KNkmg0Mu1cudSdxpV/4AdgVIYwqGDCQuPCD3DhSmYQASMIkYAgUUIkjE0DPdPdRY81vKp6x3tfdWNDMCKvcurevFd13rmTb2bVREuXwIt+gfY+gQ7Csx6h9loJbd3eXnsZOvostA0n0TQcQ/NwHM0fY3g0sIeplRx8bydNXKoDapqAqkbgWj1wsx24/wa49xq41Qlcr/fOKhslqsm/8jSJc4t1uOp/goq1x6j1t+Ds8gN0bI4xoYGKOonaJhfVjS4qGyRutEncfSVx56XE7U6JKtqrZjI6r2mgS9s0nB9vxcXZVlyYbsHlmec4M/EQnctT8K3u6uidFxhZdDH808HggkD/d4Hub5ZC75yl9gYXSlZgiDAwb6BnLk//Fgh5vJ/RsbxdgM+1TfByzAy98vj3kkUcc+KY8Nm2g51QFO96BtE1NIb9TA6b/gBW1zawur4B/9Y2QuEoNja3kEhqcInLdiT42ctI5AwJf1wiTnqERYTCspDJ5rAbjiBI0A0DQgjouo5CoaCsaZrKt23bUyI9hcKBusAQErYLWPSdzyCCky4mcl33AFJ6AIMUM5ePWQXdvBnYUSr5J4tUs2VFDPaPgglcsg5JFI5USjkSn+s42A2F0fNhBIOjnymHGYSCQSwtLSEQCGBlZQXpdPpQqEWDRJbDBbb2pPIdQYSsxiDmlLYPbT+t1PLyQpIHRH+DqnjxO/N/c1i+1IVFHMohV7lAlZxd+IHFX8sqZ7lcDvl8HhkKn202mz3wPVtQqiwKRhCy1DomWYvbxlE5jGBkfBKfJr9iP51BPB5DKBRCJBLB+vo6gpTTWCymrN/vp7MwibKh0RxYtkQwJaHRHTbnkONm+aqiRM7+SVuIw/RsWcilHJYKcPIclhfE+1cRsjKu8OjEFL5Mz8KiKUkmkwqpVIrCjyORSEDTNNVG0WgUJRF5k3JHbcMjmDWKo8eE0fieKgojTyPGiWciJg2Hwwrsc07Z13WPMKNT8zvcjzTTZpHwNG0j1YR47aLapjyHXBR5TPOWGvvP3B72D39b1tj8OjoNp1FcIvwNYtsZHqWmKvoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;booksback&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/79c520a1eb7e063690c2a9a4b0077b1f/4221c/booksback.png&quot;
+        srcset=&quot;/tech-blog/static/79c520a1eb7e063690c2a9a4b0077b1f/cf440/booksback.png 148w,
+/tech-blog/static/79c520a1eb7e063690c2a9a4b0077b1f/d2d38/booksback.png 295w,
+/tech-blog/static/79c520a1eb7e063690c2a9a4b0077b1f/4221c/booksback.png 453w&quot;
+        sizes=&quot;(max-width: 453px) 100vw, 453px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Now, unless you login properly, the GET request won’t work.&lt;/p&gt;
+&lt;p&gt;we need to add this to other methods as well in Node.js server.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;books.routes.js&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const checkAuth = require(&amp;#39;../middleware/check-auth&amp;#39;);
+
+const bookController = require(&amp;#39;../controllers/books.controllers&amp;#39;);
+
+router.get(&amp;quot;/&amp;quot;,checkAuth,bookController.getAll);
+router.post(&amp;quot;/add&amp;quot;,checkAuth,bookController.addBook);
+router.put(&amp;quot;/:_id&amp;quot;,checkAuth, bookController.updateBook);
+router.delete(&amp;quot;/:_id&amp;quot;,checkAuth, bookController.deleteBook);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now it will work for all.&lt;/p&gt;
+&lt;p&gt;we need to update our methods in Angular/Ionic as well.&lt;/p&gt;
+&lt;p&gt;books.service.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import { HttpClient, HttpHeaders } from &amp;#39;@angular/common/http&amp;#39;;
+
+import { AuthService } from &amp;#39;./../core/auth.service&amp;#39;;
+import { BookyConfig } from &amp;#39;../booky.config&amp;#39;;
+import { Injectable } from &amp;#39;@angular/core&amp;#39;;
+
+@Injectable({
+  providedIn: &amp;#39;root&amp;#39;
+})
+export class BooksService {
+  constructor(private http: HttpClient, private authService: AuthService) {}
+
+  public async getAllBooks(): Promise&amp;lt;any&amp;gt; {
+    const url = BookyConfig.getPath() + &amp;#39;/books&amp;#39;;
+    const token = await this.authService.getTokenFromStorage();
+    return this.http.get(url, {
+      headers: new HttpHeaders().set(&amp;#39;Authorization&amp;#39;, token)
+    });
+  }
+
+  public async addNewBook(data: object): Promise&amp;lt;any&amp;gt; {
+    const url = BookyConfig.getPath() + &amp;#39;/books/add&amp;#39;;
+    const token = await this.authService.getTokenFromStorage();
+
+    return this.http.post(url, data, {
+      headers: new HttpHeaders().set(&amp;#39;Authorization&amp;#39;, token)
+    });
+  }
+  public async updateBook(data): Promise&amp;lt;any&amp;gt; {
+    const url = BookyConfig.getPath() + `/books/${data._id}`;
+    const token = await this.authService.getTokenFromStorage();
+
+    return this.http.put(url, data, {
+      headers: new HttpHeaders().set(&amp;#39;Authorization&amp;#39;, token)
+    });
+  }
+  public async deleteBook(id: string): Promise&amp;lt;any&amp;gt; {
+    const url = BookyConfig.getPath() + `/books/${id}`;
+    const token = await this.authService.getTokenFromStorage();
+
+    return this.http.delete(url, {
+      headers: new HttpHeaders().set(&amp;#39;Authorization&amp;#39;, token)
+    });
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lets update the methods as well&lt;/p&gt;
+&lt;p&gt;books.page.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  async deleteBook() {
+    this.deleteLoading = true;
+    const observable = await this.booksService.deleteBook(
+      this.selectedBook._id
+    );
+
+    observable.subscribe(
+      data =&amp;gt; {
+        console.log(&amp;#39;got response from server&amp;#39;, data);
+        this.deleteLoading = false;
+        this.getAll();
+      },
+      error =&amp;gt; {
+        this.deleteLoading = false;
+        console.log(&amp;#39;error&amp;#39;, error);
+      }
+    );
+  }
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;addnewbook.component.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  async addNew() {
+    const observable = await this.booksService.addNewBook(
+      this.addNewBookForm.value
+    );
+    observable.subscribe(
+      async data =&amp;gt; {
+        console.log(&amp;#39;got response from server&amp;#39;, data);
+        const name = this.addNewBookForm.controls[&amp;#39;name&amp;#39;].value;
+        const toast = await this.toastController.create({
+          message: `${name} has been added successfully.`,
+          duration: 3500
+        });
+        toast.present();
+        this.loading = false;
+        this.addNewBookForm.reset();
+        //optional
+
+        this.modalCtrl.dismiss();
+      },
+      error =&amp;gt; {
+        this.loading = false;
+        console.log(&amp;#39;error&amp;#39;, error);
+      }
+    );
+  }
+  async updateBook() {
+    const observable = await this.booksService.updateBook(
+      this.addNewBookForm.value
+    );
+
+    observable.subscribe(
+      async data =&amp;gt; {
+        console.log(&amp;#39;got response from server&amp;#39;, data);
+        const name = this.addNewBookForm.controls[&amp;#39;name&amp;#39;].value;
+        const toast = await this.toastController.create({
+          message: `${name} has been updated successfully.`,
+          duration: 3500
+        });
+        toast.present();
+        this.loading = false;
+        this.addNewBookForm.reset();
+        //optional
+
+        this.modalCtrl.dismiss();
+      },
+      error =&amp;gt; {
+        this.loading = false;
+        console.log(&amp;#39;error&amp;#39;, error);
+      }
+    );
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now our flow is working.&lt;/p&gt;
+&lt;p&gt;Now we’re successfully restricting our user access to the API without our secure token.&lt;/p&gt;
+&lt;p&gt;What we need to do is prevent the user even going to books page if he doesnot have a token.&lt;/p&gt;
+&lt;p&gt;In Angular, we do that using &lt;strong&gt;&lt;em&gt;Guards&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Lets create a folder inside sdk -&gt; custom -&gt; guards&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/3983283215db8b77e9ecbd51ea6cbf54/f00c5/newfiles.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 323px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 77.70897832817337%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABJ0AAASdAHeZh94AAACrUlEQVQ4y4VUy3KbQBDkB3LKLYks81xeywLL8hJCAuvlqOy4UuVrbr7lD/IHued7O8NadjllKz4MDAvb09vTg+H4CbxAoN/doFrtUJcSdaVwYQUw3ejdmNsh7edIRKZzw2YcLoF2myPqbo1KpiilxMz09YZLJ9RxDnB657AYYZTo3JguLEph+hnM+99gzQZeIxHUJeYvWJ4DvSRWVpjAzXKdG9Oi4xPLIEXcfAUTCm4i4PIU1jtgT+8sYujQsTVD0yUNohwJAfy5XWBQCn1b4jAscNXVsL3XgC+fJ90YMczTk4YWbbC8mHQUEFUBObZgsYBPHwSFhH2qfA5QM/SJIe2xCcOYwCbQMCoQrCQOD3cIFy3idQM+dnT8FBdzX+s5N4N/dH0CnIp61GU3yB411CxZhIuZD7dPwNoULJdgSsInG3l5DlZOjSrAiLXuvHsKmwpMDKmw46cwHKLpkg9ZnMFyOOKrAj51OaxqiE0P3rfgqw58SawXDa2X9F38GC4njamh5BI/p2J0SoPnC0yRqiUdu4W465Edeshhg+rmAHXYQV3vUR73KLZbqP1O5/W3a+TrEbFokJRLZP0AIVcw/JgYcUKneyIkmpG0LBQiRRo2LcKyQVw1EMsOUd0ime70HNfEVlbwwhxBosCLGiGBP2v4aR5i7AM83DMaP7INNWW7atBR58eupKgwUAgu8GXOdHMm/WaWDy5SjMsapnfqsk0xsyKUZYzbPfkyzJDmxFLkEJlCQjnPCoQ80748Z3KX2Gof2uT0z5chhtLEjzuHNF2iH7aQdY9utUHTX6FdjkhlTT+N1zP+2PVnwBjmtMAEPnz/BUttkWYlZNUhSYllUkA1PXK1gB/TvDrBm+NnvgX48fiTvDZi0Q2aWdePKNsVuvUW4+4Ikdc0Xv8H/Aswp+qHLOvdHAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;newfiles&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/3983283215db8b77e9ecbd51ea6cbf54/f00c5/newfiles.png&quot;
+        srcset=&quot;/tech-blog/static/3983283215db8b77e9ecbd51ea6cbf54/cf440/newfiles.png 148w,
+/tech-blog/static/3983283215db8b77e9ecbd51ea6cbf54/d2d38/newfiles.png 295w,
+/tech-blog/static/3983283215db8b77e9ecbd51ea6cbf54/f00c5/newfiles.png 323w&quot;
+        sizes=&quot;(max-width: 323px) 100vw, 323px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;we create two files.&lt;/p&gt;
+&lt;p&gt;islogin.guard.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import { CanActivate, Router } from &amp;#39;@angular/router&amp;#39;;
+
+import { AuthService } from &amp;#39;src/sdk/core/auth.service&amp;#39;;
+import { Injectable } from &amp;#39;@angular/core&amp;#39;;
+
+@Injectable({
+  providedIn: &amp;#39;root&amp;#39;
+})
+export class IsLoginGuard implements CanActivate {
+  constructor(private router: Router, private authService: AuthService) {}
+
+  async canActivate() {
+    const token = await this.authService.getTokenFromStorage();
+    if (!token) {
+      this.router.navigateByUrl(&amp;#39;/login&amp;#39;);
+    } else {
+      return true;
+    }
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;we will come back to redirect.login.ts in a while.&lt;/p&gt;
+&lt;p&gt;In the meantime, lets use &lt;code class=&quot;language-text&quot;&gt;IsLoginGuard&lt;/code&gt; service/guard we created.&lt;/p&gt;
+&lt;p&gt;lets go to app-routing.module.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; {
+    path: &amp;#39;books&amp;#39;,
+    canActivate: [IsLoginGuard],
+    loadChildren: () =&amp;gt;
+      import(&amp;#39;./books/books.module&amp;#39;).then(m =&amp;gt; m.BooksPageModule)
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now if there is no token, it won’t let us go to books page.&lt;/p&gt;
+&lt;p&gt;To test it, lets change app.component.html and .ts a little bit&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  &amp;lt;ion-list&amp;gt;
+          &amp;lt;ion-menu-toggle auto-hide=&amp;quot;false&amp;quot; *ngFor=&amp;quot;let p of appPages&amp;quot;&amp;gt;
+            &amp;lt;ion-item *ngIf=&amp;quot;p?.title!==&amp;#39;Logout&amp;#39;&amp;quot; [routerDirection]=&amp;quot;&amp;#39;root&amp;#39;&amp;quot; [routerLink]=&amp;quot;[p.url]&amp;quot;&amp;gt;
+              &amp;lt;ion-icon *ngIf=&amp;quot;p?.icon&amp;quot; slot=&amp;quot;start&amp;quot; [name]=&amp;quot;p.icon&amp;quot;&amp;gt;&amp;lt;/ion-icon&amp;gt;
+              &amp;lt;ion-label&amp;gt;
+                {{p.title}}
+              &amp;lt;/ion-label&amp;gt;
+            &amp;lt;/ion-item&amp;gt;
+            &amp;lt;ion-item (click)=&amp;quot;logout()&amp;quot; *ngIf=&amp;quot;p?.title===&amp;#39;Logout&amp;#39;&amp;quot;&amp;gt;
+              &amp;lt;ion-icon *ngIf=&amp;quot;p?.icon&amp;quot; slot=&amp;quot;start&amp;quot; [name]=&amp;quot;p.icon&amp;quot;&amp;gt;&amp;lt;/ion-icon&amp;gt;
+              &amp;lt;ion-label&amp;gt;
+                {{p.title}}
+              &amp;lt;/ion-label&amp;gt;
+            &amp;lt;/ion-item&amp;gt;
+          &amp;lt;/ion-menu-toggle&amp;gt;
+        &amp;lt;/ion-list&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;app.component.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;public appPages = [
+    {
+      title: &amp;#39;Home&amp;#39;,
+      url: &amp;#39;/home&amp;#39;,
+      icon: &amp;#39;home&amp;#39;
+    },
+    {
+      title: &amp;#39;Books&amp;#39;,
+      url: &amp;#39;/books&amp;#39;,
+      icon: &amp;#39;book&amp;#39;
+    },
+    {
+      title: &amp;#39;Logout&amp;#39;,
+      icon: &amp;#39;power&amp;#39;
+    }
+  ];
+
+  logout() {
+    this.authService.logout();
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Click on logout on the drawer will log you out of the app (It will delete the token from storage).&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/2a36a8632891237871053554071845fc/a987b/tokensaved.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 43.541666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAABFElEQVQoz6WSy07DMBBF/f+fwF8g0Q1iAcuKTSuxYxvlZcdvp3lfxm6CAuqGMtKRx+OZa49t1vc9fjMMQxq998kHFihpcD59YJom3KrZYLFgz14whICu6xAtzwQOj2/kzRS7IbbWs2ugS4WRvXCct21IgpJ/4vj6gHkBhnHAOI4/2OqYUgrGmITWGmVRIC9K5BVHXJNSprjgNa1l0BTjVYWG8yuCqGuIqoAQAqxpJKx1sM5BUnKR53RfEkqb740i1lrK8ZAkoEhIxZEEkr9iKY9pKdB6i0vr4KxK9/YfY4djhqf3Es8niZdzA0GvGW2eZyzL8mdYKQyqxiZKrnFZX/XuEypqOVDLwTv6dxYttbx9nXv4AjvcuN7yZJINAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;token saved&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/2a36a8632891237871053554071845fc/b9e4f/tokensaved.png&quot;
+        srcset=&quot;/tech-blog/static/2a36a8632891237871053554071845fc/cf440/tokensaved.png 148w,
+/tech-blog/static/2a36a8632891237871053554071845fc/d2d38/tokensaved.png 295w,
+/tech-blog/static/2a36a8632891237871053554071845fc/b9e4f/tokensaved.png 590w,
+/tech-blog/static/2a36a8632891237871053554071845fc/f9b6a/tokensaved.png 885w,
+/tech-blog/static/2a36a8632891237871053554071845fc/2d849/tokensaved.png 1180w,
+/tech-blog/static/2a36a8632891237871053554071845fc/a987b/tokensaved.png 1920w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;We can see our token being saved in IndexedDB (Ionic Storage handles this for us).&lt;/p&gt;
+&lt;p&gt;Lets see what redirectLogin is supposed to do.&lt;/p&gt;
+&lt;p&gt;Imagine if Im already logged in, I should never go to login page right? right now I can do that. which is wrong.&lt;/p&gt;
+&lt;p&gt;so lets add redirectLogin.guard.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import { CanActivate, Router } from &amp;#39;@angular/router&amp;#39;;
+
+import { AuthService } from &amp;#39;src/sdk/core/auth.service&amp;#39;;
+import { Injectable } from &amp;#39;@angular/core&amp;#39;;
+
+@Injectable({
+  providedIn: &amp;#39;root&amp;#39;
+})
+export class RedirectLoginGuard implements CanActivate {
+  constructor(private router: Router, private authService: AuthService) {}
+
+  async canActivate() {
+    const token = await this.authService.getTokenFromStorage();
+    if (token) {
+      this.router.navigateByUrl(&amp;#39;/books&amp;#39;);
+    } else {
+      return true;
+    }
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;lets use it in app-routing.module.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  {
+    path: &amp;#39;login&amp;#39;,
+    canActivate: [RedirectLoginGuard],
+    loadChildren: () =&amp;gt;
+      import(&amp;#39;./login/login.module&amp;#39;).then(m =&amp;gt; m.LoginPageModule)
+  },
+  {
+    path: &amp;#39;register&amp;#39;,
+    canActivate: [RedirectLoginGuard],
+    loadChildren: () =&amp;gt;
+      import(&amp;#39;./register/register.module&amp;#39;).then(m =&amp;gt; m.RegisterPageModule)
+  },&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now if I go to login page, it takes me to /books as long as I’m logged in.&lt;/p&gt;
+&lt;p&gt;We have covered almost all scenarios. However, one is missing.&lt;/p&gt;
+&lt;p&gt;Lets say your token has expired and server send a 401 error. What do you do now? if we get a 401 or 403 error from server, we need to quickly send it back to login page. don’t allow access to Books api.&lt;/p&gt;
+&lt;p&gt;For that, we use &lt;em&gt;Interceptors&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Interceptors in Angular catch requests before and after. All HTTP Requests in Angular go through the interceptor.&lt;/p&gt;
+&lt;p&gt;lets create an httpinterceptor.service.ts in sdk -&gt; core -&gt; httpinterceptor.service.ts&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import {
+  HTTP_INTERCEPTORS,
+  HttpErrorResponse,
+  HttpEvent,
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest
+} from &amp;#39;@angular/common/http&amp;#39;;
+
+import { AuthService } from &amp;#39;./auth.service&amp;#39;;
+import { Injectable } from &amp;#39;@angular/core&amp;#39;;
+import { Observable } from &amp;#39;rxjs/internal/Observable&amp;#39;;
+import { Router } from &amp;#39;@angular/router&amp;#39;;
+import { tap } from &amp;#39;rxjs/operators&amp;#39;;
+
+@Injectable()
+export class ErrorInterceptor implements HttpInterceptor {
+  constructor(private router: Router, private authService: AuthService) {}
+
+  intercept(
+    req: HttpRequest&amp;lt;any&amp;gt;,
+    next: HttpHandler
+  ): Observable&amp;lt;HttpEvent&amp;lt;any&amp;gt;&amp;gt; {
+    return next.handle(req).pipe(
+      tap(
+        event =&amp;gt; {},
+        err =&amp;gt; {
+          if (
+            err instanceof HttpErrorResponse &amp;amp;&amp;amp;
+            (err.status === 403 || err.status === 401)
+          ) {
+            this.authService.logout();
+          }
+        }
+      )
+    );
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To use it, lets go to app.module.ts&lt;/p&gt;
+&lt;p&gt;import these&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import { HTTP_INTERCEPTORS, HttpClientModule } from &amp;#39;@angular/common/http&amp;#39;;
+
+import { ErrorInterceptor } from &amp;#39;src/sdk/core/httpinterceptor.service&amp;#39;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and update providers&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;providers: [
+    StatusBar,
+    SplashScreen,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true
+    },
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and Boom. its set up.&lt;/p&gt;
+&lt;p&gt;We covered quite a few things things here&lt;/p&gt;
+&lt;h3&gt;Authentication&lt;/h3&gt;
+&lt;p&gt;Check if the user is login or not.&lt;/p&gt;
+&lt;h3&gt;Authorization&lt;/h3&gt;
+&lt;p&gt;Check if the user has to roles to perform certain tasks. For e.g is it admin or user ? We didn’t cover this in here.&lt;/p&gt;
+&lt;h3&gt;Guards&lt;/h3&gt;
+&lt;p&gt;Angular services that prevent going to a page/route under some condition.&lt;/p&gt;
+&lt;h3&gt;Interceptor&lt;/h3&gt;
+&lt;p&gt;Catch HTTP Requests and give us control. These are like middlewares for angular.&lt;/p&gt;
+&lt;p&gt;Here’s &lt;a href=&quot;https://github.com/alamgirqazi/intro-to-nodejs-part7&quot;&gt;link&lt;/a&gt; to the node.js app code.&lt;/p&gt;
+&lt;p&gt;Here’s &lt;a href=&quot;https://github.com/alamgirqazi/booky-ionic/tree/part7&quot;&gt;link&lt;/a&gt; to the ionic app code. (&lt;em&gt;branch part7&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;In the next part, we will deploy our application to production.&lt;/p&gt;
+&lt;p&gt;we will use mlab / mongodb Atlas for online database.&lt;/p&gt;
+&lt;p&gt;we will use heroku platform to deploy our backend.&lt;/p&gt;
+&lt;p&gt;we will create an APK app using Capacitor.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A very basic introduction to Node.js - Part 6]]></title><description><![CDATA[This is the part 6 of post Intro to Nodejs - part 5. In this post, we will integrate our Books API with all CRUD (Create, Read, Update and…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-6/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-6/</guid><pubDate>Thu, 12 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
