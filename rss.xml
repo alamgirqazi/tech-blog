@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 22 Dec 2019 08:54:51 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 8]]></title><description><![CDATA[This is the part 8 of post Intro to Nodejs - part 7. So lets get started. Our first challenge is to deploy our application to production…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-8/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-8/</guid><pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 22 Dec 2019 09:09:14 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 8]]></title><description><![CDATA[This is the part 8 of post Intro to Nodejs - part 7. So lets get started. Our first challenge is to deploy our application to production…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-8/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-8/</guid><pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
@@ -936,7 +936,7 @@
     &lt;/p&gt;
 &lt;p&gt;It updated but still didn’t work&lt;/p&gt;
 &lt;p&gt;I ran the command&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; heroku logs -a mybookyapp --tail&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;to check for logs and see the issue. I got this.&lt;/p&gt;
 &lt;p&gt;
   &lt;a
@@ -1046,7 +1046,6 @@
   &lt;/a&gt;
     &lt;/p&gt;
 &lt;p&gt;Okay, now after git push, it will deploy itself and we will wait and see it in action.&lt;/p&gt;
-&lt;p&gt;yesssssssssssssssssssssssssssss !&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1083,6 +1082,7 @@
   
   &lt;/a&gt;
     &lt;/p&gt;
+&lt;p&gt;yesssssssssssssssssssssssssssss !&lt;/p&gt;
 &lt;p&gt;Our app is live. Hooray !!&lt;/p&gt;
 &lt;p&gt;Lets test it in postman. Just replace localhost:3000 with your URL&lt;/p&gt;
 &lt;p&gt;
