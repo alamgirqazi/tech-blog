@@ -205,6 +205,7 @@ It updated but still didn't work
 I ran the command
 
 ```
+ heroku logs -a mybookyapp --tail
 
 ```
 
@@ -228,9 +229,9 @@ in app.js, update the code like this
 
 Okay, now after git push, it will deploy itself and we will wait and see it in action.
 
-yesssssssssssssssssssssssssssss !
-
 ![yes](./yes.PNG)
+
+yesssssssssssssssssssssssssssss !
 
 Our app is live. Hooray !!
 
