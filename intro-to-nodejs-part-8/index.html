@@ -1,0 +1,1218 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link rel="apple-touch-icon" sizes="256x256" href="/tech-blog/icons/icon-256x256.png?v=ab9d362a82390b1b299fe1144c79b26d"/><meta name="generator" content="Gatsby 2.15.36"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/tech-blog/rss.xml"/><link rel="shortcut icon" href="/tech-blog/icons/icon-48x48.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="manifest" href="/tech-blog/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/tech-blog/icons/icon-48x48.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="72x72" href="/tech-blog/icons/icon-72x72.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="96x96" href="/tech-blog/icons/icon-96x96.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="144x144" href="/tech-blog/icons/icon-144x144.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="192x192" href="/tech-blog/icons/icon-192x192.png?v=ab9d362a82390b1b299fe1144c79b26d"/><style data-href="/tech-blog/styles.75d456e0bf8bd0a47aa1.css">.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><link rel="apple-touch-icon" sizes="384x384" href="/tech-blog/icons/icon-384x384.png?v=ab9d362a82390b1b299fe1144c79b26d"/><link rel="apple-touch-icon" sizes="512x512" href="/tech-blog/icons/icon-512x512.png?v=ab9d362a82390b1b299fe1144c79b26d"/><title data-react-helmet="true">A very basic introduction to Node.js - Part 8 | tech-blog</title><meta data-react-helmet="true" name="description" content="This is the part 8 of post Intro to Nodejs - part 7. So lets get started. Our first challenge is to deploy our application to production…"/><style data-href="/tech-blog/commons.c6dceef504ade98e991f.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/tech-blog/static/montserrat-latin-100-50d279861fb3cbfed809eae6ed8b9ac9.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-100-5e334eff013f12fbb8ed72c2a253f119.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/tech-blog/static/montserrat-latin-100italic-8c0705336558194799a8729840d7ed9d.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-100italic-03e19243272affe738654a157625ec26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/tech-blog/static/montserrat-latin-200-4343d3d91a9446226e7a8bbb024111ad.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-200-f2022ecd65a0703ec3edcb7641709a75.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/tech-blog/static/montserrat-latin-200italic-116c4c4b14ef76b0555da09854512022.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-200italic-89614a6008fc5c60739012463d0ee7e6.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/tech-blog/static/montserrat-latin-300-d2ad295b60682a6537c358e06ea80c61.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-300-3a371ee0d175f5c2b15ce1d6b981dc4e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/tech-blog/static/montserrat-latin-300italic-f6b6bf2431003f8142e800f9df157989.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-300italic-16521668f5f238098329cdd7d27c391e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/tech-blog/static/montserrat-latin-400-240a84447b78da0920fcb07e378f2c5f.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-400-b20cc131034316b1c85d0498fb9ed5c5.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/tech-blog/static/montserrat-latin-400italic-86172bb829de6be08b92512096b6aca6.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-400italic-9405e78785a55cf0e4ea7669d4616ea9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/tech-blog/static/montserrat-latin-500-fb8d6b71dbe8d9294be43082936f649e.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-500-50825d47af7ae47e055018eb689c6c99.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/tech-blog/static/montserrat-latin-500italic-c0a555a4f8e997385a3eebbd4da0b9ee.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-500italic-635de59c4be86285b1f70068c95b9816.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/tech-blog/static/montserrat-latin-600-d5615136a08cfee70deb4be1ee1651df.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-600-f300da4fb4fe00e23915f62b2c643681.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/tech-blog/static/montserrat-latin-600italic-10f29d139edacde92df63374c5672568.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-600italic-2bc37d86a4ba12ce526c4af904a9946e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/tech-blog/static/montserrat-latin-700-7d77e1f03eefc452dab14d7f89080083.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-700-81826529772e52f0f14a4c73c2f2c7f1.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/tech-blog/static/montserrat-latin-700italic-1dd2b53f1567a29e0505de9b27c4352c.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-700italic-c162d257f5e9f9b108a96a604cfb2132.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/tech-blog/static/montserrat-latin-800-d4e7bf86bbd8e5f43ca73fa831218648.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-800-895aadbff357be35ac8dd107c7975ee7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/tech-blog/static/montserrat-latin-800italic-fc0cbe442f7b3733c91e982e825c4daa.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-800italic-b3362875067300abedb7a8fb97903258.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/tech-blog/static/montserrat-latin-900-c8bdd772c0d1347720ff7e3fb72719f3.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-900-1b99ef78e627dd9bbd0ca4b5c0789547.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/tech-blog/static/montserrat-latin-900italic-cb72c1f90f66c124fb897a75bec64c78.woff2) format("woff2"),url(/tech-blog/static/montserrat-latin-900italic-b78bb9f8ecec6c5a924c873f1818095f.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/tech-blog/static/merriweather-latin-300-f015f1e9a46a3b9db4fd64564dacece4.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-300-92dfe81b725c342d31d962da975c07a6.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/tech-blog/static/merriweather-latin-300italic-7fd86b32accf2df4403d1d4fa3a81502.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-300italic-878b76f59d5ba58dd1652dc8d2a0f4f9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/tech-blog/static/merriweather-latin-400-12dbf4c00ae43698f278b099e4b0ec9e.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-400-1fffad22b085a877995812dbf1d9ac08.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/tech-blog/static/merriweather-latin-400italic-1e0d3e8121d88969bfb153c8f174b758.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-400italic-de18d4c4e8e808a7248a185f866ff094.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/tech-blog/static/merriweather-latin-700-dc8fec81a125fc63856587e6683da73b.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-700-d7d2ed8e58f303392cc3fc00ba3a9186.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/tech-blog/static/merriweather-latin-700italic-b7b7e5da4d7be8c12bd5a6c809edc8fc.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-700italic-6210a5fc1c54ca85a5d82aa85d7a9b5c.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/tech-blog/static/merriweather-latin-900-43f870d543dd89fbeb66d417c0d97276.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-900-8f3806df74937c7b8b53f24ae1e725d1.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/tech-blog/static/merriweather-latin-900italic-168c1ab28ed0e4e7d654334def288bc1.woff2) format("woff2"),url(/tech-blog/static/merriweather-latin-900italic-ae7778f01871e35ee142ef207b313b34.woff) format("woff")}</style><link as="script" rel="preload" href="/tech-blog/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js"/><link as="script" rel="preload" href="/tech-blog/styles-2f4c3857d9bf43cf0b50.js"/><link as="script" rel="preload" href="/tech-blog/commons-d77eb74007ee4c523f65.js"/><link as="script" rel="preload" href="/tech-blog/app-13a28d1403ec4481c4eb.js"/><link as="script" rel="preload" href="/tech-blog/webpack-runtime-47efe8d300e4250c13dc.js"/><link as="fetch" rel="preload" href="/tech-blog/page-data\intro-to-nodejs-part-8\page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/tech-blog/">tech-blog</a></h3><h1>A very basic introduction to Node.js - Part 8</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">December 22, 2019</p><div><p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6ElEQVQoz32ST0sbURTF37xUlyq4iYotFilvJkqCmHkUyfyLSi2lLhS0Gy2lioi68QuYMaZoxbroF5B2UREXhX4G0cTWUHWjErMRim7cdTme+5IganDgcOfNnPnNu/cdxh65bMdUNWHF6Z47rlTrSq160UtS8lXJtLBjsPSBzvysrtaWE3/gdz3JegdKP0vtGWwpr7OFXcFWTyPKwNXfPcnJsPhb56ms4Iv7Ojc7XlYgDdA0FII0+EO2I3kQMJb+o2vkAVR7sNv3S9E769cj3cq0Mr9M0EuAwtW6BKyW6upZhJMxCf1yk9Kjh35OT2CX31BdWru9Mk7vCeh4Zh12Fk/0yG3U/nJHBkZkQxG0XE/A/9AP25b/xlOxcPpAXK2ddwSo15Pr0WbLkgWMY8NxzQvcPwe0+HasO4dvdqa+Rhszh2IQbX8AcC7z16gjYPHNO7MGwPzwTNfTdF4UvhQ7CXgxsRYL25Y8gWcLKgDYXAZuJvtl08/g2RPskGAfoVkAGwj4grbu9ZntjA3xT8dCwPQZpxwttxyD5zskS1GSnWh5HbVVjWjPaMEMe6C227xZ1XM17sfunJxlmdr9CFXLoTLhULRG5rLMkdD8nAj5+6UYIHMqJhSvih/zDFVgftbQMEPKrhYEo+wGOwusfLZj/14AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Intro To Node.js"
+        title=""
+        src="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png"
+        srcset="/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/cf440/node-js.png 148w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/d2d38/node-js.png 295w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/b9e4f/node-js.png 590w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f9b6a/node-js.png 885w,
+/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png 960w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>This is the part 8 of post <a href="https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-7/">Intro to Nodejs - part 7</a>.</p>
+<p>So lets get started.</p>
+<p>Our first challenge is to deploy our application to production.</p>
+<p>That means we need to deploy our backend to a live URL.</p>
+<p>instead of <a href="http://localhost:3000">http://localhost:3000</a> , our URL would be something <a href="http://api.myapp.com">http://api.myapp.com</a></p>
+<p>lets first break down what we need to do.</p>
+<ol>
+<li>Our Node.js app is running locally. localhost:3000</li>
+<li>Our MongoDB database is running locally.</li>
+</ol>
+<p>This means we need to deploy two things to make it happen.</p>
+<p>First, we’ll start with MongoDB.</p>
+<p>One of the options for free hosting is MongoDB Atlas / mlab. They provide free 512 MB storage which is more than enough for us.</p>
+<p>lets head to <a href="https://www.mongodb.com/cloud/atlas">https://www.mongodb.com/cloud/atlas</a></p>
+<p>click on Start Free and sign up</p>
+<p>After Signup, Choose “Starter Cluster” on the left.</p>
+<p>Choose any provide and click on create cluster.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/1bc254d1be1e88606b7b3c9722f3daf5/2c6fa/cloudprovider.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 55.9900166389351%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAB5klEQVQoz31S227aQBDl/z+mUt+iPqUqLcVcjIBwSTAhgUAMCV577b3Z3tPZLdAgRR3paFYzO2fPzkyDFwWkUlBSQQoJSb44xcqqgilLj/Lkhaa8lh7nsyD4HNU0HKHSGs/7LVbxBuvDFrs4Bucczqy1V2Ca46gyj0wXSMi7WFXX0MTTyAsBrgSOhoKowSsJZnJPVtsatq4crUdNRf8zdSZ00vdFgrecYc+PSAtOrxkYo8GlxqEwSITxCowhT3FN3pSGlFWXhzyh+7JL8oyDsRQsSaGVpkukiAr2ymKUAlHuFFtPaEzp89Z+plCQQikxGo8xndyh3+viV6uFXhhi9fSEu+EAo16AsBugHXTwEEUIKdZut9DpBPj+s4nJfHatsCQlB1LWXrwgiLZYbnZIGUNOue5igx/zNUaPG6QJwwuL0VzM8KU/xLfJFMPHOSbbiDps/w4lo6Ka1qMwNYJ1gv6OU7/05Rvzd4HwoPAqqktsHO9xQw/93r4hNQI5DdIRXhRWboeI8J6K748SmTK+cPca4zac4muzj9vOAOFggIyUM20xPQisUnPVxwuhW8rPjKUphvMFwlmEyUOE5XKJgnr+0Zwye2K9mrKbWlXVfkEdzqsQMYPxu0b84cv+XvXvnoMjlUT4B+3RSf5oOEq9AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Cloud provider"
+        title=""
+        src="/tech-blog/static/1bc254d1be1e88606b7b3c9722f3daf5/b9e4f/cloudprovider.png"
+        srcset="/tech-blog/static/1bc254d1be1e88606b7b3c9722f3daf5/cf440/cloudprovider.png 148w,
+/tech-blog/static/1bc254d1be1e88606b7b3c9722f3daf5/d2d38/cloudprovider.png 295w,
+/tech-blog/static/1bc254d1be1e88606b7b3c9722f3daf5/b9e4f/cloudprovider.png 590w,
+/tech-blog/static/1bc254d1be1e88606b7b3c9722f3daf5/f9b6a/cloudprovider.png 885w,
+/tech-blog/static/1bc254d1be1e88606b7b3c9722f3daf5/2d849/cloudprovider.png 1180w,
+/tech-blog/static/1bc254d1be1e88606b7b3c9722f3daf5/2c6fa/cloudprovider.png 1202w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Once you create a cluster, it will take a while.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/9295cbc6b5a82cb625d7f9cb08af8418/cf1ce/clustercreate.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 44.1566265060241%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAAA50lEQVQoz6WR207DMBBE/f+/gUDAA4W/gaLyyEWVQuNb4uswXjWiEIuHEulobe94vJtVN08jbrcadzuDzYvFPdlw3eIDuX7WuNr+zSU9Lh5HvLkEpbVByhX/+ebJY/YOtRSo10HLYS6VxgVzTGcS6UHDg3GI3IQQEVOCdm6F+UUv36Knh/ocBlhrhRACrPcr5ALzCz2NZctTM/Tc5Jyl7cKS2+VToxYPWuN9v8fHkdGYH/llLYaOLya2WmuVfyAiER7ptGzcd+5UJy1b61hZpSE4lEyxX+M7dHQTh6PoJZUttEmfS2FVX8cctZl4uOhLAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="cluster create"
+        title=""
+        src="/tech-blog/static/9295cbc6b5a82cb625d7f9cb08af8418/b9e4f/clustercreate.png"
+        srcset="/tech-blog/static/9295cbc6b5a82cb625d7f9cb08af8418/cf440/clustercreate.png 148w,
+/tech-blog/static/9295cbc6b5a82cb625d7f9cb08af8418/d2d38/clustercreate.png 295w,
+/tech-blog/static/9295cbc6b5a82cb625d7f9cb08af8418/b9e4f/clustercreate.png 590w,
+/tech-blog/static/9295cbc6b5a82cb625d7f9cb08af8418/f9b6a/clustercreate.png 885w,
+/tech-blog/static/9295cbc6b5a82cb625d7f9cb08af8418/2d849/clustercreate.png 1180w,
+/tech-blog/static/9295cbc6b5a82cb625d7f9cb08af8418/cf1ce/clustercreate.png 1660w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>once its created, click on connect</p>
+<p>we need to do a couple of things</p>
+<ol>
+<li>create a mongodb Admin. use secure password not like the one in the picture :)</li>
+<li>allow IP.</li>
+</ol>
+<p>you can add your current IP but then it would only work with your IP.</p>
+<p>what you can do is add a white list IP <code class="language-text">0.0.0.0/0</code></p>
+<p>This is insecure but its fine.</p>
+<p>your network access should look like this.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/e1376abc50c8f799cdeed344a42c83ce/6683a/networkaccess.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 39.00523560209424%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABJ0AAASdAHeZh94AAABAUlEQVQoz31RCW7EIAzk/9/qA/qJqqp2083BjQ1TG5o0m1ZFGmZwsI0nxlkL6zzmzcOGjEKMY7U2gIHWNVBKARGBmTtnOWc9V4YhCfoQ8H674/b5QMqlJ9U6ktup7lH/tC5HGN2ss5jWO1IJYMrIKQqGrlTQpPMAda6dqbMIPMKCl7dXfLgJxsm427oguxk1O1CyYAHFDSWunRtFVGk2OHbuWgAWm4rD7CcZO8JY8XBeFqyblQ+ElDLUht1CXeqV975rF0P3rdaKTXJDjM8ja8A51y+p6XqxfZvV2s+POPOu9a7iHDd7d2Z+NvtUFJeif+mjoG76Qj7GbL9e81/sGv8Cf2l2FoeHJh4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="network access"
+        title=""
+        src="/tech-blog/static/e1376abc50c8f799cdeed344a42c83ce/b9e4f/networkaccess.png"
+        srcset="/tech-blog/static/e1376abc50c8f799cdeed344a42c83ce/cf440/networkaccess.png 148w,
+/tech-blog/static/e1376abc50c8f799cdeed344a42c83ce/d2d38/networkaccess.png 295w,
+/tech-blog/static/e1376abc50c8f799cdeed344a42c83ce/b9e4f/networkaccess.png 590w,
+/tech-blog/static/e1376abc50c8f799cdeed344a42c83ce/f9b6a/networkaccess.png 885w,
+/tech-blog/static/e1376abc50c8f799cdeed344a42c83ce/2d849/networkaccess.png 1180w,
+/tech-blog/static/e1376abc50c8f799cdeed344a42c83ce/6683a/networkaccess.png 1910w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Click on connect your application</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/a7490c0b3b17a060a96c1d3f6d73f11f/4d3f1/connect.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 82.70588235294117%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABJ0AAASdAHeZh94AAAB8ElEQVQ4y41Uy46cMBDk/39izznllmuk3HOMtKuVslpl3tgYDPiBgUp3D8wM7M5qLJWMDe6u7iqTmbJEXdewtkZZVeB107bgMY7jl1gP3su62CF1ScDPjD71eGR8liDzfUSb/A0CAu1FCtw6B+/9Yk6JEned4NOARbDIfSk4OSNzFRsJUBQFKmqD1gV0YaC0RggRjgIzFgEn1pnKFWxpUajigpz2TBNg/YCyTSgdseofa0FmTClMWBBNM4uiNK8tsbNQlUNeeeg6QNuAisTjfWvP7y0JWtHzMEwlN51DTN2lNzFGhBhl5rVkJvCBfhhovqLv+8VaGH5/+YXn4xvyY47Nbov94YB/mw022x2Op1yCeh/k8Felpul9Zl0LHwMdJIbEkpnyYX72gRQnOBIokZX4oLDheY2ZoYk1QiLrkJnZ0G3rpC+s8gcmgo8GnwMKw2+vP/Gi3mGUoRJPOBxP2O33ovTZHv4GTtguMnB/KeDckgzj/b5wVu5NnIw8z8NKnIUofy01vyGbkH3YNmyZXCkysxZDsyBzgntXbrwt+enPD/zePqOpauRaUTANRQHVFJD9yf1smkawviVS8mShc8mLrFcm64+vGAS3pV4E45JZWTYyRjz0i1qXzYPtxRdBGLKyXNYj/797CY0xcv14/AeY3TFSbpmK7wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="connect"
+        title=""
+        src="/tech-blog/static/a7490c0b3b17a060a96c1d3f6d73f11f/b9e4f/connect.png"
+        srcset="/tech-blog/static/a7490c0b3b17a060a96c1d3f6d73f11f/cf440/connect.png 148w,
+/tech-blog/static/a7490c0b3b17a060a96c1d3f6d73f11f/d2d38/connect.png 295w,
+/tech-blog/static/a7490c0b3b17a060a96c1d3f6d73f11f/b9e4f/connect.png 590w,
+/tech-blog/static/a7490c0b3b17a060a96c1d3f6d73f11f/4d3f1/connect.png 850w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Copy the connection string from there. Yours will be different.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/e4d6c37e3dd50dd9a6e37e339fa674b6/1d25d/connectionstring.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 38.009592326139085%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABJ0AAASdAHeZh94AAABSUlEQVQoz3WRiW6DMBBE+f+/q9IrwZw5SIgwNofBNsl0vTnUVq2lpz2AWTMbgY6bLZx1HOdpZq6Xa3gE7z2WZXlyvd76/52omTTe9wKrcoOPfYq3UuC1jFHICtY5jOOIYRgwUOz7HrO1LOwDNCxwuVy4F2JU1SesU4GsLCB2OV62a3yS8Gq7wTpPUBQl8qJgkixDmuVEhozq6njEqa6x3e1wqCqYaUKklYaIBRKRMLGIIRLBxILinTRNIdsWrVJQhJQSNV2maRrU5zPl9V1Qa36xVEdk6oBaNfSBRtsq7ne6w0HV2Mgt2l6z1+HXrL/hlp+eRhOpGmPYo5HiaEauA9N0I/QGIvgZMGaCGh3UYNEZx0JhWYHoYaz3ZDItwTrPU93y7RZ3Qv7Xkh9iLNh1HW8vbDLk3WCgaXpA9pZv0d6RhKdBv0WeNcUvZlll8AYES9AAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="connectionstring"
+        title=""
+        src="/tech-blog/static/e4d6c37e3dd50dd9a6e37e339fa674b6/b9e4f/connectionstring.png"
+        srcset="/tech-blog/static/e4d6c37e3dd50dd9a6e37e339fa674b6/cf440/connectionstring.png 148w,
+/tech-blog/static/e4d6c37e3dd50dd9a6e37e339fa674b6/d2d38/connectionstring.png 295w,
+/tech-blog/static/e4d6c37e3dd50dd9a6e37e339fa674b6/b9e4f/connectionstring.png 590w,
+/tech-blog/static/e4d6c37e3dd50dd9a6e37e339fa674b6/1d25d/connectionstring.png 834w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>We will also need to add our password to that.</p>
+<p>Lets first Connect it with our robo 3T</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/cd73ee7bc23bdf6412f76a01b1242106/ec025/robo3t.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 56.09157808667212%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAB5UlEQVQoz41SW27cMAz0/U+Qk+QEKdD/YoNma+z6vX5ItixL8mMtT0k5QdGvlsBAskAOh0NHTd/AThZKK8hRog/oMegBQolwl0qGO58MPemQJ1SHyWg4a2GtgTEGUapSvBVvuDzekbUZPooPXIsrkibFrbkhFznSLkVcx7i3d5RDCe0mJKLEtU7QW4d5A8GDI4rHGC8/X/At+46usaibDqonda0Iyu1EnfVEMOhFH96MsXDzDmN3PInHH0cAcCAqpxKv6St+lBd8XBO0bQ01jvgV31CUD8hBoe0EOiGR5TmGYcBETTplCQ5m8bCM1WP3RKgUFVQd2qbFuq0QQhCBxC0tya8J2s5QpKofTWjkPRXTmMO0QJmVxt+xkExWeBxMSB3TLEXTNNi2Dc45LPMMScS9lOFk02d611qfhHQf7RrACp/+wFdEPEJRFDRqi33foRSPNAUwAZ/m83skhRxBoWblC6bZY6GFbPtxjsyEWZahqh6kwuISZ0jSPCiuHw/kZY17XiFJUpRleTYiiHEOWLYjELr1JI04gf1riaCqKjRtB9n36D8h5YmOFsP+8ttMlrB/7CMvY336PyPrTUPMAmpVwdT/CU4L47oVXPG1kLCUI/xDPuBMPv4JT14N2sEt6181HL8ByDhJ+xvrRc8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="robo3t"
+        title=""
+        src="/tech-blog/static/cd73ee7bc23bdf6412f76a01b1242106/b9e4f/robo3t.png"
+        srcset="/tech-blog/static/cd73ee7bc23bdf6412f76a01b1242106/cf440/robo3t.png 148w,
+/tech-blog/static/cd73ee7bc23bdf6412f76a01b1242106/d2d38/robo3t.png 295w,
+/tech-blog/static/cd73ee7bc23bdf6412f76a01b1242106/b9e4f/robo3t.png 590w,
+/tech-blog/static/cd73ee7bc23bdf6412f76a01b1242106/f9b6a/robo3t.png 885w,
+/tech-blog/static/cd73ee7bc23bdf6412f76a01b1242106/2d849/robo3t.png 1180w,
+/tech-blog/static/cd73ee7bc23bdf6412f76a01b1242106/ec025/robo3t.png 1223w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>after pasting that connection string to the bottom (remember to add your password). Click on ‘From SRV’</p>
+<p>once you do, click on test. You should see something like this</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/fe76eed1e50a8f9bec073fb281abab92/99d00/dbsuccess.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 68.40390879478828%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAACnElEQVQ4y21TS24TQRBtKQoCkg2IS2SBBJwgRAn5seFyOUAisYcFrLOCA0REip3EY8//P909H49n5lHVtkki0dJTlavL1a9e1QhZSCitkBQJ0iL9Z42fL/04j43PViqJQubkR8hlhqosCRolQWsNcTm9xJV/hUlgYeyNMfJGsCIL03hKdgI7sXEf3mNC/tgfI1MpAnr0mnKnaYiqHVDOe7TdAD7i7M8Zftz/RBbX8IIEla6gpDJgv9QlSlWiqRu0TYu6qohlDV11qJoB/TCg6wcMAxccIL5PvuGX/Rs3oyk830Oe55haU7iuizRNDcIoRFEUK+SI0gJhplGUrWFXNj2atjdFReRH8FwPdVOjoGJpksKyLNi2jSSOEUUxwjA0+nRdR0wr0pM1byCrBWTdGYZrlmI2m4HRttROXaNpGsRRBN/3EQaBscyW7/gsKC8rNGnZQFOxmhg+PsJ1XDC4IBfr+6cJ68Nx8yhpmBUKqayhiCG3u3jMkFtjhhWLLaXRSRJKWgducbFYGJh26UFNKxZnCkFamoI1aVfNl+Ciwnd9BH5gWAaBTzpmSJIEWZqZAeVZbh5hq2ni7XxOu6mRyAZq1XI/DA8th2WIqIzpooJLa3MzeRhGRFoyYvrtOg48b6krDyUuKszbDu2CmHW9kYQhuGqQ0J9j/go00rwwE1VKGQkeY8k4oy9FUn7yX62FM3NhObe4m11jcjfB3d0tRqMRxuOxWR17ZsNZ6WwTXM8zHXDMon11bGeZt4LY2tjGxcU5bb0yl7wiDrXH65IRm/Vys65rq+sW5+dfsbW5jdfbb/DqJeHFEmJDbOLdzgec7H/Gwe4RDj8eL7F3hNO9Y3yh+OneCY4pdrB7SPiEfYq/3XmPDfEMm+L5E/wF2a3q8a8x7oYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="dbsuccess"
+        title=""
+        src="/tech-blog/static/fe76eed1e50a8f9bec073fb281abab92/b9e4f/dbsuccess.png"
+        srcset="/tech-blog/static/fe76eed1e50a8f9bec073fb281abab92/cf440/dbsuccess.png 148w,
+/tech-blog/static/fe76eed1e50a8f9bec073fb281abab92/d2d38/dbsuccess.png 295w,
+/tech-blog/static/fe76eed1e50a8f9bec073fb281abab92/b9e4f/dbsuccess.png 590w,
+/tech-blog/static/fe76eed1e50a8f9bec073fb281abab92/f9b6a/dbsuccess.png 885w,
+/tech-blog/static/fe76eed1e50a8f9bec073fb281abab92/2d849/dbsuccess.png 1180w,
+/tech-blog/static/fe76eed1e50a8f9bec073fb281abab92/99d00/dbsuccess.png 1228w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>This means our Robo 3T connection was successful.</p>
+<p>Next, click on Save and connect.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/b9fb9/firstdb.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 54.48460508701473%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABmUlEQVQoz42Ty27bMBRE9f//0O7TTf+iKLwokCBA0E3dRJYl60GKpEmKL00vaatp3BYIgcHVgzqcO6SqQ9tgGEZMjEEpBbsssNZiofpe5fnGGGitUX36ssfn3Q/cff2Jb/sOWgrweQbjrGhi01vxi7b3jK6FmEmiqGqGGeOsILTDdBZ47B/xzJ/RihY1rzGqEb08ldqJjtRiUD3Oi8aRn/AytTAuYvEJKa2o3GLhvYMn6z44fPj+EffsHk/dE3b1DnmkNWEb67peK8ClKUZCBHxcaR4Bc985A2spC4I/nB6wZ3s4gocUfkM2/QnmciGgJ4cJlhwGglY5zC1cYzT6rsfhcICUsizinHsDuUAvlUkLfnbU/msHN0CDpmlQ1zXt/FB2LT/LHaSUblrODi1mAmpyGNO15VvgsTkWZbCkY+S9h3f+n8DsUBpP8aylZR9ugdagGzqchh7jOJYFYox/5bgpO8ybkoHbQq/AvCmeJngB5RXeM7iib1zAJdVrhjn87ZRncIqUB52DkFv9j0IIpQqpy58Vr/dZvwDh+VLsUc19bQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="firstdb"
+        title=""
+        src="/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/b9e4f/firstdb.png"
+        srcset="/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/cf440/firstdb.png 148w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/d2d38/firstdb.png 295w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/b9e4f/firstdb.png 590w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/f9b6a/firstdb.png 885w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/2d849/firstdb.png 1180w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/b9fb9/firstdb.png 1494w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>You have been connected to your cluster. Right now, you don’t have any database. We can create it from here or from the web panel.</p>
+<p>Lets create it form the web panel.</p>
+<p>click on collections (remember for MongoDB / NoSQL, tables are called collections).</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/3a9045f9cf4668d496ace92abaaa19f7/cf1ce/collections.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 41.20481927710843%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABJ0AAASdAHeZh94AAABDElEQVQoz51SWU7FMAzM/U+ExAFA4oMTPMT6EJSq0KTZk2HsviKo+IFIozRexmO75uH4imGa4XNF7x3/ObVWLMsC7z3MyzhhCUEdwiekf0VrDTlnlFJgrm+f8Tha0jW0nrRajFEhQfIuhNwpJYX4UspKJPbtDhRmUgywNlDuHWVfaMJKVDRoj5hJWjJyKyi9rmgVmfGSa6bpHfNsKVcqMogOz0ragqhjGxvE5jgn8QdVuqoNiR3xLXZjraVCpy3IPETF1mqT+ZwgPiFdSDg7h+FtxOHpXjGMo9osF2NkO47YTjnNcN+qkOk2qeKDydEnnB0ucX5zheAjZnIo4farfG1MlPwyux/k3+799ydl5HJeFPeVTwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="collections"
+        title=""
+        src="/tech-blog/static/3a9045f9cf4668d496ace92abaaa19f7/b9e4f/collections.png"
+        srcset="/tech-blog/static/3a9045f9cf4668d496ace92abaaa19f7/cf440/collections.png 148w,
+/tech-blog/static/3a9045f9cf4668d496ace92abaaa19f7/d2d38/collections.png 295w,
+/tech-blog/static/3a9045f9cf4668d496ace92abaaa19f7/b9e4f/collections.png 590w,
+/tech-blog/static/3a9045f9cf4668d496ace92abaaa19f7/f9b6a/collections.png 885w,
+/tech-blog/static/3a9045f9cf4668d496ace92abaaa19f7/2d849/collections.png 1180w,
+/tech-blog/static/3a9045f9cf4668d496ace92abaaa19f7/cf1ce/collections.png 1660w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>click on Add Own</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/37b8289cce01e9a9b819ce9aec2af185/2996d/addown.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 49.70167064439141%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABJ0AAASdAHeZh94AAABMklEQVQoz41SW07DQAzMsRE3QeJxCnoFEOIf9QMhQBUpJGmS7vs12JtsP6pAa2mk9dqetWdddaPEZttikAbKRqSEsy3NySEEWOeyXyklIcQe1hrEGHJQaImdGOGDz76jZGstnSO899kPMWYCRqQz33GsklJmxxiTizlovIV0moqmB1JM3E4mYdKSF2cyNu5QEFfFwVM2GokfOZwcna3iNsslgx/wfurMGQe1p/H7Hl/NN/phOEzCdbn7mazUHwjLJRdMsKj7Bq/1B962n2i6Hdq2A0tkSE+tddb1T8K08L23LytcPl7h4uEOz5t7GHENpZ8WZv6HsAQYnj6FIa2Dtoo+QBBsXq2Ss6hhOiI6Z/+O83kDeDMqKQQE7aIiTQyD9GNt8kNHhUuIaVqb97HGzXqFXwVRD7Jze7g/AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="addown"
+        title=""
+        src="/tech-blog/static/37b8289cce01e9a9b819ce9aec2af185/b9e4f/addown.png"
+        srcset="/tech-blog/static/37b8289cce01e9a9b819ce9aec2af185/cf440/addown.png 148w,
+/tech-blog/static/37b8289cce01e9a9b819ce9aec2af185/d2d38/addown.png 295w,
+/tech-blog/static/37b8289cce01e9a9b819ce9aec2af185/b9e4f/addown.png 590w,
+/tech-blog/static/37b8289cce01e9a9b819ce9aec2af185/f9b6a/addown.png 885w,
+/tech-blog/static/37b8289cce01e9a9b819ce9aec2af185/2d849/addown.png 1180w,
+/tech-blog/static/37b8289cce01e9a9b819ce9aec2af185/2996d/addown.png 1676w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>add your database name and collection/table name</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/b9fb9/firstdb.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 54.48460508701473%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAABmUlEQVQoz42Ty27bMBRE9f//0O7TTf+iKLwokCBA0E3dRJYl60GKpEmKL00vaatp3BYIgcHVgzqcO6SqQ9tgGEZMjEEpBbsssNZiofpe5fnGGGitUX36ssfn3Q/cff2Jb/sOWgrweQbjrGhi01vxi7b3jK6FmEmiqGqGGeOsILTDdBZ47B/xzJ/RihY1rzGqEb08ldqJjtRiUD3Oi8aRn/AytTAuYvEJKa2o3GLhvYMn6z44fPj+EffsHk/dE3b1DnmkNWEb67peK8ClKUZCBHxcaR4Bc985A2spC4I/nB6wZ3s4gocUfkM2/QnmciGgJ4cJlhwGglY5zC1cYzT6rsfhcICUsizinHsDuUAvlUkLfnbU/msHN0CDpmlQ1zXt/FB2LT/LHaSUblrODi1mAmpyGNO15VvgsTkWZbCkY+S9h3f+n8DsUBpP8aylZR9ugdagGzqchh7jOJYFYox/5bgpO8ybkoHbQq/AvCmeJngB5RXeM7iib1zAJdVrhjn87ZRncIqUB52DkFv9j0IIpQqpy58Vr/dZvwDh+VLsUc19bQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="firstdb"
+        title=""
+        src="/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/b9e4f/firstdb.png"
+        srcset="/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/cf440/firstdb.png 148w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/d2d38/firstdb.png 295w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/b9e4f/firstdb.png 590w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/f9b6a/firstdb.png 885w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/2d849/firstdb.png 1180w,
+/tech-blog/static/619c0d8b92ec70692bac0a058ceb4813/b9fb9/firstdb.png 1494w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Save and your database is created.</p>
+<p>open Robo 3T and hit refresh</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/b6b9496b9f8ab64ab3dd0ba12b8da829/10ebc/refresh.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 49.2317969271877%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABJ0AAASdAHeZh94AAABp0lEQVQoz4WST2vcMBDF/f2vOfdQaOklHyKXJFBCICSlpZS08rqrxH8lW7ZGsuTXsby7SWihgvHIY89Pz2+cGTWABoPZGhBZWMvBmYj+G/YQE/cYY/Dz8RHZp+tLvL+8w8XXGqMeYHoDrTW00mi7FkqpU6z1NXeq4/12f8xr/cf3b8g+fP6Id9cXOL83uJdf8FsX2CuJoitQ9iWe9BOqoUpZasnP9rDeomj3EPUeI3mQj5hDQFEUyKgnwDoAHmd3Z7itb/EgH3AlrrCuOc6IS0SIgfch5XU1/Yi6n+DmJUWIywYsq2e0LNdMFjfyBmLIE8QHnxqx4J9LDYR+9Kw2JoV+jhswDYFjHEfIQkL8EskPRw7e+xNgWZZTrKtjYGccDMXjG4dPPk5smiAle7SXaNsO5Cgd5JxDjPENNAF7y9AN6MPCHkbsdrtN4QqcWGEuBPI8hxA5mqZJwIkPCiH8DRwsNCsk9o+Sj5H7xAuQLKGpGtRVjbKsGGRPzUfY66wMcWwephJfBIvJ0k/MsNGNKC0PyLVvzH+tattv9VqNPEh3qINtWZLCP1RyAF/Fx17bAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="refresh"
+        title=""
+        src="/tech-blog/static/b6b9496b9f8ab64ab3dd0ba12b8da829/b9e4f/refresh.png"
+        srcset="/tech-blog/static/b6b9496b9f8ab64ab3dd0ba12b8da829/cf440/refresh.png 148w,
+/tech-blog/static/b6b9496b9f8ab64ab3dd0ba12b8da829/d2d38/refresh.png 295w,
+/tech-blog/static/b6b9496b9f8ab64ab3dd0ba12b8da829/b9e4f/refresh.png 590w,
+/tech-blog/static/b6b9496b9f8ab64ab3dd0ba12b8da829/f9b6a/refresh.png 885w,
+/tech-blog/static/b6b9496b9f8ab64ab3dd0ba12b8da829/2d849/refresh.png 1180w,
+/tech-blog/static/b6b9496b9f8ab64ab3dd0ba12b8da829/10ebc/refresh.png 1497w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>now you see the database here</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/b0e13190aad26619d14b7c031a7f175b/001cd/adbsuccess.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 46.33821571238349%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAABN0lEQVQoz52R7UoCQRSG56qCytI+NtfvNEPD/Mj6GXUtpbvOWkp1LXkRhW24uwa7aGGs6x/jbWaioNhgceCBgXN4zss55OHJgK4/YzKZYDwesb8O0zR/MAYGDMOEZQ1hOw5s2/bFYTVrOATpD17w2NfxMZ/jvtfDRaOJTrcLqlFQStFoKrhkNBQVitpC0welRUWPdt0BGb29s2Sv4I+2rxDZkpDbLyCTzSOd3ftFajfnC6/FkmlU6ycgs5kHz/OEUKUaltfCiKcyiMaTgZETKWxKMiq1Osh0OoXrukLY0tpYXY8gmcmKiUHhAbajMVSPjkF4Oi4VQpZwMWH6HyFLGApvLJRQkuNsh3+E/IpLKyGxE94QlJ1YQhyzVKl97fBbeHN7J65WqlRRLJUDc3BYRr5QxOnZOT4B71i/6P90epwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="adbsuccess"
+        title=""
+        src="/tech-blog/static/b0e13190aad26619d14b7c031a7f175b/b9e4f/adbsuccess.png"
+        srcset="/tech-blog/static/b0e13190aad26619d14b7c031a7f175b/cf440/adbsuccess.png 148w,
+/tech-blog/static/b0e13190aad26619d14b7c031a7f175b/d2d38/adbsuccess.png 295w,
+/tech-blog/static/b0e13190aad26619d14b7c031a7f175b/b9e4f/adbsuccess.png 590w,
+/tech-blog/static/b0e13190aad26619d14b7c031a7f175b/f9b6a/adbsuccess.png 885w,
+/tech-blog/static/b0e13190aad26619d14b7c031a7f175b/2d849/adbsuccess.png 1180w,
+/tech-blog/static/b0e13190aad26619d14b7c031a7f175b/001cd/adbsuccess.png 1502w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Excellent. Now we need to connect to this database from our Node.js application.</p>
+<p>We just need to make 1 change. No change in code. just update our <code class="language-text">.env</code> file. Make sure you write your database name / bookyapp instead of test</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/630b333bfdc31d9f684bdde7e765982e/e9603/env.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 16.9054441260745%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABJ0AAASdAHeZh94AAAAhklEQVQI12WOSw7DIAxEc5qWgMPfUGja3P9UUwPdVF08efRsWbMpkxFDQ+InbGw4Ygf5B7SrMIK2BTcdfzGDtNBpurvkwbYfBRxPeN/g+ULg9ySWazKyzy/ZLe9ZcjrBcp+kSEh9epKsKGNTxCDXoeWxdtLM1n9c/TZezYcjaW4my+8yx68PaIpePMYoqQ4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="env"
+        title=""
+        src="/tech-blog/static/630b333bfdc31d9f684bdde7e765982e/b9e4f/env.png"
+        srcset="/tech-blog/static/630b333bfdc31d9f684bdde7e765982e/cf440/env.png 148w,
+/tech-blog/static/630b333bfdc31d9f684bdde7e765982e/d2d38/env.png 295w,
+/tech-blog/static/630b333bfdc31d9f684bdde7e765982e/b9e4f/env.png 590w,
+/tech-blog/static/630b333bfdc31d9f684bdde7e765982e/f9b6a/env.png 885w,
+/tech-blog/static/630b333bfdc31d9f684bdde7e765982e/2d849/env.png 1180w,
+/tech-blog/static/630b333bfdc31d9f684bdde7e765982e/e9603/env.png 1396w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Now run your nodejs app.</p>
+<p><a href="http://localhost:3000/users/register">http://localhost:3000/users/register</a></p>
+<p>and a new record should be added to your database.</p>
+<p>Congrats. The first step is done. Connection with a remote DB was successful.</p>
+<p>Lets now move to part 2.</p>
+<p>Deploying our Node.js application.</p>
+<p>There are many options</p>
+<p>Free Tiers : Heroku, Now.sh</p>
+<p>Paid: Digital Occean, AWS, Google Cloud, Ali Cloud and many more.</p>
+<p>We will use Heroku.</p>
+<p>Heroku will deploy our Nodejs application and give us back a URL. we can hit that URL to access our Node.js backend.</p>
+<p>Lets signup to Heroku <a href="https://www.heroku.com/">https://www.heroku.com/</a></p>
+<p>After Signup and Login, click on <em>New</em></p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/ff15f52d0af1ba20d77bf1fa86ffc2e4/7d205/newapp.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 60.0656455142232%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABJ0AAASdAHeZh94AAABG0lEQVQoz52STU+EMBCG+f//xbsnL568mE2MBxOj8bKwy/JRFvrdvk4LVNCDsNM8aWCGJ8y0GRcagWHaV0gD1g04nevIpWL03vytW5AZ42Csg3Melvb5eUYbC6k0pNRQyqxyifAN1YU9A4XWGnXbQigJT8t5l/CBxVrmUg2tOaJQaolzXaIkBsUhjYQwYhOhthENiv70IwyJIzuiYAWq/oJe9bCeWnDmXyyhrIqEP41CRS03LYsMXIz/7ncwhfeTMAz0WjXouo640qBtPCTn3GaCIwktnY6iKzKeFMm8302QpRmOQk3XxkJwFa/P3MIeknBgEm/POQ6Pn8i/6ptkK2Fbcjzdv+Ph7gUfr/kodItpb4w4w9n8O3Fry9+NA6+oU+CTpQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="newapp"
+        title=""
+        src="/tech-blog/static/ff15f52d0af1ba20d77bf1fa86ffc2e4/b9e4f/newapp.png"
+        srcset="/tech-blog/static/ff15f52d0af1ba20d77bf1fa86ffc2e4/cf440/newapp.png 148w,
+/tech-blog/static/ff15f52d0af1ba20d77bf1fa86ffc2e4/d2d38/newapp.png 295w,
+/tech-blog/static/ff15f52d0af1ba20d77bf1fa86ffc2e4/b9e4f/newapp.png 590w,
+/tech-blog/static/ff15f52d0af1ba20d77bf1fa86ffc2e4/f9b6a/newapp.png 885w,
+/tech-blog/static/ff15f52d0af1ba20d77bf1fa86ffc2e4/7d205/newapp.png 914w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>There are a couple of options</p>
+<ol>
+<li>Upload from your laptop using Heroku Commands.</li>
+<li>Connect it with a Github Project. (Remember Netlify ?). We make changes, upload and our app will be updated automatically.</li>
+</ol>
+<p>We will use the Github option. Click on Github.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/69b7c7a84afa43bf211a8f39ee43a4df/432cf/part7.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 43.10242747187685%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAABOklEQVQoz21Sy2rDQAzc//+vHtpjz2mh0FJTiO31vh/yRJKzIQ1ZGLSWNCPJWmNXj3VxcFtAzgVEuyKGBGsd5sViYczzCucC7LYhxoSYMtIVMWb0TtiZZ2JgxxU5V/RGaJWQQmFywmIjAosLxO9Z9DxzEzZp0eATUiwaE66Ri6IQqiB3ReACnpNr6VwZt0KS18quue0Og2dKbhAIYYwraLWrr3DXznm0xoQqaHqn/j9/wHQO6vz7DjnDplhVwIeA32lC6x25VP13he3IG5zxbcQ+D4olxbMzeI9cIxvcrEepVTHEljVgXWWDxF1xx1k65JHbjk6HENFR7PQ+4ft0Pjrs1DVwJIzOwCJ/LPbJQl8I6Qc+FYTMz4kXMARHd543Lq9CBZ8Mo4K1fvAmX9i+Mt7YH2/xx0N3O7gAa7PCBzIShK4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="part7"
+        title=""
+        src="/tech-blog/static/69b7c7a84afa43bf211a8f39ee43a4df/b9e4f/part7.png"
+        srcset="/tech-blog/static/69b7c7a84afa43bf211a8f39ee43a4df/cf440/part7.png 148w,
+/tech-blog/static/69b7c7a84afa43bf211a8f39ee43a4df/d2d38/part7.png 295w,
+/tech-blog/static/69b7c7a84afa43bf211a8f39ee43a4df/b9e4f/part7.png 590w,
+/tech-blog/static/69b7c7a84afa43bf211a8f39ee43a4df/f9b6a/part7.png 885w,
+/tech-blog/static/69b7c7a84afa43bf211a8f39ee43a4df/2d849/part7.png 1180w,
+/tech-blog/static/69b7c7a84afa43bf211a8f39ee43a4df/432cf/part7.png 1689w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Lets connect with Part 7 repo I made for this tutorial.</p>
+<p>Click on enable automatic deploys.</p>
+<p>Click on deploy branch.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/b474eff5e2216dc6aac2227ae392081c/8b41d/deploy.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 39.8780487804878%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABJ0AAASdAHeZh94AAAA70lEQVQoz31RW46DMAzk/mfrSpX2BHzwsVptIZB3SGZtJ6mAqrU0MkrMPJyhlIKSCdR7yRkhl4yczzjOXYvvhn3fsSoNvRmEGBFCfBJqa6DUim3TUKuWzrDOw9ggszEmQu1CyKohBMSUni66mrUOmzaVhL69D3CNTLsENpM5ifxXTQxvvEtTSuHv8RA475GIIKW9dSJs4sca3u2iNGV2wbjurs9cIZGNdrIPVtwPkT25chSVd1TJc4t5Jj4KyKNwnLrcJJH6wEIPMi9K9sh3IkqkP78L7vdvTNN0Iv0Ymas76/P9fJ5n3G5fGMfxJf4/9o91lQFerAkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="deploy"
+        title=""
+        src="/tech-blog/static/b474eff5e2216dc6aac2227ae392081c/b9e4f/deploy.png"
+        srcset="/tech-blog/static/b474eff5e2216dc6aac2227ae392081c/cf440/deploy.png 148w,
+/tech-blog/static/b474eff5e2216dc6aac2227ae392081c/d2d38/deploy.png 295w,
+/tech-blog/static/b474eff5e2216dc6aac2227ae392081c/b9e4f/deploy.png 590w,
+/tech-blog/static/b474eff5e2216dc6aac2227ae392081c/f9b6a/deploy.png 885w,
+/tech-blog/static/b474eff5e2216dc6aac2227ae392081c/2d849/deploy.png 1180w,
+/tech-blog/static/b474eff5e2216dc6aac2227ae392081c/8b41d/deploy.png 1640w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>I click on build and it gave me an error. It said I should either remove package-lock.json or yarn.lock</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/ee829f4ef9c9dd716c57402372b71a4b/32d95/yarnlock.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 36.184615384615384%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABJ0AAASdAHeZh94AAAA0ElEQVQoz42RiQ6CMBBE+f+/NJ4FpVxtodc6uxAMahSSl2laOjvbLUKI5OxE1o0UYyL+cn6RUv4EBzEluWMs42gACXtFxA8P3ZEqH1Q3PbWdoaYdgKG2t+TGAPyiW8aJiStcqOCK1V3T4Xih06WEXqGKbiigqhrVJ7lsnf8Le0lCTnSGiao01UirmwH0WHNiuxp+Sym4WWfDmKVNVdaSik0GM0oyI2/7w+iNxTBJovKuxYzpere0sa/VTcs8ZZ5UCIk4bWCw9tj3Ps66k4yhPAHsjiD7BYuA4gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="yarnlock"
+        title=""
+        src="/tech-blog/static/ee829f4ef9c9dd716c57402372b71a4b/b9e4f/yarnlock.png"
+        srcset="/tech-blog/static/ee829f4ef9c9dd716c57402372b71a4b/cf440/yarnlock.png 148w,
+/tech-blog/static/ee829f4ef9c9dd716c57402372b71a4b/d2d38/yarnlock.png 295w,
+/tech-blog/static/ee829f4ef9c9dd716c57402372b71a4b/b9e4f/yarnlock.png 590w,
+/tech-blog/static/ee829f4ef9c9dd716c57402372b71a4b/f9b6a/yarnlock.png 885w,
+/tech-blog/static/ee829f4ef9c9dd716c57402372b71a4b/2d849/yarnlock.png 1180w,
+/tech-blog/static/ee829f4ef9c9dd716c57402372b71a4b/32d95/yarnlock.png 1625w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>You may or maynot get this error. If you get, delete the yarn.lock file and git push again.</p>
+<p>I deleted file and git push again on part 7.</p>
+<p>Since auto deployment is on, it will start build again. Lets see if we get any errors.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/acb1dfd0b932ae369f9ffb52208c90f8/1d25d/buildprogress.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 63.0695443645084%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABJ0AAASdAHeZh94AAABmUlEQVQ4y5VTW1LjMBD05fnhKnuQvQEfVFhIBeJ3LFuyrJfT26MECFSFh6qmWh5LrR5NqxgnAx8iFucx6RkhJtjFQxvLeYTi/yi52TF8zsk/ycl6uzgcj0es6ymKQLKViZgSFhIJymLvAxesPMwTEwK/vTvl8h5u9iHkObdnUonCmBmzXfKCnwzZdMKPuTdC51iKZak8zXsqpKLgXcYUOQ/3VHxHvOOh3QXpO8nlKLQ2eHrc4DAM2JcVtqXC/bbDZtdjV2uY+Q/m5RZa35D475lwvVpBIZVGXrSEqHSeDWIISrOQSOCzoDeyyxI/R1E+PmG7faDCQ1ZYNw1K4nPZ46VWmPoBSfVYvZUivyTLhIl2Sezca9vXswVsALQDlnhW9unyrxLuyxrPu38Y1ICyqtA0LSpi37WYJgWjJ6LEmC2Db4jZZQ/ptGOHxaRiITG5+PFC24/UZcKu61GVOyilUNc12rbLWFPpvlFoDhOafqS17LfqMuGgRowkE3WaJpfnNM8Wxnq0Y0SvIwYTP5T71Sjwi/H+Sq4r/A9NWPk7Ahoc6wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="buildprogress"
+        title=""
+        src="/tech-blog/static/acb1dfd0b932ae369f9ffb52208c90f8/b9e4f/buildprogress.png"
+        srcset="/tech-blog/static/acb1dfd0b932ae369f9ffb52208c90f8/cf440/buildprogress.png 148w,
+/tech-blog/static/acb1dfd0b932ae369f9ffb52208c90f8/d2d38/buildprogress.png 295w,
+/tech-blog/static/acb1dfd0b932ae369f9ffb52208c90f8/b9e4f/buildprogress.png 590w,
+/tech-blog/static/acb1dfd0b932ae369f9ffb52208c90f8/1d25d/buildprogress.png 834w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>After a file, here is the result</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/8fe99bb7e87ad0a2d61a6f3c4af814d5/44457/deployed.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 74.58703939008893%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABJ0AAASdAHeZh94AAACEUlEQVQ4y5VU2ZLTMBDMJ/MDPFD8A3/FGzxQsLC5HN+xI+uwLanpkb1HINmqVdVEE8kz09PT9sb7AG0sjB0xz56+g3WLP/B8nGa4cUq+PGu0wzjO6dxYl86UtoyZEELEJsaYEkiQ+E/JfVgKSeC0BgcprgzGVHA9C0uMG0fISglHJhMTVO9dDH/lrwgNK6hBw7FyjIFVw7J7z5YWEyQhDPR/0rYM92uymBLFNfNGoFdNh93jA+q6QF4UKMoSpzxP1jQNLpee5jAM39C0n9BfvjDUPid8vTaCZp584klM+JT2hdOJxZYVViQvbT6h+tdSy2XXYrt9IJoqISyJMCe6Y5YhyxXy+itq9QG9+YxWf+TAvq+Jw3+cbiK5qVXLNvo0Pbua8KmdRzvIfYCdNR8/IsQ9E7m7KBPCiRpqiW7QilxdoJSC4t53HS7qAqsHBKXhyWP0C2t3W/b8OWcn5IcDur5D3ZzRnjuS36JoFHalSWYH6mx0L0OI8aaM0lAm6s+YgUI10EQzaM2JDgmp5u54bp0Inm+EtXfRJYQy0X1WYLf9w6HUqOqGKImurLk3yCqFfaWR1QbV2WAa3dtTvlK9CCSEJGK5FN/Tn73Yco43+LtC+PvXD0omw+GYUS4n7A9H7kdsjxUeszMORY9T2ZFG95z0NocyZQpa3mN5xQSJfEHkv9yNnKrhPMwETB5XyW4h/Av/YpFBRjUjygAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="deployed"
+        title=""
+        src="/tech-blog/static/8fe99bb7e87ad0a2d61a6f3c4af814d5/b9e4f/deployed.png"
+        srcset="/tech-blog/static/8fe99bb7e87ad0a2d61a6f3c4af814d5/cf440/deployed.png 148w,
+/tech-blog/static/8fe99bb7e87ad0a2d61a6f3c4af814d5/d2d38/deployed.png 295w,
+/tech-blog/static/8fe99bb7e87ad0a2d61a6f3c4af814d5/b9e4f/deployed.png 590w,
+/tech-blog/static/8fe99bb7e87ad0a2d61a6f3c4af814d5/44457/deployed.png 787w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>It has been deployed. Lets see.</p>
+<p>Click on <code class="language-text">open app</code></p>
+<p>Our Node.js app was deployed but it had errors.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/6099c8a8516f8db751ed74baa8fa4ebe/6683a/errorheroku.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 53.56020942408377%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAA7ElEQVQoz42Syw6CMBBF+/8/pjuNG1ioC6MWy1NboYDkOkXQppAKyclMhnlcmGFSKjykxDUSiESKOC0gktxPnIFfIlxEAp4USPIHzpxTfQz2LGtIVcHYSrfQNTFalyFu8krKL3VDmNiLYk0PMy9HyqpZTF9TGcZY28OWFntz9M+fKLTtx28hnzXm8uZgbsBVlOWSFnWnf6wniv82tAuKu8JNZAjCPba7AMcTXUGqvmoXN7Qbm80H4QGr9QY8Smmb3ZDzWcJsQ/cT3MmvDv1TN52V0w5nMhXB5oI2RqXBN9j22XjQvs35sAco6vUGAOpVtwPNrpsAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="errorheroku"
+        title=""
+        src="/tech-blog/static/6099c8a8516f8db751ed74baa8fa4ebe/b9e4f/errorheroku.png"
+        srcset="/tech-blog/static/6099c8a8516f8db751ed74baa8fa4ebe/cf440/errorheroku.png 148w,
+/tech-blog/static/6099c8a8516f8db751ed74baa8fa4ebe/d2d38/errorheroku.png 295w,
+/tech-blog/static/6099c8a8516f8db751ed74baa8fa4ebe/b9e4f/errorheroku.png 590w,
+/tech-blog/static/6099c8a8516f8db751ed74baa8fa4ebe/f9b6a/errorheroku.png 885w,
+/tech-blog/static/6099c8a8516f8db751ed74baa8fa4ebe/2d849/errorheroku.png 1180w,
+/tech-blog/static/6099c8a8516f8db751ed74baa8fa4ebe/6683a/errorheroku.png 1910w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>You can install heroku CLI and see the logs. However I have an idea why it isn’t working.</p>
+<p>Remember .env file ? our DB connection was in that file.</p>
+<p>We need to set the environment variables. We need to add our DB connection, our JWT secret key.</p>
+<p>Go to Settings. Click on Config Vars.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/cc5f2271dd1b3ddbe11fdd91d2082bdd/bfc9a/configvars.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 46.71092335546168%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAABDUlEQVQoz4VS2U7EMAzM//8grwhe2KX0yn0Otpu2bFdoLY3qjK9kXDV8a9xvM6bR4vY1YRhXvH/eYWyAD1ngfHoG8dYl6NXD6ABro+SqmLgoIoSEzU+YF4MQE1IqwpdST9R6ObeN67zKuYjTWkOt25et1gLnHArF2XZ+z92NfTl3Tv0NPiZx07NgR62P53apUzyRbynJgtqbrYQPvDIeELssckPvA8ZphtaGFmFJuyCBnEcY94ZAurK2zkfM2gkWbSnmD8219qK1NGTdYqIF5HzqARYa1BzwtJwQMww1HBaPH8K8GmjjhPcEHprLprX6/ym8tVOKY1AvbP25TPMf4fcbXkV/haelHNpv6/kFni/Eyzr4ztkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="configvars"
+        title=""
+        src="/tech-blog/static/cc5f2271dd1b3ddbe11fdd91d2082bdd/b9e4f/configvars.png"
+        srcset="/tech-blog/static/cc5f2271dd1b3ddbe11fdd91d2082bdd/cf440/configvars.png 148w,
+/tech-blog/static/cc5f2271dd1b3ddbe11fdd91d2082bdd/d2d38/configvars.png 295w,
+/tech-blog/static/cc5f2271dd1b3ddbe11fdd91d2082bdd/b9e4f/configvars.png 590w,
+/tech-blog/static/cc5f2271dd1b3ddbe11fdd91d2082bdd/f9b6a/configvars.png 885w,
+/tech-blog/static/cc5f2271dd1b3ddbe11fdd91d2082bdd/2d849/configvars.png 1180w,
+/tech-blog/static/cc5f2271dd1b3ddbe11fdd91d2082bdd/bfc9a/configvars.png 1657w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>lets add our environment variables here.</p>
+<p>Here are the new environment variables</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/5dd9c2d7786f08e12ece2a69e8819e7b/70d80/newvar.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 26.97409981048642%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABJ0AAASdAHeZh94AAAAmElEQVQY03VQiw7EIAjz/792D0UEXA/YZVluN5NGUrG0FPw5x3Ek7vWde+sPlE6M1jpEBDwGRDWbbE70zg/B6XzAzC5wH6DKmDZRGhGWZcVeK6ifwinojeu2Y4heEDXURslve/M/lHe8mcYgd4iXEw7JHaqLyBdqJxeJUsQFzLnga+OsyxkFjz1lvJ+4gRiU9W13uR6WdPgBR32KnJ0obMwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="newvar"
+        title=""
+        src="/tech-blog/static/5dd9c2d7786f08e12ece2a69e8819e7b/b9e4f/newvar.png"
+        srcset="/tech-blog/static/5dd9c2d7786f08e12ece2a69e8819e7b/cf440/newvar.png 148w,
+/tech-blog/static/5dd9c2d7786f08e12ece2a69e8819e7b/d2d38/newvar.png 295w,
+/tech-blog/static/5dd9c2d7786f08e12ece2a69e8819e7b/b9e4f/newvar.png 590w,
+/tech-blog/static/5dd9c2d7786f08e12ece2a69e8819e7b/f9b6a/newvar.png 885w,
+/tech-blog/static/5dd9c2d7786f08e12ece2a69e8819e7b/2d849/newvar.png 1180w,
+/tech-blog/static/5dd9c2d7786f08e12ece2a69e8819e7b/70d80/newvar.png 1583w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>It updated but still didn’t work</p>
+<p>I ran the command</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"></code></pre></div>
+<p>to check for logs and see the issue. I got this.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/0c64fd7258ba276a10aae228aa3aab16/de63c/logs.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 58.93004115226338%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABJ0AAASdAHeZh94AAACcklEQVQoz3WS30/TUBzFb9e1G/vVdmu7tuv6c4uQQHjXF8UYn40PhjdDog8mOggCG0iCxMTE+IZsbBCN/qPHcwsYYvTh5Ny7rJ/v+X6/V2xuvsDZ2Tlm3xZYTBe4nC1wRf2gflK/5pf4PpvjanpB0Xm+nMr/zjE/n+OCmp7N+P0Fvnz+CuFGGRoryzCXV2CsrsJYX4extobWcAg/TJEm99DpBGhbXcqDZdowjBZl/KUWLLpoOD2IIIDoehBRBJEkEH1610XY1xH3FQSeQM8XCHsCrYaAEP9WSbougXEMJeyjlOUoDQYopRnUMMDGYxPPn3Ww8UjHg/sKXcUgL/FjFeVyGapapmvQNI1nFaqiQlQlkMmUXgglzaEQqCQphOfDMAOE/pCthmxJth3B8yImDdFnAMdxOQILFb1SFCgJFqu4d4BMqHB2t0A/8JGnMbI0oWKmy5DEEbou59luo9loosyUakktWlYkULc5v34fgkDBVkVOqHTO1PMDDFgkTeRyCKXnvOc3vwW+D8uyUK/VoSgKgQrEkkNgRGDApDJZll07E7Zth62F6LFYxEWZhgmjZRTJpCSoUW8w5W1CArXOzXZ7cjnJDZDueXAor3vdXptJdE3/74b/qGb7bDm8BkZx0bJI0wIYsUDE4bs2316zhVp1CfWlGqqVapFOLqNIdRfYdH00hwPUmFJne3oSQ+cz0nwPPc424GJsAj2Z2HGKe8B3K++2Y8N1Hb4GA6ZlwuTGxdMnD3Gwu4vJ3gRHe2OcHBzh4/gIx/uH9EOc8nw6OcYn6mT8AeP9MSb7E7zf3cPo7TZ2tnfw8s0rjN6NsLX1Gr8BFHpXowNsKoEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="logs"
+        title=""
+        src="/tech-blog/static/0c64fd7258ba276a10aae228aa3aab16/b9e4f/logs.png"
+        srcset="/tech-blog/static/0c64fd7258ba276a10aae228aa3aab16/cf440/logs.png 148w,
+/tech-blog/static/0c64fd7258ba276a10aae228aa3aab16/d2d38/logs.png 295w,
+/tech-blog/static/0c64fd7258ba276a10aae228aa3aab16/b9e4f/logs.png 590w,
+/tech-blog/static/0c64fd7258ba276a10aae228aa3aab16/f9b6a/logs.png 885w,
+/tech-blog/static/0c64fd7258ba276a10aae228aa3aab16/2d849/logs.png 1180w,
+/tech-blog/static/0c64fd7258ba276a10aae228aa3aab16/de63c/logs.png 1215w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p><code class="language-text">dotenv</code> is not defined. I checked my repo and it was added in devDependency and not dependency. Heroku probably ran <code class="language-text">npm install --production</code> and it didn’t install devDependencies that’s why I got this issue.</p>
+<p>To fix that,</p>
+<p>I move dotenv from dev to dependecies</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/aaaac25f4804cc02494e98930386e245/54e54/dotenv.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 580px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 132.75862068965517%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAABJ0AAASdAHeZh94AAADrklEQVRIx41W23LbNhTUR8SeTKd9SyxTJHgDQAC8ipYleezESTvtY///M7YLUGIkS/b04QwAUlzuObvnUItlLOHjPtGI0wpJZhCHqLDiOZ7PhmeNZeJ/q85ien7aL5axQpJXaIcNRFmjNB3KqoesOqQFz7qbQ+QOd1GJu5Wc4wh2XBf3SQVRGLimhyB4KTQifzNXSLVBlKoQq8NZKIac1lRbROINw4hp+c0dwXZk8bcbYT0z5eCeBphNB7fr4bY9zEML1TfQ62nNKkdA/QZQVPPhQbbYqhZPusVYtqhSi0JZKAKk0uLLXRlS/no/xdWUJ4Y6HJ7I8Dvr15DhUHfYjwOkqZGSySr8jg8J9bEoqxPAx8Cum1LWTHkckbJWcVFheRThCquLGkaJt4OCyiz2BHxm1HmNPG+RGwdBMQrnAnhm7EXdTuNQQ31IReKZKftapqVl8RsMryPqPctAgWqKU420E1X2TK8CrlITNrHg27MGJQ0dk8EXXssqQ4a8XtlgldxaJLIKNnqXYUyz+s2KTEc9oC0dOhq8ZyQZ03Q7slGTkaPrZj4DTA6AvoZb1eAft2YNW1jJGloqzJdM9+W7yp4zzNx86EtaRY9Um3bJ2WoE1gNrxpQnJ8j/AZj/AtyqP/DDfMJL9ZmgnzHIGzTmd/Y265fTzF6I+GPQmWGwTZ7ip8vwYgV+OIFnGyNJY5SNg6xtsEycm6tevGRIZRMq/tNtCLbBN/uAV66+DGlhUbZ1AFZdi8K6UIIPRfGAsfD93OCRUeQWkg/qpuYgoC/Z0xHnYZg8qX4fcBYlAGqKMrXfhm2oiqlLNCeLoaH10ISUP7IOGdYz4Ipv3VLhl2qNP80DgdfYyR6WkyczTVC8JOOyrqd2vdbLp4CJkAQr8Wr8KjGqgsM3gewyFLUgWBFSP1M5Pld8kRRHQN9yKXv5lmC32OpbWuWGAtzAjrdoHj8hV7/BT/gwxcUUFwyPKvubCYu9O6TsU/cK+/WJ5z1XP9bi0kBScV/PonZhqFwA+g+VyCQaO40y4cHfxDIwUfNMnPv6jUAnnaKDsn9ZCsJ4NUOIoDiVN2SrOI0S/xHzjuDQjXMKmekD2CnDA7pXuaNVfNSMlrHm1BkZe77MD96upHVYmtxN8zKknUwsZ4YR1dX1niIM+OoHADtmSZGOEWZmejx7c1dBnPvYl4ghfsVilXFE8Zs7vvzLb3EP3zm56jmxW1qGDDT3suM68I9AG65nPIdQvF4NfKZh6o7/Lmr8BxiAVoCOuzUtAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="dotenv"
+        title=""
+        src="/tech-blog/static/aaaac25f4804cc02494e98930386e245/54e54/dotenv.png"
+        srcset="/tech-blog/static/aaaac25f4804cc02494e98930386e245/cf440/dotenv.png 148w,
+/tech-blog/static/aaaac25f4804cc02494e98930386e245/d2d38/dotenv.png 295w,
+/tech-blog/static/aaaac25f4804cc02494e98930386e245/54e54/dotenv.png 580w"
+        sizes="(max-width: 580px) 100vw, 580px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>There was also another issue, we hard-coded the PORT in app.js. Heroku needs to handle it itself.</p>
+<p>in app.js, update the code like this</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/5529e54db03558a2ad3ad77faff00ccb/fa082/resetport.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 495px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 22.020202020202024%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABJ0AAASdAHeZh94AAAA1UlEQVQY00WQyWrEMBiD8yylTDKO9y3ektAU0kKHOfT930X948P0IARC/ix7YHIB1wkzycYd0laYuEHY0l2HhrsIEKYglE/SAe2vzGPi/xpn132YZMSNDswqwvhK8AyhC66LdFgpz73MqKcIdOkacKPsbbR4vzuMzL6ggyJYVAuYrmD+AHcFMkQIv1DBwjgPQ2DlKq0vHSZdg/UJx95QSgKn/LUwmYwnPU2lE2r/hU4byrnCtdpX1ZaxHj/I64m8fSHkD/JvLLnice7YNvoqyqaZFnKHP+//gGDi5p80AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="resetport"
+        title=""
+        src="/tech-blog/static/5529e54db03558a2ad3ad77faff00ccb/fa082/resetport.png"
+        srcset="/tech-blog/static/5529e54db03558a2ad3ad77faff00ccb/cf440/resetport.png 148w,
+/tech-blog/static/5529e54db03558a2ad3ad77faff00ccb/d2d38/resetport.png 295w,
+/tech-blog/static/5529e54db03558a2ad3ad77faff00ccb/fa082/resetport.png 495w"
+        sizes="(max-width: 495px) 100vw, 495px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Okay, now after git push, it will deploy itself and we will wait and see it in action.</p>
+<p>yesssssssssssssssssssssssssssss !</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/51440105f70ea3c4e5e54962d0a9d578/a987b/yes.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 53.697916666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABJ0AAASdAHeZh94AAAAgUlEQVQoz+2P0QrCMAxF+/9fKcPZzW6VOte1g+ZYHIyyFys+CV64EJKbQ6Kcc4zW0nY9uh8w443r8MbG0rWac85fzNY7NQ06M1RcI0tcCGsAhGqllNNCEiHGwDTdmecHqszkWbZUudjaK+89qhZQ4xdwu+yDVw8qL96B3+gP/AHgEw+0ZfIgZIZ6AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="yes"
+        title=""
+        src="/tech-blog/static/51440105f70ea3c4e5e54962d0a9d578/b9e4f/yes.png"
+        srcset="/tech-blog/static/51440105f70ea3c4e5e54962d0a9d578/cf440/yes.png 148w,
+/tech-blog/static/51440105f70ea3c4e5e54962d0a9d578/d2d38/yes.png 295w,
+/tech-blog/static/51440105f70ea3c4e5e54962d0a9d578/b9e4f/yes.png 590w,
+/tech-blog/static/51440105f70ea3c4e5e54962d0a9d578/f9b6a/yes.png 885w,
+/tech-blog/static/51440105f70ea3c4e5e54962d0a9d578/2d849/yes.png 1180w,
+/tech-blog/static/51440105f70ea3c4e5e54962d0a9d578/a987b/yes.png 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Our app is live. Hooray !!</p>
+<p>Lets test it in postman. Just replace localhost:3000 with your URL</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/45dd9559a94f602d378f5465937eb937/0dd5f/postmanres.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 70.55921052631578%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABJ0AAASdAHeZh94AAACUElEQVQ4y52S20tVQRTG9z8UPaiE+RD0r/QcVFaSEViRKOlBxUvJQUKSHuQ89lgPPQS9aVZQBic7WunZ9z2zZ/b165s5XsCCsMP57bVm7bW+vdbMOC8XJrHWbGLu6SqmZ5+gMbdsGX88h7FHU5hqzGOC/sOJGcuD8YblPpmaWUKTNcafmF5gzTyct2Pn8GryEpp3L2P59gWs3BnEyugQlob7MXv1PFZHBrByawCL1/uxeGMA89f6sECMbY5cxPObg1ge7sPavSE8Gx2EA/kZiLaAgKhOD9kG9C7Zo7/NGHPUF/qfgOwr44wF78kG4x+AnPHkIxBvwQlijX1fw486OPDWse+1cOCu029h330BL9xAJCoEiUbI3DDJ4JMwSvCurXGllWH8tUIcS7iRhhP5XYTuAUTiMWkHkSHuIEl2mNSGFF1IKaFSifQQs86UwK4n0doUeLMtkXMdBy6cQgQoZYi6qlADqPmQModSBbQuaTOUZQHYd7WFns2DrTixecYO87JGWdWoKFiWJQqSpimFFAW1pSgK5vTen0Zl/HBu6iqkioJJ9wdEHNoxkiSBkClSKaBTcVxkBP9KnluRVOcQqUaUSDie24XrBdw/wU2XCKIUfiC4d9wXdv4vCmM5penUNON4vg8leco/FXa/AR3emB3ejL3vwK+9GoFPvBq+27NhQPyeNesorHmgNScEhMh4bYLAtp9nvFKy5qi1tYqWU9PHsTVodeIbTJ09KP61PhQ0+3RyWmend/IUz08JHl0L+8Ez0ROsqPOH4P/8juqMzm/FWQbme0mqEQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="postmanres"
+        title=""
+        src="/tech-blog/static/45dd9559a94f602d378f5465937eb937/b9e4f/postmanres.png"
+        srcset="/tech-blog/static/45dd9559a94f602d378f5465937eb937/cf440/postmanres.png 148w,
+/tech-blog/static/45dd9559a94f602d378f5465937eb937/d2d38/postmanres.png 295w,
+/tech-blog/static/45dd9559a94f602d378f5465937eb937/b9e4f/postmanres.png 590w,
+/tech-blog/static/45dd9559a94f602d378f5465937eb937/f9b6a/postmanres.png 885w,
+/tech-blog/static/45dd9559a94f602d378f5465937eb937/2d849/postmanres.png 1180w,
+/tech-blog/static/45dd9559a94f602d378f5465937eb937/0dd5f/postmanres.png 1216w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>It won’t be as fast as localhost but that’s predictable.</p>
+<p>Wow.</p>
+<p>This part was long and hard. But we did it.</p>
+<p>I feel exhausted now lol.</p>
+<p>When our app runs, all that effort and hard work we do is worth it.</p>
+<p>Now we learned how to deploy our application to production.</p>
+<p>In our Ionic app, just update the BookyConfig path and its should connect with it.</p>
+<p>Now would be a time to add “experience with Devops” to your CV 😭😂</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/57bbe0e3264b25da2ad3cfcdcf25fd6c/1b9ac/devops.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 99.69135802469135%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABJ0AAASdAHeZh94AAAE7UlEQVQ4y32UfUyVZRjGXzifHEDBD9QGiYqCKAoIKqh8cw6Hr3MOn55zRESgYygQKCgzkVAB+VZoqCGBYhnLtUydslkgpZSbk5Wl1ZzazFxbW67/fz3nldVarT+uve/9nOu+7uu+9pxXamvvJNlgJCsrB7MlG5M5S8Ai3rMwm511DpmmPHKtheTaisjeXEh2jg1ztg2LQHaulazsfAwpabR3dCI5BSRJ+n8oPFB7zUfpOQ+l+1xxphXQCCj/wTMLU5LNvkUu1Fp3XJVqFCoNCqVWPN1wVXmi9pjHgoBggsPXsiJsPQFBIXgIca2nD2q3OYLniUbnJWtY7QVI+VarXChUYqqLmOiqFlAJCAdKT1w0s1i8MpLI6HiWhYTh++pS5vr4Msd7Hiq1lxjqjlLjIWvI5vKt9r8FFUJMoZkWcxPnanz8V2OyvEZumh1rZh7+S4MJ8A9Ep5stNvIUfJ0QdZM1Ntv+S1B2qMVFqRPnKl5Zsp6oiHRO729hqL6JWd5+qJw5ilydPCcUandZQ9bKt9qmBXXTqzpdql6Ku6hRefoSE6Gnf3cD55u7WLlwubyBSq17uYmA3PtvQeFKiLgopzNUaEXYs/CeG8iKFTEMVDUy0tBJkF+Q7NzVGYniJf4S3GxzChbIhRysTHCXr8OyUD3pWXtJzagiJDSDpYsiiQiJQqOdKQbqprm6lxk6sxQa9oJt4toUloliBtqZC1F5+KLQLUDt7Y/J3khWXgOxyTtIMlawNjqPgNVGlgTHoJ7hi1JwnXyliETrtVAMmU1haQVSaV0LmsBYfCLSmB2WgvdqPYFxdgodPWwp7kafUsb62GKMGbuISnKgt9QSGm/He1UycwR/TriReWuMaJbGULKvCenw0EU27DiMoboNfVUr+opmNhh2YMlrJMNSjzG9ik0J24lJKCZ603YWBxmIydlNckUL8TuPkFTeTIJ4RhQdoKH/AtKPPzzm1s073J68y93b33Dj8hjR63KJiislKtou/hlJBAQbCF2Xz6rwDFHHEWeq5Or1Se6InknRO3nrDjcmbvPgwUOkF/d+4tnVKZ5dmeLFZ99z9eh7LF6eil9AAio3P2bOWIRKNV9c9AUiX39C1lhYl1TGlXdH+WP0O7n3+fWv+eXaFL/fe4L0fPxbHg+N83BwjJ8HJvh4zynhxsyhI8eofKOON/c30trUQVn5Hto7+9hbd5iAcBPD9UP8NnyLR/3jPBmc4NHgOL9O3Ed6+tEEY7u7+XRHN1OC1GarInJjJk+fPmbkg/NcGx0Vq9zn84lxLn1yieHhM6RnbOFiUStfODqZqDnBzZqTXC8+xv3hUaSx4+/j2L6HmppGdlXWU7u3kZ3lBzjWd4bWzh6OtnXT2/cOXT0naWxqp7v3JAfqD1FdXUfRtjLKhfMSRxW1ov/cqbNIFzrOUnfgBP3Dl+nqPkfPiRG62k+xs+KI+GCepuFgFx1dp+kUZy1NPXR09nO8d1BggIa3Omg41EVdfQcHG44y0HMC6auBD9kWlUV+6lYKjFspySwmNSVfXJdC9Il5JMQ7v+QOzKZS8Z5NZuoW7Im5FOitbI+3UJxkp7momtywZFoqapG+7L9EkfF10tIc5OVU4rCWE5NoIjbVzsbETDYlm4gz5BCnNxOTlEas+C0z1UG6oYTi3ErKbTWM7Hub3oqDtDX18SfKTfnl+fyP/gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="devops"
+        title=""
+        src="/tech-blog/static/57bbe0e3264b25da2ad3cfcdcf25fd6c/b9e4f/devops.png"
+        srcset="/tech-blog/static/57bbe0e3264b25da2ad3cfcdcf25fd6c/cf440/devops.png 148w,
+/tech-blog/static/57bbe0e3264b25da2ad3cfcdcf25fd6c/d2d38/devops.png 295w,
+/tech-blog/static/57bbe0e3264b25da2ad3cfcdcf25fd6c/b9e4f/devops.png 590w,
+/tech-blog/static/57bbe0e3264b25da2ad3cfcdcf25fd6c/1b9ac/devops.png 648w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Learning / Building things is fun. It requires patience, preservance and effort. But in the end, it’s really worth it.</p>
+<p>This is the last part of the series. I hope you learned some things from it. I personally learned so much from writing this series.</p>
+<p>I would end this with this tweet / quote</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/tech-blog/static/4f7204ad12a7141e19e33d62e5d2f3da/2f8d1/learning.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 61.85430463576159%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABJ0AAASdAHeZh94AAABuElEQVQoz61T246bMBD1t/cD+iX9hKpSH9rXbqVtskkgIWJ3Gy7GJhhjE+B0xgt0H7p9qIp0NL7MzDnjYcRTmuLb18+oqoogkasaFzMA04RxJLy2b2AiDOOIYRggvnz6iA/v3+Hu7jvO6SOO6U/kdsK/fEwsmusVl8cUtuvQOY+us/AE07a07mCMQdMYtLS31gZrTBssw3sfzpumCUqFrmtExyM2my1OSYLdfo/9IcL9/Q8k5zPi+Ijdbo8oirF9eEAUx3R/CH58djol2Gy3OEQR+r6HUEpTUIyn52eUpQxvqZSidYmiKHGlCnivtUY1n7NPuCNVy17K6iWhcy6U9j8+fnnRUv1a1wEFsbEaViJlGVQpYn9RoQLyvAiKLlm2Chmpw9PcbcEPnGU5FAVzyZKcMwoqKJghmYhsXV9RU/lSypCYSTyVGJRN02oFt9r3A5zvA/rbgIHua/KVboLygPZ/KXNW9lshtT7LczSklBm55IKU9jM7FvY/BC94nVhwYNtaUudxoz+dm2RtF5QuTiOtx/72ZlKekDXhIr2lJAsbj5EhEswDc8s13CZZFYcBcH5VZju3JvwFSJae7ol3lf0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="learning"
+        title=""
+        src="/tech-blog/static/4f7204ad12a7141e19e33d62e5d2f3da/b9e4f/learning.png"
+        srcset="/tech-blog/static/4f7204ad12a7141e19e33d62e5d2f3da/cf440/learning.png 148w,
+/tech-blog/static/4f7204ad12a7141e19e33d62e5d2f3da/d2d38/learning.png 295w,
+/tech-blog/static/4f7204ad12a7141e19e33d62e5d2f3da/b9e4f/learning.png 590w,
+/tech-blog/static/4f7204ad12a7141e19e33d62e5d2f3da/2f8d1/learning.png 755w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><img src="/tech-blog/static/alam01-25193be04dba408a817254b28d0215b0.jpg" alt="Alamgir Qazi" style="border-radius:50%;margin-right:0.875rem;margin-bottom:0;width:3.5rem;height:3.5rem"/><p>Hey there, I&#x27;m Alamgir Qazi. I work as a full-stack JavaScript Developer. I&#x27;ll be sharing what I&#x27;ve learned about Angular, Node, Docker, Kubernetes and other cool things.</p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/tech-blog/intro-to-nodejs-part-7/">← <!-- -->A very basic introduction to Node.js - Part 7</a></li><li></li></ul></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/intro-to-nodejs-part-8/";window.webpackCompilationHash="6bde7340039fbc964ded";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-13a28d1403ec4481c4eb.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-2223fabe0a5d5ce97932.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js"],"component---src-pages-404-js":["/component---src-pages-404-js-bfcfeb502e0b4bb62413.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4513653e6f9bbe734230.js"]};/*]]>*/</script><script src="/tech-blog/webpack-runtime-47efe8d300e4250c13dc.js" async=""></script><script src="/tech-blog/app-13a28d1403ec4481c4eb.js" async=""></script><script src="/tech-blog/commons-d77eb74007ee4c523f65.js" async=""></script><script src="/tech-blog/styles-2f4c3857d9bf43cf0b50.js" async=""></script><script src="/tech-blog/component---src-templates-blog-post-js-f75c730abf65df6c1fb5.js" async=""></script></body></html>
