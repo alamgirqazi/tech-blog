@@ -1,4 +1,193 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 05 Jan 2020 18:12:04 GMT</lastBuildDate><item><title><![CDATA[A very basic introduction to Node.js - Part 8]]></title><description><![CDATA[This is the part 8 of post Intro to Nodejs - part 7. So lets get started. Our first challenge is to deploy our application to production…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-8/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-8/</guid><pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 27 Feb 2020 16:44:31 GMT</lastBuildDate><item><title><![CDATA[Docker and Microservices]]></title><description><![CDATA[Before we talk about Docker and what is does, lets talk about some of the issues we face in development.  Its runs on my laptop/computer…]]></description><link>https://alamgirqazi.github.io/tech-blog/docker-microservices/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/docker-microservices/</guid><pubDate>Thu, 27 Feb 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/61857/docker.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 29.673590504451035%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABP0lEQVQY02NgAAL25uNMDFDAVrlDmL3pKCtYvPUkE2vCJAa2vOUMrDlLIDh3KRAvYWAD0UA+W85SMBuIGRmQDWOv3SvP0XwsH2jIYbbcZQKMpv5wS0gGQFepc7Qcv8LWf/M/e9vpP2y1e7s4eq/tZG85EclkHsQKtMAF6AJ51pyl7Gy5S4B4qTXQpVJAF7IA2YJANhcQy4BcCgYcPVemMy788Z976v1PnNMe/+VY+PU/R9+NvezVuyxYcxZHAxV2ATWUAelkIM4A4hS2nCW9QDoNiHtAGGi4A8KJzecCXNa/+u+z9/d/lvlf/nNOeXCGrXyLGNj1ucuSgIrDgS5LABoaA8SJwHALA+JoqAUNQMMj4WYt/P4fTF+8fNUsf9vdVIbGM55qYvwsIDHeu/8ZWGK6MYModykLuhjQUkaQlwFWhIFp408gUAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Docker and Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/b9e4f/docker.png&quot;
+        srcset=&quot;/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/cf440/docker.png 148w,
+/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/d2d38/docker.png 295w,
+/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/b9e4f/docker.png 590w,
+/tech-blog/static/0b86d91e4debadaaea08a19fe56432ed/61857/docker.png 674w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Before we talk about Docker and what is does, lets talk about some of the issues we face in development. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Its runs on my laptop/computer :) &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We often hear developers say, “But it runs perfectly on my computer” while it doesn’t behave expectedly in production. This is one of the common issues developers face. Most of these issues are because the environments are not the same. &lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Scaling applications is expensive. Adding more Virtual Machines (VMs) can be expensive. Its easy / cheap to start development but it becomes expensive in large-scale applications.&lt;/li&gt;
+&lt;li&gt;Lets say, our application requires integrating different services e.g Elastic Search. Should every developer install Elastic Search and all databases (e.g postgres) on their laptop? what if there are version issues? what about OS issues? Mac and a windows? what about production environment? which version will be used?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here comes Docker &lt;/p&gt;
+&lt;h3&gt;so what is Docker?&lt;/h3&gt;
+&lt;p&gt;Docker is a &lt;strong&gt;tool&lt;/strong&gt; designed to make it easier to create, deploy, and run applications by using &lt;strong&gt;containers&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Docker enables developers to easily pack, ship, and run any application as a lightweight, portable, self-sufficient container, which can run virtually anywhere.&lt;/p&gt;
+&lt;h3&gt;So what actually is a container?&lt;/h3&gt;
+&lt;p&gt;Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.&lt;/p&gt;
+&lt;p&gt;Containers are encapsulated environments in which applications are run.&lt;/p&gt;
+&lt;p&gt;There are three main concepts regarding Docker&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Docker Images&lt;/li&gt;
+&lt;li&gt;Containers&lt;/li&gt;
+&lt;li&gt;Dockerfile&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Docker is a technology that allows you to incorporate and store your code and its dependencies into a neat little package - an &lt;strong&gt;image&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A docker image holds your source code and the dependencies it needs. Lets say you have a Node.js app, A docker image of your app will contain the code + the node_modules and everything that’s needed to run your Node.js app.&lt;/p&gt;
+&lt;h3&gt;Dockerfile&lt;/h3&gt;
+&lt;p&gt;A Dockerfile is a text file that contains a bunch of instructions which informs Docker how the Docker image should get built.&lt;/p&gt;
+&lt;p&gt;Here is an Angular project with multiple Dockerfiles for each environment&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/1499d878bcd75ca12f33d04166b976a8/da7c4/angularproject.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 433px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 173.44110854503464%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAjCAYAAACU9ioYAAAACXBIWXMAABJ0AAASdAHeZh94AAAC9klEQVRIx51WC2+iQBj0//+mSy693F190uaasyJvQR6CpYoIiHRudtWmTXpp101WiMAw38z3oNe9vOBp16I5dBCrbVvUdYOmOeCF11RXr+s6TIMaYd7KPw4ELMs9drsSx+NRgqrsniDhJ8+I0xy7okBJoGq/R9008gbxQpXdE6zyPIXn2PCDAFEYIuBxlWaSsbhJiaHQrNjtsN1uEUURNpvNqx6q7CRD8ZOuEvi+D2NuwCHT1WqFlvpdsyRg/rQmkEuglEw3lCDHsTu5rmyKZJimWCwWKIotDodWps4F7CqGWbbGkkbYlgHLtKWWLyfE1zcrAa7XayRxQkALJVNGYp3dfRu2AsMMcRx9+JBq2L2qqjCdTrEmqGmZSOh4mqXSdWGOMsOyLDEajZAkMXR9CsM04RDYdT1UVa0OKBj+eXhgZSQwdB3eIoA+e5TGqIKdGe4xmUwQhhH0xxnDtliCPvYXc1TzsK72uL/TkNFp2zTguS52lOFsiXoeLtMC325uMbj7i+8/h/hxO8H9XxPbBnjei155xLpov7x78VOJm99jaA86bkf3+DW8w1CbImBLc5YZkrzCc9nJJpwT/LPda+oKY7os2pbvO6wUiw77DH+GuTFnKTZqIQvxh8MhwQIC2TAvgLaJiNWjaowEHPQHEtATgIZJUIfnDoJwiWN7fAOKT7fMQ03TyMplP5xh9qjDXfgI/AVsgm7PDVcpscfjiQTQCSYAFzyP4/hdc1DSUJRenIRkyLJj2I7nwLVd1nSmXnpSw8GAegWyjj3Pg2EYV4G9hixLL4plcxXmONQupCGnYd+pazjRqOEykMxMbgHoey5cshVjQQnwkocSkCEb8zlntPOu4SqbMhhSw2BJI2ypoRhYyyCULMXQUmTIkMdjahjJpLZsSyZ1TE0vw15ZQ42mJAzRZqfWWXqOeRoFV7l8ycOQY9SyRQ76H3ZrJVP6/T5CmuI4nhxUb7v1VYO+4IdSzTYmPjTFsfvgM+TLgP+7cA07sf4BRwqa6mGcco0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;multiple docker files&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/1499d878bcd75ca12f33d04166b976a8/da7c4/angularproject.png&quot;
+        srcset=&quot;/tech-blog/static/1499d878bcd75ca12f33d04166b976a8/cf440/angularproject.png 148w,
+/tech-blog/static/1499d878bcd75ca12f33d04166b976a8/d2d38/angularproject.png 295w,
+/tech-blog/static/1499d878bcd75ca12f33d04166b976a8/da7c4/angularproject.png 433w&quot;
+        sizes=&quot;(max-width: 433px) 100vw, 433px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;sample Angular Dockerfile&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Build Angular and upload to Firebase Hosting
+
+FROM johnpapa/angular-cli
+
+WORKDIR /home/angularapp
+COPY package.json ./
+# RUN npm install &amp;amp;&amp;amp; ng build --prod --aot --progress=false
+RUN npm install npm@latest -g
+RUN npm install -g firebase-tools
+RUN npm install
+COPY . /home/angularapp
+
+RUN ng build --prod
+RUN firebase deploy --token 1/h7xVYgTpyi4lt48D-8iasdasdasucj0aiFYz2Dk4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;sample Node.js Dockerfile&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;FROM node:8.11.2-alpine
+WORKDIR /app
+COPY package.json ./
+# Some packages for Node require these dependencies (e.g Bcrypt)
+RUN apk add --no-cache --virtual .build-deps alpine-sdk python \
+    &amp;amp;&amp;amp; apk update &amp;amp;&amp;amp; apk upgrade \
+    &amp;amp;&amp;amp; apk add pdftk  \
+    &amp;amp;&amp;amp; npm install --production --silent \
+    &amp;amp;&amp;amp; apk del .build-deps
+RUN npm install
+COPY . /app
+EXPOSE 3000 
+CMD [ &amp;quot;npm&amp;quot;, &amp;quot;start&amp;quot; ]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Why use Docker ? What are the benefits?&lt;/h3&gt;
+&lt;p&gt;Docker helps us set up local development environments that are exactly like a live production server.&lt;/p&gt;
+&lt;p&gt;Suppose you are working on multiple projects. They all have different environments. One project uses Postgres 9, One uses Postgres 10. This is not a headache with Docker. It will install what is required.&lt;/p&gt;
+&lt;p&gt;If you have 30 Docker containers that you want to run, you can run them all on a single virtual machine. To run 30 virtual machines, you’ve got to boot 30 operating systems with at least minimum resource requirements available before factoring the hypervisor for them to run on with the base OS.&lt;/p&gt;
+&lt;p&gt;Docker has been designed in a way that it can be incorporated into most DevOps applications, including Puppet, Chef, Vagrant, and Ansible, or it can be used on its own to manage development environments.&lt;/p&gt;
+&lt;p&gt;Agile and CI / CD practices are very easy to implement in a docker environment.&lt;/p&gt;
+&lt;p&gt; Your development team is able to create complex requirements for a &lt;strong&gt;microservice&lt;/strong&gt; within an easy-to-write Dockerfile.&lt;/p&gt;
+&lt;p&gt;The performance difference b/w Containers and VMs is 26:1. Those types of efficiency gains are on par with cloud providers like Amazon and on the virtual machines that they sell per hour. It’s a huge enabler for their businesses because you’re suddenly able to do a lot more for the same price.&lt;/p&gt;
+&lt;h3&gt;Docker Alternatives?&lt;/h3&gt;
+&lt;p&gt;Although Docker is the most popular container technology, but there many other container solutions out there:
+BSD Jails
+LXD
+RKT (pronounced as Rocket)&lt;/p&gt;
+&lt;h3&gt;Container Orchestration&lt;/h3&gt;
+&lt;p&gt;Like any other element of your IT infrastructure, containers need to be monitored and controlled. Otherwise, you literally have no idea what’s running on your servers.&lt;/p&gt;
+&lt;p&gt;That is where Orchestration comes in. There are 3 big players. &lt;/p&gt;
+&lt;p&gt;Docker Swarm, Kubernetes (built by Google), and Mesosphere (used by Twitter). Today, these are all still around, but Kubernetes is by far the most dominant cloud-orchestration program.&lt;/p&gt;
+&lt;h3&gt;Kubernetes&lt;/h3&gt;
+&lt;p&gt;Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications.&lt;/p&gt;
+&lt;p&gt;“Designed on the same principles that allows Google to run billions of containers a week, Kubernetes can scale without increasing your ops team.”&lt;/p&gt;
+&lt;h3&gt;Containers as a Service&lt;/h3&gt;
+&lt;p&gt;AWS Fargate. Just build apps and Amazon will manage the containers for you (scale automatically).&lt;/p&gt;
+&lt;h3&gt;Microservices&lt;/h3&gt;
+&lt;p&gt;Microservices are an architectural approach to building applications. As an architectural framework, microservices are distributed and loosely coupled, so one team’s changes won’t break the entire app. The benefit to using microservices is that development teams are able to rapidly build new components of apps to meet changing business needs.&lt;/p&gt;
+&lt;p&gt;Microservices can communicate with each other, usually statelessly, so apps built in this way can be more fault tolerant. This also allows dev teams to choose their own tools, since microservices can communicate through language-agnostic application programming interfaces (APIs).&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/ffd1db91e5b339f4eea04caac6f6a413/6d51e/monovsmicro.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.5940594059406%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABJ0AAASdAHeZh94AAACD0lEQVQoz4VSQWgTQRTdg6BnL3pVPIlF8CR41JsnlaJ4Ek+9qhSqIoiFolCEWtqKiBEtIWlsmqTGqDEauzS1Jh6Cqay1GLdG2yTuliZpNt2dzfPPZHetXvzwdv/M+//9P/NHYrYNvd4QqDUNrG80Ybfb4Namf9vxa80mGoYBY9NEyzRRJ5/DjXHjJMYYLIJrNvmM2SLApmJbsaKvQSn9EKiu18Qe2wKeI3ERf1rGiYFBnCRMyBkhzBwRbqZT8Jo/hF3negTuJ1/jX+PxQnDoRQoHrvSj62o/xlJvBcmPw0Ut6tZkHeHlShXZxSW8UxbRoKsZmn2P4w/8ODX+BL5cvnNk/rktz+OoL4BjviCGM1lBbLQ28T+LfPyE6y/TGHgzi7jy5Y+gTMSdqQSGo8+RWVC8hMJqBTdSMi7Hkxiby2GyoKAv/gq90QTCFHdv/gNuJtMYJU6jjj3B4s9V5Je+EYpQV8p8voKc+aridCCCMxMxXCShwZk5dPN1MCZO1UMNnA1No9s/hQUq3pmyc/G6rkHTNO9y3YE06nWUSiWv63K5jGqlk2xbFlRVhdlq/T0UgzZ27u/C7oOHwJyJmvTWuJ2/cAnStu3I5vO0Z2HHnn3Ye/iI4AKRKCRJwq2RUbG2qIDEVbkTjMYQmn7qded2nsnmcPfRY/zSdVFsfDKM8LOE4IrL3zHie4iC8tl7ar8By6PCIvJZRIcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;monolith vs microservices.PNG&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/ffd1db91e5b339f4eea04caac6f6a413/b9e4f/monovsmicro.png&quot;
+        srcset=&quot;/tech-blog/static/ffd1db91e5b339f4eea04caac6f6a413/cf440/monovsmicro.png 148w,
+/tech-blog/static/ffd1db91e5b339f4eea04caac6f6a413/d2d38/monovsmicro.png 295w,
+/tech-blog/static/ffd1db91e5b339f4eea04caac6f6a413/b9e4f/monovsmicro.png 590w,
+/tech-blog/static/ffd1db91e5b339f4eea04caac6f6a413/f9b6a/monovsmicro.png 885w,
+/tech-blog/static/ffd1db91e5b339f4eea04caac6f6a413/6d51e/monovsmicro.png 1010w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Microservices can be written in different languages depending on the use case and requirement. Modern application development essentially consists of composing an application from a variety of services.&lt;/p&gt;
+&lt;h3&gt;Why not Docker?&lt;/h3&gt;
+&lt;p&gt;Run applications as fast as a bare-metal server. Docker containers have less overhead than virtual machines. But Docker does not have zero overhead. The only way to get true bare-metal speed from an application is to run it directly on a bare-metal server, without using containers or virtual machines.&lt;/p&gt;
+&lt;p&gt;Docker also creates new security challenges — such as the difficulty of monitoring so many moving pieces within a dynamic, large-scale Docker environment. Before moving workloads to Docker, you need to evaluate the Docker-specific security risks and make sure you can handle them.&lt;/p&gt;
+&lt;p&gt;All the data stored inside a container will be lost forever once the container shuts down. Managing stateful applications in a docker environment is hard.&lt;/p&gt;
+&lt;p&gt;You have to think of ways to save your data somewhere else first. To keep data safe in Docker, you need to employ an additional tool – Docker Data Volumes. Yet, this solution is still quite clumsy and needs to be improved.&lt;/p&gt;
+&lt;p&gt;Docker should be avoided for production databases unless you have strong expertise in managing stateful applications in Docker.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A very basic introduction to Node.js - Part 8]]></title><description><![CDATA[This is the part 8 of post Intro to Nodejs - part 7. So lets get started. Our first challenge is to deploy our application to production…]]></description><link>https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-8/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/intro-to-nodejs-part-8/</guid><pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/a717eafa290bf333c4dd1c86076c5b9e/f570d/node-js.png&quot;
