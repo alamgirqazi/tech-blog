@@ -41,7 +41,7 @@ change nginx configurations
 
 nano /etc/nginx/sites-enabled/default
 
-![nginx configuration](./nginx-config.png)
+![nginx configuration](./nginx-conf.png)
 
 update the root directory and make sure to bable autoIndex on in nginx
 
