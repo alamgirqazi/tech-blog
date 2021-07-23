@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jul 2021 10:45:01 GMT</lastBuildDate><item><title><![CDATA[Install Multi-node Hadoop using Hortonworks Data Platform (HDP) 3.1.5 on Ubuntu 18 LTS]]></title><description><![CDATA[There are different way to install Hadoop ecosystem. One way is to install every component of Hadoop itself as they’re all open-source and…]]></description><link>https://alamgirqazi.github.io/tech-blog/install-hortonworks-data-platform-hdp-3.1.5/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/install-hortonworks-data-platform-hdp-3.1.5/</guid><pubDate>Sun, 18 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tech-blog]]></title><description><![CDATA[A simple tech blog.]]></description><link>https://alamgirqazi.github.io/tech-blog</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 23 Jul 2021 09:01:06 GMT</lastBuildDate><item><title><![CDATA[Install Multi-node Hadoop using Hortonworks Data Platform (HDP) 3.1.5 on Ubuntu 18 LTS]]></title><description><![CDATA[There are different way to install Hadoop ecosystem. One way is to install every component of Hadoop itself as they’re all open-source and…]]></description><link>https://alamgirqazi.github.io/tech-blog/install-hortonworks-data-platform-hdp-3.1.5/</link><guid isPermaLink="false">https://alamgirqazi.github.io/tech-blog/install-hortonworks-data-platform-hdp-3.1.5/</guid><pubDate>Sun, 18 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/tech-blog/static/0cfe2b0c4f31e93e5426868dedb34dc4/8ff1e/hortonworks.png&quot;
@@ -82,7 +82,40 @@
 &lt;p&gt;Step 2: &lt;/p&gt;
 &lt;p&gt;change nginx configurations&lt;/p&gt;
 &lt;p&gt;nano /etc/nginx/sites-enabled/default&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./nginx-config.png&quot; alt=&quot;nginx configuration&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/tech-blog/static/d3063736979eb3437b968b9606ad02a3/8fde6/nginx-conf.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 62.26880394574599%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABJElEQVQoz41SW5KCMBD0HiZghBgIyUxegvi4/7W2hf2xVnS7KhSVSk/39MyuW0BExg5EjB9rrVKq+gd2Yr/XbRti9MwlF++91lqpo5TyOxmP+r5PMVrnHVHgwMzO+VZrWcnv5K7vLUfnKcSUUy6loBaqoB1zOlWV3HLxq5zLGRjP5/v9Pk3jhDOOuDfGrN+6rt/1LCUSAg2E+TpfLpfr9TYvGIahM50nappmU9nghSc8RdqDcyFE7zwst20LwQ/J73BQGBNCTiEwCh3VcSUIId66fVHWJx1jQk4555RSWJAQXi7o3Pb2U2Cwt4zHqcNBCPkar1yxaRsmEenTNFOMTM95E8TRPwbOxJtpr7dCipTy4/GYxoAdw6aAh1VblxdkmPqr/wOtfmfO8l+i6AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;nginx configuration&quot;
+        title=&quot;&quot;
+        src=&quot;/tech-blog/static/d3063736979eb3437b968b9606ad02a3/b9e4f/nginx-conf.png&quot;
+        srcset=&quot;/tech-blog/static/d3063736979eb3437b968b9606ad02a3/cf440/nginx-conf.png 148w,
+/tech-blog/static/d3063736979eb3437b968b9606ad02a3/d2d38/nginx-conf.png 295w,
+/tech-blog/static/d3063736979eb3437b968b9606ad02a3/b9e4f/nginx-conf.png 590w,
+/tech-blog/static/d3063736979eb3437b968b9606ad02a3/8fde6/nginx-conf.png 811w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;update the root directory and make sure to bable autoIndex on in nginx&lt;/p&gt;
 &lt;p&gt;once changes are done&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;systemctl restart nginx&lt;/code&gt;&lt;/p&gt;
