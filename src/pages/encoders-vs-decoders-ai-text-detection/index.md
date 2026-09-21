@@ -3,17 +3,17 @@ title: Do Decoders Really Generalize Better at Spotting AI-Edited Text?
 date: '2026-09-21'
 ---
 
-Pangram recently published [EditLens](https://arxiv.org/abs/2510.03154) (ICLR 2026). Instead of just saying whether a piece of text is human or AI, it estimates how much of it an AI has edited. They [open sourced two versions](https://www.pangram.com/blog/introducing-open-pangram), one built on RoBERTa-large (an encoder) and one on Llama-3.2-3B (a decoder).
+Pangram recently published [EditLens](https://arxiv.org/abs/2510.03154) (ICLR 2026). Instead of just saying whether a piece of text is human or AI, it gives an estimate of how much of it an AI has edited. They [open sourced two versions](https://www.pangram.com/blog/introducing-open-pangram), one built on RoBERTa-large (an encoder model) and one on Llama-3.2-3B (a decoder).
 
-The interesting part of their results is what happens on Enron emails, a kind of text neither model saw during training. The Llama model barely drops (0.895 to 0.863 accuracy). The RoBERTa model falls off a cliff (0.881 to 0.695). The easy reading is that decoders generalize better.
+The interesting part of their results is on text model didnt saw during training. The Llama model barely drops (0.895 to 0.863 accuracy). The RoBERTa model falls off a cliff (0.881 to 0.695). It gives the reading that decoders generalize better.
 
-Those two models differ in a lot more than encoder vs decoder. Llama is about 8 times bigger, reads twice as much text at once (1024 vs 512 tokens), was trained on much newer data, uses a different tokenizer and was fine-tuned in a different way. Any one of those could explain the drop.
+Those two models differ in a lot more than encoder vs decoder. Llama model is about 8 times bigger, reads twice as much text at once [bigger context window] (1024 vs 512 tokens), was trained on much newer data, uses a different tokenizer and was fine-tuned in a different way.
 
 ## The setup
 
-[Ettin](https://arxiv.org/abs/2507.11412) is a family of models where every encoder has a decoder twin. Same training data, same recipe, same tokenizer, same number of parameters. The only real difference is the architecture, which is exactly what you need to test this properly.
+[Ettin](https://arxiv.org/abs/2507.11412) is a family of models where every encoder has a decoder equivalent. Same training data, same recipe, same tokenizer, same number of parameters. The only real difference is the architecture.
 
-I fine-tuned encoder and decoder pairs at 17M, 32M, 68M, 150M and 400M parameters on the EditLens training set, using the EditLens code and settings for everything. A run takes anywhere from a few minutes to half an hour on a single RTX 4090. Then I scored the same three test sets Pangram used: text like the training data, Enron emails, and text written by Llama-3.3-70B, a model that didn't generate any of the training data.
+I fine-tuned encoder and decoder pairs at 17M, 32M, 68M, 150M and 400M parameters on the EditLens training set (available on hf), using the EditLens code and settings for everything. A run takes anywhere from a few minutes to half an hour on a single RTX 4090 GPU. I scored the same three test sets that Pangram used: text like the training data, Enron emails, and text written by Llama-3.3-70B.
 
 ## What I found
 
