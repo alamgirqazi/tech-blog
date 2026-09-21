@@ -1,0 +1,38 @@
+# Build the Gatsby site and publish it to the gh-pages branch, which GitHub Pages serves.
+# Replaces running `npm run deploy` by hand.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: # allows a manual run from the Actions tab
+
+permissions:
+  contents: write # needed to push to gh-pages
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Gatsby 2 + React 16 don't build on current Node versions; this matches .nvmrc.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 14
+
+      # installs exactly what package-lock.json pins (generated with Node 14 / npm 6)
+      - run: npm ci
+
+      # --prefix-paths applies pathPrefix '/tech-blog' from gatsby-config.js
+      - run: npx gatsby build --prefix-paths
+
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages

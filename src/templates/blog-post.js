@@ -5,7 +5,7 @@ import { rhythm, scale } from '../utils/typography'
 
 import Bio from '../components/Bio'
 import Helmet from 'react-helmet'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import React from 'react'
 import get from 'lodash/get'
 
